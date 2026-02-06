@@ -1,0 +1,6 @@
+# CaraCore PDV — loja (GitHub Pages a partir de /docs)
+title: CaraCore PDV
+baseurl: ""
+url: "https://chmulato.github.io/caracore-pdv-releases"
+theme: null
+markdown: kramdown
