@@ -10,12 +10,12 @@ alwaysApply: true
 - **URL:** https://chmulato.github.io/caracore-pdv-releases/
 
 ## Ambientes relacionados
-- **Oficina:** caracore-pdv (código-fonte, branch java_21, v1.1.0). Scripts de build e delivery em caracore-pdv/scripts/ (preparar_release_loja.py, delivery_exe_pdv_to_releases.py).
+- **Oficina:** caracore-pdv (código-fonte, branch java_21, v.1.0.15). Scripts de build e delivery em caracore-pdv/scripts/ (preparar_release_loja.py, delivery_exe_pdv_to_releases.py).
 - **Matriz:** caracore-site/delivery/pdv — apresentação completa, planos, consultoria (caracore.com.br).
 
 ## Conteúdo e alinhamento
 - **docs/:** todo o site da loja (index.html, download.html, tecnologia.html, canal-feedback.html, assets/css, assets/js). Base href: https://chmulato.github.io/caracore-pdv-releases/.
-- **Lançamento 03/03/2026:** versão v1.1.0 com **Java 21**. Textos da loja destacam: Undertow, virtual threads, JVM otimizada para Windows Desktop (ZGC, heap), caixa mais rápido e estável.
+- **Lançamento 03/03/2026:** versão v.1.0.15 com **Java 21**. Textos da loja destacam: Undertow, virtual threads, JVM otimizada para Windows Desktop (ZGC, heap), caixa mais rápido e estável.
 - **Releases (artefatos):** publicados via GitHub Releases (tag v*). Instalador .exe, .yml e .blockmap gerados pela oficina (electron-builder); publicação manual com `delivery_exe_pdv_to_releases.py` ou via GitHub Actions no caracore-pdv ao dar push de tag.
 
 ## Convenções
