@@ -27,4 +27,4 @@ Login de degustacao:
 - senha: 123456
 
 Canal oficial:
-- https://github.com/chmulato/caracore-pdv-releases/releases/latest
+- ../download.html
