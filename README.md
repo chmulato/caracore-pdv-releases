@@ -10,7 +10,7 @@ Vitrine de releases do **CaraCore-PDV** (PDV Selo Verde) da Cara Core Informáti
 
 ## Este repositório (loja)
 
-- **Vitrine:** alinhada à matriz — mesma mensagem (Selo CaraCore de Sustentabilidade, economia real, fluxo contínuo, pronto 2026). Download, tecnologia (Soluções) e canal de feedback. Links para a matriz (apresentação completa, economia papel x digital, planos, Wiki Fiscal, consultoria, demonstração presencial).
+- **Vitrine:** alinhada à matriz — mesma mensagem (Selo CaraCore de Sustentabilidade, economia real, fluxo contínuo, pronto 2026). Download, tecnologia (Soluções), wiki interna da loja e canal de feedback. Links para a matriz (apresentação completa, economia papel x digital, planos, consultoria, demonstração presencial).
 - **Canal de feedback:** suporte por e-mail (suporte@caracore.com.br), WhatsApp e Telegram. Não atendemos ligações telefônicas.
 
 ## Publicação
@@ -19,6 +19,7 @@ O site da loja é publicado via **GitHub Pages** a partir da pasta `docs/`:
 
 - Configurar em: **Settings → Pages → Source:** Deploy from a branch → Branch: main (ou master) → Folder: **/docs**.
 - URL do site: `https://chmulato.github.io/caracore-pdv-releases/`
+- Domínio próprio: ainda não ativo para esta loja (em planejamento).
 
 ## Links
 
