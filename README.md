@@ -18,7 +18,7 @@ Vitrine de releases do **CaraCore-PDV** (PDV Selo Verde) da Cara Core Informáti
 O site da loja é publicado via **GitHub Pages** a partir da pasta `docs/`:
 
 - Configurar em: **Settings → Pages → Source:** Deploy from a branch → Branch: main (ou master) → Folder: **/docs**.
-- URL do site: `https://chmulato.github.io/caracore-pdv-releases/`
+- URL do site: `https://pdv.caracore.com.br/`
 - Domínio próprio: ainda não ativo para esta loja (em planejamento).
 
 ## Links
