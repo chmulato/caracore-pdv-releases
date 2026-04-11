@@ -6,7 +6,7 @@ Vitrine de releases do **CaraCore-PDV** (PDV Selo Verde) da Cara Core Informáti
 
 - **Produto:** Ponto de Venda para o mercado brasileiro (PDV Selo Verde). Motor fiscal que acompanha as mudanças de alíquotas até 2033. Operação ininterrupta: venda mesmo quando a internet cai (contingência, SQLite local). Economia com papel (recibo digital).
 - **Planos:** Free (100 vendas/mês, 10 SMS recibo/mês) e Premium (recuperação de senha por SMS, relatório ao contador, suporte prioritário).
-- **Download:** Versão de Degustação (Free) — 100 vendas completas para teste real. Guia de início rápido na [matriz](https://caracore.com.br/delivery/pdv/download.html). Releases neste repositório quando publicadas.
+- **Download:** Versão de Degustação (Free) — 100 vendas completas para teste real. Guia de início rápido na [loja oficial](https://pdv.caracore.com.br/download.html). Releases neste repositório quando publicadas.
 
 ## Este repositório (loja)
 
@@ -25,8 +25,8 @@ O site da loja é publicado via **GitHub Pages** a partir da pasta `docs/`:
 
 - **Repositório de releases (este repo):** [chmulato/caracore-pdv-releases](https://github.com/chmulato/caracore-pdv-releases)
 - **Download EXE (Releases):** [Releases / Latest](https://github.com/chmulato/caracore-pdv-releases/releases/latest)
-- **Matriz (delivery):** [caracore.com.br/delivery/pdv/](https://caracore.com.br/delivery/pdv/) — apresentação, consultoria, demonstração
-- **Cara Core Informática:** [caracore.com.br](https://caracore.com.br)
+- **Loja oficial:** [pdv.caracore.com.br](https://pdv.caracore.com.br/) — apresentação, consultoria, demonstração
+- **Cara Core Informática:** [caracore.com.br](https://www.caracore.com.br)
 
 ---
 
