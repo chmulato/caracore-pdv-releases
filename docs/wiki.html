@@ -52,6 +52,42 @@
         </section>
 
         <section class="card wiki-card">
+            <h2>Checklist rapido pos-instalacao (Windows)</h2>
+            <ul>
+                <li>Confirmar abertura do app local em <code>http://localhost:8080</code></li>
+                <li>Validar login <code>admin / 123456</code> no ambiente de degustacao</li>
+                <li>Cadastrar 1 produto, registrar 1 venda e emitir 1 recibo digital de teste</li>
+                <li>Fechar e reabrir o app para validar persistencia no SQLite local</li>
+                <li>Verificar pasta de logs do desktop em caso de comportamento inesperado</li>
+            </ul>
+        </section>
+
+        <section class="card wiki-card">
+            <h2>Canal de releases e politica de atualizacao</h2>
+            <ul>
+                <li><strong>Canal estavel:</strong> sempre pelo link <code>releases/latest</code></li>
+                <li><strong>Canal pre-release:</strong> usado para validacoes de campo antes da proxima final</li>
+                <li><strong>Fonte unica:</strong> distribuicao oficial apenas no GitHub Releases (sem espelho local de instalador)</li>
+                <li><strong>Boa pratica:</strong> em ambiente produtivo, priorizar release estavel</li>
+            </ul>
+            <div class="wiki-links">
+                <a href="https://github.com/chmulato/caracore-pdv-releases/releases/latest" class="btn-release" target="_blank" rel="noopener">Abrir estavel mais recente</a>
+                <a href="https://github.com/chmulato/caracore-pdv-releases/releases" class="btn-release btn-release-outline" target="_blank" rel="noopener">Historico de releases</a>
+            </div>
+        </section>
+
+        <section class="card wiki-card">
+            <h2>Diagnostico rapido (suporte N1)</h2>
+            <ul>
+                <li><strong>App nao abre:</strong> reiniciar Windows e executar novamente como usuario local</li>
+                <li><strong>Tela em branco:</strong> validar se <code>localhost:8080</code> responde no navegador</li>
+                <li><strong>Porta ocupada:</strong> encerrar processos antigos do app e relancar</li>
+                <li><strong>Falha apos atualizacao:</strong> voltar para a release estavel no canal oficial</li>
+                <li><strong>Persistindo erro:</strong> enviar evidencia com horario e captura para suporte oficial</li>
+            </ul>
+        </section>
+
+        <section class="card wiki-card">
             <h2>Paginas da wiki</h2>
             <div class="wiki-links">
                 <a href="wiki-caracteristicas.html" class="btn-release">Caracteristicas completas</a>
