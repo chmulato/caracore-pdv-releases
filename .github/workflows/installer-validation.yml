@@ -1,0 +1,196 @@
+name: PDV Installer Validation
+
+on:
+  release:
+    types:
+      - published
+  workflow_dispatch:
+    inputs:
+      release_tag:
+        description: 'Tag da release (opcional). Em branco usa latest.'
+        required: false
+        type: string
+      asset_name:
+        description: 'Nome do instalador EXE esperado.'
+        required: false
+        default: 'CaraCorePDV.exe'
+        type: string
+      min_size_mb:
+        description: 'Tamanho minimo esperado do instalador (MB).'
+        required: false
+        default: '40'
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  validate-installer:
+    runs-on: windows-latest
+    timeout-minutes: 25
+    env:
+      REPO: ${{ github.repository }}
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      INPUT_RELEASE_TAG: ${{ inputs.release_tag }}
+      INPUT_ASSET_NAME: ${{ inputs.asset_name }}
+      INPUT_MIN_SIZE_MB: ${{ inputs.min_size_mb }}
+    steps:
+      - name: Resolve release and download installer
+        id: download
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+
+          $headers = @{ Authorization = "Bearer $env:GITHUB_TOKEN"; 'X-GitHub-Api-Version' = '2022-11-28' }
+          $repo = $env:REPO
+          $assetName = if ([string]::IsNullOrWhiteSpace($env:INPUT_ASSET_NAME)) { 'CaraCorePDV.exe' } else { $env:INPUT_ASSET_NAME }
+          $minSizeMb = if ([string]::IsNullOrWhiteSpace($env:INPUT_MIN_SIZE_MB)) { 40 } else { [int]$env:INPUT_MIN_SIZE_MB }
+
+          if ([string]::IsNullOrWhiteSpace($env:INPUT_RELEASE_TAG)) {
+            $releaseApi = "https://api.github.com/repos/$repo/releases/latest"
+            Write-Host "Using latest release from $repo"
+          }
+          else {
+            $releaseApi = "https://api.github.com/repos/$repo/releases/tags/$($env:INPUT_RELEASE_TAG)"
+            Write-Host "Using release tag $($env:INPUT_RELEASE_TAG)"
+          }
+
+          $release = Invoke-RestMethod -Uri $releaseApi -Headers $headers -Method Get
+          if (-not $release) { throw 'Release not found.' }
+
+          $assets = @($release.assets)
+          if ($assets.Count -eq 0) { throw "Release $($release.tag_name) has no assets." }
+
+          $installerAsset = $assets | Where-Object { $_.name -eq $assetName } | Select-Object -First 1
+          if (-not $installerAsset) {
+            $installerAsset = $assets | Where-Object { $_.name -match 'CaraCore.*PDV.*\.exe$|\.exe$' } | Select-Object -First 1
+          }
+          if (-not $installerAsset) {
+            $assetList = ($assets | ForEach-Object { $_.name }) -join ', '
+            throw "No EXE asset found in release. Assets: $assetList"
+          }
+
+          $installerPath = Join-Path $env:RUNNER_TEMP $installerAsset.name
+          Write-Host "Downloading installer asset: $($installerAsset.name)"
+          Invoke-WebRequest -Uri $installerAsset.browser_download_url -OutFile $installerPath
+
+          $file = Get-Item $installerPath
+          $minSizeBytes = $minSizeMb * 1MB
+          if ($file.Length -lt $minSizeBytes) {
+            throw "Installer size check failed. Expected >= ${minSizeMb}MB, got $([math]::Round($file.Length / 1MB, 2))MB."
+          }
+
+          $bytes = [System.IO.File]::ReadAllBytes($installerPath)
+          if ($bytes.Length -lt 2 -or $bytes[0] -ne 0x4D -or $bytes[1] -ne 0x5A) {
+            throw 'Installer is not a valid PE executable (MZ header missing).'
+          }
+
+          $sha = (Get-FileHash -Path $installerPath -Algorithm SHA256).Hash.ToUpperInvariant()
+          Write-Host "Installer SHA256: $sha"
+
+          $shaAsset = $assets | Where-Object { $_.name -eq 'checksum.sha256' } | Select-Object -First 1
+          if ($shaAsset) {
+            $shaPath = Join-Path $env:RUNNER_TEMP 'checksum.sha256'
+            Invoke-WebRequest -Uri $shaAsset.browser_download_url -OutFile $shaPath
+            $shaLine = Get-Content -Path $shaPath -Encoding UTF8 | Where-Object { $_ -match [regex]::Escape($installerAsset.name) } | Select-Object -First 1
+            if ($shaLine) {
+              $expected = (($shaLine -split '\s+')[0]).ToUpperInvariant()
+              if ($expected -ne $sha) {
+                throw "SHA256 mismatch. Expected: $expected, Actual: $sha"
+              }
+              Write-Host 'SHA256 validated against checksum.sha256 asset.'
+            }
+            else {
+              Write-Warning "checksum.sha256 exists but has no line for $($installerAsset.name)."
+            }
+          }
+          else {
+            Write-Warning 'No checksum.sha256 asset found in release. Hash comparison skipped.'
+          }
+
+          "release_tag=$($release.tag_name)" | Out-File -FilePath $env:GITHUB_OUTPUT -Encoding utf8 -Append
+          "installer_name=$($installerAsset.name)" | Out-File -FilePath $env:GITHUB_OUTPUT -Encoding utf8 -Append
+          "installer_path=$installerPath" | Out-File -FilePath $env:GITHUB_OUTPUT -Encoding utf8 -Append
+
+      - name: Smoke test silent install
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+
+          $installerPath = '${{ steps.download.outputs.installer_path }}'
+          if (-not (Test-Path $installerPath)) { throw "Installer not found at $installerPath" }
+
+          function Get-UninstallEntries {
+            $roots = @(
+              'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\*',
+              'HKLM:\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\*',
+              'HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\*'
+            )
+            $items = foreach ($root in $roots) {
+              Get-ItemProperty -Path $root -ErrorAction SilentlyContinue |
+                Where-Object { $_.DisplayName -match 'CaraCore|PDV' } |
+                Select-Object DisplayName, DisplayVersion, Publisher, InstallLocation
+            }
+            @($items)
+          }
+
+          $before = Get-UninstallEntries
+
+          $switches = @(
+            '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-',
+            '/S',
+            '/quiet /norestart'
+          )
+
+          $acceptedCodes = @(0, 3010)
+          $installed = $false
+          $selectedSwitch = ''
+          $lastExitCode = $null
+
+          foreach ($args in $switches) {
+            Write-Host "Trying installer args: $args"
+            $process = Start-Process -FilePath $installerPath -ArgumentList $args -PassThru
+            $waitOk = $process.WaitForExit(420000)
+            if (-not $waitOk) {
+              try { $process.Kill() } catch {}
+              Write-Warning "Installer timed out with args: $args"
+              continue
+            }
+
+            $lastExitCode = $process.ExitCode
+            Write-Host "Installer exit code with '$args': $lastExitCode"
+
+            if ($acceptedCodes -contains $lastExitCode) {
+              Start-Sleep -Seconds 8
+              $after = Get-UninstallEntries
+              if ($after.Count -gt $before.Count) {
+                $installed = $true
+                $selectedSwitch = $args
+                break
+              }
+
+              $newEntries = Compare-Object -ReferenceObject ($before | ForEach-Object { "$($_.DisplayName)|$($_.DisplayVersion)" }) -DifferenceObject ($after | ForEach-Object { "$($_.DisplayName)|$($_.DisplayVersion)" }) -PassThru
+              if ($newEntries) {
+                $installed = $true
+                $selectedSwitch = $args
+                break
+              }
+            }
+          }
+
+          if (-not $installed) {
+            throw "Smoke install failed. Last installer exit code: $lastExitCode"
+          }
+
+          Write-Host "Smoke install passed using args: $selectedSwitch"
+
+      - name: Summary
+        shell: pwsh
+        run: |
+          @"
+          ## PDV Installer Validation
+
+          - Release: `${{ steps.download.outputs.release_tag }}`
+          - Asset: `${{ steps.download.outputs.installer_name }}`
+          - Status: PASS
+          "@ | Out-File -FilePath $env:GITHUB_STEP_SUMMARY -Encoding utf8 -Append

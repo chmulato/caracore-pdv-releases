@@ -21,6 +21,20 @@ O site da loja é publicado via **GitHub Pages** a partir da pasta `docs/`:
 - URL do site: `https://pdv.caracore.com.br/`
 - Domínio próprio: ainda não ativo para esta loja (em planejamento).
 
+## Qualidade do instalador (GitHub Actions)
+
+Para aumentar a acuidade da entrega, este repositorio possui workflow dedicado de validacao do instalador:
+
+- Workflow: `.github/workflows/installer-validation.yml`
+- Gatilhos: publicacao de release e execucao manual (`workflow_dispatch`)
+- Validacoes executadas no `windows-latest`:
+	- download do asset EXE da release
+	- verificacao de tamanho minimo e cabecalho PE (`MZ`)
+	- hash SHA-256 (com comparacao automatica quando `checksum.sha256` existe na release)
+	- smoke test de instalacao silenciosa (aceita codigos de sucesso `0` e `3010`)
+
+Se qualquer etapa falhar, o workflow marca a release como nao conforme para distribuicao.
+
 ## Links
 
 - **Repositório de releases (este repo):** [chmulato/caracore-pdv-releases](https://github.com/chmulato/caracore-pdv-releases)
