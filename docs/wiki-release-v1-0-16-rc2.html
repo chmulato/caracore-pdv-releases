@@ -16,7 +16,7 @@
 </head>
 <body class="page-wiki page-wiki-release">
     <div class="wrapper">
-        <nav class="breadcrumb" aria-label="Navegacao">
+        <nav class="breadcrumb" aria-label="Navegação">
             <a href="index.html">CaraCore-PDV - Loja</a>
             <span> · </span>
             <a href="wiki.html">Wiki da Loja</a>
@@ -26,7 +26,7 @@
 
         <header>
             <h1>Release v1.0.16-rc2</h1>
-            <p>Resumo tecnico e operacional da release atual publicada no canal remoto do CaraCore-PDV.</p>
+            <p>Resumo técnico e operacional da release atual publicada no canal remoto do CaraCore-PDV.</p>
         </header>
 
         <p class="download-notice"><strong>Publicado em 04/04/2026.</strong> Release candidata com instalador Windows x64, runtime embarcado e artefatos para auto-update.</p>
@@ -34,7 +34,7 @@
         <section class="card wiki-card">
             <h2>Resumo</h2>
             <ul>
-                <li>Tipo: prerelease candidata de validacao</li>
+                <li>Tipo: prerelease candidata de validação</li>
                 <li>Plataforma: Windows x64</li>
                 <li>Instalador principal: <code>caracore-pdv-1.0.16-rc2-windows-x64.exe</code></li>
                 <li>Banco local: <code>SQLite</code></li>
@@ -42,48 +42,183 @@
         </section>
 
         <section class="card wiki-card">
-            <h2>Conteudo publicado</h2>
+            <h2>Informações da aplicação</h2>
+            <div class="wiki-table-wrap">
+                <table class="wiki-table">
+                    <thead>
+                        <tr>
+                            <th>Domínio</th>
+                            <th>Definição na v1.0.16-rc2</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Modelo</td>
+                            <td>PDV local para Windows com acesso via <code>localhost:8080</code></td>
+                        </tr>
+                        <tr>
+                            <td>Persistência</td>
+                            <td>SQLite local para continuidade operacional</td>
+                        </tr>
+                        <tr>
+                            <td>Distribuicao</td>
+                            <td>Instalador EXE com suporte a atualização incremental</td>
+                        </tr>
+                        <tr>
+                            <td>Objetivo da RC</td>
+                            <td>Validar instalação, fluxo mínimo de venda e estabilidade geral</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="card wiki-card">
+            <h2>Regras de negócio centrais</h2>
+            <ul>
+                <li><strong>RB-01 Operação local:</strong> a venda deve ser concluível com banco SQLite local.</li>
+                <li><strong>RB-02 Fonte oficial:</strong> instalador e metadados de update devem vir do canal oficial de releases.</li>
+                <li><strong>RB-03 Integridade de validação:</strong> toda anomalia em homologação deve ser registrada com evidência.</li>
+                <li><strong>RB-04 Fluxo mínimo obrigatorio:</strong> login, cadastro de item, venda e recibo devem funcionar sem erro.</li>
+            </ul>
+        </section>
+
+        <section class="card wiki-card">
+            <h2>Conteúdo publicado</h2>
             <ul>
                 <li>Instalador <code>.exe</code></li>
                 <li>Arquivo <code>builder-debug.yml</code></li>
-                <li>Arquivo <code>.blockmap</code> para atualizacao incremental</li>
+                <li>Arquivo <code>.blockmap</code> para atualização incremental</li>
                 <li>Guia <code>INSTALACAO.md</code></li>
             </ul>
         </section>
 
         <section class="card wiki-card">
-            <h2>Caracteristicas desta RC2</h2>
+            <h2>Características desta RC2</h2>
             <ul>
-                <li>Degustacao Free com 100 vendas para teste real</li>
-                <li>Operacao offline com SQLite local</li>
-                <li>Ofuscacao aplicada ao pacote distribuido</li>
+                <li>Degustação Free com 100 vendas para teste real</li>
+                <li>Operação offline com SQLite local</li>
+                <li>Ofuscação aplicada ao pacote distribuido</li>
                 <li>Runtime Java 21 embarcado</li>
                 <li>Compatibilidade com fluxo de auto-update</li>
             </ul>
         </section>
 
         <section class="card wiki-card">
+            <h2>Funcionalidades por módulo</h2>
+
+            <h3>1) Acesso e usuários</h3>
+            <ul>
+                <li>Login administrativo para bootstrap de ambiente.</li>
+                <li>Base para governança de operadores.</li>
+            </ul>
+
+            <h3>2) Cadastros e venda</h3>
+            <ul>
+                <li>Cadastro de itens e execução de ciclo mínimo de venda.</li>
+                <li>Persistência local dos dados após reinício.</li>
+            </ul>
+
+            <h3>3) Recibo e operação</h3>
+            <ul>
+                <li>Emissão de comprovante digital no fluxo de teste.</li>
+                <li>Comportamento orientado a continuidade operacional local.</li>
+            </ul>
+        </section>
+
+        <section class="card wiki-card">
+            <h2>Cadastros existentes nesta versão (uso prático no PDV)</h2>
+            <div class="wiki-table-wrap">
+                <table class="wiki-table">
+                    <thead>
+                        <tr>
+                            <th>Cadastro</th>
+                            <th>Finalidade no PDV</th>
+                            <th>Uso pratico na rotina</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Loja</td><td>Unidade de operação</td><td>Registrar unidade antes de abrir caixa e estoque.</td></tr>
+                        <tr><td>Operador</td><td>Autenticação e trilha de acao</td><td>Criar usuário admin e backup administrativo para contingência.</td></tr>
+                        <tr><td>Vendedor</td><td>Atribuição comercial da venda</td><td>Definir vendedor padrão para operação rápida no balcão.</td></tr>
+                        <tr><td>Produto</td><td>Catalogo e precificacao</td><td>Importar ou cadastrar itens de maior giro para teste real.</td></tr>
+                        <tr><td>Estoque</td><td>Controle de saldo por loja</td><td>Conferir quantidade inicial e ajustar mínimo/maximo.</td></tr>
+                        <tr><td>Cliente</td><td>Cadastro para relacionamento e recibo</td><td>Usar cadastro rápido no atendimento quando sólicitado.</td></tr>
+                        <tr><td>Venda (cadastro de venda)</td><td>Fluxo principal de caixa</td><td>Executar ciclo completo com fechamento e recibo digital.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>Fluxo operacional sugerido: <strong>cadastros estruturais primeiro, depois cadastros comerciais, por fim venda em produção assistida</strong>.</p>
+        </section>
+
+        <section class="card wiki-card">
+            <h2>Operação por turno (quadro pratico)</h2>
+            <div class="wiki-table-wrap">
+                <table class="wiki-table">
+                    <thead>
+                        <tr>
+                            <th>Turno</th>
+                            <th>Responsável principal</th>
+                            <th>Cadastros e ações</th>
+                            <th>Checklist rápido</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Abertura</td>
+                            <td>ADMIN / GERENTE</td>
+                            <td>Revisar cadastros base e saldos de estoque.</td>
+                            <td>Conferir acesso de operadores e disponibilidade dos produtos.</td>
+                        </tr>
+                        <tr>
+                            <td>Operação</td>
+                            <td>CAIXA</td>
+                            <td>Executar venda e cadastro rápido de cliente quando necessário.</td>
+                            <td>Pagamento concluido, recibo digital emitido e venda registrada.</td>
+                        </tr>
+                        <tr>
+                            <td>Fechamento</td>
+                            <td>GERENTE / ADMIN</td>
+                            <td>Conferir consistência de vendas e estoque.</td>
+                            <td>Registrar anomalias de homologação com evidência.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="card wiki-card">
+            <h2>Critérios de validação desta versão</h2>
+            <ul>
+                <li>Instalação sem erro em Windows 10/11</li>
+                <li>Subida da aplicação em <code>localhost:8080</code></li>
+                <li>Fluxo mínimo validado ponta a ponta</li>
+                <li>Dados preservados no SQLite após reinicialização</li>
+            </ul>
+        </section>
+
+        <section class="card wiki-card">
             <h2>Primeiro acesso</h2>
             <ul>
-                <li>Endereco local: <code>http://localhost:8080</code></li>
-                <li>Usuario: <code>admin</code></li>
+                <li>Endereço local: <code>http://localhost:8080</code></li>
+                <li>Usuário: <code>admin</code></li>
                 <li>Senha: <code>123456</code></li>
             </ul>
             <div class="wiki-links">
                 <a href="download.html" class="btn-release">Baixar EXE</a>
-                <a href="wiki-caracteristicas.html" class="btn-release btn-release-outline">Caracteristicas da aplicacao</a>
-                <a href="wiki.html" class="btn-release btn-release-outline">Voltar a wiki</a>
+                <a href="wiki-caracteristicas.html" class="btn-release btn-release-outline">Características da aplicação</a>
+                <a href="wiki.html" class="btn-release btn-release-outline">Voltar à wiki</a>
                 <a href="index.html" class="btn-release btn-release-outline">Portal da loja</a>
             </div>
         </section>
 
         <nav class="back">
-            <a href="wiki.html">← Voltar a wiki</a> · <a href="download.html">Download</a> · Release atual da loja
+            <a href="wiki.html">← Voltar à wiki</a> · <a href="wiki.html">Trilha de versões</a> · <a href="download.html">Download</a> · <a href="tecnologia.html">Tecnologia</a> · Release v1.0.16-rc2
         </nav>
     </div>
     <script src="https://pdv.caracore.com.br/assets/js/loja.js"></script>
 
-    <footer class="evo-roadmap-footer" role="contentinfo"><p class="evo-roadmap-title">Proximos passos</p><ul class="evo-roadmap-list"><li>Dominio proprio <span class="evo-roadmap-tag">Em planejamento</span></li><li>Integracao PIX nativa</li><li>IA para estoque</li></ul></footer>
+    <footer class="evo-roadmap-footer" role="contentinfo"><p class="evo-roadmap-title">Próximos passos</p><ul class="evo-roadmap-list"><li>Domínio próprio <span class="evo-roadmap-tag">Em planejamento</span></li><li>Integração PIX nativa</li><li>IA para estoque</li></ul></footer>
     <div class="evo-feedback-fab"><a href="canal-feedback.html" class="evo-feedback-btn" aria-label="Sugira uma melhoria no canal da loja"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> Sugira uma melhoria</a></div>
 </body>
 </html>

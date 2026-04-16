@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="https://pdv.caracore.com.br/">
+    <title>Wiki Release 1.0.16 - CaraCore-PDV</title>
+    <meta name="description" content="Wiki completa da release 1.0.16 do CaraCore-PDV: aplicação, regras de negócio, funcionalidades e validação operacional.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pdv.caracore.com.br/assets/css/loja.css">
+    <link rel="stylesheet" href="https://pdv.caracore.com.br/assets/evolution-status/evolution-status.css">
+    <link rel="stylesheet" href="/assets/caracore-core-typography.css">
+    <link rel="stylesheet" href="/assets/caracore-institutional-components.css">
+</head>
+<body class="page-wiki page-wiki-release">
+    <div class="wrapper">
+        <nav class="breadcrumb" aria-label="Navegação">
+            <a href="index.html">CaraCore-PDV - Loja</a>
+            <span> · </span>
+            <a href="wiki.html">Wiki da Loja</a>
+            <span> · </span>
+            <span>Release v1.0.16</span>
+        </nav>
+
+        <header>
+            <h1>Release v1.0.16</h1>
+            <p>Wiki técnica da release 1.0.16, marco da série inicial com operação local e fluxo de venda para validação em ambiente real.</p>
+        </header>
+
+        <p class="download-notice"><strong>Canal:</strong> release da série 1.0.16. Referência histórica para comparação de evolução da plataforma.</p>
+
+        <section class="card wiki-card">
+            <h2>Resumo executivo</h2>
+            <ul>
+                <li>Tipo: release da linha 1.0.x</li>
+                <li>Plataforma: Windows x64</li>
+                <li>Banco: SQLite local</li>
+                <li>Objetivo: operação local estável para frente de caixa</li>
+            </ul>
+        </section>
+
+        <section class="card wiki-card">
+            <h2>Informações da aplicação</h2>
+            <ul>
+                <li>App local com entrada por <code>localhost:8080</code></li>
+                <li>Persistência em banco local para simplificar implantacao</li>
+                <li>Fluxo operacional voltado a vendas e recibo digital</li>
+            </ul>
+        </section>
+
+        <section class="card wiki-card">
+            <h2>Regras de negócio centrais</h2>
+            <ul>
+                <li><strong>RB-01:</strong> instalação deve concluir sem dependência de banco remoto.</li>
+                <li><strong>RB-02:</strong> fluxo mínimo de venda deve fechar sem erro funcional.</li>
+                <li><strong>RB-03:</strong> dados de venda devem persistir entre reinicializacoes.</li>
+                <li><strong>RB-04:</strong> distribuição e suporte seguem canal oficial de releases.</li>
+            </ul>
+        </section>
+
+        <section class="card wiki-card">
+            <h2>Funcionalidades por módulo</h2>
+            <h3>1) Operação de caixa</h3>
+            <ul>
+                <li>Abertura de venda, inclusão de itens e fechamento.</li>
+                <li>Emissão de recibo digital no fluxo principal.</li>
+            </ul>
+
+            <h3>2) Cadastros basicos</h3>
+            <ul>
+                <li>Cadastro de entidades essenciais para operação da loja.</li>
+            </ul>
+
+            <h3>3) Persistência e retomada</h3>
+            <ul>
+                <li>Dados mantidos em SQLite local entre execucoes da aplicação.</li>
+            </ul>
+        </section>
+
+        <section class="card wiki-card">
+            <h2>Cadastros existentes nesta versão (uso prático no PDV)</h2>
+            <div class="wiki-table-wrap">
+                <table class="wiki-table">
+                    <thead>
+                        <tr>
+                            <th>Cadastro</th>
+                            <th>Finalidade no PDV</th>
+                            <th>Uso pratico na rotina</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Loja</td><td>Unidade operacional do caixa</td><td>Cadastrar a loja antes do primeiro ciclo de venda completo.</td></tr>
+                        <tr><td>Operador</td><td>Controle de acesso e rastreabilidade</td><td>Criar operador titular e operador de contingência para troca de turno.</td></tr>
+                        <tr><td>Vendedor</td><td>Responsável comercial da venda</td><td>Selecionar vendedor no início da venda para vincular comissão e histórico.</td></tr>
+                        <tr><td>Produto</td><td>Catalogo de itens vendidos</td><td>Registrar código interno, descrição e preco antes de operar no caixa.</td></tr>
+                        <tr><td>Estoque</td><td>Saldo por produto e loja</td><td>Ajustar quantidade inicial para evitar ruptura no primeiro dia de uso.</td></tr>
+                        <tr><td>Cliente</td><td>Identificação para recibo e relacionamento</td><td>Cadastrar rapidamente no atendimento quando necessário.</td></tr>
+                        <tr><td>Venda (cadastro de venda)</td><td>Operação principal de caixa</td><td>Selecionar vendedor, incluir itens, escolher pagamento e finalizar recibo.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>Ordem recomendada de implantacao na prática: <strong>Loja → Operadores → Vendedores → Produtos → Estoque → Clientes → Vendas</strong>.</p>
+        </section>
+
+        <section class="card wiki-card">
+            <h2>Operação por turno (quadro pratico)</h2>
+            <div class="wiki-table-wrap">
+                <table class="wiki-table">
+                    <thead>
+                        <tr>
+                            <th>Turno</th>
+                            <th>Responsável principal</th>
+                            <th>Cadastros e ações</th>
+                            <th>Checklist rápido</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Abertura</td>
+                            <td>ADMIN / GERENTE</td>
+                            <td>Conferir Loja, Operadores, Vendedores, Produtos e Estoque.</td>
+                            <td>Validar login, saldo inicial e item de teste pesquisável.</td>
+                        </tr>
+                        <tr>
+                            <td>Operação</td>
+                            <td>CAIXA</td>
+                            <td>Cadastrar Cliente quando necessário e executar Venda (cadastro de venda).</td>
+                            <td>Selecionar vendedor, finalizar pagamento e emitir recibo.</td>
+                        </tr>
+                        <tr>
+                            <td>Fechamento</td>
+                            <td>GERENTE / ADMIN</td>
+                            <td>Conferir vendas, recibos e consistência dos dados de estoque.</td>
+                            <td>Fechar app com persistência confirmada e registrar ocorrências.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="card wiki-card">
+            <h2>Primeiro acesso</h2>
+            <ul>
+                <li>Endereço local: <code>http://localhost:8080</code></li>
+                <li>Usuário: <code>admin</code></li>
+                <li>Senha: <code>123456</code></li>
+            </ul>
+            <div class="wiki-links">
+                <a href="https://github.com/chmulato/caracore-pdv-releases/releases/tag/v1.0.16" class="btn-release" target="_blank" rel="noopener">Abrir release no GitHub</a>
+                <a href="wiki.html" class="btn-release btn-release-outline">Voltar à wiki</a>
+                <a href="download.html" class="btn-release btn-release-outline">Download</a>
+            </div>
+        </section>
+
+        <nav class="back">
+            <a href="wiki.html">← Voltar à wiki</a> · <a href="wiki.html">Trilha de versões</a> · <a href="download.html">Download</a> · <a href="tecnologia.html">Tecnologia</a> · Release v1.0.16
+        </nav>
+    </div>
+    <script src="https://pdv.caracore.com.br/assets/js/loja.js"></script>
+
+    <footer class="evo-roadmap-footer" role="contentinfo"><p class="evo-roadmap-title">Próximos passos</p><ul class="evo-roadmap-list"><li>Comparar evolução para série 2.x</li><li>Consolidar trilha histórica da wiki</li></ul></footer>
+    <div class="evo-feedback-fab"><a href="canal-feedback.html" class="evo-feedback-btn" aria-label="Sugira uma melhoria no canal da loja"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> Sugira uma melhoria</a></div>
+</body>
+</html>

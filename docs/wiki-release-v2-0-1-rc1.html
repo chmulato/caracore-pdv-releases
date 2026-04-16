@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="https://pdv.caracore.com.br/">
+    <title>Wiki Release 2.0.1-rc1 - CaraCore-PDV</title>
+    <meta name="description" content="Wiki completa da release 2.0.1-rc1 do CaraCore-PDV: aplicação, regras de negócio, funcionalidades e critérios de validação.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pdv.caracore.com.br/assets/css/loja.css">
+    <link rel="stylesheet" href="https://pdv.caracore.com.br/assets/evolution-status/evolution-status.css">
+    <link rel="stylesheet" href="/assets/caracore-core-typography.css">
+    <link rel="stylesheet" href="/assets/caracore-institutional-components.css">
+</head>
+<body class="page-wiki page-wiki-release">
+    <div class="wrapper">
+        <nav class="breadcrumb" aria-label="Navegação">
+            <a href="index.html">CaraCore-PDV - Loja</a>
+            <span> · </span>
+            <a href="wiki.html">Wiki da Loja</a>
+            <span> · </span>
+            <span>Release v2.0.1-rc1</span>
+        </nav>
+
+        <header>
+            <h1>Release v2.0.1-rc1</h1>
+            <p>Wiki técnica da pré-release 2.0.1-rc1 para validações de campo antes da consolidação da próxima versão final.</p>
+        </header>
+
+        <p class="download-notice"><strong>Canal:</strong> pré-release de homologação controlada. Recomendado para testes guiados, validação de rotina operacional e conferência de instalador.</p>
+
+        <section class="card wiki-card">
+            <h2>Resumo executivo</h2>
+            <ul>
+                <li>Tipo: pré-release (release candidate incremental)</li>
+                <li>Linha de evolução: série 2.x</li>
+                <li>Plataforma: Windows x64</li>
+                <li>Banco oficial da operação: SQLite local</li>
+                <li>Objetivo: validar estabilidade de distribuição e rotina de atualização</li>
+            </ul>
+        </section>
+
+        <section class="card wiki-card">
+            <h2>Informações da aplicação na 2.0.1-rc1</h2>
+            <div class="wiki-table-wrap">
+                <table class="wiki-table">
+                    <thead>
+                        <tr>
+                            <th>Domínio</th>
+                            <th>Definição</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Execução</td>
+                            <td>Aplicação local em <code>localhost:8080</code> para operação de caixa</td>
+                        </tr>
+                        <tr>
+                            <td>Persistência</td>
+                            <td>SQLite local com foco em soberania e continuidade operacional</td>
+                        </tr>
+                        <tr>
+                            <td>Distribuicao</td>
+                            <td>Canal oficial em GitHub Releases com artefatos de atualização incremental</td>
+                        </tr>
+                        <tr>
+                            <td>Público alvo</td>
+                            <td>Lojas em validação antecipada e time técnico de homologação</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="card wiki-card">
+            <h2>Regras de negócio para homologação</h2>
+            <ul>
+                <li><strong>RB-01 Canal controlado:</strong> esta versão não substitui automaticamente o canal estável para produção.</li>
+                <li><strong>RB-02 Operação local:</strong> o fluxo de venda deve funcionar com banco local SQLite mesmo em conectividade instável.</li>
+                <li><strong>RB-03 Integridade de atualização:</strong> artefatos de update devem ser validados antes de promover para final.</li>
+                <li><strong>RB-04 Compatibilidade de dados:</strong> base local existente deve abrir sem perda de histórico operacional.</li>
+                <li><strong>RB-05 Rastro de erro:</strong> qualquer regressão observada deve ser reportada com horário, cenário e evidências.</li>
+            </ul>
+        </section>
+
+        <section class="card wiki-card">
+            <h2>Funcionalidades avaliadas nesta RC</h2>
+
+            <h3>1) Instalação e bootstrap local</h3>
+            <ul>
+                <li>Instalação do executável Windows e abertura do app sem etapa manual extra.</li>
+                <li>Subida do backend local e acesso ao login via navegador local.</li>
+            </ul>
+
+            <h3>2) Login e operação básica</h3>
+            <ul>
+                <li>Autenticação do operador no ambiente de degustação.</li>
+                <li>Acesso aos módulos de cadastro, venda e recibo digital.</li>
+            </ul>
+
+            <h3>3) Ciclo mínimo de venda</h3>
+            <ul>
+                <li>Cadastro de item de teste, abertura de venda, fechamento e comprovação de persistência.</li>
+                <li>Reabertura da aplicação com dados preservados no SQLite local.</li>
+            </ul>
+
+            <h3>4) Atualização incremental</h3>
+            <ul>
+                <li>Conferência de arquivos de metadados de update (ex.: <code>latest.yml</code> e <code>.blockmap</code> quando presentes).</li>
+                <li>Verificação do comportamento esperado no fluxo de upgrade.</li>
+            </ul>
+        </section>
+
+        <section class="card wiki-card">
+            <h2>Cadastros existentes nesta versão (uso prático no PDV)</h2>
+            <div class="wiki-table-wrap">
+                <table class="wiki-table">
+                    <thead>
+                        <tr>
+                            <th>Cadastro</th>
+                            <th>Finalidade no PDV</th>
+                            <th>Uso pratico na rotina</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Loja</td><td>Base organizacional</td><td>Habilitar unidade para testes de campo por filial.</td></tr>
+                        <tr><td>Operador</td><td>Segregacao de responsabilidade</td><td>Validar comportamento por perfil (ADMIN, GERENTE, CAIXA).</td></tr>
+                        <tr><td>Vendedor</td><td>Vínculo comercial no caixa</td><td>Selecionar vendedor ao iniciar a venda.</td></tr>
+                        <tr><td>Produto</td><td>Catalogo e preco de venda</td><td>Cadastrar itens de teste e conferir pesquisa por nome/código.</td></tr>
+                        <tr><td>Estoque</td><td>Disponibilidade de itens</td><td>Ajustar saldos para validar baixa de estoque no ciclo de venda.</td></tr>
+                        <tr><td>Cliente</td><td>Identificação de comprador</td><td>Cadastrar no atendimento e testar permissão de exclusão por perfil.</td></tr>
+                        <tr><td>Venda (cadastro de venda)</td><td>Fluxo operacional fim a fim</td><td>Executar venda real de homologação com recibo digital.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>Roteiro recomendado para validação RC: <strong>cadastros estruturais → cadastros comerciais → ciclo de venda → conferência de permissão por papel</strong>.</p>
+        </section>
+
+        <section class="card wiki-card">
+            <h2>Operação por turno (quadro pratico)</h2>
+            <div class="wiki-table-wrap">
+                <table class="wiki-table">
+                    <thead>
+                        <tr>
+                            <th>Turno</th>
+                            <th>Responsável principal</th>
+                            <th>Cadastros e ações</th>
+                            <th>Checklist rápido</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Abertura</td>
+                            <td>ADMIN / GERENTE</td>
+                            <td>Executar checklist de cadastros base para homologação.</td>
+                            <td>Confirmar papéis e comportamentos esperados em cada aba.</td>
+                        </tr>
+                        <tr>
+                            <td>Operação</td>
+                            <td>CAIXA</td>
+                            <td>Rodar ciclo de venda com cadastro de cliente quando aplicável.</td>
+                            <td>Pagamento concluido e recibo digital emitido sem erro.</td>
+                        </tr>
+                        <tr>
+                            <td>Fechamento</td>
+                            <td>GERENTE / ADMIN</td>
+                            <td>Consolidar evidências de teste e ocorrências da RC.</td>
+                            <td>Decisao de promover ou não a versão para release final.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="card wiki-card">
+            <h2>Critérios de validação</h2>
+            <ul>
+                <li>Instalação sem erro em Windows 10/11</li>
+                <li>Inicialização da aplicação em <code>localhost:8080</code></li>
+                <li>Login funcional e ciclo mínimo de venda concluido</li>
+                <li>Persistência local confirmada após reinício da aplicação</li>
+                <li>Evidência de logs para eventuais falhas reproduziveis</li>
+            </ul>
+        </section>
+
+        <section class="card wiki-card">
+            <h2>Primeiro acesso</h2>
+            <ul>
+                <li>Endereço local: <code>http://localhost:8080</code></li>
+                <li>Usuário: <code>admin</code></li>
+                <li>Senha: <code>123456</code></li>
+                <li>Banco: SQLite local</li>
+            </ul>
+            <div class="wiki-links">
+                <a href="https://github.com/chmulato/caracore-pdv-releases/releases/tag/v2.0.1-rc1" class="btn-release" target="_blank" rel="noopener">Abrir release no GitHub</a>
+                <a href="download.html" class="btn-release btn-release-outline">Download</a>
+                <a href="wiki.html" class="btn-release btn-release-outline">Voltar à wiki</a>
+                <a href="index.html" class="btn-release btn-release-outline">Portal da loja</a>
+            </div>
+        </section>
+
+        <nav class="back">
+            <a href="wiki.html">← Voltar à wiki</a> · <a href="wiki.html">Trilha de versões</a> · <a href="download.html">Download</a> · <a href="tecnologia.html">Tecnologia</a> · Pre-release v2.0.1-rc1
+        </nav>
+    </div>
+    <script src="https://pdv.caracore.com.br/assets/js/loja.js"></script>
+
+    <footer class="evo-roadmap-footer" role="contentinfo"><p class="evo-roadmap-title">Próximos passos</p><ul class="evo-roadmap-list"><li>Consolidar homologação de campo</li><li>Promover para release final após aprovação</li><li>Atualizar trilha da wiki por versão</li></ul></footer>
+    <div class="evo-feedback-fab"><a href="canal-feedback.html" class="evo-feedback-btn" aria-label="Sugira uma melhoria no canal da loja"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> Sugira uma melhoria</a></div>
+</body>
+</html>

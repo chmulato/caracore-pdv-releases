@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <base href="https://pdv.caracore.com.br/">
-    <title>Wiki Caracteristicas da Aplicacao — CaraCore-PDV</title>
-    <meta name="description" content="Caracteristicas completas do CaraCore-PDV com base na garagem da aplicacao: modulos, arquitetura, operacao, seguranca, testes e stack.">
+    <title>Wiki Características da Aplicação — CaraCore-PDV</title>
+    <meta name="description" content="Características completas do CaraCore-PDV com base na garagem da aplicação: módulos, arquitetura, operação, segurança, testes e stack.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -16,57 +16,57 @@
 </head>
 <body class="page-wiki page-wiki-caracteristicas">
     <div class="wrapper">
-        <nav class="breadcrumb" aria-label="Navegacao">
+        <nav class="breadcrumb" aria-label="Navegação">
             <a href="index.html">CaraCore-PDV - Loja</a>
             <span> · </span>
             <a href="wiki.html">Wiki da Loja</a>
             <span> · </span>
-            <span>Caracteristicas da Aplicacao</span>
+            <span>Características da Aplicação</span>
         </nav>
 
         <header>
-            <h1>Caracteristicas completas da aplicacao</h1>
-            <p>Baseado na garagem da aplicacao <code>D:\dev\caracore-pdv</code>, este guia consolida as capacidades atuais do CaraCore-PDV em linguagem operacional.</p>
+            <h1>Características completas da aplicação</h1>
+            <p>Baseado na garagem da aplicação <code>D:\dev\caracore-pdv</code>, este guia consolida as capacidades atuais do CaraCore-PDV em linguagem operacional.</p>
         </header>
 
-        <p class="download-notice"><strong>Fonte oficial:</strong> codigo e documentacao da garagem. Escopo desta pagina: produto, arquitetura, modulos, operacao, seguranca, testes e planos.</p>
+        <p class="download-notice"><strong>Fonte oficial:</strong> código e documentação da garagem. Escopo desta página: produto, arquitetura, módulos, operação, segurança, testes e planos.</p>
 
         <section class="card wiki-card">
-            <h2>1. Visao de produto</h2>
+            <h2>1. Visão de produto</h2>
             <ul>
-                <li>PDV Selo Verde para varejo brasileiro com foco em operacao antifragil</li>
-                <li>Execucao local com SQLite para soberania de dados e continuidade de venda</li>
+                <li>PDV Selo Verde para varejo brasileiro com foco em operação antifrágil</li>
+                <li>Execução local com SQLite para soberania de dados e continuidade de venda</li>
                 <li>Fluxo preparado para Reforma Tributaria 2026-2033</li>
                 <li>Distribuicao principal em Windows Desktop (EXE) com abertura em <code>localhost:8080</code></li>
             </ul>
         </section>
 
         <section class="card wiki-card">
-            <h2>2. Stack tecnologica</h2>
+            <h2>2. Stack tecnológica</h2>
             <div class="wiki-table-wrap">
                 <table class="wiki-table">
                     <thead>
                         <tr>
                             <th>Camada</th>
                             <th>Tecnologias</th>
-                            <th>Observacao</th>
+                            <th>Observação</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>Backend</td>
                             <td>Java 21, Spring Boot, Spring Data JPA, Spring Security, Hibernate</td>
-                            <td>Base de negocio e APIs REST do PDV</td>
+                            <td>Base de negócio e APIs REST do PDV</td>
                         </tr>
                         <tr>
                             <td>Frontend</td>
                             <td>Thymeleaf, Bootstrap, HTMX, ApexCharts, jQuery</td>
-                            <td>Interface web responsiva para operacao e administracao</td>
+                            <td>Interface web responsiva para operação e administração</td>
                         </tr>
                         <tr>
                             <td>Banco</td>
                             <td>SQLite</td>
-                            <td>Perfil padrao e armazenamento local</td>
+                            <td>Perfil padrão e armazenamento local</td>
                         </tr>
                         <tr>
                             <td>Desktop</td>
@@ -74,7 +74,7 @@
                             <td>Instalador Windows com bootstrap do servidor local</td>
                         </tr>
                         <tr>
-                            <td>Relatorios</td>
+                            <td>Relatórios</td>
                             <td>JasperReports</td>
                             <td>Geracao de PDF gerencial e fiscal</td>
                         </tr>
@@ -84,36 +84,36 @@
         </section>
 
         <section class="card wiki-card">
-            <h2>3. Modulos funcionais</h2>
+            <h2>3. Módulos funcionais</h2>
             <ul>
-                <li>PDV frente de caixa com atalhos, fluxo rapido e formas de pagamento</li>
-                <li>Gestao de vendas com ciclo completo e rastreio de status</li>
+                <li>PDV frente de caixa com atalhos, fluxo rápido e formas de pagamento</li>
+                <li>Gestão de vendas com ciclo completo e rastreio de status</li>
                 <li>Cadastro e pesquisa de produtos, clientes, vendedores, lojas e operadores</li>
                 <li>Controle de estoque por loja e monitoramento administrativo</li>
                 <li>Dashboard executivo com indicadores em tempo real</li>
-                <li>Relatorios gerenciais e relatorio para contador (plano Premium)</li>
-                <li>Suporte a operacao multi-loja</li>
+                <li>Relatórios gerenciais e relatório para contador (plano Premium)</li>
+                <li>Suporte a operação multi-loja</li>
             </ul>
         </section>
 
         <section class="card wiki-card">
-            <h2>4. Operacao local e contingencia</h2>
+            <h2>4. Operação local e contingência</h2>
             <ul>
-                <li>Banco local em SQLite para operar mesmo com internet instavel</li>
-                <li>Modo de contingencia com fila local para eventos fiscais</li>
-                <li>Fluxo antifragil para manter venda em condicao degradada</li>
-                <li>Desktop com inicializacao assistida do backend local quando necessario</li>
-                <li>Primeiro acesso de degustacao na loja: <code>admin / 123456</code></li>
+                <li>Banco local em SQLite para operar mesmo com internet instável</li>
+                <li>Modo de contingência com fila local para eventos fiscais</li>
+                <li>Fluxo antifrágil para manter venda em condição degradada</li>
+                <li>Desktop com inicialização assistida do backend local quando necessário</li>
+                <li>Primeiro acesso de degustação na loja: <code>admin / 123456</code></li>
             </ul>
         </section>
 
         <section class="card wiki-card">
-            <h2>5. Seguranca e hardening</h2>
+            <h2>5. Segurança e hardening</h2>
             <ul>
-                <li>Controles de autenticacao e autorizacao na aplicacao</li>
-                <li>Empacotamento desktop com foco em integridade e protecao de codigo</li>
-                <li>Ofuscacao no fluxo de distribuicao</li>
-                <li>Diagnostico guiado no desktop com logs e coleta de evidencia</li>
+                <li>Controles de autenticação e autorização na aplicação</li>
+                <li>Empacotamento desktop com foco em integridade e proteção de código</li>
+                <li>Ofuscação no fluxo de distribuição</li>
+                <li>Diagnóstico guiado no desktop com logs e coleta de evidência</li>
                 <li>Trilha de suporte com canais formais (e-mail, WhatsApp, Telegram)</li>
             </ul>
         </section>
@@ -121,9 +121,9 @@
         <section class="card wiki-card">
             <h2>6. Fiscal, compliance e sustentabilidade</h2>
             <ul>
-                <li>Motor fiscal com evolucao aderente ao cronograma 2026-2033</li>
-                <li>Recibo digital para reduzir custo de papel e impressao</li>
-                <li>Registro local e rastreabilidade de operacoes</li>
+                <li>Motor fiscal com evolução aderente ao cronograma 2026-2033</li>
+                <li>Recibo digital para reduzir custo de papel e impressão</li>
+                <li>Registro local e rastreabilidade de operações</li>
                 <li>Posicionamento Selo Verde com foco em economia operacional</li>
             </ul>
         </section>
@@ -141,14 +141,14 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Free (Degustacao)</td>
-                            <td>Validacao real da operacao</td>
-                            <td>100 vendas para teste, operacao local, fluxo base do PDV</td>
+                            <td>Free (Degustação)</td>
+                            <td>Validação real da operação</td>
+                            <td>100 vendas para teste, operação local, fluxo base do PDV</td>
                         </tr>
                         <tr>
                             <td>Premium</td>
                             <td>Continuidade operacional ampliada</td>
-                            <td>Recuperacao de senha por SMS, relatorio do contador, suporte prioritario e automacoes premium</td>
+                            <td>Recuperação de senha por SMS, relatório do contador, suporte prioritario e automações premium</td>
                         </tr>
                     </tbody>
                 </table>
@@ -158,43 +158,43 @@
         <section class="card wiki-card">
             <h2>8. Testes e qualidade</h2>
             <ul>
-                <li>Testes Java (unitarios e integracao) com JUnit e Mockito</li>
+                <li>Testes Java (unitários e integração) com JUnit e Mockito</li>
                 <li>Cobertura com JaCoCo</li>
                 <li>Testes de interface com Selenium e Pytest</li>
                 <li>Testes fiscais no desktop com Vitest e mocks da SEFAZ</li>
-                <li>Validacoes de contingencia e sincronizacao em fila local</li>
+                <li>Validações de contingência e sincronização em fila local</li>
             </ul>
         </section>
 
         <section class="card wiki-card">
-            <h2>9. Governanca de release local</h2>
+            <h2>9. Governança de release local</h2>
             <ul>
-                <li>Canal de distribuicao oficial: GitHub Releases do repositorio de entregas</li>
-                <li>Canal estavel para producao e canal pre-release para validacoes controladas</li>
-                <li>Integridade do instalador validada em pipeline antes de publicacao</li>
-                <li>Loja local atua como vitrine e navegacao, sem espelhamento redundante de binarios</li>
-                <li>Rastreabilidade por tag de versao e historico publico de release</li>
+                <li>Canal de distribuição oficial: GitHub Releases do repositório de entregas</li>
+                <li>Canal estável para produção e canal pré-release para validações controladas</li>
+                <li>Integridade do instalador validada em pipeline antes de publicação</li>
+                <li>Loja local atua como vitrine e navegação, sem espelhamento redundante de binários</li>
+                <li>Rastreabilidade por tag de versão e histórico público de release</li>
             </ul>
         </section>
 
         <section class="card wiki-card">
-            <h2>10. Navegacao recomendada da wiki</h2>
+            <h2>10. Navegação recomendada da wiki</h2>
             <div class="wiki-links">
-                <a href="wiki-release-v2-0-0.html" class="btn-release">Release atual</a>
+                <a href="wiki-release-v3-0-0.html" class="btn-release">Prévia da próxima versão (v3.0.0)</a>
+                <a href="wiki.html" class="btn-release btn-release-outline">Trilha completa de versões</a>
                 <a href="download.html" class="btn-release btn-release-outline">Download</a>
                 <a href="tecnologia.html" class="btn-release btn-release-outline">Tecnologia</a>
-                <a href="wiki.html" class="btn-release btn-release-outline">Voltar a wiki</a>
                 <a href="index.html" class="btn-release btn-release-outline">Portal da loja</a>
             </div>
         </section>
 
         <nav class="back">
-            <a href="wiki.html">← Voltar a wiki</a> · <a href="wiki-release-v2-0-0.html">Release atual</a> · Caracteristicas consolidadas da aplicacao
+            <a href="wiki.html">← Voltar à wiki</a> · <a href="wiki.html">Trilha de versões</a> · <a href="download.html">Download</a> · <a href="tecnologia.html">Tecnologia</a> · Características consolidadas da aplicação
         </nav>
     </div>
     <script src="https://pdv.caracore.com.br/assets/js/loja.js"></script>
 
-    <footer class="evo-roadmap-footer" role="contentinfo"><p class="evo-roadmap-title">Proximos passos</p><ul class="evo-roadmap-list"><li>Dominio proprio <span class="evo-roadmap-tag">Em planejamento</span></li><li>Integracao PIX nativa</li><li>IA para estoque</li></ul></footer>
+    <footer class="evo-roadmap-footer" role="contentinfo"><p class="evo-roadmap-title">Próximos passos</p><ul class="evo-roadmap-list"><li>Domínio próprio <span class="evo-roadmap-tag">Em planejamento</span></li><li>Integração PIX nativa</li><li>IA para estoque</li></ul></footer>
     <div class="evo-feedback-fab"><a href="canal-feedback.html" class="evo-feedback-btn" aria-label="Sugira uma melhoria no canal da loja"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> Sugira uma melhoria</a></div>
 </body>
 </html>
