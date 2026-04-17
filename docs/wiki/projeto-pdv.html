@@ -254,7 +254,7 @@
                                     </div>
                                     <div class="feature-content">
                                         <p><strong>Para leigos:</strong> Se a internet cair, as vendas continuam em banco local e são enviadas quando voltar; em contingência, usa SQLite e avisa por SMS. O app Android no celular ainda recebe a ativação da <strong>Licença Premium por SMS</strong> e mostra se está ativa (verde) ou inativa (vermelho).</p>
-                                        <p><strong>Técnico:</strong> Modo contingência: SQLite local + ADB/SMS. App <strong>pdv-sms-enviar</strong> (android-sms-enviar): envio de SMS via ADB; <strong>recepção de licença Premium por SMS</strong> (CC-LICENSE/CARACORE-KEY, filtro por número oficial); <strong>LicencaContentProvider</strong> (<code>content://br.com.caracore.pdv.sms.licenca/licenca</code>) com <code>hardware_id</code>, <code>chave</code>, <code>valida</code>, <code>mes_ano</code> para o PDV consultar via ADB; tela com status (Licença Gratuita/Inativa ou Licença Premium Ativa) e botão <strong>Verificar Conexão USB</strong>. Doc: <code>android-sms-enviar/README.md</code>.</p>
+                                        <p><strong>Técnico:</strong> Modo contingência: SQLite local + ADB/SMS. App <strong>pdv-sms-enviar</strong> (android-sms-enviar): envio de SMS via ADB; <strong>recepção de licença Premium por SMS</strong> (CC-LICENSE/CARACORE-KEY, filtro por número oficial); <strong>LicencaContentProvider</strong> (<code>content://br.com.caracore.pdv.sms.licenca/licenca</code>) com <code>hardware_id</code>, <code>chave</code>, <code>valida</code>, <code>mes_ano</code> para o PDV consultar via ADB; tela com status (Licença Gratuita/Inativa ou Licença Premium Ativa) e botão <strong>Verificar Conexão USB</strong>. A documentação pública da loja permanece concentrada nas páginas HTML desta wiki.</p>
                                     </div>
                                 </div>
                             </div>
@@ -306,7 +306,7 @@
                                     </div>
                                     <div class="feature-content">
                                         <p><strong>Para leigos:</strong> Painel para definir políticas de segurança, criptografia de dados sensíveis e agendar backups. No modo contingência: backup automático ao fechar o sistema, envio para nuvem (criptografado) e cópia em USB via celular conectado.</p>
-                                        <p><strong>Técnico:</strong> <code>SqliteBackupService</code> (checkpoint WAL, <code>./backups</code>, retenção 7 dias; USB .gz via ADB); <code>SqliteBackupCloudSyncService</code> (JSON vendas do dia, AES-256-GCM, POST para servidor central). Doc: <code>doc/SQLITE_LOCAL.md</code>; portal <code>docs/</code> (tecnologia.html#seguranca, imagem centro_de_seguranca_e_backup.png).</p>
+                                        <p><strong>Técnico:</strong> <code>SqliteBackupService</code> (checkpoint WAL, <code>./backups</code>, retenção 7 dias; USB .gz via ADB); <code>SqliteBackupCloudSyncService</code> (JSON vendas do dia, AES-256-GCM, POST para servidor central). A visão pública deste tema permanece concentrada nas páginas HTML da loja e na trilha institucional do produto.</p>
                                     </div>
                                 </div>
                             </div>
@@ -474,7 +474,7 @@ cd caracore-pdv
                             <p><strong>Somente SQLite (recomendado para pequenos e médios):</strong></p>
                             <pre><code>docker-compose -f docker/docker-compose.sqlite.yml up -d</code></pre>
                             <p>Um único container; na primeira subida a carga inicial (admin/admin e massa para testes Selenium) é aplicada automaticamente. Banco em <code>/data/caracore-pdv.db</code> (volume <code>sqlite_data</code>).</p>
-                            <p><strong>Modo contingência:</strong> <code>docker-compose.contingency.yml</code> quando necessário. Credenciais (ex.: <code>admin</code>/<code>admin</code>, <code>caixa1</code>/<code>1234</code>) em <code>STATUS_ATUAL.md</code>.</p>
+                            <p><strong>Modo contingência:</strong> <code>docker-compose.contingency.yml</code> quando necessário. Credenciais e materiais operacionais detalhados permanecem na documentação interna da aplicação, fora da trilha pública da loja.</p>
                             <p class="mb-0">Testes Selenium: <code>testes/STATUS_APLICACAO_E_CENARIOS.md</code> e <code>verificar-status-app.bat</code> / <code>verificar-status-app.sh</code>.</p>
                         </div>
                     </section>
@@ -487,12 +487,15 @@ cd caracore-pdv
                             <li><strong>Loja online (vitrine e download):</strong> <a href="https://pdv.caracore.com.br/download.html">canal institucional de releases</a></li>
                             <li><strong>Baixar EXE (Windows):</strong> <a href="https://pdv.caracore.com.br/download.html">loja: download</a></li>
                             <li><strong>Portal oficial:</strong> <a href="https://pdv.caracore.com.br/" target="_blank" rel="noopener">pdv.caracore.com.br</a> (economia, planos, demonstração, Wiki Fiscal, consultoria)</li>
+                            <li><strong>Hub de guias da aplicacao:</strong> <a href="guias-aplicacao.html">central de guias por stack</a></li>
+                            <li><strong>Manual Operacional - Aplicacao Spring:</strong> <a href="manual-operacional-pdv-spring.html">trilha operacional com 19 telas</a></li>
+                            <li><strong>Manual Operacional - Stack Java_21:</strong> <a href="manual-operacional-pdv-java21.html">trilha Java_21 com capturas classificadas</a></li>
                             <li><strong>Tecnologia:</strong> <a href="https://pdv.caracore.com.br/tecnologia.html" target="_blank" rel="noopener">matriz: tecnologia</a></li>
                             <li><strong>Wiki Fiscal e Consultoria:</strong> <a href="https://pdv.caracore.com.br/wiki-fiscal.html" target="_blank" rel="noopener">matriz: wiki-fiscal</a> · <a href="https://pdv.caracore.com.br/consultoria.html" target="_blank" rel="noopener">matriz: consultoria</a></li>
                             <li><strong>Testes Selenium (Docker SQLite):</strong> <code>testes/STATUS_APLICACAO_E_CENARIOS.md</code>; <code>verificar-status-app.bat</code> / <code>verificar-status-app.sh</code></li>
                             <li><strong>SQLite (pequenos e médios):</strong> <code>doc/SQLITE_PEQUENOS_MEDIOS.md</code>; <code>docker-compose.sqlite.yml</code></li>
                         </ul>
-                        <p class="text-muted mt-2">Documentação técnica: <code>STATUS_ATUAL.md</code>, <code>doc/OFFLINE_FIRST.md</code>, <code>doc/MODO_CONTINGENCIA.md</code>, <code>doc/SQLITE_LOCAL.md</code> (backup, cloud AES-256, USB), <code>android-sms-enviar/README.md</code>.</p>
+                        <p class="text-muted mt-2">Documentação pública da loja: páginas HTML desta wiki, com manuais operacionais por stack, manual de upgrade e descrição institucional do produto. Materiais técnicos internos permanecem fora da trilha pública da loja.</p>
                     </section>
 
                     <!-- Contribuição -->

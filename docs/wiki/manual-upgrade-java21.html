@@ -65,10 +65,6 @@
       <pre><code>&amp; D:\\dev\\.venv\\Scripts\\python.exe --version
 &amp; D:\\dev\\.mvn\\activate-maven-env.ps1
 mvn --version</code></pre>
-      <div class="screenshot-box">
-        <img src="assets/images/manual-upgrade-java21/01-precheck-terminal.png" alt="Terminal com pré-check do ambiente">
-        <div class="screenshot-caption">Print 01: landing da aplicação PDV em localhost.</div>
-      </div>
     </div>
 
     <div id="passo2" class="step-card">
@@ -77,10 +73,6 @@ mvn --version</code></pre>
       <pre><code>cd D:\\dev\\caracore-pdv
 $timestamp = Get-Date -Format "yyyy_MM_dd_HHmmss"
 Copy-Item .\\data\\caracore-pdv.db ".\\backups\\caracore-pdv_backup_$timestamp.db"</code></pre>
-      <div class="screenshot-box">
-        <img src="assets/images/manual-upgrade-java21/02-backup-criado.png" alt="Terminal com backup criado">
-        <div class="screenshot-caption">Print 02: seção "O que o CaraCore-PDV resolve".</div>
-      </div>
     </div>
 
     <div id="passo3" class="step-card">
@@ -90,10 +82,6 @@ Copy-Item .\\data\\caracore-pdv.db ".\\backups\\caracore-pdv_backup_$timestamp.d
   --db-path .\\data\\caracore-pdv.db ^
   --backup-dir .\\backups ^
   --report-file .\\upgrade_validation_report.txt</code></pre>
-      <div class="screenshot-box">
-        <img src="assets/images/manual-upgrade-java21/03-upgrade-go.png" alt="Saída do script mostrando result GO">
-        <div class="screenshot-caption">Print 03: seção de benefícios do PDV.</div>
-      </div>
       <div class="callout-ok mt-2"><strong>Critério de aprovação:</strong> o relatório final deve conter <strong>result=GO</strong>.</div>
     </div>
 
@@ -105,10 +93,6 @@ Copy-Item .\\data\\caracore-pdv.db ".\\backups\\caracore-pdv_backup_$timestamp.d
         <li>Teste de autorização por perfil</li>
         <li>Validação de integridade do banco</li>
       </ul>
-      <div class="screenshot-box">
-        <img src="assets/images/manual-upgrade-java21/04-validacao-aplicacao.png" alt="Tela da aplicação após upgrade">
-        <div class="screenshot-caption">Print 04: seção "Pronto para 2026" (fiscal).</div>
-      </div>
     </div>
 
     <div id="passo5" class="step-card">
@@ -117,20 +101,16 @@ Copy-Item .\\data\\caracore-pdv.db ".\\backups\\caracore-pdv_backup_$timestamp.d
       <pre><code>&amp; D:\\dev\\.venv\\Scripts\\python.exe .\\scripts\\upgrade\\rollback_from_backup.py ^
   --backup-dir .\\backups --latest ^
   --db-path .\\data\\caracore-pdv.db --force</code></pre>
-      <div class="screenshot-box">
-        <img src="assets/images/manual-upgrade-java21/05-rollback-ok.png" alt="Saída de rollback com sucesso">
-        <div class="screenshot-caption">Print 05: seção final da página principal da aplicação.</div>
-      </div>
       <div class="callout-warn mt-2"><strong>NO-GO:</strong> qualquer inconsistência de dados, erro de startup ou falha de segurança.</div>
     </div>
 
     <div class="step-card">
       <h2 class="step-title">Checklist de publicação</h2>
       <ul>
-        <li>[ ] 5 prints capturados e salvos em assets/images/manual-upgrade-java21/</li>
-        <li>[ ] print legível (largura recomendada: 1600px)</li>
-        <li>[ ] sem dados sensíveis visíveis</li>
         <li>[ ] GO/NO-GO preenchido</li>
+        <li>[ ] Validação operacional executada (login, venda, autorização, banco)</li>
+        <li>[ ] Backup confirmado antes do upgrade</li>
+        <li>[ ] Nenhuma inconsistência de dados detectada</li>
       </ul>
       <a class="btn btn-primary" href="index.html"><i class="bi bi-arrow-left"></i> Voltar para Wiki</a>
     </div>

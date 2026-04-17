@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hub de Guias da Aplicacao | Wiki PDV</title>
+  <meta name="description" content="Central de guias da aplicacao CaraCore PDV na loja, organizada por stack e por tipo de material.">
+  <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/css/wiki.css">
+  <link rel="stylesheet" href="assets/css/wiki-unified.css">
+  <link rel="stylesheet" href="assets/css/guias-aplicacao.css">
+  <link rel="icon" href="../assets/images/favicon.ico" type="image/ico">
+  <link rel="stylesheet" href="/assets/caracore-core-typography.css">
+  <link rel="stylesheet" href="/assets/caracore-institutional-components.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark wiki-nav">
+    <div class="container">
+      <a class="navbar-brand" href="index.html"><i class="bi bi-journal-code"></i> Wiki da loja</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarWiki" aria-label="Menu"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navbarWiki">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="../index.html"><i class="bi bi-shop"></i> Loja</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html"><i class="bi bi-journal-text"></i> Wiki</a></li>
+          <li class="nav-item"><a class="nav-link active" href="guias-aplicacao.html" aria-current="page"><i class="bi bi-journal-bookmark"></i> Hub de Guias</a></li>
+          <li class="nav-item"><a class="nav-link" href="projeto-pdv.html"><i class="bi bi-box"></i> Produto PDV</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="wiki-breadcrumb">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb mb-0">
+          <li class="breadcrumb-item"><a href="../index.html">Loja</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Wiki</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Hub de Guias da Aplicacao</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+  <div class="wiki-container py-4">
+    <div class="wiki-content">
+      <section class="guides-hero">
+        <h1><i class="bi bi-journal-bookmark"></i> Hub de Guias da Aplicacao PDV</h1>
+        <p>Material oficial da loja organizado por tecnologia e por tipo de uso: aplicacao Spring, stack Java_21 e upgrade.</p>
+        <div class="guides-badges">
+          <span class="guides-badge">HTML-only na loja</span>
+          <span class="guides-badge">Trilhas por stack</span>
+          <span class="guides-badge">Manuais com imagens</span>
+        </div>
+      </section>
+
+      <section class="guides-section">
+        <h2>Leitura recomendada</h2>
+        <div class="stack-note-grid">
+          <article class="stack-note">
+            <strong>Aplicacao Spring</strong>
+            <p>Use o manual Spring para o acervo operacional com 19 telas ja disponiveis na loja.</p>
+          </article>
+          <article class="stack-note">
+            <strong>Stack Java_21</strong>
+            <p>Use o manual Java_21 para as capturas atualmente classificadas como pertencentes a esta stack.</p>
+          </article>
+          <article class="stack-note">
+            <strong>Mudanca de stack</strong>
+            <p>Use o manual de upgrade para conduzir a passagem controlada para Java_21.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="guides-section">
+        <h2>Governanca de versionamento</h2>
+        <div class="stack-note-grid">
+          <article class="stack-note">
+            <strong>Fonte oficial dos manuais</strong>
+            <p>Todo material de manual do CaraCore PDV e versionado na loja, neste repositório de releases, em HTML e com seus respectivos ativos visuais.</p>
+          </article>
+          <article class="stack-note">
+            <strong>Aplicacao e oficina</strong>
+            <p>O repositório da aplicacao e a oficina Java_21 deixam de ser local de versionamento de manuais. Neles permanecem somente codigo-fonte e materiais tecnicos de engenharia.</p>
+          </article>
+          <article class="stack-note">
+            <strong>Coerencia editorial</strong>
+            <p>Qualquer revisao de manual, imagem, stack ou transparência publica deve ser feita primeiro na loja para manter trilha unica e coerente de publicacao.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="guides-section">
+        <h2>Trilhas Operacionais por Stack</h2>
+        <div class="row g-3">
+          <div class="col-lg-6">
+            <article class="guide-card">
+              <span class="label-chip">Stack Java_21</span>
+              <h3>Manual Operacional - Stack Java_21</h3>
+              <p>Trilha da stack Java_21 com 6 capturas atualmente disponiveis e segregadas do acervo operacional da aplicacao Spring.</p>
+              <a class="btn btn-success btn-sm" href="manual-operacional-pdv-java21.html"><i class="bi bi-journal-check"></i> Acessar stack Java_21</a>
+            </article>
+          </div>
+          <div class="col-lg-6">
+            <article class="guide-card">
+              <span class="label-chip">Aplicacao Spring</span>
+              <h3>Manual Operacional - Aplicacao Spring</h3>
+              <p>Trilha operacional com 31 itens e acervo visual correspondente a aplicacao em Spring.</p>
+              <a class="btn btn-outline-success btn-sm" href="manual-operacional-pdv-spring.html"><i class="bi bi-window-stack"></i> Acessar manual Spring</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="guides-section">
+        <h2>Guias de Evolucao</h2>
+        <div class="row g-3">
+          <div class="col-lg-6">
+            <article class="guide-card">
+              <span class="label-chip">Upgrade</span>
+              <h3>Manual de Upgrade - Java_21</h3>
+              <p>Fluxo de implantacao e validacao para transicao controlada para Java_21.</p>
+              <a class="btn btn-primary btn-sm" href="manual-upgrade-java21.html"><i class="bi bi-images"></i> Acessar manual de upgrade</a>
+            </article>
+          </div>
+          <div class="col-lg-6">
+            <article class="guide-card">
+              <span class="label-chip">Contexto produto</span>
+              <h3>Pagina do Produto PDV</h3>
+              <p>Documentacao geral do produto, requisitos de operacao e links institucionais.</p>
+              <a class="btn btn-outline-primary btn-sm" href="projeto-pdv.html"><i class="bi bi-file-earmark-text"></i> Abrir pagina do produto</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="guides-section">
+        <h2>Padrao de Coerencia</h2>
+        <ul class="feature-list mb-0">
+          <li>Manual da aplicacao Spring e manual da stack Java_21 ficam em trilhas separadas.</li>
+          <li>Cada guia explicita o escopo de stack no titulo e na descricao.</li>
+          <li>A loja aponta para a trilha atual sem remover o historico legado.</li>
+        </ul>
+      </section>
+    </div>
+  </div>
+
+  <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
