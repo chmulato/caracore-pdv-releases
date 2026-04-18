@@ -37,10 +37,10 @@ Se qualquer etapa falhar, o workflow marca a release como nao conforme para dist
 
 ## Links
 
-- **Repositório de releases (este repo):** [chmulato/caracore-pdv-releases](https://github.com/chmulato/caracore-pdv-releases)
-- **Download EXE (Releases):** [Releases / Latest](https://github.com/chmulato/caracore-pdv-releases/releases/latest)
-- **Loja oficial:** [pdv.caracore.com.br](https://pdv.caracore.com.br/) — apresentação, consultoria, demonstração
-- **Cara Core Informática:** [caracore.com.br](https://www.caracore.com.br)
+- **Repositório de releases (este repo):** `chmulato/caracore-pdv-releases` no GitHub (manutenção e CI; a loja pública usa apenas pdv.caracore.com.br).
+- **Download EXE (mesmo domínio da loja):** [pdv.caracore.com.br/installers/](https://pdv.caracore.com.br/installers/) — publicar o `.exe` nesta pasta no deploy; detalhes em [download](https://pdv.caracore.com.br/download.html).
+- **Loja oficial:** [pdv.caracore.com.br](https://pdv.caracore.com.br/) — vitrine, wiki e canal de feedback.
+- **Cara Core Informática:** site institucional em `www.caracore.com.br` (fora do subdomínio da loja).
 
 ---
 

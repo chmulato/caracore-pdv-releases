@@ -29,7 +29,7 @@
 html { scroll-behavior: smooth; }
 
 body {
-    font-family: 'Manrope', 'Segoe UI', sans-serif;
+    font-family: 'Segoe UI', system-ui, sans-serif;
     line-height: 1.65;
     color: var(--text-primary);
     background:
@@ -139,7 +139,7 @@ header h1,
 .page-tecnologia .card h2,
 .page-wiki .wiki-card h2,
 .channel-card .title {
-    font-family: 'Fraunces', Georgia, serif;
+    font-family: Georgia, 'Times New Roman', serif;
 }
 
 header h1 {

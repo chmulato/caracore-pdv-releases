@@ -20,17 +20,6 @@
     <!-- Favicon -->
     <link rel="icon" href="../assets/images/favicon.ico" type="image/ico">
     
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MKFC9G3CL0"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-MKFC9G3CL0', {
-            page_title: 'CaraCore PDV - Wiki',
-            custom_map: {'custom_parameter_1': 'project_pdv'}
-        });
-    </script>
   <link rel="stylesheet" href="/assets/caracore-core-typography.css">
   <link rel="stylesheet" href="/assets/caracore-institutional-components.css">
 </head>
@@ -67,8 +56,8 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="https://wiki.caracore.com.br/index.html" target="_blank" rel="noopener">
-                            <i class="bi bi-globe2"></i> Wiki Cara Core (completa)
+                        <a class="nav-link" href="guias-aplicacao.html">
+                            <i class="bi bi-globe2"></i> Hub de guias (nesta loja)
                         </a>
                     </li>
                 </ul>
@@ -100,7 +89,7 @@
                         <li><a href="projeto-pdv.html" class="active"><i class="bi bi-file-earmark-text"></i> Documentação do produto</a></li>
                         <li><a href="../download.html"><i class="bi bi-box-arrow-down"></i> Download / entregas</a></li>
                         <li><a href="../canal-feedback.html"><i class="bi bi-chat-dots"></i> Canal de feedback</a></li>
-                        <li><a href="https://wiki.caracore.com.br/index.html" target="_blank" rel="noopener"><i class="bi bi-globe2"></i> Wiki completa — Cara Core</a></li>
+                        <li><a href="guias-aplicacao.html"><i class="bi bi-globe2"></i> Hub de guias — nesta loja</a></li>
                     </ul>
                 </div>
             </div>
@@ -133,7 +122,7 @@
                     <!-- Aviso sobre repositório privado -->
                     <div class="alert alert-warning">
                         <h5><i class="bi bi-lock-fill"></i> Repositório Privado</h5>
-                        <p class="mb-0">Este projeto possui <strong>código-fonte privado</strong> e é protegido por <strong>licença proprietária</strong> da Cara Core Informática. A documentação aqui tem caráter informativo sobre funcionalidades e arquitetura. <strong>Loja online:</strong> <a href="https://pdv.caracore.com.br/download.html">canal institucional de releases</a> · <strong>Portal oficial:</strong> <a href="https://pdv.caracore.com.br/" target="_blank" rel="noopener">pdv.caracore.com.br</a>.</p>
+                        <p class="mb-0">Este projeto possui <strong>código-fonte privado</strong> e é protegido por <strong>licença proprietária</strong> da Cara Core Informática. A documentação aqui tem caráter informativo sobre funcionalidades e arquitetura. <strong>Loja online:</strong> <a href="../download.html">canal institucional de releases</a> · <strong>Portal da loja:</strong> <a href="../index.html">pdv.caracore.com.br</a>.</p>
                     </div>
 
                     <section id="v3-pdv-transparencia" class="mb-5">
@@ -453,8 +442,8 @@
                             <div class="col-md-6">
                                 <div class="setup-card">
                                     <h4><i class="bi bi-terminal text-success"></i> Executar</h4>
-                                    <pre><code># Clonar (acesso mediante permissão)
-git clone https://github.com/cara-core/caracore-pdv
+                                    <pre><code># Clonar (acesso mediante permissão; URL do repositório fornecido pela equipe)
+git clone &lt;url-privada-fornecida-pela-Cara-Core&gt;
 cd caracore-pdv
 
 # Rodar com Maven (perfil sqlite é o padrão; carga admin/admin na 1ª vez)
@@ -484,14 +473,14 @@ cd caracore-pdv
                         <h2><i class="bi bi-link-45deg text-primary"></i> Links e Documentação</h2>
                         <ul class="feature-list">
                             <li><strong>Escopo:</strong> Foco localhost e Windows Desktop (EXE sobe em <code>localhost:8080</code>); banco apenas SQLite.</li>
-                            <li><strong>Loja online (vitrine e download):</strong> <a href="https://pdv.caracore.com.br/download.html">canal institucional de releases</a></li>
-                            <li><strong>Baixar EXE (Windows):</strong> <a href="https://pdv.caracore.com.br/download.html">loja: download</a></li>
-                            <li><strong>Portal oficial:</strong> <a href="https://pdv.caracore.com.br/" target="_blank" rel="noopener">pdv.caracore.com.br</a> (economia, planos, demonstração, Wiki Fiscal, consultoria)</li>
+                            <li><strong>Loja online (vitrine e download):</strong> <a href="../download.html">canal institucional de releases</a></li>
+                            <li><strong>Baixar EXE (Windows):</strong> <a href="../installers/index.html">instaladores no domínio da loja</a></li>
+                            <li><strong>Portal da loja:</strong> <a href="../index.html">pdv.caracore.com.br</a> (vitrine, wiki e canal de feedback)</li>
                             <li><strong>Hub de guias da aplicacao:</strong> <a href="guias-aplicacao.html">central de guias por stack</a></li>
                             <li><strong>Manual Operacional - Aplicacao Spring:</strong> <a href="manual-operacional-pdv-spring.html">trilha operacional com 19 telas</a></li>
                             <li><strong>Manual Operacional - Stack Java_21:</strong> <a href="manual-operacional-pdv-java21.html">trilha Java_21 com capturas classificadas</a></li>
-                            <li><strong>Tecnologia:</strong> <a href="https://pdv.caracore.com.br/tecnologia.html" target="_blank" rel="noopener">matriz: tecnologia</a></li>
-                            <li><strong>Wiki Fiscal e Consultoria:</strong> <a href="https://pdv.caracore.com.br/wiki-fiscal.html" target="_blank" rel="noopener">matriz: wiki-fiscal</a> · <a href="https://pdv.caracore.com.br/consultoria.html" target="_blank" rel="noopener">matriz: consultoria</a></li>
+                            <li><strong>Tecnologia (nesta loja):</strong> <a href="../tecnologia.html">tecnologia e soluções</a></li>
+                            <li><strong>Consultoria e suporte:</strong> <a href="../canal-feedback.html">canal de feedback</a> (e-mail, WhatsApp e Telegram)</li>
                             <li><strong>Testes Selenium (Docker SQLite):</strong> <code>testes/STATUS_APLICACAO_E_CENARIOS.md</code>; <code>verificar-status-app.bat</code> / <code>verificar-status-app.sh</code></li>
                             <li><strong>SQLite (pequenos e médios):</strong> <code>doc/SQLITE_PEQUENOS_MEDIOS.md</code>; <code>docker-compose.sqlite.yml</code></li>
                         </ul>
@@ -509,11 +498,11 @@ cd caracore-pdv
                             <a href="../tecnologia.html" class="btn-wiki me-2">
                                 <i class="bi bi-gear"></i> Tecnologias Utilizadas
                             </a>
-                            <a href="https://pdv.caracore.com.br/download.html" class="btn-wiki me-2">
+                            <a href="../download.html" class="btn-wiki me-2">
                                 <i class="bi bi-shop"></i> Loja online
                             </a>
-                            <a href="https://pdv.caracore.com.br/" class="btn-wiki" target="_blank" rel="noopener">
-                                <i class="bi bi-box-arrow-up-right"></i> Apresentação (matriz)
+                            <a href="../index.html" class="btn-wiki">
+                                <i class="bi bi-box-arrow-up-right"></i> Portal da loja
                             </a>
                         </div>
                     </section>
