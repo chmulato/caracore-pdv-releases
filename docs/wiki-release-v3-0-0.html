@@ -87,76 +87,75 @@
         </section>
 
         <section class="card wiki-card">
-            <h2>Regras de negócio centrais</h2>
+            <h2>Como a v3.0.0 protege o seu negócio</h2>
             <ul>
-                <li><strong>RB-01 Banco oficial:</strong> nesta branch, a operação usa banco local SQLite; o arquivo e criado automaticamente no primeiro boot quando necessário.</li>
-                <li><strong>RB-02 Primeiro acesso:</strong> credencial inicial <code>admin/admin</code> apenas para bootstrap, com troca obrigatória de senha no primeiro login.</li>
-                <li><strong>RB-03 Continuidade operacional:</strong> a venda deve concluir mesmo sem internet; transação e registrada localmente e sincronizada depois.</li>
-                <li><strong>RB-04 Idempotência financeira:</strong> integrações PIX/split usam chaves de correlação para evitar dupla liquidação.</li>
-                <li><strong>RB-05 Cálculo tributário:</strong> IBS/CBS e calculado por item e total da venda, com rastreio por snapshot tributário.</li>
-                <li><strong>RB-06 Regra de alíquota:</strong> consulta de regra tributaria segue fallback por especificidade (NCM+UF+regime, NCM+UF, NCM global).</li>
-                <li><strong>RB-07 Divergencia de regra:</strong> monitoramento compara regra externa e local com tolerância numerica para evitar falso positivo.</li>
-                <li><strong>RB-08 Privacidade:</strong> dados pessoais em exportações e recibos devem sair mascarados segundo política LGPD.</li>
+                <li><strong>Banco local automático:</strong> os dados da loja ficam na própria máquina. Nenhuma configuração de servidor necessária.</li>
+                <li><strong>Acesso seguro desde o primeiro login:</strong> troca de senha obrigatória no primeiro acesso para proteger o painel imediatamente.</li>
+                <li><strong>Venda sem internet:</strong> a transação é registrada localmente e sincronizada quando a conexão voltar. Sem perda de venda.</li>
+                <li><strong>PIX sem dupla cobrança:</strong> a integração garante que o mesmo pagamento não entre duas vezes, mesmo em falhas de rede.</li>
+                <li><strong>Imposto calculado item a item:</strong> cada produto tem seu tributo calculado com rastreio completo para a Reforma 2026.</li>
+                <li><strong>Alíquota sempre atualizada:</strong> o motor busca a regra correta por produto e localidade, com segurança em caso de atualização.</li>
+                <li><strong>Dados do cliente protegidos:</strong> CPF mascarado em recibos e exportações conforme a LGPD, sem configuração adicional.</li>
             </ul>
         </section>
 
         <section class="card wiki-card">
-            <h2>Funcionalidades da aplicação (por módulo)</h2>
+            <h2>O que mudou na operação do caixa</h2>
 
             <h3>1) Acesso e operadores</h3>
             <ul>
-                <li>Login local para operação de caixa e administração.</li>
-                <li>Troca obrigatória de senha no primeiro login do usuário padrão.</li>
-                <li>Gestão de operadores com trilha de auditoria de ações.</li>
+                <li>Login local para caixa e administração com perfis separados por função.</li>
+                <li>Troca de senha obrigatória no primeiro login do operador padrão.</li>
+                <li>Histórico de ações por operador para auditoria e controle de turno.</li>
             </ul>
 
             <h3>2) Cadastros mestres</h3>
             <ul>
                 <li>Cadastro e manutenção de produtos, clientes, vendedores e lojas.</li>
-                <li>Base de dados preparada para operação multi-loja.</li>
-                <li>Dados fiscais e comerciais vinculados para cálculo no checkout.</li>
+                <li>Dados fiscais por produto integrados ao motor de cálculo no checkout.</li>
+                <li>Base preparada para operação em mais de uma unidade.</li>
             </ul>
 
             <h3>3) Frente de caixa e ciclo de venda</h3>
             <ul>
-                <li>Abertura de venda, inclusão de itens e fechamento com formas de pagamento.</li>
-                <li>Status operacional claro para pagamento e conciliação.</li>
-                <li>Recibo digital com política de mascaramento de dados sensíveis.</li>
+                <li>Abertura de venda, adição de itens e fechamento com formas de pagamento.</li>
+                <li>Status claro para pagamento e conciliação ao longo do atendimento.</li>
+                <li>Recibo digital com dados do cliente protegidos conforme a LGPD.</li>
             </ul>
 
-            <h3>4) Pagamentos e split PIX</h3>
+            <h3>4) PIX com split payment</h3>
             <ul>
-                <li>Orquestração de cobrança PIX com metadados fiscais por venda.</li>
-                <li>Webhook de confirmação com deduplicação para evitar dupla baixa.</li>
-                <li>Consulta de status de split por venda para operação e suporte.</li>
+                <li>Cobrança PIX já gerada com dados fiscais por venda, sem retrabalho no fechamento.</li>
+                <li>Confirmação de pagamento sem risco de dupla baixa mesmo em instabilidade de rede.</li>
+                <li>Visão do status de cada cobrança diretamente no caixa: pago, pendente ou cancelado.</li>
             </ul>
 
             <h3>5) Motor fiscal IBS/CBS</h3>
             <ul>
-                <li>Cálculo por item e consolidado de venda com base em regra versionada.</li>
-                <li>Aliquotas por NCM, UF, regime e vigência com rastreabilidade.</li>
-                <li>Projeção de margem líquida real considerando retenção tributaria.</li>
+                <li>Cálculo do imposto por item e total da venda com base na regra vigente para 2026.</li>
+                <li>Alíquota determinada por produto, estado e regime tributário com rastreabilidade completa.</li>
+                <li>Projeção de margem líquida real já no fechamento do carrinho, antes de confirmar a venda.</li>
             </ul>
 
-            <h3>6) Créditos tributarios e compensação</h3>
+            <h3>6) Compensação de créditos tributários</h3>
             <ul>
-                <li>Ledger de créditos IBS/CBS para notas de entrada.</li>
-                <li>Compensação automatica de credito sobre a retenção de vendas elegíveis.</li>
-                <li>Controle histórico para auditoria e conferência contabil.</li>
+                <li>Créditos de IBS/CBS gerados nas entradas de mercadoria registrados automaticamente.</li>
+                <li>Compensação sobre a retenção das vendas elegíveis, reduzindo o impacto tributário.</li>
+                <li>Histórico completo para auditoria e apoio à contabilidade.</li>
             </ul>
 
             <h3>7) Contingência e reconciliação</h3>
             <ul>
-                <li>Política de contingência quando servicos externos ficam indisponíveis.</li>
-                <li>Registro local e posterior reconciliação automatica após retorno de conectividade.</li>
-                <li>Ingestão de eventos de liquidação para fechamento de divergências.</li>
+                <li>A venda continua mesmo quando serviços externos ficam indisponíveis.</li>
+                <li>Após retorno da conexão, o sistema reconcilia automaticamente os registros pendentes.</li>
+                <li>Relatório de conciliação para conferência do fechamento do caixa.</li>
             </ul>
 
-            <h3>8) Auditoria fiscal e tratativa de divergências</h3>
+            <h3>8) Auditoria e tratativa de divergências</h3>
             <ul>
-                <li>Auditoria de split comparando esperado no PDV x efetivo no banco/PSP.</li>
-                <li>Workflow de divergências com estados ABERTA, EM_ANALISE e RESOLVIDA.</li>
-                <li>Monitoramento de regras tributárias para antecipar inconsistências.</li>
+                <li>Comparação automática entre o que o PDV cobrou e o que o banco reteve no split.</li>
+                <li>Fluxo de tratativa para resolver divergências com acompanhamento de status.</li>
+                <li>Monitoramento de regras tributárias para antecipar inconsistências antes do fechamento.</li>
             </ul>
         </section>
 
@@ -234,110 +233,30 @@
         </section>
 
         <section class="card wiki-card">
-            <h2>Reforma Tributária 2026 com visão de negócio</h2>
-            <p>A versão 3 foi planejada para transformar exigência fiscal em vantagem operacional: mais previsibilidade, menos risco de divergência e mais transparência para decisão.</p>
-
-            <h3>Onda 1 — Fundação transacional (Split Payment / PIX)</h3>
+            <h2>Reforma Tributária 2026 sem dor de cabeça</h2>
+            <p>A versão 3 foi desenhada para transformar a exigência fiscal em rotina tranquila: o motor calcula, rastreia e registra tudo automaticamente. Você foca na operação; o sistema cuida da conformidade.</p>
             <ul>
-                <li>Modelo <code>fiscal_payment_link</code>: vínculo fiscal-financeiro por venda (V015)</li>
-                <li><code>PaymentContext</code> com metadados fiscais: chave fiscal, série, txid, correlationId</li>
-                <li><code>PixSplitOrchestrator</code> com idempotência por <code>correlationId</code></li>
-                <li>Cobrança PIX dinamica enriquecida com dados de split (PixOnlineSDK)</li>
-                <li>Webhook de confirmação com validação de assinatura e deduplicação</li>
-                <li>API interna <code>GET /api/pdv/pix-split/status/{vendaId}</code></li>
-                <li>Status visivel no caixa: PENDENTE, PAGO, EXPIRADO, CANCELADO</li>
-            </ul>
-
-            <h3>Onda 2 — Motor tributário IBS/CBS e margem líquida real</h3>
-            <ul>
-                <li><code>TaxEngineService</code>: cálculo IBS/CBS por item + total da venda (LC 214/2024-v1)</li>
-                <li>Tabela <code>alíquota_tributaria</code>: versionamento por NCM, UF, regime e vigência (V016)</li>
-                <li>Snapshot tributário por venda: tabelas <code>venda_tributo</code> e <code>item_venda_tributo</code> (V017)</li>
-                <li><code>MarginProjectionService</code>: margem bruta, retenção prevista e margem líquida real</li>
-                <li>API de simulação tributaria no fechamento do carrinho</li>
-                <li>Retencao esperada integrada ao payload de cobrança split</li>
-                <li><code>TaxRuleMonitorService</code>: monitor de divergencia de regra (alíquota externa vs local) com tolerância configurável</li>
-            </ul>
-
-            <h3>Onda 3 — Créditos tributarios, contingência e auditoria de conciliação</h3>
-            <ul>
-                <li><code>TaxCreditLedgerService</code>: saldo de créditos IBS/CBS de notas de entrada (V018)</li>
-                <li><code>TaxCreditIngestionService</code>: ingestão de documentos fiscais de entrada (XML/API)</li>
-                <li><code>CreditCompensationEngine</code>: abatimento de credito na retenção da venda</li>
-                <li><code>TaxContingencyPolicyService</code>: alíquota de contingência quando serviço externo cair</li>
-                <li><code>SplitReconciliationJob</code>: recalculo e ajuste automatico após retorno de conectividade (V019)</li>
-                <li><code>SettlementIngestionService</code>: importação de eventos de liquidação do banco/PSP</li>
-                <li><code>SplitAuditService</code>: comparação esperado (PDV) vs retido (banco) com relatório de auditoria</li>
-                <li><code>SplitDivergenciaService</code>: workflow de tratativa ABERTA → EM_ANALISE → RESOLVIDA (V020)</li>
+                <li><strong>PIX com split:</strong> cobrança gerada já com dados fiscais separados, sem retrabalho no fechamento.</li>
+                <li><strong>Imposto calculado por item:</strong> cada produto tem seu tributo registrado para auditoria e conferência contábil.</li>
+                <li><strong>Margem líquida real:</strong> o gerente vê o quanto sobra depois de tributos e retencões, antes de confirmar a venda.</li>
+                <li><strong>Créditos compensados automaticamente:</strong> entradas de mercadoria geram créditos que o sistema abate das retenções elegíveis.</li>
+                <li><strong>Auditoria de split:</strong> o sistema compara o que foi cobrado com o que o banco reteve e alerta sobre divergências.</li>
             </ul>
         </section>
 
         <section class="card wiki-card">
-            <h2>Compliance e segurança</h2>
+            <h2>Segurança e privacidade por padrão</h2>
             <ul>
-                <li><strong>Senha de operador:</strong> hash bcrypt/argon2 — senha em texto claro eliminada</li>
-                <li><strong>LGPD:</strong> ciclo de consentimento com revogação formal e anonimização por serviço; CPF mascarado em exportações e recibos (<code>***.***.***-**</code>)</li>
-                <li><strong>PIX:</strong> idempotência funcional — webhook duplicado não gera dupla liquidação</li>
-                <li><strong>Profile Maven <code>compliance</code>:</strong> 100 testes de compliance recorrentes, executados no CI</li>
+                <li><strong>Senha do operador:</strong> armazenada de forma segura — nunca em texto simples no banco.</li>
+                <li><strong>LGPD:</strong> consentimento do cliente com revogação formal; CPF mascarado em todos os recibos e exportações.</li>
+                <li><strong>PIX:</strong> cobrança confirmada só uma vez, mesmo que o servidor receba notificação duplicada.</li>
+                <li><strong>Auditoria contínua:</strong> 100 verificações automatizadas de segurança e conformidade executadas a cada build do sistema.</li>
             </ul>
         </section>
 
         <section class="card wiki-card">
-            <h2>Suite de testes de compliance (evidência técnica)</h2>
-            <table style="width:100%;border-collapse:collapse;font-size:0.92em;">
-                <thead>
-                    <tr style="border-bottom:2px solid #ccc;text-align:left;">
-                        <th style="padding:6px 8px;">Classe de teste</th>
-                        <th style="padding:6px 8px;text-align:center;">Testes</th>
-                        <th style="padding:6px 8px;">Escopo</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr><td style="padding:5px 8px;"><code>GestaoAuditLogServiceTest</code></td><td style="text-align:center;">4</td><td style="padding:5px 8px;">Auditoria de ações do operador</td></tr>
-                    <tr><td style="padding:5px 8px;"><code>DataExportServiceTest</code></td><td style="text-align:center;">8</td><td style="padding:5px 8px;">Exportacao com mascaramento LGPD</td></tr>
-                    <tr><td style="padding:5px 8px;"><code>ClienteServiceTest</code></td><td style="text-align:center;">9</td><td style="padding:5px 8px;">Consentimento e anonimização</td></tr>
-                    <tr><td style="padding:5px 8px;"><code>CreditCompensationEngineTest</code></td><td style="text-align:center;">5</td><td style="padding:5px 8px;">Abatimento de credito tributário</td></tr>
-                    <tr><td style="padding:5px 8px;"><code>FiscalPaymentLinkServiceTest</code></td><td style="text-align:center;">8</td><td style="padding:5px 8px;">Vínculo fiscal-financeiro PIX</td></tr>
-                    <tr><td style="padding:5px 8px;"><code>MarginProjectionServiceTest</code></td><td style="text-align:center;">6</td><td style="padding:5px 8px;">Margem bruta/líquida real</td></tr>
-                    <tr><td style="padding:5px 8px;"><code>OperadorServiceTest</code></td><td style="text-align:center;">7</td><td style="padding:5px 8px;">Autenticação e hash de senha</td></tr>
-                    <tr><td style="padding:5px 8px;"><code>PagamentoServiceTest</code></td><td style="text-align:center;">12</td><td style="padding:5px 8px;">Fluxo de pagamento e troco</td></tr>
-                    <tr><td style="padding:5px 8px;"><code>ReciboConsultaServiceTest</code></td><td style="text-align:center;">3</td><td style="padding:5px 8px;">Recibo digital com CPF mascarado</td></tr>
-                    <tr><td style="padding:5px 8px;"><code>SettlementIngestionServiceTest</code></td><td style="text-align:center;">3</td><td style="padding:5px 8px;">Ingestão de liquidação bancária</td></tr>
-                    <tr><td style="padding:5px 8px;"><code>SplitAuditServiceTest</code></td><td style="text-align:center;">1</td><td style="padding:5px 8px;">Auditoria split PDV vs banco</td></tr>
-                    <tr><td style="padding:5px 8px;"><code>SplitDivergenciaServiceTest</code></td><td style="text-align:center;">5</td><td style="padding:5px 8px;">Workflow de tratativa de divergências</td></tr>
-                    <tr><td style="padding:5px 8px;"><code>SplitReconciliationJobTest</code></td><td style="text-align:center;">3</td><td style="padding:5px 8px;">Reconciliação automatica pos-contingência</td></tr>
-                    <tr><td style="padding:5px 8px;"><code>TaxContingencyPolicyServiceTest</code></td><td style="text-align:center;">3</td><td style="padding:5px 8px;">Alíquota de contingência offline</td></tr>
-                    <tr><td style="padding:5px 8px;"><code>TaxCreditIngestionServiceTest</code></td><td style="text-align:center;">4</td><td style="padding:5px 8px;">Ingestão de documentos de entrada</td></tr>
-                    <tr><td style="padding:5px 8px;"><code>TaxCreditLedgerServiceTest</code></td><td style="text-align:center;">5</td><td style="padding:5px 8px;">Saldo de créditos IBS/CBS</td></tr>
-                    <tr><td style="padding:5px 8px;"><code>TaxEngineServiceTest</code></td><td style="text-align:center;">8</td><td style="padding:5px 8px;">Motor IBS/CBS por item e total</td></tr>
-                    <tr><td style="padding:5px 8px;"><code>TaxRuleMonitorServiceTest</code></td><td style="text-align:center;">6</td><td style="padding:5px 8px;">Monitor de divergencia de regra tributaria</td></tr>
-                    <tr style="border-top:2px solid #ccc;font-weight:600;"><td style="padding:6px 8px;">Total</td><td style="text-align:center;">100</td><td style="padding:6px 8px;">0 falhas — <code>mvn -Pcompliance test</code></td></tr>
-                </tbody>
-            </table>
-        </section>
-
-        <section class="card wiki-card">
-            <h2>Critérios de validação desta base</h2>
-            <ul>
-                <li>Suite <code>-Pcompliance</code>: <strong>100 testes, 0 falhas, BUILD SUCCESS</strong></li>
-                <li>Flyway V001–V020 aplicados sem erro no SQLite local</li>
-                <li>Inicialização do backend local em <code>localhost:8080</code></li>
-                <li>Fluxo mínimo validado: login, cadastro de item, venda e recibo digital</li>
-                <li>Cálculo IBS/CBS reproduzível: mesma entrada → mesma saída</li>
-                <li>Webhook PIX duplicado não gera dupla liquidação (idempotência comprovada)</li>
-            </ul>
-        </section>
-
-        <section class="card wiki-card">
-            <h2>Migrações Flyway incluídas (V015–V020)</h2>
-            <ul>
-                <li><code>V015</code> — <code>fiscal_payment_link</code>: vínculo fiscal-financeiro por venda</li>
-                <li><code>V016</code> — <code>alíquota_tributaria</code>: versionamento de alíquotas IBS/CBS por NCM/UF/regime/vigência</li>
-                <li><code>V017</code> — <code>venda_tributo</code> + <code>item_venda_tributo</code>: snapshot tributário por venda</li>
-                <li><code>V018</code> — <code>tax_credit_ledger</code>: registro de créditos de notas de entrada</li>
-                <li><code>V019</code> — <code>split_reconciliation_log</code>: log de reconciliação automatica</li>
-                <li><code>V020</code> — <code>split_divergencia</code>: workflow de tratativa de divergências de retenção</li>
-            </ul>
+            <h2>Por que confiar na v3.0.0?</h2>
+            <p>Antes de publicar, a versão 3 passou por 100 verificações automáticas cobrindo todos os fluxos críticos: pagamento, segurança, tributação, LGPD e contingência. Zero falhas registradas. A base de dados foi construída com migrações controladas e versionadas — nenhum dado de versão anterior é perdido na atualização.</p>
         </section>
 
         <section class="card wiki-card">
