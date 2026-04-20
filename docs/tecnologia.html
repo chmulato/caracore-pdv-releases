@@ -3,80 +3,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <base href="https://pdv.caracore.com.br/">
-    <title>Tecnologia (Soluções) — CaraCore-PDV v3.0.0 | Cara Core Informática</title>
-    <meta name="description" content="CaraCore-PDV v3.0.0: Bunker Digital, operação antifrágil, motor fiscal 2026, PIX com split e recibo digital. PDV local para Windows — soberania e resultado.">
-    <link rel="stylesheet" href="https://pdv.caracore.com.br/assets/css/loja.css">
-    <link rel="stylesheet" href="https://pdv.caracore.com.br/assets/evolution-status/evolution-status.css">
-  <link rel="stylesheet" href="/assets/caracore-core-typography.css">
-  <link rel="stylesheet" href="/assets/caracore-institutional-components.css">
+    <meta name="description" content="Soluções CaraCore-PDV: Tecnologia de Fluxo Contínuo, Blindagem de Dados Local, Motor de Inteligência CaraCore e Tecnologia Selo Verde">
+    <title>Soluções | CaraCore-PDV</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/portal-style.css">
 </head>
-<body class="page-tecnologia">
-    <div class="wrapper">
-        <nav class="breadcrumb" aria-label="Navegação">
-            <a href="index.html">CaraCore-PDV — Loja</a>
-            <span> · </span>
-            <span>Cara Core Informática (caracore.com.br)</span>
-            <span> · </span>
-            <span>Tecnologia (Soluções)</span>
-        </nav>
-
-        <header>
-            <h1>Tecnologia (Soluções) — CaraCore-PDV</h1>
-            <p>Pilares que fazem do PDV Selo Verde uma solução robusta e estável: soberania local, operação antifrágil, ROI mensurável e conformidade fiscal.</p>
-        </header>
-
-        <section class="card">
-            <h2>Operação antifrágil (fluxo contínuo)</h2>
-            <p>Quando a internet cai, o caixa não para. Sistema <strong>antifrágil</strong>: vendas registradas e protegidas em soberania local (SQLite), sem perda de dados. Ao restabelecer a conexão, a operação continua transparente. Menos paradas, mais faturamento.</p>
-        </section>
-
-        <section class="card">
-            <h2>Soberania local (dados no seu ambiente)</h2>
-            <p>Seus dados de vendas, produtos e clientes ficam no próprio ambiente da loja — <strong>infraestrutura Bunker</strong>. Rotinas automáticas de backup e o Centro de Segurança no painel garantem que nada se perca. Controle e previsibilidade, sem depender de nuvem para o dia a dia.</p>
-        </section>
-
-        <section class="card">
-            <h2>Motor Fiscal CaraCore</h2>
-            <p>Cálculo automático de impostos em linha com a Reforma Tributária 2026–2033. O motor acompanha o cronograma legal (CBS, IBS e transição) e aplica as alíquotas corretas por ano. Tudo roda localmente. Você foca no negócio; a conformidade fiscal fica com a gente.</p>
-        </section>
-
-        <section class="card">
-            <h2>Tecnologia Selo Verde</h2>
-            <p>Recibo digital em vez de bobina: eliminação de custos com papel e impressoras térmicas. O cliente recebe o comprovante por link ou e-mail. Sustentabilidade que vira economia — e que costuma cobrir o licenciamento de ativo (Premium). Exclusivo do ecossistema CaraCore.</p>
-        </section>
-
-        <section class="card">
-            <h2>Plataforma v3.0.0 — Windows Desktop, local e rápido</h2>
-            <p>O CaraCore-PDV roda como aplicativo <strong>Windows</strong> instalado na própria máquina da loja. Ao abrir, o painel já está no ar em segundos — sem servidor externo, sem nuvem obrigatória, sem assinatura mensal de infraestrutura. Banco local que guarda todos os dados com segurança na sua própria máquina. A versão 3 é mais rápida, mais estável e mais completa do que as versões anteriores.</p>
-        </section>
-
-        <section class="card">
-            <h2>O que há de novo na v3.0.0</h2>
-            <ul>
-                <li>Motor fiscal pronto para a Reforma Tributária 2026 — cálculo automático de IBS e CBS por item e venda</li>
-                <li>PIX com split payment: cobrança já separada com dados fiscais, sem retrabalho no fechamento</li>
-                <li>Margem líquida real no caixa: o gerente vê o quanto sobra depois de tributos, na hora da venda</li>
-                <li>Segurança de dados reforçada: senhas protegidas, LGPD aplicada e trilha de auditoria de ações</li>
-                <li>Operação mais estável e responsível: plataforma moderna que reduz falhas e agiliza o atendimento</li>
-            </ul>
-            <div class="wiki-links">
-                <a href="wiki-release-v3-0-0.html" class="btn-release">Ver tudo que a v3.0.0 entrega</a>
-                <a href="download.html" class="btn-release btn-release-outline">Baixar agora (Free)</a>
+<body class="smooth-scroll bg-gray-50">
+    
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center space-x-3">
+                    <a href="index.html" class="flex items-center space-x-3">
+                        <div class="w-12 h-12 green-bg rounded-lg flex items-center justify-center"><i class="fas fa-cash-register text-white text-xl"></i></div>
+                        <div><h1 class="text-xl font-bold text-gray-900">Cara Core</h1><p class="text-xs text-gray-600">Informática</p></div>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="index.html#economia" class="text-gray-700 hover:text-green-600 font-medium">Economia</a>
+                    <a href="index.html#dores" class="text-gray-700 hover:text-green-600 font-medium">O que resolvemos</a>
+                    <a href="index.html#fiscal" class="text-gray-700 hover:text-green-600 font-medium">Pronto para 2026</a>
+                    <a href="index.html#planos" class="text-gray-700 hover:text-green-600 font-medium">Planos</a>
+                    <a href="wiki-fiscal.html" class="text-gray-700 hover:text-green-600 font-medium">Wiki Fiscal</a>
+                    <a href="tecnologia.html" class="text-green-600 font-semibold">Soluções</a>
+                    <a href="readme.html" class="text-gray-700 hover:text-green-600 font-medium">Documentação</a>
+                    <a href="download.html" class="text-gray-700 hover:text-green-600 font-medium">Baixar Free</a>
+                    <a href="consultoria.html" class="text-gray-700 hover:text-green-600 font-medium">Consultoria</a>
+                    <a href="index.html#demo" class="green-bg text-white px-6 py-2 rounded-lg font-semibold">Demonstração Presencial</a>
+                </div>
+                <button id="mobile-menu-button" class="md:hidden text-gray-700" aria-label="Menu"><i class="fas fa-bars text-2xl"></i></button>
             </div>
-        </section>
-
-        <p class="tech-selo"><strong>Selo CaraCore de Sustentabilidade</strong> — Bunker Digital para o varejo brasileiro: soberania local, licenciamento de ativo, resultado financeiro, conformidade fiscal e operação antifrágil que não para.</p>
-
-        <nav class="back">
-            <a href="index.html">← Voltar ao portal</a> · <a href="download.html">Download</a> · <a href="wiki.html">Wiki da loja</a> · Soluções completas na loja
+            <div id="mobile-menu" class="hidden md:hidden pb-4">
+                <div class="flex flex-col space-y-3">
+                    <a href="index.html#economia" class="text-gray-700 hover:text-green-600 font-medium py-2">Economia</a>
+                    <a href="index.html#dores" class="text-gray-700 hover:text-green-600 font-medium py-2">O que resolvemos</a>
+                    <a href="index.html#fiscal" class="text-gray-700 hover:text-green-600 font-medium py-2">Pronto para 2026</a>
+                    <a href="index.html#planos" class="text-gray-700 hover:text-green-600 font-medium py-2">Planos</a>
+                    <a href="wiki-fiscal.html" class="text-gray-700 hover:text-green-600 font-medium py-2">Wiki Fiscal</a>
+                    <a href="tecnologia.html" class="text-green-600 font-semibold py-2">Soluções</a>
+                    <a href="readme.html" class="text-gray-700 hover:text-green-600 font-medium py-2">Documentação</a>
+                    <a href="download.html" class="text-gray-700 hover:text-green-600 font-medium py-2">Baixar Free</a>
+                    <a href="consultoria.html" class="text-gray-700 hover:text-green-600 font-medium py-2">Consultoria</a>
+                    <a href="index.html#demo" class="green-bg text-white px-6 py-2 rounded-lg font-semibold text-center">Demonstração Presencial</a>
+                </div>
+            </div>
         </nav>
-    </div>
-    <script src="https://pdv.caracore.com.br/assets/js/loja.js"></script>
+    </header>
+    
+    <section class="green-bg text-white py-12">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-4xl mx-auto text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">Soluções CaraCore</h1>
+                <p class="text-xl text-green-50">Pilares que fazem do PDV Selo Verde uma solução com ROI mensurável e conformidade fiscal garantida.</p>
+            </div>
+        </div>
+    </section>
+    
+    <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        
+        <div id="fluxo-continuo" class="sol-card">
+            <h2 class="text-2xl font-bold text-gray-900 mb-4"><i class="fas fa-water text-blue-500 me-2"></i>Tecnologia de Fluxo Contínuo</h2>
+            <p class="text-gray-700 leading-relaxed">
+                O caixa segue funcionando mesmo quando a internet oscila ou cai. As vendas são registradas e protegidas localmente, sem perda de dados. Ao restabelecer a conexão, a operação continua transparente. Menos paradas, mais faturamento.
+            </p>
+        </div>
+        
+        <div id="blindagem-dados" class="sol-card">
+            <h2 class="text-2xl font-bold text-gray-900 mb-4"><i class="fas fa-database text-green-600 me-2"></i>Blindagem de Dados Local</h2>
+            <p class="text-gray-700 leading-relaxed">
+                Seus dados de vendas, produtos e clientes ficam protegidos no próprio ambiente da loja. Rotinas automáticas de backup e o Centro de Segurança no painel garantem que nada se perca. Ideal para quem quer controle e previsibilidade, sem depender de nuvem para o dia a dia.
+            </p>
+        </div>
+        
+        <div id="motor-inteligencia" class="sol-card">
+            <h2 class="text-2xl font-bold text-gray-900 mb-4"><i class="fas fa-brain text-purple-600 me-2"></i>Motor de Inteligência CaraCore</h2>
+            <p class="text-gray-700 leading-relaxed">
+                Cálculo automático de impostos em linha com a Reforma Tributária 2026–2033. O motor acompanha o cronograma legal (CBS, IBS e transição) e aplica as alíquotas corretas por ano. Você foca no negócio; a conformidade fiscal fica com a gente.
+            </p>
+        </div>
+        
+        <div id="selo-verde" class="sol-card">
+            <h2 class="text-2xl font-bold text-gray-900 mb-4"><i class="fas fa-leaf text-green-600 me-2"></i>Tecnologia Selo Verde</h2>
+            <p class="text-gray-700 leading-relaxed">
+                Recibo digital em vez de bobina: eliminação de custos com papel e impressoras térmicas. O cliente recebe o comprovante por link ou e-mail. Sustentabilidade que vira economia — e que costuma pagar a própria mensalidade do PDV. Exclusivo do ecossistema CaraCore.
+            </p>
+        </div>
+        
+        <div id="app-desktop" class="sol-card">
+            <h2 class="text-2xl font-bold text-gray-900 mb-4"><i class="fas fa-desktop text-indigo-600 me-2"></i>Experiência em desktop e navegador</h2>
+            <p class="text-gray-700 leading-relaxed">
+                O PDV pode ser usado tanto no navegador quanto como aplicativo instalado no Windows, mantendo a mesma interface e os mesmos recursos. Flexibilidade para o jeito que você prefere trabalhar.
+            </p>
+        </div>
 
-    <footer class="evo-roadmap-footer" role="contentinfo"><p class="evo-roadmap-title">Próximos passos</p><ul class="evo-roadmap-list"><li>Domínio próprio <span class="evo-roadmap-tag">Em planejamento</span></li><li>Integração PIX nativa</li><li>IA para estoque</li></ul></footer>
-    <div class="evo-feedback-fab"><a href="canal-feedback.html" class="evo-feedback-btn" aria-label="Sugira uma melhoria no canal da loja"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> Sugira uma melhoria</a></div>
+        <div id="infra-externa" class="sol-card">
+            <h2 class="text-2xl font-bold text-gray-900 mb-4"><i class="fas fa-plug text-amber-600 me-2"></i>Infraestruturas externas (PIX e SEFAZ)</h2>
+            <p class="text-gray-700 leading-relaxed">
+                O PDV conecta-se a serviços que ficam fora do controle da Cara Core: <strong>gateways de pagamento (PIX)</strong> e <strong>Web Services da SEFAZ</strong> (emissão NFC-e, homologação e produção). Em caso de timeout ou indisponibilidade da SEFAZ, o sistema detecta, aciona a contingência e grava as notas em fila local (SQLite); quando a conexão volta, o envio é refeito em lote, sem duplicar. A integração PIX segue modelo de plugin (gateway configurável); a documentação técnica (PLUGINS_PIX_SEFAZ.md no repositório) descreve o que plugar e os testes automatizados do módulo fiscal.
+            </p>
+        </div>
+        
+        <div id="sms-premium-plus" class="sol-card">
+            <h2 class="text-2xl font-bold text-gray-900 mb-4"><i class="fas fa-sms text-red-600 me-2"></i>Premium+ (Android + SMS com LGPD)</h2>
+            <p class="text-gray-700 leading-relaxed">
+                Para operações que precisam de um canal alternativo em situações críticas, existe a integração com o módulo <code>android-sms-enviar</code>.
+                Um celular Android dedicado fica conectado ao Windows (USB/ADB) para envio de SMS quando necessário.
+            </p>
+            <p class="text-gray-700 leading-relaxed mt-3">
+                A configuração exige <strong>visita técnica</strong> para preparar o dispositivo e garantir procedimentos compatíveis com a LGPD (consentimento e uso estritamente necessário).
+            </p>
+        </div>
+        
+        <div class="mt-8 p-6 bg-green-50 border border-green-200 rounded-xl">
+            <p class="text-gray-700 text-center">
+                <strong class="text-green-800">Selo CaraCore de Sustentabilidade</strong> — Um conjunto exclusivo de soluções pensadas para o varejo brasileiro: resultado financeiro, conformidade fiscal e operação que não para.
+            </p>
+        </div>
+        
+        <div class="mt-10 text-center">
+            <a href="index.html#demo" class="inline-flex items-center green-bg text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition">
+                <i class="fas fa-calendar-check me-2"></i>Solicitar Demonstração
+            </a>
+        </div>
+    </main>
+    
+    <footer class="bg-gray-900 text-gray-300 py-8 mt-12">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-sm text-gray-400">&copy; 2024–2026 Cara Core Informática. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    
+    <script>
+        var m=document.getElementById('mobile-menu-button'),n=document.getElementById('mobile-menu');
+        if(m&&n) m.addEventListener('click',function(){n.classList.toggle('hidden');});
+    </script>
 </body>
 </html>
-
-

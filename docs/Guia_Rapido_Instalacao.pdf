@@ -1,0 +1,8 @@
+Guia Rápido de Instalação - v1.0.15
+
+Este é um PDF placeholder. Substitua por um PDF gerado a partir de `docs/PRIMEIROS_PASSOS.md`.
+
+Conteúdo resumido:
+- Execute `python scripts\install_windows.py` para instalar o PDV e a JRE embutida.
+- Se o Windows Defender ou SmartScreen bloquear, siga as instruções em `docs/PRIMEIROS_PASSOS.md`.
+- Verifique logs e telemetria em `%APPDATA%\CaraCore`.

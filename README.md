@@ -13,6 +13,10 @@ Vitrine de releases do **CaraCore-PDV** (PDV Selo Verde) da Cara Core Informáti
 - **Vitrine:** alinhada à matriz — mesma mensagem (Selo CaraCore de Sustentabilidade, economia real, fluxo contínuo, pronto 2026). Download, tecnologia (Soluções), wiki interna da loja e canal de feedback. Links para a matriz (apresentação completa, economia papel x digital, planos, consultoria, demonstração presencial).
 - **Canal de feedback:** suporte por e-mail (suporte@caracore.com.br), WhatsApp e Telegram. Não atendemos ligações telefônicas.
 
+## Sincronização com a matriz (código-fonte)
+
+A pasta `docs/` deste repositório é atualizada a partir do repositório de desenvolvimento **caracore-pdv** (branch `master`). Última entrega: **2026-04-20** — alinhado ao commit `3091a36` da matriz (versão de aplicação **2.0.0** em `pom.xml` / `electron`).
+
 ## Publicação
 
 O site da loja é publicado via **GitHub Pages** a partir da pasta `docs/`:
