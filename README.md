@@ -22,7 +22,7 @@ Vitrine de releases do **CaraCore-PDV** (PDV Selo Verde) da Cara Core Informáti
 - **Java 21 Temurin:** JRE embarcado para compatibilidade e performance.
 - **Atualização automática:** ficheiros `.yml` e `.blockmap` para **electron-updater**.
 - **Guia:** **INSTALACAO.md** (anexo aos assets da release).
-- **Apresentação e consultoria:** [caracore.com.br/delivery/pdv/](https://www.caracore.com.br/delivery/pdv/).
+- **Apresentação e consultoria:** [caracore.com.br/delivery/pdv/](https://caracore.com.br/delivery/pdv/).
 - **Changelog da matriz:** [chmulato/caracore-pdv](https://github.com/chmulato/caracore-pdv).
 
 ## Outras tags (ex.: **v3.0.0**) — stack distinta
