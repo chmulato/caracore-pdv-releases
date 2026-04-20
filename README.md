@@ -10,17 +10,28 @@ Vitrine de releases do **CaraCore-PDV** (PDV Selo Verde) da Cara Core Informáti
 
 ## Este repositório (loja)
 
-- **Vitrine:** mesma mensagem de produto (Selo CaraCore de Sustentabilidade, economia real, fluxo contínuo, pronto 2026). Download, tecnologia (Soluções), wiki interna da loja e canal de feedback. **Importante:** o conteúdo de `docs/` pode ser sincronizado a partir da **branch `master` da matriz**, mas isso **não** significa que o site e o **instalador v3.0.0** usem a mesma stack técnica — ver secção abaixo.
+- **Vitrine:** mesma mensagem de produto (Selo CaraCore de Sustentabilidade, economia real, fluxo contínuo, pronto 2026). Download, tecnologia (Soluções), wiki interna da loja e canal de feedback. A **linha de instalador alinhada à `master`** está documentada abaixo (**v1.0.16-rc2**); outras tags (ex.: **v3.0.0**) correspondem a **outra stack** — ver secção seguinte.
 - **Canal de feedback:** suporte por e-mail (suporte@caracore.com.br), WhatsApp e Telegram. Não atendemos ligações telefônicas.
 
-## Duas stacks: `master` (matriz) e release **v3.0.0** (loja / EXE)
+## Linha de referência a partir da `master` — [**v1.0.16-rc2**](https://github.com/chmulato/caracore-pdv-releases/releases/tag/v1.0.16-rc2)
 
-- **Branch `master` do repositório `caracore-pdv`:** linha atual de **desenvolvimento** — stack própria (runtime, dependências e build conforme esse repo hoje; ex.: versão em `pom.xml` / `electron`).
-- **Release [v3.0.0](https://github.com/chmulato/caracore-pdv-releases/releases/tag/v3.0.0) e o EXE distribuído:** **outra stack** — a que foi congelada e empacotada para a loja pública. O número **3.0.0** identifica essa linha empacotada; **não** deve ser lido como continuação direta do número de artefacto na `master` (são **pilhas técnicas distintas**).
+**Última versão da `master` a partir da qual se parte** (instalador Windows — PDV Selo Verde):
+
+- **Versão de Degustação (Free):** 100 vendas para teste real; operação offline (SQLite).
+- **Ofuscação:** código protegido contra engenharia reversa (segurança).
+- **Java 21 Temurin:** JRE embarcado para compatibilidade e performance.
+- **Atualização automática:** ficheiros `.yml` e `.blockmap` para **electron-updater**.
+- **Guia:** **INSTALACAO.md** (anexo aos assets da release).
+- **Apresentação e consultoria:** [caracore.com.br/delivery/pdv/](https://www.caracore.com.br/delivery/pdv/).
+- **Changelog da matriz:** [chmulato/caracore-pdv](https://github.com/chmulato/caracore-pdv).
+
+## Outras tags (ex.: **v3.0.0**) — stack distinta
+
+O release [**v3.0.0**](https://github.com/chmulato/caracore-pdv-releases/releases/tag/v3.0.0) e o respetivo EXE pertencem a **outra linha técnica empacotada**, **não** à continuidade directa da mesma stack que origina o **v1.0.16-rc2** a partir da `master`. Não comparar números de versão entre tags dessas linhas como se fossem a mesma série de build.
 
 ## Sincronização com a matriz (só a vitrine `docs/`)
 
-A pasta `docs/` pode ser atualizada a partir do **caracore-pdv** branch **`master`** (conteúdo de vitrine / mensagem). Última sincronização: **2026-04-20** — commit `3091a36` na matriz. Isto **não** substitui nem reversiona o instalador **v3.0.0**; apenas alinha páginas estáticas quando fizer sentido editorialmente.
+A pasta `docs/` pode ser atualizada a partir do **caracore-pdv** branch **`master`** (conteúdo de vitrine / mensagem). Última sincronização: **2026-04-20** — commit `3091a36` na matriz. Isto **não** substitui os instaladores publicados nas **releases**; apenas alinha páginas estáticas. A referência de produto empacotado a partir da `master` continua a ser o [**v1.0.16-rc2**](https://github.com/chmulato/caracore-pdv-releases/releases/tag/v1.0.16-rc2) até existir uma tag posterior explícita nessa linha.
 
 ## Publicação
 
