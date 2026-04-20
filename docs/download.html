@@ -468,7 +468,8 @@
           latest.url = data.html_url || latest.url;
 
           const assets = Array.isArray(data.assets) ? data.assets : [];
-          const re = /^caracore-pdv-[0-9a-z._-]{1,80}-windows-x64\.(exe|msi)$/i;
+          // Aceita dois formatos: CaraCore.PDV-3.0.0.exe (novo) ou caracore-pdv-2.0.0-windows-x64.exe (antigo)
+          const re = /^(CaraCore\.PDV-[0-9.]+|caracore-pdv-[0-9a-z._-]{1,80}-windows-x64)\.(exe|msi)$/i;
           const asset = assets.find(a => a && typeof a.name === "string" && re.test(a.name));
           if (asset && asset.browser_download_url) {
             latest.assetUrl = asset.browser_download_url;
