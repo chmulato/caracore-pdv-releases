@@ -10,12 +10,18 @@ Vitrine de releases do **CaraCore-PDV** (PDV Selo Verde) da Cara Core Informáti
 
 ## Este repositório (loja)
 
-- **Vitrine:** mesma mensagem de produto (Selo CaraCore de Sustentabilidade, economia real, fluxo contínuo, pronto 2026). Download, tecnologia (Soluções), wiki interna da loja e canal de feedback. A **linha de instalador alinhada à `master`** está documentada abaixo (**v1.0.16-rc2**); outras tags (ex.: **v3.0.0**) correspondem a **outra stack** — ver secção seguinte.
+- **Vitrine:** mesma mensagem de produto (Selo CaraCore de Sustentabilidade, economia real, fluxo contínuo, pronto 2026). A pasta **`docs/`** (GitHub Pages) é sincronizada a partir da branch **`java_21`** da matriz (stack **Quarkus + JavaFX**). A linha **Spring + Electron** na branch **`master`** mantém o seu próprio instalador de referência (**v1.0.16-rc2**) — ver secções abaixo.
 - **Canal de feedback:** suporte por e-mail (suporte@caracore.com.br), WhatsApp e Telegram. Não atendemos ligações telefônicas.
 
-## Linha de referência a partir da `master` — [**v1.0.16-rc2**](https://github.com/chmulato/caracore-pdv-releases/releases/tag/v1.0.16-rc2)
+## Linha `java_21` (Quarkus + JavaFX) — vitrine `docs/` e release [**v3.0.0**](https://github.com/chmulato/caracore-pdv-releases/releases/tag/v3.0.0)
 
-**Última versão da `master` a partir da qual se parte** (instalador Windows — PDV Selo Verde):
+- **Matriz:** branch [`java_21`](https://github.com/chmulato/caracore-pdv/tree/java_21) — `pom.xml` em **3.0.0**, empacotamento **jar**, Quarkus 3, JavaFX, soberania localhost.
+- **Loja:** o site em `docs/` segue o **conteúdo desta branch** (páginas HTML/CSS e wiki alinhadas à trilha Java 21).
+- **Instalador público:** o EXE e notas do [**v3.0.0**](https://github.com/chmulato/caracore-pdv-releases/releases/tag/v3.0.0) correspondem a esta **stack** (não à linha Spring da `master`).
+
+## Linha `master` (Spring + Electron WAR) — [**v1.0.16-rc2**](https://github.com/chmulato/caracore-pdv-releases/releases/tag/v1.0.16-rc2)
+
+**Última versão empacotada a partir da qual se parte** nesta linha (instalador Windows — PDV Selo Verde, stack anterior):
 
 - **Versão de Degustação (Free):** 100 vendas para teste real; operação offline (SQLite).
 - **Ofuscação:** código protegido contra engenharia reversa (segurança).
@@ -23,15 +29,11 @@ Vitrine de releases do **CaraCore-PDV** (PDV Selo Verde) da Cara Core Informáti
 - **Atualização automática:** ficheiros `.yml` e `.blockmap` para **electron-updater**.
 - **Guia:** **INSTALACAO.md** (anexo aos assets da release).
 - **Apresentação e consultoria:** [caracore.com.br/delivery/pdv/](https://caracore.com.br/delivery/pdv/).
-- **Changelog da matriz:** [chmulato/caracore-pdv](https://github.com/chmulato/caracore-pdv).
+- **Changelog da matriz:** [chmulato/caracore-pdv](https://github.com/chmulato/caracore-pdv) (branch `master` atual em **1.0.17** no `pom.xml`).
 
-## Outras tags (ex.: **v3.0.0**) — stack distinta
+## Sincronização da vitrine (`docs/`)
 
-O release [**v3.0.0**](https://github.com/chmulato/caracore-pdv-releases/releases/tag/v3.0.0) e o respetivo EXE pertencem a **outra linha técnica empacotada**, **não** à continuidade directa da mesma stack que origina o **v1.0.16-rc2** a partir da `master`. Não comparar números de versão entre tags dessas linhas como se fossem a mesma série de build.
-
-## Sincronização com a matriz (só a vitrine `docs/`)
-
-A pasta `docs/` pode ser atualizada a partir do **caracore-pdv** branch **`master`** (conteúdo de vitrine / mensagem). Última sincronização: **2026-04-20** — commit `3091a36` na matriz. Isto **não** substitui os instaladores publicados nas **releases**; apenas alinha páginas estáticas. A referência de produto empacotado a partir da `master` continua a ser o [**v1.0.16-rc2**](https://github.com/chmulato/caracore-pdv-releases/releases/tag/v1.0.16-rc2) até existir uma tag posterior explícita nessa linha.
+Última atualização: **2026-04-20** — conteúdo copiado a partir de **caracore-pdv** branch **`java_21`**, commit **`4cb5bb9`** (`pom.xml` **3.0.0** nessa branch). Não altera por si só os assets das **releases**; apenas a vitrine GitHub Pages. Páginas exclusivas da loja (CNAME, `installers/`, wikis de release, manuais operacionais adicionais, etc.) **mantêm-se** no repositório quando não existem equivalentes na matriz.
 
 ## Publicação
 
