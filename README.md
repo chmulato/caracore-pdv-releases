@@ -10,12 +10,17 @@ Vitrine de releases do **CaraCore-PDV** (PDV Selo Verde) da Cara Core Informáti
 
 ## Este repositório (loja)
 
-- **Vitrine:** alinhada à matriz — mesma mensagem (Selo CaraCore de Sustentabilidade, economia real, fluxo contínuo, pronto 2026). Download, tecnologia (Soluções), wiki interna da loja e canal de feedback. Links para a matriz (apresentação completa, economia papel x digital, planos, consultoria, demonstração presencial).
+- **Vitrine:** mesma mensagem de produto (Selo CaraCore de Sustentabilidade, economia real, fluxo contínuo, pronto 2026). Download, tecnologia (Soluções), wiki interna da loja e canal de feedback. **Importante:** o conteúdo de `docs/` pode ser sincronizado a partir da **branch `master` da matriz**, mas isso **não** significa que o site e o **instalador v3.0.0** usem a mesma stack técnica — ver secção abaixo.
 - **Canal de feedback:** suporte por e-mail (suporte@caracore.com.br), WhatsApp e Telegram. Não atendemos ligações telefônicas.
 
-## Sincronização com a matriz (código-fonte)
+## Duas stacks: `master` (matriz) e release **v3.0.0** (loja / EXE)
 
-A pasta `docs/` deste repositório é atualizada a partir do repositório de desenvolvimento **caracore-pdv** (branch `master`). Última entrega: **2026-04-20** — alinhado ao commit `3091a36` da matriz (versão de aplicação **2.0.0** em `pom.xml` / `electron`).
+- **Branch `master` do repositório `caracore-pdv`:** linha atual de **desenvolvimento** — stack própria (runtime, dependências e build conforme esse repo hoje; ex.: versão em `pom.xml` / `electron`).
+- **Release [v3.0.0](https://github.com/chmulato/caracore-pdv-releases/releases/tag/v3.0.0) e o EXE distribuído:** **outra stack** — a que foi congelada e empacotada para a loja pública. O número **3.0.0** identifica essa linha empacotada; **não** deve ser lido como continuação direta do número de artefacto na `master` (são **pilhas técnicas distintas**).
+
+## Sincronização com a matriz (só a vitrine `docs/`)
+
+A pasta `docs/` pode ser atualizada a partir do **caracore-pdv** branch **`master`** (conteúdo de vitrine / mensagem). Última sincronização: **2026-04-20** — commit `3091a36` na matriz. Isto **não** substitui nem reversiona o instalador **v3.0.0**; apenas alinha páginas estáticas quando fizer sentido editorialmente.
 
 ## Publicação
 
