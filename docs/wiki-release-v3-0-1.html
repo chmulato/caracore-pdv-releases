@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="https://pdv.caracore.com.br/">
+    <title>Novidades da Versão 3.0.1 — CaraCore-PDV</title>
+    <meta name="description" content="Notas da versão 3.0.1 do CaraCore-PDV: correção de regressão no registro de estoque e ajuste de migração Flyway para compatibilidade com Hibernate LocalDateTime.">
+    <link rel="stylesheet" href="https://pdv.caracore.com.br/assets/css/loja.css">
+    <link rel="stylesheet" href="https://pdv.caracore.com.br/assets/evolution-status/evolution-status.css">
+    <link rel="stylesheet" href="/assets/caracore-core-typography.css">
+    <link rel="stylesheet" href="/assets/caracore-institutional-components.css">
+</head>
+<body class="page-wiki page-wiki-release">
+    <div class="wrapper">
+        <nav class="breadcrumb" aria-label="Navegação">
+            <a href="index.html">CaraCore-PDV - Loja</a>
+            <span> · </span>
+            <a href="wiki.html">Wiki da Loja</a>
+            <span> · </span>
+            <span>Novidades da v3.0.1</span>
+        </nav>
+
+        <header>
+            <h1>Versão 3.0.1: correção de regressão no estoque</h1>
+            <p>Atualização de manutenção da linha 3 (branch <code>java_21</code>). Corrige falha que impedia o registro correto de estoque no banco de dados após a migração inicial.</p>
+        </header>
+
+        <p class="download-notice"><strong>Versão estável atual: 3.0.1 — lançada em 21/04/2026.</strong> Se você usa a v3.0.0, recomendamos atualizar para esta versão para garantir a integridade do registro de estoque.</p>
+
+        <section class="card wiki-card">
+            <h2>O que foi corrigido</h2>
+            <ul>
+                <li><strong>Regressão no campo <code>data_registro</code> do estoque:</strong> a migração V027 (seed do vendedor padrão) usava <code>DATE('now')</code> do SQLite, que retorna apenas a data (<code>YYYY-MM-DD</code>). O Hibernate mapeava esse campo como <code>LocalDateTime</code>, esperando o formato <code>YYYY-MM-DD HH:MM:SS</code>, causando erro 400 nas vendas e 500 no dashboard.</li>
+                <li><strong>Migração V028 adicionada:</strong> converte registros existentes com data incompleta para o formato correto (<code>datetime(data_registro)</code>), garantindo compatibilidade com instalações que já usavam a v3.0.0.</li>
+                <li><strong>Migração V027 corrigida:</strong> substituído <code>DATE('now')</code> por <code>datetime('now')</code> para garantir o formato correto em novas instalações.</li>
+            </ul>
+        </section>
+
+        <section class="card wiki-card">
+            <h2>Impacto da atualização</h2>
+            <div class="wiki-table-wrap">
+                <table class="wiki-table">
+                    <thead>
+                        <tr>
+                            <th>Cenário</th>
+                            <th>Comportamento antes da v3.0.1</th>
+                            <th>Comportamento após a v3.0.1</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Nova venda com produto em estoque</td>
+                            <td>Erro 400 — requisição rejeitada</td>
+                            <td>Venda registrada normalmente</td>
+                        </tr>
+                        <tr>
+                            <td>Dashboard</td>
+                            <td>Erro 500 — página não carregava</td>
+                            <td>Dados exibidos corretamente</td>
+                        </tr>
+                        <tr>
+                            <td>Nova instalação</td>
+                            <td>Problema na criação do estoque padrão</td>
+                            <td>Estoque inicial criado com formato correto</td>
+                        </tr>
+                        <tr>
+                            <td>Atualização de v3.0.0</td>
+                            <td>—</td>
+                            <td>Flyway aplica V028 automaticamente na primeira inicialização</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="card wiki-card">
+            <h2>Como atualizar</h2>
+            <ol>
+                <li>Baixe o instalador <strong>CaraCore PDV-3.0.1.exe</strong> na página de download.</li>
+                <li>Execute o instalador — ele atualiza sobre a versão anterior sem perda de dados.</li>
+                <li>Na primeira inicialização, o Flyway aplica a migração V028 automaticamente.</li>
+                <li>Não é necessária nenhuma ação manual no banco de dados.</li>
+            </ol>
+            <p>O banco de dados SQLite local é preservado integralmente durante a atualização.</p>
+        </section>
+
+        <section class="card wiki-card">
+            <h2>O que permanece igual da v3.0.0</h2>
+            <ul>
+                <li>Todos os cadastros, vendas e histórico registrados na v3.0.0 são mantidos.</li>
+                <li>Motor fiscal IBS/CBS, PIX com split payment e dashboard gerencial sem alterações.</li>
+                <li>Perfis de operador, trilha de auditoria e configurações de loja inalterados.</li>
+                <li>Nenhuma reconfiguração necessária após a atualização.</li>
+            </ul>
+        </section>
+
+        <section class="card wiki-card">
+            <h2>Primeiro acesso (nova instalação)</h2>
+            <ul>
+                <li>Endereço local: <code>http://localhost:8080</code></li>
+                <li>Usuário inicial: <code>admin</code></li>
+                <li>Senha inicial: <code>admin</code></li>
+                <li>No primeiro login há troca obrigatória de senha (8 a 15 caracteres)</li>
+                <li>Recomendado criar segundo operador administrativo para contingência</li>
+                <li>Banco: SQLite local (criado automaticamente via Flyway)</li>
+            </ul>
+            <div class="wiki-links">
+                <a href="download.html" class="btn-release">Baixar EXE</a>
+                <a href="wiki-caracteristicas.html" class="btn-release btn-release-outline">Características da aplicação</a>
+                <a href="wiki-release-v3-0-0.html" class="btn-release btn-release-outline">Release anterior v3.0.0</a>
+                <a href="wiki.html" class="btn-release btn-release-outline">Voltar à wiki</a>
+                <a href="index.html" class="btn-release btn-release-outline">Portal da loja</a>
+            </div>
+        </section>
+
+        <nav class="back">
+            <a href="wiki.html">← Voltar à wiki</a> · <a href="wiki.html">Trilha de versões</a> · <a href="download.html">Download</a> · <a href="tecnologia.html">Tecnologia</a> · Release 3.0.1 — branch java_21
+        </nav>
+    </div>
+    <script src="https://pdv.caracore.com.br/assets/js/loja.js"></script>
+
+    <footer class="evo-roadmap-footer" role="contentinfo"><p class="evo-roadmap-title">Próximos passos</p><ul class="evo-roadmap-list"><li>Integração PIX nativa (homologação PSP)</li><li>Dashboard de margem líquida para gerente/admin</li><li>IA para previsão de estoque</li></ul></footer>
+    <div class="evo-feedback-fab"><a href="canal-feedback.html" class="evo-feedback-btn" aria-label="Sugira uma melhoria no canal da loja"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> Sugira uma melhoria</a></div>
+</body>
+</html>
