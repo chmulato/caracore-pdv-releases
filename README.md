@@ -13,11 +13,11 @@ Vitrine de releases do **CaraCore-PDV** (PDV Selo Verde) da Cara Core Informáti
 - **Vitrine:** mesma mensagem de produto (Selo CaraCore de Sustentabilidade, economia real, fluxo contínuo, pronto 2026). A pasta **`docs/`** (GitHub Pages) é sincronizada a partir da branch **`java_21`** da matriz (stack **Quarkus + JavaFX**). A linha **Spring + Electron** na branch **`master`** mantém o seu próprio instalador de referência (**v1.0.16-rc2**) — ver secções abaixo.
 - **Canal de feedback:** suporte por e-mail (suporte@caracore.com.br), WhatsApp e Telegram. Não atendemos ligações telefônicas.
 
-## Linha `java_21` (Quarkus + JavaFX) — vitrine `docs/` e release [**v3.0.0**](https://github.com/chmulato/caracore-pdv-releases/releases/tag/v3.0.0)
+## Linha `java_21` (Quarkus + JavaFX) — vitrine `docs/` e release [**v3.0.10**](https://github.com/chmulato/caracore-pdv-releases/releases/tag/v3.0.10)
 
-- **Matriz:** branch [`java_21`](https://github.com/chmulato/caracore-pdv/tree/java_21) — `pom.xml` em **3.0.0**, empacotamento **jar**, Quarkus 3, JavaFX, soberania localhost.
+- **Matriz:** branch [`java_21`](https://github.com/chmulato/caracore-pdv/tree/java_21) — `pom.xml` em **3.0.2**, empacotamento **jar** (hybrid: native tentado, fallback JVM), Quarkus 3, JavaFX, soberania localhost.
 - **Loja:** o site em `docs/` segue o **conteúdo desta branch** (páginas HTML/CSS e wiki alinhadas à trilha Java 21).
-- **Instalador público:** o EXE e notas do [**v3.0.0**](https://github.com/chmulato/caracore-pdv-releases/releases/tag/v3.0.0) correspondem a esta **stack** (não à linha Spring da `master`).
+- **Instalador público:** o ZIP e notas do [**v3.0.10**](https://github.com/chmulato/caracore-pdv-releases/releases/tag/v3.0.10) correspondem a esta **stack** (não à linha Spring da `master`).
 
 ## Linha `master` (Spring + Electron WAR) — [**v1.0.16-rc2**](https://github.com/chmulato/caracore-pdv-releases/releases/tag/v1.0.16-rc2)
 
@@ -33,7 +33,7 @@ Vitrine de releases do **CaraCore-PDV** (PDV Selo Verde) da Cara Core Informáti
 
 ## Sincronização da vitrine (`docs/`)
 
-Última atualização: **2026-04-20** — conteúdo copiado a partir de **caracore-pdv** branch **`java_21`**, commit **`4cb5bb9`** (`pom.xml` **3.0.0** nessa branch). Não altera por si só os assets das **releases**; apenas a vitrine GitHub Pages. Páginas exclusivas da loja (CNAME, `installers/`, wikis de release, manuais operacionais adicionais, etc.) **mantêm-se** no repositório quando não existem equivalentes na matriz.
+Última atualização: **2026-04-23** — conteúdo copiado a partir de **caracore-pdv** branch **`java_21`**, release **v3.0.10**. Não altera por si só os assets das **releases**; apenas a vitrine GitHub Pages. Páginas exclusivas da loja (CNAME, `installers/`, wikis de release, manuais operacionais adicionais, etc.) **mantêm-se** no repositório quando não existem equivalentes na matriz.
 
 ## Publicação
 
