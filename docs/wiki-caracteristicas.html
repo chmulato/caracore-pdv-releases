@@ -34,7 +34,7 @@
                 <li>PDV Selo Verde para varejo brasileiro com foco em operação antifrágil</li>
                 <li>Execução local com SQLite para soberania de dados e continuidade de venda</li>
                 <li>Fluxo preparado para Reforma Tributaria 2026-2033</li>
-                <li>Distribuicao principal em Windows Desktop (EXE) com abertura em <code>localhost:8080</code></li>
+                <li>Distribuição principal em Windows Desktop com backend local em <code>localhost:8080</code> e evolução JavaFX nativa na oficina <code>java_21</code></li>
             </ul>
         </section>
 
@@ -52,13 +52,13 @@
                     <tbody>
                         <tr>
                             <td>Backend</td>
-                            <td>Java 21, Spring Boot, Spring Data JPA, Spring Security, Hibernate</td>
-                            <td>Base de negócio e APIs REST do PDV</td>
+                            <td>Java 21, Quarkus 3, Hibernate Panache, SQLite JDBC</td>
+                            <td>Base de negócio e APIs REST locais do PDV</td>
                         </tr>
                         <tr>
-                            <td>Frontend</td>
-                            <td>Thymeleaf, Bootstrap, HTMX, ApexCharts, jQuery</td>
-                            <td>Interface web responsiva para operação e administração</td>
+                            <td>Cliente desktop</td>
+                            <td>JavaFX 21</td>
+                            <td>Caminho principal atual da oficina <code>java_21</code></td>
                         </tr>
                         <tr>
                             <td>Banco</td>
@@ -66,9 +66,9 @@
                             <td>Perfil padrão e armazenamento local</td>
                         </tr>
                         <tr>
-                            <td>Desktop</td>
-                            <td>Electron + JRE embarcada</td>
-                            <td>Instalador Windows com bootstrap do servidor local</td>
+                            <td>Delivery publicado</td>
+                            <td>Pacote Windows portátil v3.0.10</td>
+                            <td>Empacotamento híbrido da release; Electron permanece como histórico/ponte de delivery</td>
                         </tr>
                         <tr>
                             <td>Relatórios</td>
@@ -100,7 +100,7 @@
                 <li>Modo de contingência com fila local para eventos fiscais</li>
                 <li>Fluxo antifrágil para manter venda em condição degradada</li>
                 <li>Desktop com inicialização assistida do backend local quando necessário</li>
-                <li>Primeiro acesso de degustação na loja: <code>admin / 123456</code></li>
+                <li>Primeiro acesso de degustação na loja: <code>admin / admin</code>, com troca obrigatória de senha no primeiro login</li>
             </ul>
         </section>
 
@@ -157,8 +157,8 @@
             <ul>
                 <li>Testes Java (unitários e integração) com JUnit e Mockito</li>
                 <li>Cobertura com JaCoCo</li>
-                <li>Testes de interface com Selenium e Pytest</li>
-                <li>Testes fiscais no desktop com Vitest e mocks da SEFAZ</li>
+                <li>Testes de interface com JavaFX/TestFX, Selenium e Pytest conforme trilha de validação</li>
+                <li>Testes fiscais e mocks da SEFAZ conforme documentação técnica da oficina</li>
                 <li>Validações de contingência e sincronização em fila local</li>
             </ul>
         </section>
@@ -166,10 +166,10 @@
         <section class="card wiki-card">
             <h2>9. Governança de release local</h2>
             <ul>
-                <li>Canal de distribuição oficial para o cliente: <code>pdv.caracore.com.br/installers/</code></li>
+                <li>Canal de distribuição oficial para o cliente: <code>pdv.caracore.com.br/download.html</code></li>
                 <li>Canal estável para produção e canal pré-release para validações controladas</li>
-                <li>Integridade do instalador validada em pipeline antes de publicação</li>
-                <li>A loja concentra vitrine, wiki e binários servidos no mesmo domínio</li>
+                <li>Integridade do pacote validada com SHA256 e manifesto de release</li>
+                <li>A loja concentra vitrine, wiki e link público para os binários de release</li>
                 <li>Rastreabilidade por tag de versão e histórico público de release</li>
             </ul>
         </section>
@@ -177,7 +177,7 @@
         <section class="card wiki-card">
             <h2>10. Navegação recomendada da wiki</h2>
             <div class="wiki-links">
-                <a href="wiki-release-v3-0-1.html" class="btn-release">Release atual (v3.0.1)</a>
+                <a href="wiki-release-v3-0-10.html" class="btn-release">Release atual (v3.0.10)</a>
                 <a href="wiki.html" class="btn-release btn-release-outline">Trilha completa de versões</a>
                 <a href="download.html" class="btn-release btn-release-outline">Download</a>
                 <a href="tecnologia.html" class="btn-release btn-release-outline">Tecnologia</a>
@@ -191,7 +191,7 @@
     </div>
     <script src="https://pdv.caracore.com.br/assets/js/loja.js"></script>
 
-    <footer class="evo-roadmap-footer" role="contentinfo"><p class="evo-roadmap-title">Próximos passos</p><ul class="evo-roadmap-list"><li>Domínio próprio <span class="evo-roadmap-tag">Em planejamento</span></li><li>Integração PIX nativa</li><li>IA para estoque</li></ul></footer>
+    <footer class="evo-roadmap-footer" role="contentinfo"><p class="evo-roadmap-title">Próximos passos</p><ul class="evo-roadmap-list"><li>Domínio próprio <span class="evo-roadmap-tag">Ativo</span></li><li>JavaFX nativo na oficina <span class="evo-roadmap-tag">java_21</span></li><li>Integração PIX nativa</li><li>IA para estoque</li></ul></footer>
     <div class="evo-feedback-fab"><a href="canal-feedback.html" class="evo-feedback-btn" aria-label="Sugira uma melhoria no canal da loja"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> Sugira uma melhoria</a></div>
 </body>
 </html>

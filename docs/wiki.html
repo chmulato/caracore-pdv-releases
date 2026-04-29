@@ -26,15 +26,15 @@
             <p>Referência operacional interna da loja do CaraCore-PDV: trilha de versões, primeiro acesso, instalação e navegação rápida.</p>
         </header>
 
-        <p class="download-notice"><strong>Canal atual: versão 3.0.1 estável — lançada em 21/04/2026.</strong> A linha 3 é a mais completa do CaraCore-PDV: motor fiscal 2026, PIX com split, margem líquida real e operação antifrágil.</p>
+        <p class="download-notice"><strong>Canal atual: versão 3.0.10 estável — lançada em 23/04/2026.</strong> A linha 3 é a mais completa do CaraCore-PDV: motor fiscal 2026, PIX com split, margem líquida real e operação antifrágil. A oficina <code>java_21</code> segue evoluindo para JavaFX nativo + Quarkus + SQLite local.</p>
 
         <section class="card wiki-card">
             <h2>Visão geral</h2>
             <p>Esta wiki fica dentro da própria loja do <strong>CaraCore-PDV</strong> e concentra instruções curtas para validação da release e primeiro uso em ambiente Windows.</p>
             <ul>
-                <li>Canal atual: instalador Windows x64</li>
+                <li>Canal atual: pacote Windows portátil da série 3.x</li>
                 <li>Perfil: degustação Free com SQLite local</li>
-                <li>Atualização automatica suportada por artefatos auxiliares</li>
+                <li>Release pública atual: <code>v3.0.10</code> no GitHub Releases</li>
             </ul>
         </section>
 
@@ -55,7 +55,8 @@
             <ul>
                 <li>URL local: <code>http://localhost:8080</code></li>
                 <li>Usuário inicial: <code>admin</code></li>
-                <li>Senha inicial: <code>123456</code></li>
+                <li>Senha inicial: <code>admin</code></li>
+                <li>Primeiro login exige troca obrigatória de senha</li>
                 <li>Banco local: <code>SQLite</code></li>
             </ul>
         </section>
@@ -64,7 +65,7 @@
             <h2>Checklist rápido pos-instalação (Windows)</h2>
             <ul>
                 <li>Confirmar abertura do app local em <code>http://localhost:8080</code></li>
-                <li>Validar login <code>admin / 123456</code> no ambiente de degustação</li>
+                <li>Validar login inicial <code>admin / admin</code> no ambiente de degustação e trocar a senha no primeiro acesso</li>
                 <li>Cadastrar 1 produto, registrar 1 venda e emitir 1 recibo digital de teste</li>
                 <li>Fechar e reabrir o app para validar persistência no SQLite local</li>
                 <li>Verificar pasta de logs do desktop em caso de comportamento inesperado</li>
@@ -74,13 +75,13 @@
         <section class="card wiki-card">
             <h2>Canal de releases e política de atualização</h2>
             <ul>
-                <li><strong>Canal estável:</strong> página <code>installers/index.html#estavel</code> no domínio da loja</li>
+                <li><strong>Canal estável:</strong> release <code>v3.0.10</code> e página <code>download.html</code> no domínio da loja</li>
                 <li><strong>Canal pré-release:</strong> usado para validações de campo antes da próxima final</li>
-                <li><strong>Fonte única para o operador:</strong> instaladores publicados em <code>pdv.caracore.com.br/installers/</code> (mesmo domínio da loja)</li>
+                <li><strong>Fonte única para o operador:</strong> download publicado em <code>pdv.caracore.com.br/download.html</code>, apontando para o latest release público</li>
                 <li><strong>Boa prática:</strong> em ambiente produtivo, priorizar release estável</li>
             </ul>
             <div class="wiki-links">
-                <a href="installers/index.html#estavel" class="btn-release">Abrir estável mais recente</a>
+                <a href="download.html" class="btn-release">Abrir estável mais recente</a>
                 <a href="installers/index.html#historico" class="btn-release btn-release-outline">Histórico e wiki por versão</a>
             </div>
         </section>
@@ -144,7 +145,7 @@
     </div>
     <script src="https://pdv.caracore.com.br/assets/js/loja.js"></script>
 
-    <footer class="evo-roadmap-footer" role="contentinfo"><p class="evo-roadmap-title">Próximos passos</p><ul class="evo-roadmap-list"><li>Domínio próprio <span class="evo-roadmap-tag">Em planejamento</span></li><li>Integração PIX nativa</li><li>IA para estoque</li></ul></footer>
+    <footer class="evo-roadmap-footer" role="contentinfo"><p class="evo-roadmap-title">Próximos passos</p><ul class="evo-roadmap-list"><li>Domínio próprio <span class="evo-roadmap-tag">Ativo</span></li><li>JavaFX nativo na oficina <span class="evo-roadmap-tag">java_21</span></li><li>Integração PIX nativa</li><li>IA para estoque</li></ul></footer>
     <div class="evo-feedback-fab"><a href="canal-feedback.html" class="evo-feedback-btn" aria-label="Sugira uma melhoria no canal da loja"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> Sugira uma melhoria</a></div>
 </body>
 </html>

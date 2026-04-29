@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <base href="https://pdv.caracore.com.br/">
     <title>Novidades da Versão 3.0.10 — CaraCore-PDV</title>
-    <meta name="description" content="Notas da versão 3.0.10 do CaraCore-PDV: entrega portátil Windows via CI/CD híbrido, Electron dual-mode (Native + JVM) e correção de publicação de releases.">
+    <meta name="description" content="Notas da versão 3.0.10 do CaraCore-PDV: entrega portátil Windows via CI/CD híbrido, fallback Native/JVM e alinhamento da oficina JavaFX nativa.">
     <link rel="stylesheet" href="https://pdv.caracore.com.br/assets/css/loja.css">
     <link rel="stylesheet" href="https://pdv.caracore.com.br/assets/evolution-status/evolution-status.css">
     <link rel="stylesheet" href="/assets/caracore-core-typography.css">
@@ -23,7 +23,7 @@
 
         <header>
             <h1>Versão 3.0.10: entrega portátil Windows e CI/CD híbrido</h1>
-            <p>Atualização da linha 3 (branch <code>java_21</code>). Consolida o pipeline de entrega contínua com fallback automático JVM, Electron dual-mode e publicação estável de releases no repositório público.</p>
+            <p>Atualização da linha 3 (branch <code>java_21</code>). Consolida o pipeline de entrega contínua com fallback automático JVM, pacote Windows portátil e publicação estável de releases no repositório público. A oficina atual segue evoluindo o caminho JavaFX nativo sem Electron como direção principal.</p>
         </header>
 
         <p class="download-notice"><strong>Versão estável atual: 3.0.10 — lançada em 23/04/2026.</strong> Se você usa v3.0.1 ou anterior, recomendamos atualizar para esta versão para obter o instalador ZIP portátil mais recente.</p>
@@ -31,8 +31,8 @@
         <section class="card wiki-card">
             <h2>O que foi adicionado</h2>
             <ul>
-                <li><strong>Entrega portátil Windows (CI/CD):</strong> workflow híbrido no GitHub Actions — tenta build Quarkus Native; em caso de falha, aciona fallback automático para empacotamento JVM (<code>fast-jar</code>). Garante instalador ZIP estável em todas as máquinas Windows.</li>
-                <li><strong>Electron dual-mode:</strong> <code>electron/main.js</code> detecta automaticamente <code>*-runner.exe</code> (native) ou <code>quarkus-run.jar</code> (JVM) e inicializa o backend correto, com JRE embutido para a rota JVM. O usuário não precisa instalar Java separadamente.</li>
+                <li><strong>Entrega portátil Windows (CI/CD):</strong> workflow híbrido no GitHub Actions — tenta build Quarkus Native; em caso de falha, aciona fallback automático para empacotamento JVM (<code>fast-jar</code>). Garante ZIP estável em todas as máquinas Windows.</li>
+                <li><strong>Empacotamento dual-mode da v3.0.10:</strong> o pacote publicado detecta automaticamente <code>*-runner.exe</code> (native) ou <code>quarkus-run.jar</code> (JVM) e inicializa o backend correto, com JRE embutido para a rota JVM. Esse empacotamento é o delivery desta release; a oficina <code>java_21</code> segue priorizando JavaFX nativo sem Electron.</li>
             </ul>
         </section>
 
@@ -67,7 +67,7 @@
                             <td>Fallback JVM acionado automaticamente; ZIP sempre disponível</td>
                         </tr>
                         <tr>
-                            <td>Execução via Electron</td>
+                            <td>Execução do pacote portátil</td>
                             <td>Somente modo native; erros se runner.exe ausente</td>
                             <td>Modo dual: detecta native ou JVM automaticamente</td>
                         </tr>
@@ -84,8 +84,8 @@
         <section class="card wiki-card">
             <h2>Como atualizar</h2>
             <ol>
-                <li>Baixe o instalador <strong>CaraCore PDV-3.0.10.exe</strong> (ou ZIP portátil) na página de download.</li>
-                <li>Execute o instalador — ele atualiza sobre a versão anterior sem perda de dados.</li>
+                <li>Baixe o pacote <strong>caracore-pdv-v3.0.10-windows-portable.zip</strong> na página de download ou no GitHub Releases.</li>
+                <li>Extraia o ZIP em uma pasta local e execute o aplicativo conforme o <code>INSTALACAO.md</code> da release.</li>
                 <li>Na primeira inicialização, o Flyway aplica migrações pendentes automaticamente.</li>
                 <li>Não é necessária nenhuma ação manual no banco de dados.</li>
             </ol>
@@ -113,7 +113,7 @@
                 <li>Banco: SQLite local (criado automaticamente via Flyway)</li>
             </ul>
             <div class="wiki-links">
-                <a href="download.html" class="btn-release">Baixar EXE</a>
+                <a href="download.html" class="btn-release">Baixar versão estável</a>
                 <a href="wiki-caracteristicas.html" class="btn-release btn-release-outline">Características da aplicação</a>
                 <a href="wiki-release-v3-0-1.html" class="btn-release btn-release-outline">Release anterior v3.0.1</a>
                 <a href="wiki.html" class="btn-release btn-release-outline">Voltar à wiki</a>

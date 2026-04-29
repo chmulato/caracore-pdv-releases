@@ -210,7 +210,7 @@
                 <div class="font-extrabold text-slate-900">Onde acessar no Windows (Explorador de arquivos)</div>
                 <ul class="mt-3 text-sm text-slate-800 space-y-2">
                   <li><strong>Instalação padrão (pasta da aplicação):</strong> os arquivos do banco ficam na pasta <code class="px-1.5 py-0.5 bg-slate-100 rounded">data</code> no mesmo diretório em que o PDV foi instalado. Exemplo: <code class="px-1.5 py-0.5 bg-slate-100 rounded">C:\CaracorePDV\data\</code>.</li>
-                  <li><strong>Versão Desktop (Electron):</strong> o diretório de dados do usuário pode estar em <code class="px-1.5 py-0.5 bg-slate-100 rounded">%USERPROFILE%\.caracore-pdv</code> ou na pasta de dados do aplicativo (varia conforme o instalador). O lojista ou o suporte pode confirmar o caminho na tela de backup/restauração do Centro de Segurança.</li>
+                  <li><strong>Versão Desktop:</strong> o diretório de dados do usuário pode estar em <code class="px-1.5 py-0.5 bg-slate-100 rounded">%USERPROFILE%\.caracore-pdv</code>, em <code class="px-1.5 py-0.5 bg-slate-100 rounded">%APPDATA%\caracore</code> ou na pasta de dados do aplicativo (varia conforme o empacotamento). O lojista ou o suporte pode confirmar o caminho na tela de backup/restauração do Centro de Segurança.</li>
                 </ul>
               </div>
 
@@ -348,7 +348,7 @@
                 <div class="font-extrabold text-slate-900">Proteções do sistema</div>
                 <ul class="mt-3 text-sm text-slate-800 space-y-2">
                   <li>O próprio PDV executa <strong>PRAGMA integrity_check</strong> ao iniciar; em falha, não sobe e pode exibir <strong>Erro 02 (Estado Parcial)</strong>.</li>
-                  <li>Na versão Desktop (Electron), alterações em arquivos do aplicativo ou do banco podem ser detectadas (hash do app, cabeçalho do SQLite), bloqueando a abertura.</li>
+                  <li>Na versão Desktop, alterações em arquivos do aplicativo ou do banco podem ser detectadas (hash do app, cabeçalho do SQLite), bloqueando a abertura.</li>
                 </ul>
               </div>
             </section>
