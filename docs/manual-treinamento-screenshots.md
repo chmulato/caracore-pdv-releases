@@ -429,14 +429,14 @@ Presente em todas as telas (menos Login):
 
 **Opção 1: Maven**
 ```bash
-cd d:\dev\caracore-pdv
+cd <repositorio>/caracore-pdv
 mvn clean compile
 mvn javafx:run -pl . -am
 ```
 
 **Opção 2: Java direto**
 ```bash
-cd d:\dev\caracore-pdv
+cd <repositorio>/caracore-pdv
 java -cp target/classes:$HOME/.m2/repository/org/openjfx/javafx-graphics/21/javafx-graphics-21-win.jar:... \
   br.com.caracore.pdv.fx.ui.ScreenshotsTraining
 ```

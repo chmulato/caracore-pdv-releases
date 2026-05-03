@@ -41,7 +41,7 @@ screenshots/
 
 **Passo 1: Compilar o projeto**
 ```bash
-cd d:\dev\caracore-pdv
+cd <repositorio>/caracore-pdv
 mvn clean compile -DskipTests
 ```
 
