@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Manual de Upgrade Java 21 - Wiki PDV</title>
-  <meta name="description" content="Manual oficial em HTML com prints para upgrade seguro do PDV: master para java_21.">
+  <title>Manual de Upgrade Historico - Transicao Java 21 | Wiki PDV</title>
+  <meta name="description" content="Guia historico preservado da transicao para Java 21, mantido para auditoria e consulta tecnica, nao como fluxo publico principal.">
   <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="/assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
   <link rel="stylesheet" href="assets/css/wiki.css">
@@ -36,7 +36,7 @@
         <ol class="breadcrumb mb-0">
           <li class="breadcrumb-item"><a href="../index.html">Loja</a></li>
           <li class="breadcrumb-item"><a href="index.html">Wiki</a></li>
-          <li class="breadcrumb-item active" aria-current="page">Manual Upgrade Java 21</li>
+          <li class="breadcrumb-item active" aria-current="page">Manual Upgrade Historico</li>
         </ol>
       </nav>
     </div>
@@ -44,8 +44,8 @@
 
   <div class="wiki-container py-4">
     <div class="manual-hero">
-      <h1><i class="bi bi-shield-check"></i> Manual Oficial de Upgrade (master -> java_21)</h1>
-      <p class="mb-2">Guia operacional em HTML com capturas de tela para implantação segura do PDV.</p>
+      <h1><i class="bi bi-shield-check"></i> Manual Historico de Upgrade (transicao para Java 21)</h1>
+      <p class="mb-2">Guia historico preservado com capturas e passos de uma transicao tecnica anterior do produto. Nao representa o caminho publico principal de uso da loja.</p>
       <span class="manual-pill">Banco SQLite</span>
       <span class="manual-pill">Flyway</span>
       <span class="manual-pill">Rollback testado</span>
@@ -54,14 +54,14 @@
     <div class="quick-nav mb-3">
       <a href="#passo1" class="btn btn-outline-primary btn-sm">1. Pré-check</a>
       <a href="#passo2" class="btn btn-outline-primary btn-sm">2. Backup</a>
-      <a href="#passo3" class="btn btn-outline-primary btn-sm">3. Upgrade</a>
+      <a href="#passo3" class="btn btn-outline-primary btn-sm">3. Upgrade historico</a>
       <a href="#passo4" class="btn btn-outline-primary btn-sm">4. Validação</a>
       <a href="#passo5" class="btn btn-outline-primary btn-sm">5. Rollback</a>
     </div>
 
     <div id="passo1" class="step-card">
       <h2 class="step-title">Passo 1 - Pré-check do ambiente</h2>
-      <p>Execute os comandos abaixo e confirme Python e Maven centralizados.</p>
+      <p>Execute os comandos abaixo apenas quando estiver reproduzindo a transicao historica em ambiente tecnico controlado.</p>
       <pre><code>&amp; D:\\dev\\.venv\\Scripts\\python.exe --version
 &amp; D:\\dev\\.mvn\\activate-maven-env.ps1
 mvn --version</code></pre>
@@ -69,7 +69,7 @@ mvn --version</code></pre>
 
     <div id="passo2" class="step-card">
       <h2 class="step-title">Passo 2 - Backup do banco</h2>
-      <p>Crie backup do SQLite antes de qualquer alteração.</p>
+      <p>Crie backup do SQLite antes de qualquer alteracao nesse fluxo historico.</p>
       <pre><code>cd D:\\dev\\caracore-pdv
 $timestamp = Get-Date -Format "yyyy_MM_dd_HHmmss"
 Copy-Item .\\data\\caracore-pdv.db ".\\backups\\caracore-pdv_backup_$timestamp.db"</code></pre>
@@ -77,12 +77,12 @@ Copy-Item .\\data\\caracore-pdv.db ".\\backups\\caracore-pdv_backup_$timestamp.d
 
     <div id="passo3" class="step-card">
       <h2 class="step-title">Passo 3 - Executar upgrade + validação</h2>
-      <p>Use o orquestrador Python para validar pré e pós-upgrade.</p>
+      <p>Use o orquestrador Python para validar pre e pos-upgrade apenas nesse procedimento historico.</p>
       <pre><code>&amp; D:\\dev\\.venv\\Scripts\\python.exe .\\scripts\\upgrade\\run_upgrade_and_validate.py ^
   --db-path .\\data\\caracore-pdv.db ^
   --backup-dir .\\backups ^
   --report-file .\\upgrade_validation_report.txt</code></pre>
-      <div class="callout-ok mt-2"><strong>Critério de aprovação:</strong> o relatório final deve conter <strong>result=GO</strong>.</div>
+      <div class="callout-ok mt-2"><strong>Criterio de aprovacao:</strong> o relatorio final deve conter <strong>result=GO</strong>.</div>
     </div>
 
     <div id="passo4" class="step-card">
@@ -97,7 +97,7 @@ Copy-Item .\\data\\caracore-pdv.db ".\\backups\\caracore-pdv_backup_$timestamp.d
 
     <div id="passo5" class="step-card">
       <h2 class="step-title">Passo 5 - Rollback (se necessário)</h2>
-      <p>Se houver qualquer falha crítica, execute rollback imediato:</p>
+      <p>Se houver qualquer falha critica, execute rollback imediato nesse fluxo historico:</p>
       <pre><code>&amp; D:\\dev\\.venv\\Scripts\\python.exe .\\scripts\\upgrade\\rollback_from_backup.py ^
   --backup-dir .\\backups --latest ^
   --db-path .\\data\\caracore-pdv.db --force</code></pre>

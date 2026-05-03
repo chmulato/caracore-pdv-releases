@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <base href="https://pdv.caracore.com.br/">
-    <title>Novidades da Versão 3.0.10 — CaraCore-PDV</title>
-    <meta name="description" content="Notas da versão 3.0.10 do CaraCore-PDV: entrega portátil Windows via CI/CD híbrido, fallback Native/JVM e alinhamento da oficina JavaFX nativa.">
+    <title>Versão 3.0.10 — Arquivo Histórico Recente — CaraCore-PDV</title>
+    <meta name="description" content="Notas históricas da versão 3.0.10 do CaraCore-PDV, preservadas como referência recente anterior à oferta canônica atual da loja.">
     <link rel="stylesheet" href="https://pdv.caracore.com.br/assets/css/loja.css">
     <link rel="stylesheet" href="https://pdv.caracore.com.br/assets/evolution-status/evolution-status.css">
     <link rel="stylesheet" href="/assets/caracore-core-typography.css">
@@ -18,102 +18,39 @@
             <span> · </span>
             <a href="wiki.html">Wiki da Loja</a>
             <span> · </span>
-            <span>Novidades da v3.0.10</span>
+            <span>Arquivo da v3.0.10</span>
         </nav>
 
         <header>
-            <h1>Versão 3.0.10: entrega portátil Windows e CI/CD híbrido</h1>
-            <p>Atualização da linha 3 (branch <code>java_21</code>). Consolida o pipeline de entrega contínua com fallback automático JVM, pacote Windows portátil e publicação estável de releases no repositório público. A oficina atual segue evoluindo o caminho JavaFX nativo sem Electron como direção principal.</p>
+            <h1>Versão 3.0.10: arquivo histórico recente da série 3.x</h1>
+            <p>Release histórica preservada da linha 3.x. Consolida uma etapa anterior da distribuição portátil em Windows e permanece disponível para comparação de evolução, não como oferta canônica atual da loja.</p>
         </header>
 
-        <p class="download-notice"><strong>Versão estável atual: 3.0.10 — lançada em 23/04/2026.</strong> Se você usa v3.0.1 ou anterior, recomendamos atualizar para esta versão para obter o instalador ZIP portátil mais recente.</p>
+        <p class="download-notice"><strong>Versão histórica 3.0.10 — lançada em 23/04/2026.</strong> A oferta canônica atual da loja é a <a href="wiki-release-v3-1-0-free.html"><strong>v3.1.0-free</strong></a>. Esta página permanece apenas como referência histórica recente.</p>
 
         <section class="card wiki-card">
-            <h2>O que foi adicionado</h2>
+            <h2>Resumo histórico</h2>
             <ul>
-                <li><strong>Entrega portátil Windows (CI/CD):</strong> workflow híbrido no GitHub Actions — tenta build Quarkus Native; em caso de falha, aciona fallback automático para empacotamento JVM (<code>fast-jar</code>). Garante ZIP estável em todas as máquinas Windows.</li>
-                <li><strong>Empacotamento dual-mode da v3.0.10:</strong> o pacote publicado detecta automaticamente <code>*-runner.exe</code> (native) ou <code>quarkus-run.jar</code> (JVM) e inicializa o backend correto, com JRE embutido para a rota JVM. Esse empacotamento é o delivery desta release; a oficina <code>java_21</code> segue priorizando JavaFX nativo sem Electron.</li>
+                <li><strong>Papel na trajetória:</strong> consolidou uma etapa anterior da distribuição portátil em Windows.</li>
+                <li><strong>Valor histórico:</strong> registrou melhorias de empacotamento e publicação antes da oferta atual.</li>
+                <li><strong>Status na loja:</strong> referência de arquivo, sem instrução operacional detalhada.</li>
             </ul>
         </section>
 
         <section class="card wiki-card">
-            <h2>O que foi corrigido</h2>
+            <h2>Quando consultar esta página</h2>
             <ul>
-                <li><strong>Erro 403 na publicação de releases:</strong> token ausente ou incorreto em <code>PUBLIC_RELEASES_TOKEN</code> impedia a publicação cruzada no repositório público <code>caracore-pdv-releases</code> — corrigido com permissão <code>Contents: Read and write</code> e PAT explícito no workflow.</li>
-                <li><strong>Publicação via PAT explícito:</strong> <code>release.yml</code> agora usa <code>PUBLIC_RELEASES_TOKEN</code> diretamente em <code>softprops/action-gh-release</code>, eliminando dependência do token padrão do repositório.</li>
+                <li>Para rastrear a evolução recente da série 3.x.</li>
+                <li>Para comparar nomenclatura de releases antigas com a oferta atual.</li>
+                <li>Para auditoria editorial da linha pública da loja.</li>
             </ul>
         </section>
 
         <section class="card wiki-card">
-            <h2>Impacto para o usuário final</h2>
-            <div class="wiki-table-wrap">
-                <table class="wiki-table">
-                    <thead>
-                        <tr>
-                            <th>Cenário</th>
-                            <th>Antes da v3.0.10</th>
-                            <th>Após a v3.0.10</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Download do instalador</td>
-                            <td>Artefato manual; release poderia falhar silenciosamente</td>
-                            <td>ZIP publicado automaticamente a cada tag via CI/CD</td>
-                        </tr>
-                        <tr>
-                            <td>Instalação em Windows sem GraalVM</td>
-                            <td>Build nativo falhava; nenhum pacote gerado</td>
-                            <td>Fallback JVM acionado automaticamente; ZIP sempre disponível</td>
-                        </tr>
-                        <tr>
-                            <td>Execução do pacote portátil</td>
-                            <td>Somente modo native; erros se runner.exe ausente</td>
-                            <td>Modo dual: detecta native ou JVM automaticamente</td>
-                        </tr>
-                        <tr>
-                            <td>Java pré-instalado</td>
-                            <td>Necessário na rota JVM</td>
-                            <td>JRE embutido no ZIP — Java não é necessário no sistema</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </section>
-
-        <section class="card wiki-card">
-            <h2>Como atualizar</h2>
-            <ol>
-                <li>Baixe o pacote <strong>caracore-pdv-v3.0.10-windows-portable.zip</strong> na página de download ou no GitHub Releases.</li>
-                <li>Extraia o ZIP em uma pasta local e execute o aplicativo conforme o <code>INSTALACAO.md</code> da release.</li>
-                <li>Na primeira inicialização, o Flyway aplica migrações pendentes automaticamente.</li>
-                <li>Não é necessária nenhuma ação manual no banco de dados.</li>
-            </ol>
-            <p>O banco de dados SQLite local é preservado integralmente durante a atualização.</p>
-        </section>
-
-        <section class="card wiki-card">
-            <h2>O que permanece igual das versões anteriores</h2>
-            <ul>
-                <li>Todos os cadastros, vendas e histórico registrados nas versões anteriores são mantidos.</li>
-                <li>Motor fiscal IBS/CBS, PIX com split payment e dashboard gerencial sem alterações funcionais.</li>
-                <li>Perfis de operador, trilha de auditoria e configurações de loja inalterados.</li>
-                <li>Nenhuma reconfiguração necessária após a atualização.</li>
-            </ul>
-        </section>
-
-        <section class="card wiki-card">
-            <h2>Primeiro acesso (nova instalação)</h2>
-            <ul>
-                <li>Endereço local: <code>http://localhost:8080</code></li>
-                <li>Usuário inicial: <code>admin</code></li>
-                <li>Senha inicial: <code>admin</code></li>
-                <li>No primeiro login há troca obrigatória de senha (8 a 15 caracteres)</li>
-                <li>Recomendado criar segundo operador administrativo para contingência</li>
-                <li>Banco: SQLite local (criado automaticamente via Flyway)</li>
-            </ul>
+            <h2>Oferta vigente</h2>
+            <p>A experiência recomendada hoje é a <strong>v3.1.0-free</strong>, com desktop local para Windows, backend local e persistência em SQLite.</p>
             <div class="wiki-links">
-                <a href="download.html" class="btn-release">Baixar versão estável</a>
+                <a href="download.html" class="btn-release">Baixar oferta atual</a>
                 <a href="wiki-caracteristicas.html" class="btn-release btn-release-outline">Características da aplicação</a>
                 <a href="wiki-release-v3-0-1.html" class="btn-release btn-release-outline">Release anterior v3.0.1</a>
                 <a href="wiki.html" class="btn-release btn-release-outline">Voltar à wiki</a>
@@ -122,7 +59,7 @@
         </section>
 
         <nav class="back">
-            <a href="wiki.html">← Voltar à wiki</a> · <a href="wiki.html">Trilha de versões</a> · <a href="download.html">Download</a> · <a href="tecnologia.html">Tecnologia</a> · Release 3.0.10 — branch java_21
+            <a href="wiki.html">← Voltar à wiki</a> · <a href="wiki.html">Trilha de versões</a> · <a href="download.html">Oferta atual</a> · <a href="tecnologia.html">Tecnologia</a> · Release 3.0.10 — arquivo histórico recente
         </nav>
     </div>
     <script src="https://pdv.caracore.com.br/assets/js/loja.js"></script>

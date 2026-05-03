@@ -23,24 +23,22 @@
 
         <header>
             <h1>Release v2.0.1-rc1</h1>
-            <p>Pré-release de validação focada em garantir uma próxima versão final mais segura para o cliente.</p>
+            <p>Registro histórico curto de uma pré-release da linha 2.x.</p>
         </header>
 
-        <p class="download-notice"><strong>Versão anterior — superada pela <a href="wiki-release-v3-0-0.html">v3.0.0</a>.</strong> Esta foi uma versão de validação da linha 2. A versão atual do canal é a 3.0.0, com motor fiscal 2026 e mais recursos para sua operação.</p>
+        <p class="download-notice"><strong>Versão histórica de validação.</strong> A referência pública atual da loja é a <a href="wiki-release-v3-1-0-free.html">v3.1.0-free</a>. Esta página foi mantida apenas como citação de rastreabilidade.</p>
 
         <section class="card wiki-card">
-            <h2>Resumo para o cliente</h2>
+            <h2>Resumo histórico</h2>
             <ul>
-                <li><strong>Perfil:</strong> versão de validação antecipada.</li>
-                <li><strong>Foco:</strong> garantir experiência estável no caixa.</li>
-                <li><strong>Benefício:</strong> menor risco na atualização para a versão final.</li>
-                <li><strong>Ambiente:</strong> operação local segura no Windows 10/11.</li>
-                <li><strong>Resultado esperado:</strong> evolução com previsibilidade para a loja.</li>
+                <li><strong>Papel na trajetória:</strong> pré-release de validação anterior à maturidade da linha pública.</li>
+                <li><strong>Modelo registrado:</strong> operação local em Windows com SQLite.</li>
+                <li><strong>Status na loja:</strong> arquivo histórico sem detalhamento comercial.</li>
             </ul>
         </section>
 
         <section class="card wiki-card">
-            <h2>Informações da aplicação na 2.0.1-rc1</h2>
+            <h2>Por que ainda existe no acervo</h2>
             <div class="wiki-table-wrap">
                 <table class="wiki-table">
                     <thead>
@@ -63,8 +61,8 @@
                             <td>Canal oficial na loja (pdv.caracore.com.br/installers/) com artefatos de atualização incremental</td>
                         </tr>
                         <tr>
-                            <td>Público alvo</td>
-                            <td>Lojas em validação antecipada e time técnico de homologação</td>
+                            <td>Objetivo do arquivo</td>
+                            <td>Preservar rastreabilidade de uma etapa de validação anterior</td>
                         </tr>
                     </tbody>
                 </table>
@@ -72,53 +70,23 @@
         </section>
 
         <section class="card wiki-card">
-            <h2>Regras de negócio para homologação</h2>
-            <ul>
-                <li><strong>RB-01 Canal controlado:</strong> esta versão não substitui automaticamente o canal estável para produção.</li>
-                <li><strong>RB-02 Operação local:</strong> o fluxo de venda deve funcionar com banco local SQLite mesmo em conectividade instável.</li>
-                <li><strong>RB-03 Integridade de atualização:</strong> artefatos de update devem ser validados antes de promover para final.</li>
-                <li><strong>RB-04 Compatibilidade de dados:</strong> base local existente deve abrir sem perda de histórico operacional.</li>
-                <li><strong>RB-05 Rastro de erro:</strong> qualquer regressão observada deve ser reportada com horário, cenário e evidências.</li>
-            </ul>
+            <h2>Oferta vigente</h2>
+            <p>A vitrine principal da loja destaca hoje a <strong>v3.1.0-free</strong> e a stack atual do produto.</p>
+            <div class="wiki-links">
+                <a href="wiki-release-v3-1-0-free.html" class="btn-release">Ver oferta atual</a>
+                <a href="download.html" class="btn-release btn-release-outline">Baixar versão atual</a>
+            </div>
         </section>
 
         <section class="card wiki-card">
-            <h2>Funcionalidades avaliadas nesta RC</h2>
-
-            <h3>1) Instalação e bootstrap local</h3>
-            <ul>
-                <li>Instalação do executável Windows e abertura do app sem etapa manual extra.</li>
-                <li>Subida do backend local e acesso ao login via navegador local.</li>
-            </ul>
-
-            <h3>2) Login e operação básica</h3>
-            <ul>
-                <li>Autenticação do operador no ambiente de degustação.</li>
-                <li>Acesso aos módulos de cadastro, venda e recibo digital.</li>
-            </ul>
-
-            <h3>3) Ciclo mínimo de venda</h3>
-            <ul>
-                <li>Cadastro de item de teste, abertura de venda, fechamento e comprovação de persistência.</li>
-                <li>Reabertura da aplicação com dados preservados no SQLite local.</li>
-            </ul>
-
-            <h3>4) Atualização incremental</h3>
-            <ul>
-                <li>Conferência de arquivos de metadados de update (ex.: <code>latest.yml</code> e <code>.blockmap</code> quando presentes).</li>
-                <li>Verificação do comportamento esperado no fluxo de upgrade.</li>
-            </ul>
-        </section>
-
-        <section class="card wiki-card">
-            <h2>Cadastros existentes nesta versão (uso prático no PDV)</h2>
+            <h2>Citação histórica preservada</h2>
             <div class="wiki-table-wrap">
                 <table class="wiki-table">
                     <thead>
                         <tr>
                             <th>Cadastro</th>
                             <th>Finalidade no PDV</th>
-                            <th>Uso pratico na rotina</th>
+                            <th>Registro resumido</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -132,66 +100,13 @@
                     </tbody>
                 </table>
             </div>
-            <p>Roteiro recomendado para validação RC: <strong>cadastros estruturais → cadastros comerciais → ciclo de venda → conferência de permissão por papel</strong>.</p>
         </section>
 
         <section class="card wiki-card">
-            <h2>Operação por turno (quadro pratico)</h2>
-            <div class="wiki-table-wrap">
-                <table class="wiki-table">
-                    <thead>
-                        <tr>
-                            <th>Turno</th>
-                            <th>Responsável principal</th>
-                            <th>Cadastros e ações</th>
-                            <th>Checklist rápido</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Abertura</td>
-                            <td>ADMIN / GERENTE</td>
-                            <td>Executar checklist de cadastros base para homologação.</td>
-                            <td>Confirmar papéis e comportamentos esperados em cada aba.</td>
-                        </tr>
-                        <tr>
-                            <td>Operação</td>
-                            <td>CAIXA</td>
-                            <td>Rodar ciclo de venda com cadastro de cliente quando aplicável.</td>
-                            <td>Pagamento concluido e recibo digital emitido sem erro.</td>
-                        </tr>
-                        <tr>
-                            <td>Fechamento</td>
-                            <td>GERENTE / ADMIN</td>
-                            <td>Consolidar evidências de teste e ocorrências da RC.</td>
-                            <td>Decisao de promover ou não a versão para release final.</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </section>
-
-        <section class="card wiki-card">
-            <h2>Critérios de validação</h2>
-            <ul>
-                <li>Instalação sem erro em Windows 10/11</li>
-                <li>Inicialização da aplicação em <code>localhost:8080</code></li>
-                <li>Login funcional e ciclo mínimo de venda concluido</li>
-                <li>Persistência local confirmada após reinício da aplicação</li>
-                <li>Evidência de logs para eventuais falhas reproduziveis</li>
-            </ul>
-        </section>
-
-        <section class="card wiki-card">
-            <h2>Primeiro acesso</h2>
-            <ul>
-                <li>Endereço local: <code>http://localhost:8080</code></li>
-                <li>Usuário: <code>admin</code></li>
-                <li>Senha: <code>123456</code></li>
-                <li>Banco: SQLite local</li>
-            </ul>
+            <h2>Acesso atual recomendado</h2>
+            <p>Para uso real e narrativa pública vigente, siga a trilha atual da loja e a documentação da <strong>v3.1.0-free</strong>.</p>
             <div class="wiki-links">
-                <a href="installers/index.html#prerelease" class="btn-release">Abrir instalador da pré-release</a>
+                <a href="wiki-release-v3-1-0-free.html" class="btn-release">Abrir release atual</a>
                 <a href="download.html" class="btn-release btn-release-outline">Download</a>
                 <a href="wiki.html" class="btn-release btn-release-outline">Voltar à wiki</a>
                 <a href="index.html" class="btn-release btn-release-outline">Portal da loja</a>

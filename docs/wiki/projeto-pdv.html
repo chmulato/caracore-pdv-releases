@@ -174,11 +174,11 @@
                             <div class="col-md-6">
                                 <div class="estagiario-section">
                                     <h3><i class="bi bi-mortarboard"></i> Arquitetura Técnica</h3>
-                                    <p>Aplicação desktop/local em <strong>Java 21</strong>, <strong>JavaFX 21</strong> e <strong>Quarkus 3</strong>, com API REST local e persistência SQLite. <strong>Escopo: foco localhost e Windows Desktop;</strong> banco apenas SQLite. Módulos: PDV (caixa), vendas, produtos, clientes, estoque, dashboard, relatórios (JasperReports), operadores e <strong>multi-loja</strong>. Perfil <code>sqlite</code> (padrão): banco em <code>./data/caracore-pdv.db</code>; backend local em <code>http://localhost:8765</code>. A oferta pública atual está na release <code>v3.1.0-free</code>; a oficina <code>java_21</code> segue priorizando JavaFX nativo sem Electron.</p>
+                                    <p>Aplicação desktop/local em <strong>Java 21</strong>, <strong>JavaFX 21</strong> e <strong>Quarkus 3</strong>, com API REST local e persistência SQLite. <strong>Escopo: foco localhost e Windows Desktop;</strong> banco apenas SQLite. Módulos: PDV (caixa), vendas, produtos, clientes, estoque, dashboard, relatórios (JasperReports), operadores e <strong>multi-loja</strong>. Perfil <code>sqlite</code> (padrão): banco em <code>./data/caracore-pdv.db</code>; backend local em <code>http://localhost:8765</code>. A oferta pública atual está na release <code>v3.1.0-free</code> e prioriza o desktop local nativo para resposta rápida no balcão e menor dependência de infraestrutura externa.</p>
                                     <p><strong>Componentes principais:</strong></p>
                                     <ul class="feature-list">
                                         <li><strong>Quarkus / REST / Panache:</strong> APIs locais, serviços e repositórios</li>
-                                        <li><strong>JavaFX:</strong> cliente desktop nativo da trilha <code>java_21</code></li>
+                                        <li><strong>JavaFX:</strong> cliente desktop nativo da oferta atual</li>
                                         <li><strong>SQLite (banco único):</strong> Perfil <code>sqlite</code> padrão; modo contingência usa SQLite local</li>
                                         <li><strong>Segurança local:</strong> Perfis Administrador, Operador, Visitante</li>
                                         <li><strong>JasperReports:</strong> Relatórios PDF</li>
@@ -282,7 +282,7 @@
                                     </div>
                                     <div class="feature-content">
                                         <p><strong>Para leigos:</strong> O PDV usa apenas SQLite como banco — um único arquivo, sem servidor de banco separado. Ideal para um caixa, lojas e pequenas redes. Na primeira execução já cria o banco e carrega usuário <code>admin</code>/<code>admin</code>.</p>
-                                        <p><strong>Técnico:</strong> Perfil <code>sqlite</code> (padrão); <code>SqliteDataSourceConfig</code>, <code>SqliteSeedDataLoader</code>, <code>data/init-data-sqlite.sql</code>; <code>docker-compose -f docker/docker-compose.sqlite.yml up -d</code>. Doc: <code>doc/SQLITE_PEQUENOS_MEDIOS.md</code>.</p>
+                                        <p><strong>Técnico:</strong> Perfil <code>sqlite</code> (padrão), carga inicial automática e rotinas locais de persistência para manter a operação simples no balcão e previsível em Windows.</p>
                                     </div>
                                 </div>
                             </div>
@@ -334,7 +334,7 @@
                             <div class="col-md-6">
                                 <h4><i class="bi bi-palette text-warning"></i> Cliente e interface</h4>
                                 <ul class="tech-list">
-                                    <li><strong>JavaFX 21:</strong> Cliente desktop nativo da oficina <code>java_21</code></li>
+                                    <li><strong>JavaFX 21:</strong> Cliente desktop nativo da oferta atual</li>
                                     <li><strong>Bootstrap 5.3.2:</strong> Layout responsivo</li>
                                     <li><strong>Thymeleaf 3.x:</strong> Templates e fragments</li>
                                     <li><strong>HTMX 1.9:</strong> Atualizações dinâmicas sem recarregar</li>
@@ -443,18 +443,14 @@
                             <div class="col-md-6">
                                 <div class="setup-card">
                                     <h4><i class="bi bi-terminal text-success"></i> Executar</h4>
-                                    <pre><code># Clonar (acesso mediante permissão; URL do repositório fornecido pela equipe)
-git clone &lt;url-privada-fornecida-pela-Cara-Core&gt;
-cd caracore-pdv
+                                    <pre><code># Oferta publica atual (Windows)
+1. Baixe o pacote em ../download.html
+2. Extraia o arquivo em uma pasta local
+3. Abra o aplicativo
+4. No primeiro acesso, o servidor local e o SQLite são preparados automaticamente
 
-# Rodar com Maven (perfil sqlite é o padrão; carga admin/admin na 1ª vez)
-.\mvnw spring-boot:run
-
-# Perfil sqlite é o padrão (banco único)
-.\mvnw spring-boot:run -Dspring-boot.run.profiles=sqlite
-
-# Modo contingência (SQLite local + SMS)
-.\mvnw spring-boot:run -Dspring-boot.run.profiles=contingency</code></pre>
+# Referencia tecnica do runtime atual
+mvn -pl pdv-apps -am quarkus:dev</code></pre>
                                 </div>
                             </div>
                         </div>
@@ -463,9 +459,9 @@ cd caracore-pdv
                             <h5><i class="bi bi-docker"></i> Docker Compose</h5>
                             <p><strong>Somente SQLite (recomendado para pequenos e médios):</strong></p>
                             <pre><code>docker-compose -f docker/docker-compose.sqlite.yml up -d</code></pre>
-                            <p>Um único container; na primeira subida a carga inicial (admin/admin e massa para testes Selenium) é aplicada automaticamente. Banco em <code>/data/caracore-pdv.db</code> (volume <code>sqlite_data</code>).</p>
-                            <p><strong>Modo contingência:</strong> <code>docker-compose.contingency.yml</code> quando necessário. Credenciais e materiais operacionais detalhados permanecem na documentação interna da aplicação, fora da trilha pública da loja.</p>
-                            <p class="mb-0">Testes Selenium: <code>testes/STATUS_APLICACAO_E_CENARIOS.md</code> e <code>verificar-status-app.bat</code> / <code>verificar-status-app.sh</code>.</p>
+                            <p>Um único container; na primeira subida a carga inicial é aplicada automaticamente. Banco em <code>/data/caracore-pdv.db</code> (volume <code>sqlite_data</code>).</p>
+                            <p><strong>Modo contingência:</strong> <code>docker-compose.contingency.yml</code> quando necessário. Materiais operacionais detalhados de engenharia permanecem fora da trilha pública da loja.</p>
+                            <p class="mb-0">Para uso de balcão e validação comercial, o caminho principal continua sendo o pacote Windows publicado na loja.</p>
                         </div>
                     </section>
 
@@ -477,15 +473,14 @@ cd caracore-pdv
                             <li><strong>Loja online (vitrine e download):</strong> <a href="../download.html">canal institucional de releases</a></li>
                             <li><strong>Baixar pacote Windows:</strong> <a href="../download.html">download oficial da loja</a></li>
                             <li><strong>Portal da loja:</strong> <a href="../index.html">pdv.caracore.com.br</a> (vitrine, wiki e canal de feedback)</li>
-                            <li><strong>Hub de guias da aplicacao:</strong> <a href="guias-aplicacao.html">central de guias por stack</a></li>
-                            <li><strong>Manual Operacional - Aplicacao Spring:</strong> <a href="manual-operacional-pdv-spring.html">trilha operacional com 19 telas</a></li>
-                            <li><strong>Manual Operacional - Stack Java_21:</strong> <a href="manual-operacional-pdv-java21.html">trilha Java_21 com capturas classificadas</a></li>
+                            <li><strong>Hub de guias do PDV:</strong> <a href="guias-aplicacao.html">central do guia atual e do arquivo de apoio</a></li>
+                            <li><strong>Manual operacional atual:</strong> <a href="manual-operacional-pdv-java21.html">guia do desktop local atual</a></li>
+                            <li><strong>Arquivo de apoio:</strong> <a href="manual-operacional-pdv-spring.html">trilha anterior para consulta curta e rastreabilidade</a></li>
                             <li><strong>Tecnologia (nesta loja):</strong> <a href="../tecnologia.html">tecnologia e soluções</a></li>
                             <li><strong>Consultoria e suporte:</strong> <a href="../canal-feedback.html">canal de feedback</a> (e-mail, WhatsApp e Telegram)</li>
-                            <li><strong>Testes Selenium (Docker SQLite):</strong> <code>testes/STATUS_APLICACAO_E_CENARIOS.md</code>; <code>verificar-status-app.bat</code> / <code>verificar-status-app.sh</code></li>
-                            <li><strong>SQLite (pequenos e médios):</strong> <code>doc/SQLITE_PEQUENOS_MEDIOS.md</code>; <code>docker-compose.sqlite.yml</code></li>
+                            <li><strong>Perfil operacional:</strong> SQLite como banco único do produto e pacote Windows como trilha pública principal</li>
                         </ul>
-                        <p class="text-muted mt-2">Documentação pública da loja: páginas HTML desta wiki, com manuais operacionais por stack, manual de upgrade e descrição institucional do produto. Materiais técnicos internos permanecem fora da trilha pública da loja.</p>
+                        <p class="text-muted mt-2">Documentação pública da loja: páginas HTML desta wiki, com guia operacional atual, arquivo de apoio quando necessário e descrição institucional do produto. Materiais técnicos internos permanecem fora da trilha pública da loja.</p>
                     </section>
 
                     <!-- Contribuição -->

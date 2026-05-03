@@ -23,23 +23,23 @@
 
         <header>
             <h1>Release v1.0.16</h1>
-            <p>Marco da série inicial que estabeleceu a base de operação local para o varejo.</p>
+            <p>Registro histórico curto da fase inicial do produto.</p>
         </header>
 
-        <p class="download-notice"><strong>Canal:</strong> release histórica da série 1.0.16. Referência de como o produto começou a entregar continuidade e controle para a loja.</p>
+        <p class="download-notice"><strong>Canal:</strong> release histórica da série 1.0.16. Mantida apenas como marco fundacional do produto, sem foco operacional atual.</p>
 
         <section class="card wiki-card">
-            <h2>Resumo para o cliente</h2>
+            <h2>Resumo histórico</h2>
             <ul>
                 <li><strong>Perfil:</strong> versão fundadora da linha 1.0.x.</li>
                 <li><strong>Foco:</strong> colocar o caixa para operar com simplicidade.</li>
                 <li><strong>Benefício:</strong> dados locais e continuidade operacional.</li>
-                <li><strong>Legado:</strong> base para as evoluções de estabilidade das versões seguintes.</li>
+                <li><strong>Status na loja:</strong> citação histórica, sem protagonismo na vitrine atual.</li>
             </ul>
         </section>
 
         <section class="card wiki-card">
-            <h2>Informações da aplicação</h2>
+            <h2>Por que ainda existe no acervo</h2>
             <ul>
                 <li>App local com entrada por <code>localhost:8080</code></li>
                 <li>Persistência em banco local para simplificar implantacao</li>
@@ -48,43 +48,23 @@
         </section>
 
         <section class="card wiki-card">
-            <h2>Regras de negócio centrais</h2>
-            <ul>
-                <li><strong>RB-01:</strong> instalação deve concluir sem dependência de banco remoto.</li>
-                <li><strong>RB-02:</strong> fluxo mínimo de venda deve fechar sem erro funcional.</li>
-                <li><strong>RB-03:</strong> dados de venda devem persistir entre reinicializacoes.</li>
-                <li><strong>RB-04:</strong> distribuição e suporte seguem canal oficial de releases.</li>
-            </ul>
+            <h2>Oferta vigente</h2>
+            <p>O foco atual da loja está na <strong>v3.1.0-free</strong> e na stack atual do desktop local com SQLite.</p>
+            <div class="wiki-links">
+                <a href="wiki-release-v3-1-0-free.html" class="btn-release">Ver oferta atual</a>
+                <a href="download.html" class="btn-release btn-release-outline">Baixar versão atual</a>
+            </div>
         </section>
 
         <section class="card wiki-card">
-            <h2>Funcionalidades por módulo</h2>
-            <h3>1) Operação de caixa</h3>
-            <ul>
-                <li>Abertura de venda, inclusão de itens e fechamento.</li>
-                <li>Emissão de recibo digital no fluxo principal.</li>
-            </ul>
-
-            <h3>2) Cadastros basicos</h3>
-            <ul>
-                <li>Cadastro de entidades essenciais para operação da loja.</li>
-            </ul>
-
-            <h3>3) Persistência e retomada</h3>
-            <ul>
-                <li>Dados mantidos em SQLite local entre execucoes da aplicação.</li>
-            </ul>
-        </section>
-
-        <section class="card wiki-card">
-            <h2>Cadastros existentes nesta versão (uso prático no PDV)</h2>
+            <h2>Citação histórica preservada</h2>
             <div class="wiki-table-wrap">
                 <table class="wiki-table">
                     <thead>
                         <tr>
                             <th>Cadastro</th>
                             <th>Finalidade no PDV</th>
-                            <th>Uso pratico na rotina</th>
+                            <th>Registro resumido</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -98,54 +78,13 @@
                     </tbody>
                 </table>
             </div>
-            <p>Ordem recomendada de implantacao na prática: <strong>Loja → Operadores → Vendedores → Produtos → Estoque → Clientes → Vendas</strong>.</p>
         </section>
 
         <section class="card wiki-card">
-            <h2>Operação por turno (quadro pratico)</h2>
-            <div class="wiki-table-wrap">
-                <table class="wiki-table">
-                    <thead>
-                        <tr>
-                            <th>Turno</th>
-                            <th>Responsável principal</th>
-                            <th>Cadastros e ações</th>
-                            <th>Checklist rápido</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Abertura</td>
-                            <td>ADMIN / GERENTE</td>
-                            <td>Conferir Loja, Operadores, Vendedores, Produtos e Estoque.</td>
-                            <td>Validar login, saldo inicial e item de teste pesquisável.</td>
-                        </tr>
-                        <tr>
-                            <td>Operação</td>
-                            <td>CAIXA</td>
-                            <td>Cadastrar Cliente quando necessário e executar Venda (cadastro de venda).</td>
-                            <td>Selecionar vendedor, finalizar pagamento e emitir recibo.</td>
-                        </tr>
-                        <tr>
-                            <td>Fechamento</td>
-                            <td>GERENTE / ADMIN</td>
-                            <td>Conferir vendas, recibos e consistência dos dados de estoque.</td>
-                            <td>Fechar app com persistência confirmada e registrar ocorrências.</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </section>
-
-        <section class="card wiki-card">
-            <h2>Primeiro acesso</h2>
-            <ul>
-                <li>Endereço local: <code>http://localhost:8080</code></li>
-                <li>Usuário: <code>admin</code></li>
-                <li>Senha: <code>123456</code></li>
-            </ul>
+            <h2>Acesso atual recomendado</h2>
+            <p>Para uso real e narrativa pública vigente, siga a trilha atual da loja e a documentação da <strong>v3.1.0-free</strong>.</p>
             <div class="wiki-links">
-                <a href="installers/index.html#historico" class="btn-release">Instaladores e histórico na loja</a>
+                <a href="wiki-release-v3-1-0-free.html" class="btn-release">Abrir release atual</a>
                 <a href="wiki.html" class="btn-release btn-release-outline">Voltar à wiki</a>
                 <a href="download.html" class="btn-release btn-release-outline">Download</a>
             </div>
