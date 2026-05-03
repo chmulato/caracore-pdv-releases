@@ -158,23 +158,23 @@
                             <div class="col-md-6">
                                 <div class="leigos-section">
                                     <h3><i class="bi bi-people"></i> O que é o PDV?</h3>
-                                    <p>O <strong>PDV (Ponto de Venda)</strong> é o sistema de caixa usado no balcão da loja: registrar produtos, aplicar descontos, receber pagamentos e emitir comprovantes. <strong>Escopo: foco localhost e Windows Desktop</strong> — pacote Windows para uso local; ao abrir, o backend sobe em <code>localhost:8080</code>. O CaraCore PDV é preparado para a <strong>Reforma Tributária 2026–2033</strong> (CBS e IBS), com <strong>PIX</strong> (QR Code e Split), <strong>modo contingência</strong> (SQLite local + SMS) quando a internet cai. <strong>Banco: apenas SQLite</strong> (<code>./data/caracore-pdv.db</code>), carga inicial automática (admin/admin) na primeira execução e <strong>Centro de Segurança e Backup</strong>.</p>
+                                    <p>O <strong>PDV (Ponto de Venda)</strong> é o sistema de caixa usado no balcão da loja: registrar produtos, aplicar descontos, receber pagamentos e emitir comprovantes. <strong>Escopo: foco localhost e Windows Desktop</strong> — pacote Windows para uso local; ao abrir, o backend sobe em <code>localhost:8765</code>. O CaraCore PDV é preparado para a <strong>Reforma Tributária 2026–2033</strong> (CBS e IBS), com <strong>modo contingência</strong> (SQLite local + SMS) quando a internet cai e trilha Premium para <strong>integração PIX</strong>. <strong>Banco: apenas SQLite</strong> (<code>./data/caracore-pdv.db</code>), carga inicial automática (admin/admin) na primeira execução e <strong>Centro de Segurança e Backup</strong>.</p>
                                     <p><strong>Em resumo:</strong></p>
                                     <ul class="feature-list">
                                         <li>🛒 <strong>Caixa completo:</strong> Vendas, clientes, estoque, relatórios</li>
                                         <li>📋 <strong>Fiscal:</strong> Motor preparado para CBS/IBS 2026–2033</li>
-                                        <li>💳 <strong>PIX:</strong> QR Code, webhook, Split</li>
+                                        <li>💳 <strong>PIX:</strong> trilha de integração e automação no plano Premium</li>
                                         <li>📶 <strong>Offline / contingência:</strong> Funciona sem internet</li>
-                                        <li>🖥️ <strong>Foco localhost e Windows Desktop:</strong> EXE para Windows; sobe em <code>localhost:8080</code> ao abrir; banco apenas SQLite; <code>docker-compose.sqlite.yml</code> para um container</li>
+                                        <li>🖥️ <strong>Foco localhost e Windows Desktop:</strong> EXE para Windows; sobe em <code>localhost:8765</code> ao abrir; banco apenas SQLite; <code>docker-compose.sqlite.yml</code> para um container</li>
                                         <li>🔐 <strong>Centro de Segurança e Backup:</strong> Políticas, criptografia e gestão de backup/restore</li>
-                                        <li>📋 <strong>Planos Free e Premium:</strong> Free — 100 vendas/mês, 10 SMS de recibo/mês; Premium — recuperação de senha por SMS, configuração de e-mail e relatório automático ao contador, suporte prioritário (RustDesk/AnyDesk, botão Ajuda). Liberação Premium somente após confirmação de pagamento e registro LGPD.</li>
+                                        <li>📋 <strong>Planos Free e Premium:</strong> Free — 100 vendas, até 100 produtos e 1 operador; Premium — integração PIX, expansão operacional, configuração de e-mail, relatório automático ao contador e suporte prioritário. Liberação Premium somente após confirmação de pagamento e registro LGPD.</li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="estagiario-section">
                                     <h3><i class="bi bi-mortarboard"></i> Arquitetura Técnica</h3>
-                                    <p>Aplicação desktop/local em <strong>Java 21</strong>, <strong>JavaFX 21</strong> e <strong>Quarkus 3</strong>, com API REST local e persistência SQLite. <strong>Escopo: foco localhost e Windows Desktop;</strong> banco apenas SQLite. Módulos: PDV (caixa), vendas, produtos, clientes, estoque, dashboard, relatórios (JasperReports), operadores e <strong>multi-loja</strong>. Perfil <code>sqlite</code> (padrão): banco em <code>./data/caracore-pdv.db</code>; backend local em <code>http://localhost:8080</code>. A release <code>v3.0.10</code> usa pacote portátil híbrido; a oficina <code>java_21</code> segue priorizando JavaFX nativo sem Electron.</p>
+                                    <p>Aplicação desktop/local em <strong>Java 21</strong>, <strong>JavaFX 21</strong> e <strong>Quarkus 3</strong>, com API REST local e persistência SQLite. <strong>Escopo: foco localhost e Windows Desktop;</strong> banco apenas SQLite. Módulos: PDV (caixa), vendas, produtos, clientes, estoque, dashboard, relatórios (JasperReports), operadores e <strong>multi-loja</strong>. Perfil <code>sqlite</code> (padrão): banco em <code>./data/caracore-pdv.db</code>; backend local em <code>http://localhost:8765</code>. A oferta pública atual está na release <code>v3.1.0-free</code>; a oficina <code>java_21</code> segue priorizando JavaFX nativo sem Electron.</p>
                                     <p><strong>Componentes principais:</strong></p>
                                     <ul class="feature-list">
                                         <li><strong>Quarkus / REST / Panache:</strong> APIs locais, serviços e repositórios</li>
@@ -184,7 +184,7 @@
                                         <li><strong>JasperReports:</strong> Relatórios PDF</li>
                                         <li><strong>Centro de Segurança e Backup:</strong> Políticas, criptografia de dados sensíveis, gestão de backup/restore (incl. auto-backup ao encerrar, cloud AES-256, USB via ADB no modo contingência)</li>
                                         <li><strong>App pdv-sms-enviar (Android):</strong> Envio de SMS na contingência; recepção de licença Premium por SMS (CC-LICENSE/CARACORE-KEY); ContentProvider para o PDV (hardware_id, licença); tela de status e Verificar Conexão USB.</li>
-                                        <li><strong>Planos Free e Premium:</strong> <code>PlanoLicencaService</code>, <code>configuracao_plano</code>. Free: 100 vendas/mês, 10 SMS recibo; trava em <code>PagamentoService</code> e <code>SmsService</code>. Premium: recuperação de senha por SMS (<code>RecuperacaoSenhaService</code>, <code>AdbSmsProvider</code>, celular do operador); configuração de e-mail e contador (<code>ConfiguracaoEmail</code>); relatório automático ao contador (<code>RelatorioContadorService</code>, <code>AutomacaoEmailContadorService</code>, job diário, PDF/TXT); suporte prioritário (<code>/suporte</code>, <code>SuporteController</code>, RustDesk/AnyDesk, botão Ajuda no layout). Liberação Premium somente após confirmação de pagamento e registro LGPD.</li>
+                                        <li><strong>Planos Free e Premium:</strong> <code>PlanoLicencaService</code>, <code>configuracao_plano</code>. Free: 100 vendas, até 100 produtos e 1 operador. Premium: integração PIX, configuração de e-mail e contador, relatório automático ao contador, suporte prioritário e demais automações liberadas comercialmente. Liberação Premium somente após confirmação de pagamento e registro LGPD.</li>
                                     </ul>
                                 </div>
                             </div>
@@ -473,7 +473,7 @@ cd caracore-pdv
                     <section class="mb-5">
                         <h2><i class="bi bi-link-45deg text-primary"></i> Links e Documentação</h2>
                         <ul class="feature-list">
-                            <li><strong>Escopo:</strong> Foco localhost e Windows Desktop (EXE sobe em <code>localhost:8080</code>); banco apenas SQLite.</li>
+                            <li><strong>Escopo:</strong> Foco localhost e Windows Desktop (EXE sobe em <code>localhost:8765</code>); banco apenas SQLite.</li>
                             <li><strong>Loja online (vitrine e download):</strong> <a href="../download.html">canal institucional de releases</a></li>
                             <li><strong>Baixar pacote Windows:</strong> <a href="../download.html">download oficial da loja</a></li>
                             <li><strong>Portal da loja:</strong> <a href="../index.html">pdv.caracore.com.br</a> (vitrine, wiki e canal de feedback)</li>
