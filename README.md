@@ -26,35 +26,32 @@ A matriz de desenvolvimento fica no repositório **caracore-pdv**. Este reposit�
 
 | Campo | Valor |
 |-------|-------|
-| Versão | `v3.0.10` |
-| Status | Estável atual |
-| Publicação | 23/04/2026 |
-| Linha | `java_21` |
+| Versão | `v3.1.0-free` |
+| Status | Oferta pública atual |
+| Publicação | 05/2026 |
+| Linha | `free-edition` sobre a trilha `java_21` |
 | Stack da oficina | Java 21 + JavaFX + Quarkus 3 + SQLite local |
-| Delivery publicado | Windows Desktop portátil com empacotamento híbrido da `v3.0.10` |
-| Release | <https://github.com/chmulato/caracore-pdv-releases/releases/tag/v3.0.10> |
+| Delivery publicado | Windows Desktop portátil da degustação `v3.1.0-free` |
+| Release | <https://github.com/chmulato/caracore-pdv-releases/releases/tag/v3.1.0-free> |
 | Loja | <https://pdv.caracore.com.br/> |
 
-### Artefatos v3.0.10
+### Artefatos v3.1.0-free
 
 | Artefato | Descrição | SHA256 |
 |----------|-----------|--------|
-| `caracore-pdv-v3.0.10-windows-portable.zip` | Pacote portátil Windows com backend e desktop | `d385c2e0192afe434fc77498ec98dfdc2fff6b97dfa85af4b72c04e3c386a388` |
-| `INSTALACAO.md` | Guia de instalação anexado à release | `cc364fe50b8b3d3834aecb66d16443196a976794d3325aa34fdaa511347abc89` |
-| `RELEASE_MANIFEST.json` | Manifesto técnico da publicação | `e5675d70ea564f0af5f5532ad75b0f55903f249f235f29366e2995ca1d31335a` |
-| `SHA256SUMS.txt` | Lista de hashes da release | `e77b8f9d0f45663e07fc0d71cbc588615d9a050f73d27cec925ffcf8f8ab3dec` |
+| `caracore-pdv-v3.1.0-free-windows-portable.zip` | Pacote portátil Windows da degustação pública | Publicado no `SHA256SUMS.txt` da release |
+| `INSTALACAO.md` | Guia de instalação anexado à release | Publicado no `SHA256SUMS.txt` da release |
+| `RELEASE_MANIFEST.json` | Manifesto técnico da publicação | Publicado no `SHA256SUMS.txt` da release |
+| `SHA256SUMS.txt` | Lista oficial de hashes da release | Fonte de verificação |
 
 ---
 
-## Atualização operacional - 23/04/2026
+## Atualização operacional - 05/2026
 
-- `v3.0.10` consolidada como versão estável atual da linha 3.
-- Entrega portátil Windows publicada via CI/CD híbrido.
-- Pipeline tenta build Quarkus Native e usa fallback JVM quando necessário.
-- Na release `v3.0.10`, o pacote portátil usa shell Electron em modo dual, detectando runner nativo ou `quarkus-run.jar`.
-- Na oficina atual da branch `java_21`, a direção principal é JavaFX nativo sem Electron para reduzir consumo de memória e simplificar a distribuição Windows.
-- JRE pode seguir embutido na rota JVM, sem exigir Java instalado pelo usuário.
-- Publicação no repositório público corrigida com token explícito para releases.
+- `v3.1.0-free` consolidada como oferta pública atual da loja para degustação no Windows.
+- A comunicação comercial da loja foi atualizada para enfatizar bunker digital, operação local soberana, prontidão para 2026 e evolução para o Premium.
+- A wiki da loja passou a incluir uma leitura comercial específica da versão atual para apoiar CTA, demonstração e proposta de valor.
+- `v3.0.10` permanece como referência histórica da série 3.x anterior à degustação Free.
 
 ---
 
@@ -66,7 +63,11 @@ A vitrine em `docs/` segue a trilha Java 21 da matriz, com foco em Quarkus, Java
 
 A página de novidades da versão atual fica em:
 
-<https://pdv.caracore.com.br/wiki-release-v3-0-10.html>
+<https://pdv.caracore.com.br/wiki-release-v3-1-0-free.html>
+
+A página de leitura comercial da versão atual fica em:
+
+<https://pdv.caracore.com.br/wiki-analise-v3-1-0-free.html>
 
 ### Linhas anteriores
 
