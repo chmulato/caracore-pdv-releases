@@ -26,15 +26,15 @@
             <p>Referência operacional interna da loja do CaraCore-PDV: trilha de versões, primeiro acesso, instalação e navegação rápida.</p>
         </header>
 
-        <p class="download-notice"><strong>Canal atual: versão 3.0.10 estável — lançada em 23/04/2026.</strong> A linha 3 é a mais completa do CaraCore-PDV: motor fiscal 2026, PIX com split, margem líquida real e operação antifrágil. A oficina <code>java_21</code> segue evoluindo para JavaFX nativo + Quarkus + SQLite local.</p>
+        <p class="download-notice"><strong>Canal público atual da degustação: versão 3.1.0-free para Windows.</strong> A página de download concentra a oferta comercial vigente: Free para validação real com limites claros e Premium para evolução operacional com mais automação.</p>
 
         <section class="card wiki-card">
             <h2>Visão geral</h2>
             <p>Esta wiki fica dentro da própria loja do <strong>CaraCore-PDV</strong> e concentra instruções curtas para validação da release e primeiro uso em ambiente Windows.</p>
             <ul>
-                <li>Canal atual: pacote Windows portátil da série 3.x</li>
-                <li>Perfil: degustação Free com SQLite local</li>
-                <li>Release pública atual: <code>v3.0.10</code> no GitHub Releases</li>
+                <li>Canal atual: pacote Windows portátil da edição <code>v3.1.0-free</code></li>
+                <li>Perfil: degustação Free com SQLite local e limites comerciais explícitos</li>
+                <li>Referência histórica da linha 3: <code>v3.0.10</code> no GitHub Releases</li>
             </ul>
         </section>
 
@@ -53,7 +53,7 @@
         <section class="card wiki-card">
             <h2>Primeiro acesso</h2>
             <ul>
-                <li>URL local: <code>http://localhost:8080</code></li>
+                <li>URL local: <code>http://localhost:8765</code></li>
                 <li>Usuário inicial: <code>admin</code></li>
                 <li>Senha inicial: <code>admin</code></li>
                 <li>Primeiro login exige troca obrigatória de senha</li>
@@ -64,7 +64,7 @@
         <section class="card wiki-card">
             <h2>Checklist rápido pos-instalação (Windows)</h2>
             <ul>
-                <li>Confirmar abertura do app local em <code>http://localhost:8080</code></li>
+                <li>Confirmar abertura do app local em <code>http://localhost:8765</code></li>
                 <li>Validar login inicial <code>admin / admin</code> no ambiente de degustação e trocar a senha no primeiro acesso</li>
                 <li>Cadastrar 1 produto, registrar 1 venda e emitir 1 recibo digital de teste</li>
                 <li>Fechar e reabrir o app para validar persistência no SQLite local</li>
@@ -75,10 +75,10 @@
         <section class="card wiki-card">
             <h2>Canal de releases e política de atualização</h2>
             <ul>
-                <li><strong>Canal estável:</strong> release <code>v3.0.10</code> e página <code>download.html</code> no domínio da loja</li>
-                <li><strong>Canal pré-release:</strong> usado para validações de campo antes da próxima final</li>
+                <li><strong>Oferta pública atual:</strong> release <code>v3.1.0-free</code> para degustação no Windows</li>
+                <li><strong>Linha de referência anterior:</strong> release <code>v3.0.10</code> como marco histórico da série 3.x</li>
                 <li><strong>Fonte única para o operador:</strong> download publicado em <code>pdv.caracore.com.br/download.html</code>, apontando para o latest release público</li>
-                <li><strong>Boa prática:</strong> em ambiente produtivo, priorizar release estável</li>
+                <li><strong>Boa prática comercial:</strong> apresentar o Free como validação real e o Premium como evolução de operação</li>
             </ul>
             <div class="wiki-links">
                 <a href="download.html" class="btn-release">Abrir estável mais recente</a>
@@ -90,7 +90,7 @@
             <h2>Diagnóstico rápido (suporte N1)</h2>
             <ul>
                 <li><strong>App não abre:</strong> reiniciar Windows e executar novamente como usuário local</li>
-                <li><strong>Tela em branco:</strong> validar se <code>localhost:8080</code> responde no navegador</li>
+                <li><strong>Tela em branco:</strong> validar se <code>localhost:8765</code> responde no navegador</li>
                 <li><strong>Porta ocupada:</strong> encerrar processos antigos do app e relançar</li>
                 <li><strong>Falha após atualização:</strong> voltar para a release estável no canal oficial</li>
                 <li><strong>Persistindo erro:</strong> enviar evidência com horário e captura para suporte oficial</li>
@@ -104,7 +104,12 @@
                 <a href="wiki-release-v1-0-16.html" class="btn-release">Release v1.0.16</a>
             </div>
 
-            <h3>Linha 3.x — versão atual estável</h3>
+            <h3>Linha FREE atual</h3>
+            <div class="wiki-links">
+                <a href="wiki-release-v3-1-0-free.html" class="btn-release">Release v3.1.0-free (degustação atual)</a>
+            </div>
+
+            <h3>Linha 3.x — histórico recente</h3>
             <div class="wiki-links">
                 <a href="wiki-release-v3-0-10.html" class="btn-release">Release v3.0.10 (estável atual)</a>
                 <a href="wiki-release-v3-0-1.html" class="btn-release btn-release-outline">Release v3.0.1 (versão anterior)</a>

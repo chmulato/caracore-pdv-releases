@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <base href="https://pdv.caracore.com.br/">
-    <title>Versão 3.1.0 FREE — CaraCore-PDV</title>
-    <meta name="description" content="Notas da versão 3.1.0 FREE do CaraCore-PDV: edição gratuita multi-plataforma (Windows, Linux, macOS) com motor Quarkus JVM e shell Electron.">
+    <title>Versão 3.1.0 FREE — Windows — CaraCore-PDV</title>
+    <meta name="description" content="Notas da versão 3.1.0 FREE do CaraCore-PDV: edição gratuita publicada no canal público para Windows, com operação local e limites claros.">
     <link rel="stylesheet" href="https://pdv.caracore.com.br/assets/css/loja.css">
     <link rel="stylesheet" href="https://pdv.caracore.com.br/assets/evolution-status/evolution-status.css">
     <link rel="stylesheet" href="/assets/caracore-core-typography.css">
@@ -22,20 +22,20 @@
         </nav>
 
         <header>
-            <h1>Versão 3.1.0 FREE: edição gratuita multi-plataforma</h1>
-            <p>Primeira entrega da linha <strong>FREE</strong> do CaraCore-PDV. Disponível para <strong>Windows, Linux e macOS</strong> via pacote portátil Electron + Quarkus JVM. Ideal para avaliação, microempresas e operações de baixo volume.</p>
+            <h1>Versão 3.1.0 FREE: degustação pública para Windows</h1>
+            <p>Primeira entrega oficial da linha <strong>FREE</strong> do CaraCore-PDV no canal público da loja. Publicada como pacote portátil para <strong>Windows</strong>, é indicada para avaliação prática, microoperações e validação comercial com limites explícitos.</p>
         </header>
 
-        <p class="download-notice"><strong>Versão FREE 3.1.0 — lançada em 05/2026.</strong> Edição gratuita com funcionalidades essenciais de ponto de venda. Para operações completas com NF-e, PIX e múltiplos operadores, consulte a edição PREMIUM.</p>
+        <p class="download-notice"><strong>Versão FREE 3.1.0 — lançada em 05/2026.</strong> Edição gratuita para teste real no Windows. Para ampliar operação, integrar PIX no sistema e adicionar mais estrutura comercial, consulte a edição PREMIUM.</p>
 
         <section class="card wiki-card">
             <h2>O que foi adicionado nesta versão</h2>
             <ul>
-                <li><strong>Edição FREE oficial:</strong> primeiro empacotamento multi-plataforma da linha gratuita, com limites claros e operação offline-first.</li>
-                <li><strong>Suporte a Windows, Linux e macOS:</strong> workflow CI/CD (<code>release-free.yml</code>) produz ZIPs portáteis para as três plataformas a partir de uma única base de código.</li>
-                <li><strong>Motor Quarkus 3.x JVM (fast-jar):</strong> engine construída uma vez no CI e distribuída para todos os pacotes — sem necessidade de compilação nativa por plataforma.</li>
-                <li><strong>Shell Electron cross-platform:</strong> detecção automática do runner nativo (<code>*-runner</code>) ou JVM (<code>quarkus-run.jar</code>) em Linux e macOS, além do Windows.</li>
-                <li><strong>Identificação visual FREE:</strong> título da janela exibe <code>CaraCore PDV FREE</code> para diferenciar da edição paga.</li>
+                <li><strong>Edição FREE oficial:</strong> pacote público da degustação com limites claros e foco em validação real no balcão.</li>
+                <li><strong>Publicação Windows:</strong> release portátil publicada no GitHub Releases para uso imediato no Windows.</li>
+                <li><strong>Operação local:</strong> banco SQLite local e fluxo pensado para seguir vendendo mesmo sem depender da internet no balcão.</li>
+                <li><strong>Primeiro acesso orientado:</strong> login inicial padrão e troca obrigatória de senha para começar com segurança.</li>
+                <li><strong>Evolução comercial separada:</strong> o Premium permanece como caminho para integrar PIX no sistema, ampliar uso e adicionar mais suporte.</li>
             </ul>
         </section>
 
@@ -87,7 +87,7 @@
         </section>
 
         <section class="card wiki-card">
-            <h2>Plataformas disponíveis</h2>
+            <h2>Pacote publicado no canal público</h2>
             <div class="wiki-table-wrap">
                 <table class="wiki-table">
                     <thead>
@@ -100,32 +100,23 @@
                     <tbody>
                         <tr>
                             <td>Windows 10/11 x64</td>
-                            <td><code>caracore-pdv-v3.1.0-free-windows-x64.zip</code></td>
-                            <td>Java 21+ (ou JRE embutida)</td>
-                        </tr>
-                        <tr>
-                            <td>Linux x64 (Ubuntu 20.04+)</td>
-                            <td><code>caracore-pdv-v3.1.0-free-linux-x64.zip</code></td>
-                            <td>Java 21+</td>
-                        </tr>
-                        <tr>
-                            <td>macOS 12+ x64 (Intel)</td>
-                            <td><code>caracore-pdv-v3.1.0-free-macos-x64.zip</code></td>
-                            <td>Java 21+ — app não assinado: clique com botão direito → Abrir</td>
+                            <td><code>caracore-pdv-v3.1.0-free-windows-portable.zip</code></td>
+                            <td>Pacote portátil publicado no GitHub Releases</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
+            <p>Linux e macOS seguem como trilha de evolução do produto, mas não fazem parte da oferta pública desta release.</p>
         </section>
 
         <section class="card wiki-card">
             <h2>Instalação rápida</h2>
             <ol>
-                <li>Baixe o ZIP correspondente à sua plataforma na <a href="download.html">página de download</a> ou no <a href="https://github.com/chmulato/caracore-pdv-releases/releases" target="_blank" rel="noopener">GitHub Releases</a>.</li>
+                <li>Baixe o pacote Windows na <a href="download.html">página de download</a> ou no <a href="https://github.com/chmulato/caracore-pdv-releases/releases" target="_blank" rel="noopener">GitHub Releases</a>.</li>
                 <li>Extraia o ZIP para uma pasta local (ex.: <code>C:\Programas\CaraCore-PDV-FREE</code>).</li>
-                <li><strong>Windows:</strong> execute <code>CaraCore PDV.exe</code>. <strong>Linux:</strong> execute <code>caracore-pdv</code>. <strong>macOS:</strong> abra <code>CaraCore PDV.app</code> com botão direito → Abrir.</li>
+                <li><strong>Windows:</strong> execute <code>CaraCore PDV.exe</code>.</li>
                 <li>Aguarde ~10 segundos para o backend Quarkus iniciar (progresso visível no console).</li>
-                <li>Acesse o sistema no navegador em <code>http://localhost:8765</code> ou pela janela Electron.</li>
+                <li>Acesse o sistema no navegador em <code>http://localhost:8765</code> ou pela janela principal do aplicativo.</li>
             </ol>
             <p><strong>Primeiro login:</strong> usuário <code>admin</code> · senha <code>admin</code> · troca obrigatória no primeiro acesso.</p>
             <p><strong>Dados:</strong> banco SQLite local criado automaticamente em <code>%APPDATA%\caracore\</code> (Windows) ou <code>~/.config/CaraCore PDV/</code> (Linux/macOS).</p>
@@ -134,9 +125,7 @@
         <section class="card wiki-card">
             <h2>Integridade do pacote</h2>
             <p>Cada release inclui <code>SHA256SUMS.txt</code> e <code>RELEASE_MANIFEST.json</code>. Para validar no Windows:</p>
-            <pre><code>Get-FileHash caracore-pdv-v3.1.0-free-windows-x64.zip -Algorithm SHA256</code></pre>
-            <p>No Linux/macOS:</p>
-            <pre><code>sha256sum caracore-pdv-v3.1.0-free-linux-x64.zip</code></pre>
+            <pre><code>Get-FileHash caracore-pdv-v3.1.0-free-windows-portable.zip -Algorithm SHA256</code></pre>
             <p>Compare com o hash em <code>SHA256SUMS.txt</code> da mesma release.</p>
         </section>
 
