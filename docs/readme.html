@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Guia comercial e operacional para pequena loja: como o CaraCore-PDV gera valor no caixa e na gestão antes da expansão.">
-    <title>Guia Comercial e Operacional - CaraCore-PDV</title>
+    <meta name="description" content="Guia comercial e operacional alinhado à oficina de validação: como o CaraCore-PDV gera valor no caixa e na gestão antes da expansão.">
+    <title>Guia Comercial e Operacional (Alinhado à Oficina) - CaraCore-PDV</title>
     
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -94,11 +94,22 @@
             <p class="text-gray-700 leading-relaxed mt-4">
                 <a href="wiki-validacao-cliente-pequeno.html" class="green-accent font-semibold hover:underline">Ver plano de validação do cliente pequeno →</a>
             </p>
+            <div class="bg-blue-50 border-l-4 border-blue-500 p-4 mt-4">
+                <p class="text-gray-800"><strong>Alinhamento com a oficina:</strong> use este guia junto com o roteiro de campo para manter o mesmo discurso técnico-comercial do início ao fechamento.</p>
+                <p class="text-gray-800 mt-2">
+                    <a href="wiki/demo-pdv.html" class="green-accent font-semibold hover:underline">Demo da oficina</a> ·
+                    <a href="wiki/guia-vendas-representante.html" class="green-accent font-semibold hover:underline">Guia de abordagem</a> ·
+                    <a href="wiki-validacao-cliente-pequeno.html" class="green-accent font-semibold hover:underline">Plano de validação</a>
+                </p>
+            </div>
         </div>
         
         <!-- Principais Funcionalidades -->
         <div class="section-card">
             <h2 class="text-3xl font-bold text-gray-900 mb-6">Capacidades da Oferta Pública Atual</h2>
+            <p class="text-gray-700 leading-relaxed mb-4">
+                A leitura desta seção segue o mesmo critério da oficina: <strong>não vender promessa</strong>. O foco é o que já gera resultado no balcão hoje e o que depende de evolução por plano/release.
+            </p>
             <div class="overflow-x-auto">
                 <table>
                     <thead>
@@ -231,7 +242,7 @@
             <p class="text-gray-600 text-sm mb-6">A configuração e o dispositivo dedicado são feitos pela equipe Cara Core ou por parceiros. Consulte <a href="consultoria.html" class="green-accent hover:underline">Consultoria</a>.</p>
             
             <div class="my-6 text-center">
-                <img src="assets/img/caracore_pdv_vendas.png" alt="Interface de Frente de Caixa - CaraCore-PDV" class="mx-auto max-w-full h-auto rounded-lg shadow-lg" style="max-width: 100%;">
+                <img src="assets/img/caracore_pdv_tela_restrita_02_operacao.png" alt="Interface de Frente de Caixa - CaraCore-PDV" class="mx-auto max-w-full h-auto rounded-lg shadow-lg" style="max-width: 100%;">
                 <p class="text-sm text-gray-500 mt-2 italic">Figura 2: Interface de Frente de Caixa otimizada para agilidade</p>
             </div>
             
@@ -247,7 +258,7 @@
                 <li><strong>Atualização Dinâmica:</strong> Dados carregados via API REST para visualização em tempo real</li>
             </ul>
             <div class="my-6 text-center">
-                <img src="assets/img/caracore_pdv_dashboard.png" alt="Dashboard Administrativo - CaraCore-PDV" class="mx-auto max-w-full h-auto rounded-lg shadow-lg" style="max-width: 100%;">
+                <img src="assets/img/caracore_pdv_tela_restrita_01_resumo.png" alt="Dashboard Administrativo - CaraCore-PDV" class="mx-auto max-w-full h-auto rounded-lg shadow-lg" style="max-width: 100%;">
                 <p class="text-sm text-gray-500 mt-2 italic">Figura 1: Dashboard administrativo com métricas em tempo real</p>
             </div>
             <p class="text-gray-700 leading-relaxed mb-6">
@@ -264,7 +275,7 @@
                 <li><strong>Resumo Fiscal Detalhado:</strong> Tributos exibidos no fechamento da venda e no cupom (PDF) para o cliente</li>
             </ul>
             <div class="my-6 text-center">
-                <img src="assets/img/caracore_pdv_tax.png" alt="Interface de Configuração Fiscal - Reforma Tributária 2026" class="mx-auto max-w-full h-auto rounded-lg shadow-lg" style="max-width: 100%;">
+                <img src="assets/img/caracore_pdv_tela_restrita_03_config.png" alt="Interface de Configuração Fiscal - Reforma Tributária 2026" class="mx-auto max-w-full h-auto rounded-lg shadow-lg" style="max-width: 100%;">
                 <p class="text-sm text-gray-500 mt-2 italic">Figura 3: Configuração Fiscal com gestão de alíquotas da Reforma Tributária 2026</p>
             </div>
             
@@ -279,7 +290,7 @@
                 <li><strong>Modo Informativo:</strong> Quando desabilitado, os tributos são calculados apenas para fins informativos, sem divisão real do pagamento</li>
             </ul>
             <div class="my-6 text-center">
-                <img src="assets/img/caracore_pdv_split_off.png" alt="Resumo Fiscal com PIX Split Desabilitado" class="mx-auto max-w-full h-auto rounded-lg shadow-lg" style="max-width: 100%;">
+                <img src="assets/img/caracore_pdv_tela_restrita_03_caixa.png" alt="Resumo Fiscal com PIX Split Desabilitado" class="mx-auto max-w-full h-auto rounded-lg shadow-lg" style="max-width: 100%;">
                 <p class="text-sm text-gray-500 mt-2 italic">Figura 4: Resumo fiscal com PIX Split desabilitado - tributos apenas informativos</p>
             </div>
             <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-6">
@@ -291,7 +302,7 @@
                 O painel administrativo inclui um <strong>Centro de Segurança e Backup</strong> para configuração de políticas de segurança, criptografia de dados sensíveis e gestão de rotinas de backup e restore.
             </p>
             <div class="my-6 text-center">
-                <img src="assets/img/centro_de_seguranca_e_backup.png" alt="Centro de Segurança e Backup - CaraCore-PDV" class="mx-auto max-w-full h-auto rounded-lg shadow-lg" style="max-width: 100%;">
+                <img src="assets/img/caracore_pdv_tela_restrita_03_config_backup.png" alt="Centro de Segurança e Backup - CaraCore-PDV" class="mx-auto max-w-full h-auto rounded-lg shadow-lg" style="max-width: 100%;">
                 <p class="text-sm text-gray-500 mt-2 italic">Centro de Segurança e Backup no painel administrativo</p>
             </div>
             
@@ -355,6 +366,9 @@
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Licenciamento</h2>
             <p class="text-gray-700 leading-relaxed">
                 Este software é propriedade da <strong>Cara Core Informática</strong>. Todos os direitos reservados.
+            </p>
+            <p class="text-gray-700 leading-relaxed mt-3">
+                Regra de oficina aplicada: toda proposta deve indicar claramente o que está coberto na edição validada em campo e o que exige evolução contratual.
             </p>
         </div>
         

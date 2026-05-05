@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Procedimento técnico para captura de screenshots do CaraCore-PDV v3.1.1-free em material de treinamento.">
+    <title>Procedimento de Captura de Screenshots - CaraCore-PDV</title>
+    <link rel="stylesheet" href="assets/css/wiki.css">
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; line-height: 1.6; color: #333; }
+        .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+        .alert { background: #eff6ff; border-left: 4px solid #2563eb; padding: 12px 16px; margin: 16px 0; border-radius: 4px; }
+        code { background: #f5f5f5; padding: 2px 6px; border-radius: 3px; font-family: 'Courier New', monospace; }
+        pre { background: #f5f5f5; padding: 12px; border-radius: 4px; overflow-x: auto; }
+        .release-badge { display: inline-block; background: #10b981; color: white; padding: 4px 12px; border-radius: 12px; font-size: 0.9em; font-weight: 600; }
+        a { color: #059669; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Procedimento de Captura de Screenshots</h1>
+        <p><span class="release-badge">v3.1.1-free</span> — Material técnico de apoio para treinamento</p>
+
+        <div class="alert">
+            <strong>Aviso:</strong> Esta página documenta o processo técnico interno de captura de telas. A oferta pública atual está descrita em <a href="wiki-release-v3-1-1-free.html">Release v3.1.1-free</a> e <a href="readme.html">Guia Comercial e Operacional</a>.
+        </div>
+
+        <h2>Objetivo</h2>
+        <p>Manter biblioteca de screenshots atualizados para material de treinamento, documentação e validação de interface do CaraCore-PDV. Este procedimento aplica-se à versão <strong>v3.1.1-free</strong>.</p>
+
+        <h2>Pré-requisitos</h2>
+        <ul>
+            <li>Java JDK 21+ instalado</li>
+            <li>Maven 3.8+</li>
+            <li>Projeto <code>caracore-pdv</code> compilado e testado</li>
+            <li>Python 3.9+ (para captura automática)</li>
+        </ul>
+
+        <h2>Procedimento manual</h2>
+        <ol>
+            <li>Compile o projeto:
+                <pre><code>mvn clean compile -DskipTests</code></pre>
+            </li>
+            <li>Execute a aplicação JavaFX:
+                <pre><code>mvn javafx:run</code></pre>
+            </li>
+            <li>Navegue pela interface e capture imagens em <strong>PNG</strong> com resolução <strong>1920x1080</strong> ou superior</li>
+            <li>Salve as imagens em <code>docs/assets/img/</code> com nomenclatura clara: <code>caracore_pdv_tela_restrita_NN_descricao.png</code></li>
+        </ol>
+
+        <h2>Captura automática (opcional)</h2>
+        <p>Para automação de screenshots com TestFX:</p>
+        <pre><code>python scripts/capturador-screenshots.py \
+  --backend auto \
+  --upscale 2 \
+  --output docs/assets/img</code></pre>
+
+        <h2>Telas principais para captura</h2>
+        <ul>
+            <li><strong>Login:</strong> Tela de autenticação com erro e sucesso</li>
+            <li><strong>Frente de Caixa:</strong> Operação de venda, busca de produtos, pagamento</li>
+            <li><strong>Dashboard:</strong> Visão administrativa, vendas do dia, indicadores</li>
+            <li><strong>Configuração Fiscal:</strong> Parâmetros de reforma tributária 2026</li>
+            <li><strong>Segurança e Backup:</strong> Centro de controle local</li>
+            <li><strong>Gestão de Produtos:</strong> Cadastro, NCM, alíquotas</li>
+        </ul>
+
+        <h2>Padrões de nomenclatura</h2>
+        <table style="width: 100%; border-collapse: collapse; margin: 16px 0;">
+            <tr style="background: #f5f5f5;">
+                <th style="padding: 8px; text-align: left; border: 1px solid #ddd;">Padrão</th>
+                <th style="padding: 8px; text-align: left; border: 1px solid #ddd;">Exemplo</th>
+            </tr>
+            <tr>
+                <td style="padding: 8px; border: 1px solid #ddd;"><code>caracore_pdv_tela_restrita_NN_descricao.png</code></td>
+                <td style="padding: 8px; border: 1px solid #ddd;"><code>caracore_pdv_tela_restrita_02_operacao.png</code></td>
+            </tr>
+            <tr>
+                <td style="padding: 8px; border: 1px solid #ddd;"><code>caracore_pdv_tela_de_login.png</code></td>
+                <td style="padding: 8px; border: 1px solid #ddd;"><code>caracore_pdv_tela_de_login.png</code></td>
+            </tr>
+            <tr>
+                <td style="padding: 8px; border: 1px solid #ddd;"><code>caracore_pdv_[funcionalidade].png</code></td>
+                <td style="padding: 8px; border: 1px solid #ddd;"><code>caracore_pdv_tax.png</code>, <code>caracore_pdv_split_off.png</code></td>
+            </tr>
+        </table>
+
+        <h2>Verificação de qualidade</h2>
+        <ul>
+            <li><strong>Resolução:</strong> Mínimo 1920x1080px para clareza</li>
+            <li><strong>Formato:</strong> PNG (sem compressão com perda)</li>
+            <li><strong>Conteúdo:</strong> Interface limpa, sem dados sensíveis ou PII</li>
+            <li><strong>Atualização:</strong> Screenshots devem ser renovados com cada release significativa</li>
+        </ul>
+
+        <h2>Referências relacionadas</h2>
+        <ul>
+            <li><a href="manual-treinamento.html">Manual de treinamento com screenshots</a></li>
+            <li><a href="capturas-testfx.html">Guia de captura com TestFX</a></li>
+            <li><a href="wiki-release-v3-1-1-free.html">Release v3.1.1-free</a></li>
+            <li><a href="readme.html">Guia Comercial e Operacional</a></li>
+        </ul>
+
+        <div class="alert">
+            <strong>Próximo passo:</strong> Após capturar novos screenshots, atualize as referências em <a href="readme.html">readme.html</a>, <a href="index.html">index.html</a> e documentação relacionada.
+        </div>
+
+        <p style="margin-top: 40px; color: #666; font-size: 0.95em;">
+            Última atualização: 05/05/2026 | Versão alvo: v3.1.1-free
+        </p>
+    </div>
+</body>
+</html>
