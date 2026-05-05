@@ -1,5 +1,5 @@
-/**
- * CaraCore-PDV — Loja (caracore-pdv-releases)
+﻿/**
+ * CaraCore-PDV â€” Loja (caracore-pdv-releases)
  * Scripts compartilhados. Utilize sempre assets/js.
  */
 'use strict';
@@ -17,3 +17,5 @@
         }
     });
 })();
+
+

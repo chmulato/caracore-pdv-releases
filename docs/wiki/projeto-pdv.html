@@ -7,21 +7,21 @@
     <meta name="description" content="CaraCore PDV - Sistema de ponto de venda. Foco localhost e Windows Desktop (EXE), banco apenas SQLite, motor fiscal Reforma Tributária 2026-2033, PIX e modo contingência.">
     
     <!-- Bootstrap CSS -->
-    <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="/assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../assets/css/bootstrap-icons.min.css">
     <!-- Wiki CSS -->
-    <link rel="stylesheet" href="assets/css/wiki.css">
+    <link rel="stylesheet" href="../assets/css/wiki.css">
     <!-- Projeto PDV CSS -->
-    <link rel="stylesheet" href="assets/css/projeto-pdv.css">
+    <link rel="stylesheet" href="../assets/css/projeto-pdv.css">
     <!-- Wiki Unified (overrides) -->
-    <link rel="stylesheet" href="assets/css/wiki-unified.css">
+    <link rel="stylesheet" href="../assets/css/wiki-unified.css">
     
     <!-- Favicon -->
-    <link rel="icon" href="../assets/images/favicon.ico" type="image/ico">
+    <link rel="icon" href="../assets/img/favicon.ico" type="image/ico">
     
-  <link rel="stylesheet" href="/assets/caracore-core-typography.css">
-  <link rel="stylesheet" href="/assets/caracore-institutional-components.css">
+  <link rel="stylesheet" href="../assets/css/caracore-core-typography.css">
+  <link rel="stylesheet" href="../assets/css/caracore-institutional-components.css">
 </head>
 <body>
     <!-- Navegação -->
@@ -167,24 +167,24 @@
                                         <li>📶 <strong>Offline / contingência:</strong> Funciona sem internet</li>
                                         <li>🖥️ <strong>Foco localhost e Windows Desktop:</strong> EXE para Windows; sobe em <code>localhost:8765</code> ao abrir; banco apenas SQLite; <code>docker-compose.sqlite.yml</code> para um container</li>
                                         <li>🔐 <strong>Centro de Segurança e Backup:</strong> Políticas, criptografia e gestão de backup/restore</li>
-                                        <li>📋 <strong>Planos Free e Premium:</strong> Free — 100 vendas, até 100 produtos e 1 operador; Premium — integração PIX, expansão operacional, configuração de e-mail, relatório automático ao contador e suporte prioritário. Liberação Premium somente após confirmação de pagamento e registro LGPD.</li>
+                                        <li>📋 <strong>Planos Free e Premium:</strong> Free — 100 vendas, até 100 produtos e 1 operador; Premium — integração PIX, expansão operacional, configuração de e-mail, trilha de relatório ao contador conforme release e suporte prioritário. Liberação Premium somente após confirmação de pagamento e registro LGPD.</li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="estagiario-section">
                                     <h3><i class="bi bi-mortarboard"></i> Arquitetura Técnica</h3>
-                                    <p>Aplicação desktop/local em <strong>Java 21</strong>, <strong>JavaFX 21</strong> e <strong>Quarkus 3</strong>, com API REST local e persistência SQLite. <strong>Escopo: foco localhost e Windows Desktop;</strong> banco apenas SQLite. Módulos: PDV (caixa), vendas, produtos, clientes, estoque, dashboard, relatórios (JasperReports), operadores e <strong>multi-loja</strong>. Perfil <code>sqlite</code> (padrão): banco em <code>./data/caracore-pdv.db</code>; backend local em <code>http://localhost:8765</code>. A oferta pública atual está na release <code>v3.1.1-free</code> e prioriza o desktop local nativo para resposta rápida no balcão e menor dependência de infraestrutura externa.</p>
+                                    <p>Aplicação desktop/local em <strong>Java 21</strong>, <strong>JavaFX 21</strong> e <strong>Quarkus 3</strong>, com API REST local e persistência SQLite. <strong>Escopo: foco localhost e Windows Desktop;</strong> banco apenas SQLite. Módulos: PDV (caixa), vendas, produtos, clientes, estoque, dashboard, relatórios nativos do PDV, operadores e <strong>multi-loja</strong>. Perfil <code>sqlite</code> (padrão): banco em <code>./data/caracore-pdv.db</code>; backend local em <code>http://localhost:8765</code>. A oferta pública atual está na release <code>v3.1.1-free</code> e prioriza o desktop local nativo para resposta rápida no balcão e menor dependência de infraestrutura externa.</p>
                                     <p><strong>Componentes principais:</strong></p>
                                     <ul class="feature-list">
                                         <li><strong>Quarkus / REST / Panache:</strong> APIs locais, serviços e repositórios</li>
                                         <li><strong>JavaFX:</strong> cliente desktop nativo da oferta atual</li>
                                         <li><strong>SQLite (banco único):</strong> Perfil <code>sqlite</code> padrão; modo contingência usa SQLite local</li>
                                         <li><strong>Segurança local:</strong> Perfis Administrador, Operador, Visitante</li>
-                                        <li><strong>JasperReports:</strong> Relatórios PDF</li>
+                                        <li><strong>Relatórios nativos:</strong> Geração de PDF e exportações operacionais</li>
                                         <li><strong>Centro de Segurança e Backup:</strong> Políticas, criptografia de dados sensíveis, gestão de backup/restore (incl. auto-backup ao encerrar, cloud AES-256, USB via ADB no modo contingência)</li>
                                         <li><strong>App pdv-sms-enviar (Android):</strong> Envio de SMS na contingência; recepção de licença Premium por SMS (CC-LICENSE/CARACORE-KEY); ContentProvider para o PDV (hardware_id, licença); tela de status e Verificar Conexão USB.</li>
-                                        <li><strong>Planos Free e Premium:</strong> <code>PlanoLicencaService</code>, <code>configuracao_plano</code>. Free: 100 vendas, até 100 produtos e 1 operador. Premium: integração PIX, configuração de e-mail e contador, relatório automático ao contador, suporte prioritário e demais automações liberadas comercialmente. Liberação Premium somente após confirmação de pagamento e registro LGPD.</li>
+                                        <li><strong>Planos Free e Premium:</strong> <code>PlanoLicencaService</code>, <code>configuracao_plano</code>. Free: 100 vendas, até 100 produtos e 1 operador. Premium: integração PIX, configuração de e-mail e contador, trilha de relatório ao contador conforme release, suporte prioritário e demais automações liberadas comercialmente. Liberação Premium somente após confirmação de pagamento e registro LGPD.</li>
                                     </ul>
                                 </div>
                             </div>
@@ -269,7 +269,7 @@
                                     </div>
                                     <div class="feature-content">
                                         <p><strong>Para leigos:</strong> Relatórios de vendas, estoque e performance em PDF; suporte a várias lojas com estoque por unidade.</p>
-                                        <p><strong>Técnico:</strong> JasperReports; multi-loja com estoque independente; tratamento de erros e logging.</p>
+                                        <p><strong>Técnico:</strong> Pipeline nativo de relatórios; multi-loja com estoque independente; tratamento de erros e logging.</p>
                                     </div>
                                 </div>
                             </div>
@@ -307,8 +307,8 @@
                                         <h4>Planos Free e Premium</h4>
                                     </div>
                                     <div class="feature-content">
-                                        <p><strong>Para leigos:</strong> <strong>Free:</strong> até 100 vendas/mês e 10 SMS de recibo/mês; ideal para começar. <strong>Premium:</strong> recuperação de senha por SMS no celular do operador; configuração de e-mail com dados do contador e envio automático de relatório diário (PDF e TXT); suporte prioritário com acesso remoto (RustDesk/AnyDesk) e botão Ajuda no menu. Liberação Premium somente após confirmação de pagamento e registro LGPD.</p>
-                                        <p><strong>Técnico:</strong> <code>PlanoLicencaService</code>, tabela <code>configuracao_plano</code>. Free: limitação em <code>PagamentoService</code> (LimiteVendasAtingidoException) e <code>SmsService</code> (recibo). Premium: <code>RecuperacaoSenhaService</code> + <code>AdbSmsProvider</code>; <code>ConfiguracaoEmail</code> (contadorNome, contadorEmail); <code>RelatorioContadorService</code>, <code>AutomacaoEmailContadorService</code> (cron, JasperReports <code>relatorio_contador.jrxml</code>); <code>SuporteController</code> (<code>/suporte</code>, suporte.rustdesk.id, suporte.anydesk.id). Validação online da licença Premium a cada 15 dias; se &gt;15 dias sem internet, automações (e-mail, nuvem) ficam suspensas.</p>
+                                        <p><strong>Para leigos:</strong> <strong>Free:</strong> até 100 vendas/mês e 10 SMS de recibo/mês; ideal para começar. <strong>Premium:</strong> recuperação de senha por SMS no celular do operador; configuração de e-mail com dados do contador e trilha de relatório ao contador conforme release; suporte prioritário com acesso remoto (RustDesk/AnyDesk) e botão Ajuda no menu. Liberação Premium somente após confirmação de pagamento e registro LGPD.</p>
+                                        <p><strong>Técnico:</strong> <code>PlanoLicencaService</code>, tabela <code>configuracao_plano</code>. Free: limitação em <code>PagamentoService</code> (LimiteVendasAtingidoException) e <code>SmsService</code> (recibo). Premium: <code>RecuperacaoSenhaService</code> + <code>AdbSmsProvider</code>; <code>ConfiguracaoEmail</code> (contadorNome, contadorEmail); <code>RelatorioContadorService</code> e <code>AutomacaoEmailContadorService</code> habilitados por release na trilha Premium; <code>SuporteController</code> (<code>/suporte</code>, suporte.rustdesk.id, suporte.anydesk.id). Validação online da licença Premium a cada 15 dias; se &gt;15 dias sem internet, automações (e-mail, nuvem) ficam suspensas.</p>
                                     </div>
                                 </div>
                             </div>
@@ -328,7 +328,7 @@
                                     <li><strong>Hibernate Panache:</strong> ORM e repositórios</li>
                                     <li><strong>SQLite 3.51:</strong> <strong>Banco padrão</strong> (perfil <code>sqlite</code>); <code>./data/caracore-pdv.db</code>; carga automática na 1ª execução</li>
                                     <li><strong>SQLite (contingência):</strong> Modo contingência (SMS, ADB) — também SQLite local</li>
-                                    <li><strong>JasperReports 6.20:</strong> Relatórios PDF</li>
+                                    <li><strong>Relatórios nativos do PDV:</strong> Relatórios PDF e saídas operacionais</li>
                                 </ul>
                             </div>
                             <div class="col-md-6">
@@ -475,7 +475,7 @@ mvn -pl pdv-apps -am quarkus:dev</code></pre>
                             <li><strong>Portal da loja:</strong> <a href="../index.html">pdv.caracore.com.br</a> (vitrine, wiki e canal de feedback)</li>
                             <li><strong>Hub de guias do PDV:</strong> <a href="guias-aplicacao.html">central do guia atual e do arquivo de apoio</a></li>
                             <li><strong>Manual operacional atual:</strong> <a href="manual-operacional-pdv-java21.html">guia do desktop local atual</a></li>
-                            <li><strong>Arquivo de apoio:</strong> <a href="manual-operacional-pdv-spring.html">trilha anterior para consulta curta e rastreabilidade</a></li>
+                            <li><strong>Alias historico:</strong> <a href="manual-operacional-pdv-stack-anterior.html">continuidade de links antigos sem dependencia da versao anterior</a></li>
                             <li><strong>Tecnologia (nesta loja):</strong> <a href="../tecnologia.html">tecnologia e soluções</a></li>
                             <li><strong>Consultoria e suporte:</strong> <a href="../canal-feedback.html">canal de feedback</a> (e-mail, WhatsApp e Telegram)</li>
                             <li><strong>Perfil operacional:</strong> SQLite como banco único do produto e pacote Windows como trilha pública principal</li>
@@ -516,11 +516,15 @@ mvn -pl pdv-apps -am quarkus:dev</code></pre>
     </footer>
 
     <!-- Bootstrap JS -->
-    <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
     <!-- Wiki JS -->
-    <script src="assets/js/wiki.js"></script>
+    <script src="../assets/js/wiki.js"></script>
 </body>
 </html>
+
+
+
+
 
 
 

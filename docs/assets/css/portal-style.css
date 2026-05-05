@@ -1,4 +1,4 @@
-/* CaraCore-PDV Portal (docs/) — Unified styles
+﻿/* CaraCore-PDV Portal (docs/) â€” Unified styles
    Purpose: centralize shared CSS used across docs/*.html pages.
    Notes:
    - Pages still use Tailwind CDN; this file covers shared custom classes.
@@ -33,6 +33,16 @@ body {
 }
 
 img, svg, video, canvas {
+  max-width: 100%;
+  height: auto;
+}
+
+img {
+  display: block;
+}
+
+figure,
+picture {
   max-width: 100%;
 }
 
@@ -236,7 +246,7 @@ a[aria-label="Represente a Tecnologia Cara Core"] {
   margin-bottom: 1.5rem;
 }
 
-/* Tecnologia (Soluções) cards */
+/* Tecnologia (SoluÃ§Ãµes) cards */
 .sol-card {
   background: white;
   border-radius: 12px;
@@ -260,4 +270,6 @@ a[aria-label="Represente a Tecnologia Cara Core"] {
 table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
 table th, table td { border: 1px solid #e5e7eb; padding: 0.75rem; text-align: left; }
 table th { background-color: #f9fafb; font-weight: 600; }
+
+
 

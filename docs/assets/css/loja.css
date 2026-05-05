@@ -1,4 +1,4 @@
-/* CaraCore-PDV — Loja. Todas as páginas: assets/css, assets/js, assets/img */
+﻿/* CaraCore-PDV â€” Loja. Todas as pÃ¡ginas: assets/css, assets/js, assets/img */
 
 :root {
     --bg-dark: #0f1514;
@@ -759,3 +759,5 @@ body.page-tecnologia .back a { color: var(--accent-blue); }
         min-height: unset;
     }
 }
+
+

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Guia técnico de captura automatizada com TestFX para telas do CaraCore-PDV.">
+    <title>CaraCore-PDV | TestFX Screenshots</title>
+    <link rel="stylesheet" href="assets/css/wiki.css">
+</head>
+<body>
+    <main class="container py-8">
+        <h1>TestFX - Captura Automatizada de Screenshots</h1>
+        <p>Fluxo automatizado para captura consistente das telas JavaFX de treinamento do CaraCore-PDV.</p>
+        <p><strong>Observação:</strong> este conteúdo é técnico e de apoio interno para documentação e treinamento.</p>
+
+        <h2>Execução</h2>
+        <pre><code>mvn clean test -Dtest=ScreenshotsTrainingTestFX</code></pre>
+
+        <h2>Execuções específicas</h2>
+        <pre><code>mvn clean test -Dtest=ScreenshotsTrainingTestFX#testCaptureTelaLogin
+mvn clean test -Dtest=ScreenshotsTrainingTestFX#testCaptureFrenteCaixa</code></pre>
+
+        <h2>Saída esperada</h2>
+        <p>As imagens são geradas em pastas versionadas dentro de <code>screenshots/</code>.</p>
+
+        <h2>Observações</h2>
+        <ul>
+            <li>Executar com JDK 21.</li>
+            <li>Manter escala de tela em 100% para fidelidade visual.</li>
+            <li>Aguardar renderização entre navegações quando necessário.</li>
+        </ul>
+
+        <p><a href="download.html">Ir para download da versão pública atual (v3.1.1-free)</a></p>
+    </main>
+</body>
+</html>

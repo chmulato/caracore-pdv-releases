@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Guia rápido de primeiros passos do CaraCore-PDV em Windows. Material técnico de apoio para instalação e diagnóstico inicial.">
+    <title>CaraCore-PDV | Primeiros Passos</title>
+    <link rel="stylesheet" href="assets/css/wiki.css">
+</head>
+<body>
+    <main class="container py-8">
+        <h1>Guia Rápido de Primeiros Passos</h1>
+        <p>Este guia orienta a instalação e autorização inicial do CaraCore-PDV em Windows.</p>
+        <p><strong>Contexto da loja:</strong> a oferta pública atual para validação é a edição <strong>v3.1.1-free</strong>. Este documento é material técnico de apoio para implantação e suporte.</p>
+
+        <h2>Pré-requisitos</h2>
+        <ul>
+            <li>Windows 10 ou 11</li>
+            <li>Python 3.8+ (necessário no instalador script)</li>
+        </ul>
+
+        <h2>1. Executar instalador</h2>
+        <pre><code>python scripts\install_windows.py</code></pre>
+
+        <h2>2. Se o Defender bloquear</h2>
+        <p>Abra o PowerShell como Administrador e execute:</p>
+        <pre><code>Add-MpPreference -ExclusionPath "$env:APPDATA\CaraCore"</code></pre>
+
+        <h2>3. Se o SmartScreen bloquear</h2>
+        <ul>
+            <li>Clique em <strong>More info</strong> e depois em <strong>Run anyway</strong>.</li>
+            <li>Ou abra propriedades do executável e marque <strong>Unblock</strong>, quando disponível.</li>
+        </ul>
+
+        <h2>4. Verificação pós-instalação</h2>
+        <ul>
+            <li>Arquivos principais: <code>%APPDATA%\CaraCore\</code></li>
+            <li>Confirme <code>java_home</code> no <code>config.json</code></li>
+            <li>Telemetria: <code>%APPDATA%\CaraCore\telemetry.log</code></li>
+        </ul>
+
+        <h2>5. Timeout de backend</h2>
+        <p>Quando ocorrer <code>BACKEND_TIMEOUT</code>, valide rede, processo Java e logs locais.</p>
+
+        <h2>6. Suporte</h2>
+        <p>Se persistir, envie o arquivo <code>%APPDATA%\CaraCore\telemetry.log</code> para o suporte técnico.</p>
+
+        <p><a href="download.html">Ir para a página de download da oferta atual (v3.1.1-free)</a></p>
+    </main>
+</body>
+</html>

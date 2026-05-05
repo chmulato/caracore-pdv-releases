@@ -1,18 +1,18 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Manual Operacional PDV - Desktop Local Atual | Wiki PDV</title>
   <meta name="description" content="Guia operacional do desktop local atual do CaraCore PDV, com capturas do runtime atual em Windows e SQLite.">
-  <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
-  <link rel="stylesheet" href="assets/css/wiki.css">
-  <link rel="stylesheet" href="assets/css/wiki-unified.css">
-  <link rel="stylesheet" href="assets/css/manual-operacional-pdv-java21.css">
-  <link rel="icon" href="../assets/images/favicon.ico" type="image/ico">
-  <link rel="stylesheet" href="/assets/caracore-core-typography.css">
-  <link rel="stylesheet" href="/assets/caracore-institutional-components.css">
+  <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../assets/css/wiki.css">
+  <link rel="stylesheet" href="../assets/css/wiki-unified.css">
+  <link rel="stylesheet" href="../assets/css/manual-operacional-pdv-java21.css">
+  <link rel="icon" href="../assets/img/favicon.ico" type="image/ico">
+  <link rel="stylesheet" href="../assets/css/caracore-core-typography.css">
+  <link rel="stylesheet" href="../assets/css/caracore-institutional-components.css">
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark wiki-nav">
@@ -24,7 +24,6 @@
           <li class="nav-item"><a class="nav-link" href="../index.html"><i class="bi bi-shop"></i> Loja</a></li>
           <li class="nav-item"><a class="nav-link" href="index.html"><i class="bi bi-journal-text"></i> Wiki</a></li>
           <li class="nav-item"><a class="nav-link active" href="manual-operacional-pdv-java21.html" aria-current="page"><i class="bi bi-file-earmark-richtext"></i> Guia Atual</a></li>
-          <li class="nav-item"><a class="nav-link" href="manual-operacional-pdv-spring.html"><i class="bi bi-window-stack"></i> Material historico</a></li>
           <li class="nav-item"><a class="nav-link" href="projeto-pdv.html"><i class="bi bi-box"></i> Produto PDV</a></li>
         </ul>
       </div>
@@ -63,19 +62,18 @@
       <section class="section-card">
         <div class="manual-actions">
           <a class="btn btn-outline-primary btn-sm" href="index.html"><i class="bi bi-arrow-left"></i> Voltar para Wiki</a>
-          <a class="btn btn-outline-secondary btn-sm" href="manual-operacional-pdv-spring.html"><i class="bi bi-window-stack"></i> Ver material historico</a>
           <button class="btn btn-primary btn-sm" type="button" onclick="window.print()"><i class="bi bi-printer"></i> Gerar impressao/PDF</button>
         </div>
       </section>
 
       <section class="section-card">
         <h2>Escopo desta trilha</h2>
-        <p>Este manual representa o caminho operacional atual do produto. As imagens desta pagina pertencem ao conjunto vigente do desktop local e ficam separadas do material historico preservado na loja.</p>
+        <p>Este manual representa o caminho operacional atual do produto. As imagens desta pagina pertencem ao conjunto vigente do desktop local e devem ser usadas como referencia canonica da operacao.</p>
       </section>
 
       <section class="section-card">
         <h2>Transparencia de classificacao</h2>
-        <p>O acervo foi reorganizado para separar o material operacional atual dos conjuntos historicos preservados. Esta pagina aponta somente para as imagens homologadas da oferta atual.</p>
+        <p>Esta pagina aponta somente para as imagens homologadas da oferta atual, mantendo foco na operacao vigente da loja.</p>
         <p>Quando novas capturas homologadas do runtime atual forem adicionadas, esta trilha deve ser expandida mantendo a mesma classificacao editorial.</p>
       </section>
 
@@ -115,7 +113,7 @@
           <p class="screen-meta">${meta}</p>
         </header>
         <figure class="screen-media">
-          <img src="assets/images/manual-operacional-pdv-java21/${image}" alt="Tela atual ${title}">
+          <img src="../assets/img/wiki/manual-operacional-pdv-java21/${image}" alt="Tela atual ${title}">
         </figure>
         <p class="screen-notes">${notes}</p>
         <section class="acceptance-box" aria-label="Checklist de aceite da tela atual ${title}">
@@ -128,6 +126,10 @@
 
     document.getElementById("auditStamp").textContent = new Date().toLocaleString("pt-BR");
   </script>
-  <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
+
+
+
