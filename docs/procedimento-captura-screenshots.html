@@ -5,25 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Procedimento técnico para captura de screenshots do CaraCore-PDV v3.1.1-free em material de treinamento.">
     <title>Procedimento de Captura de Screenshots - CaraCore-PDV</title>
-    <link rel="stylesheet" href="assets/css/wiki.css">
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; line-height: 1.6; color: #333; }
-        .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
-        .alert { background: #eff6ff; border-left: 4px solid #2563eb; padding: 12px 16px; margin: 16px 0; border-radius: 4px; }
-        code { background: #f5f5f5; padding: 2px 6px; border-radius: 3px; font-family: 'Courier New', monospace; }
-        pre { background: #f5f5f5; padding: 12px; border-radius: 4px; overflow-x: auto; }
-        .release-badge { display: inline-block; background: #10b981; color: white; padding: 4px 12px; border-radius: 12px; font-size: 0.9em; font-weight: 600; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; line-height: 1.6; color: #333; background: #f9fafb; }
+        .container { max-width: 900px; margin: 0 auto; padding: 20px; }
+        h1 { font-size: 2.25rem; font-weight: 700; margin-bottom: 8px; color: #111; }
+        h2 { font-size: 1.5rem; font-weight: 600; margin-top: 32px; margin-bottom: 16px; color: #1f2937; }
+        p { margin-bottom: 16px; color: #374151; }
+        code { background: #f3f4f6; padding: 2px 6px; border-radius: 3px; font-family: 'Courier New', monospace; font-size: 0.9em; }
+        pre { background: #f3f4f6; padding: 12px; border-radius: 4px; overflow-x: auto; margin: 12px 0 12px 0; }
+        pre code { background: none; padding: 0; }
+        ul { margin-left: 20px; margin-bottom: 16px; }
+        li { margin-bottom: 8px; }
         a { color: #059669; text-decoration: none; }
         a:hover { text-decoration: underline; }
+        .badge { display: inline-block; background: #10b981; color: white; padding: 4px 12px; border-radius: 12px; font-size: 0.85em; font-weight: 600; margin-left: 8px; }
+        .alert { background: #eff6ff; border-left: 4px solid #2563eb; padding: 12px 16px; margin: 16px 0; border-radius: 4px; }
+        .alert p { margin: 0; }
+        .alert p + p { margin-top: 8px; }
+        table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+        th, td { padding: 10px; text-align: left; border: 1px solid #e5e7eb; }
+        th { background: #f3f4f6; font-weight: 600; }
+        tr:nth-child(even) { background: #f9fafb; }
+        .header-badge { display: inline-block; vertical-align: middle; }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Procedimento de Captura de Screenshots</h1>
-        <p><span class="release-badge">v3.1.1-free</span> — Material técnico de apoio para treinamento</p>
+        <div>
+            <h1>Procedimento de Captura de Screenshots<span class="badge header-badge">v3.1.1-free</span></h1>
+            <p style="color: #6b7280; font-size: 0.95em; margin-top: 8px;">Material técnico de apoio para treinamento</p>
+        </div>
 
         <div class="alert">
-            <strong>Aviso:</strong> Esta página documenta o processo técnico interno de captura de telas. A oferta pública atual está descrita em <a href="wiki-release-v3-1-1-free.html">Release v3.1.1-free</a> e <a href="readme.html">Guia Comercial e Operacional</a>.
+            <p><strong>Aviso:</strong> Esta página documenta o processo técnico interno de captura de telas. A oferta pública atual está descrita em <a href="wiki-release-v3-1-1-free.html">Release v3.1.1-free</a> e <a href="readme.html">Guia Comercial e Operacional</a>.</p>
         </div>
 
         <h2>Objetivo</h2>
@@ -67,22 +82,22 @@
         </ul>
 
         <h2>Padrões de nomenclatura</h2>
-        <table style="width: 100%; border-collapse: collapse; margin: 16px 0;">
-            <tr style="background: #f5f5f5;">
-                <th style="padding: 8px; text-align: left; border: 1px solid #ddd;">Padrão</th>
-                <th style="padding: 8px; text-align: left; border: 1px solid #ddd;">Exemplo</th>
+        <table>
+            <tr>
+                <th>Padrão</th>
+                <th>Exemplo</th>
             </tr>
             <tr>
-                <td style="padding: 8px; border: 1px solid #ddd;"><code>caracore_pdv_tela_restrita_NN_descricao.png</code></td>
-                <td style="padding: 8px; border: 1px solid #ddd;"><code>caracore_pdv_tela_restrita_02_operacao.png</code></td>
+                <td><code>caracore_pdv_tela_restrita_NN_descricao.png</code></td>
+                <td><code>caracore_pdv_tela_restrita_02_operacao.png</code></td>
             </tr>
             <tr>
-                <td style="padding: 8px; border: 1px solid #ddd;"><code>caracore_pdv_tela_de_login.png</code></td>
-                <td style="padding: 8px; border: 1px solid #ddd;"><code>caracore_pdv_tela_de_login.png</code></td>
+                <td><code>caracore_pdv_tela_de_login.png</code></td>
+                <td><code>caracore_pdv_tela_de_login.png</code></td>
             </tr>
             <tr>
-                <td style="padding: 8px; border: 1px solid #ddd;"><code>caracore_pdv_[funcionalidade].png</code></td>
-                <td style="padding: 8px; border: 1px solid #ddd;"><code>caracore_pdv_tax.png</code>, <code>caracore_pdv_split_off.png</code></td>
+                <td><code>caracore_pdv_[funcionalidade].png</code></td>
+                <td><code>caracore_pdv_tax.png</code>, <code>caracore_pdv_split_off.png</code></td>
             </tr>
         </table>
 
@@ -103,12 +118,30 @@
         </ul>
 
         <div class="alert">
-            <strong>Próximo passo:</strong> Após capturar novos screenshots, atualize as referências em <a href="readme.html">readme.html</a>, <a href="index.html">index.html</a> e documentação relacionada.
+            <p><strong>Próximo passo:</strong> Após capturar novos screenshots, atualize as referências em <a href="readme.html">readme.html</a>, <a href="index.html">index.html</a> e documentação relacionada.</p>
         </div>
 
-        <p style="margin-top: 40px; color: #666; font-size: 0.95em;">
+        <p style="margin-top: 40px; padding-top: 24px; border-top: 1px solid #e5e7eb; color: #6b7280; font-size: 0.9em;">
             Última atualização: 05/05/2026 | Versão alvo: v3.1.1-free
         </p>
     </div>
+
+    <script>
+        // Previne erros de CORS quando aberto como file://
+        if (window.location.protocol === 'file:') {
+            document.querySelectorAll('a').forEach(link => {
+                const href = link.getAttribute('href');
+                if (href && !href.startsWith('#') && !href.startsWith('http')) {
+                    link.style.cursor = 'not-allowed';
+                    link.style.opacity = '0.6';
+                    link.title = 'Links internos requerem servidor HTTP. Use em um servidor web para navegação completa.';
+                    link.onclick = (e) => {
+                        e.preventDefault();
+                        alert('Esta página carrega como arquivo local. Para navegação entre páginas, use um servidor web (ex: Live Server, HTTP Server).');
+                    };
+                }
+            });
+        }
+    </script>
 </body>
 </html>
