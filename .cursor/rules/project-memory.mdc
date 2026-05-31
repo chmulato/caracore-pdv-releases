@@ -10,7 +10,7 @@ alwaysApply: true
 - **URL:** https://pdv.caracore.com.br/
 - **Publicação:** GitHub Pages a partir da pasta **docs/**.
 - **Oficina:** caracore-pdv (Java 21, Quarkus, JavaFX).
-- **Matriz:** caracore-site — portfólio `#caracore-pdv`, ecossistema.
+- **Matriz:** caracore-site — `#caracore-pdv` · `#pdv-coexistencia` · footer loja → portfólio.
 
 ## Linha Rust (coexistência — não substituição)
 - **PDV Desktop (Rust + Tauri 2):** https://rust-pdv.caracore.com.br/
