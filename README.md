@@ -41,49 +41,48 @@ A matriz de desenvolvimento fica no repositório **caracore-pdv**. Este reposit�
 
 | Campo | Valor |
 | ----- | ----- |
-| Versão | `v3.1.2-free` |
+| Versão | `v3.2.2-free` |
 | Status | Oferta pública atual |
-| Publicação | 05/2026 |
-| Linha | `free-edition` sobre a trilha `java_21` |
-| Stack da oficina | Java 21 + JavaFX + Quarkus 3 + SQLite local |
-| Delivery publicado | Multi-plataforma: Windows, Linux e macOS — primeira release FREE multiplataforma |
-| Requisito | Java 21+ instalado no sistema ([Temurin](https://adoptium.net/)) |
-| Release | <https://github.com/chmulato/caracore-pdv-releases/releases/tag/v3.1.2-free> |
+| Publicação | 06/2026 |
+| Linha | `free-edition` sobre a trilha `java_25` |
+| Stack da oficina | Java 25 + JavaFX + Quarkus 3 + SQLite local |
+| Delivery publicado | Multi-plataforma: Windows, Linux e macOS — release FREE multiplataforma Java 25 |
+| Requisito | Java 25+ instalado no sistema ([Temurin 25](https://adoptium.net/)) |
+| Release | <https://github.com/chmulato/caracore-pdv-releases/releases/tag/v3.2.2-free> |
 | Loja | <https://pdv.caracore.com.br/> |
 
-### Artefatos v3.1.2-free
+### Artefatos v3.2.2-free
 
 | Artefato | Plataforma | SHA256 |
 | -------- | ---------- | ------ |
-| `caracore-pdv-v3.1.2-free-windows-x64.zip` | Windows 10/11 x64 | Publicado no `SHA256SUMS.txt` da release |
-| `caracore-pdv-v3.1.2-free-linux-x64.zip` | Linux x64 (Ubuntu 20.04+) | Publicado no `SHA256SUMS.txt` da release |
-| `caracore-pdv-v3.1.2-free-macos-x64.zip` | macOS 12+ x64 (Intel) | Publicado no `SHA256SUMS.txt` da release |
+| `caracore-pdv-v3.2.2-free-windows-x64.zip` | Windows 10/11 x64 | Publicado no `SHA256SUMS.txt` da release |
+| `caracore-pdv-v3.2.2-free-linux-x64.zip` | Linux x64 (Ubuntu 20.04+) | Publicado no `SHA256SUMS.txt` da release |
+| `caracore-pdv-v3.2.2-free-macos-x64.zip` | macOS 12+ x64 (Intel) | Publicado no `SHA256SUMS.txt` da release |
 | `RELEASE_MANIFEST.json` | Manifesto técnico da publicação | Publicado no `SHA256SUMS.txt` da release |
 | `SHA256SUMS.txt` | Lista oficial de hashes da release | Fonte de verificação |
 
 ---
 
-## Atualização operacional - 05/2026
+## Atualização operacional - 06/2026
 
-- `v3.1.2-free` publicada como oferta pública atual — primeira release multi-plataforma (Windows, Linux, macOS).
-- Pipeline CI/CD (`release-free.yml`) reescrito: empacotamento direto do Quarkus fast-jar, sem dependência do Electron.
-- `v3.1.1-free` rebaixada para "anterior imediata" na trilha de versões da loja.
-- A comunicação comercial da loja foi atualizada para enfatizar pequena operação, validação do básico, operação local e clareza de escopo.
-- A wiki da loja passou a incluir plano de validação do cliente pequeno, ficha de visita piloto e wiki fiscal alinhada ao escopo público real.
+- `v3.2.2-free` publicada como oferta pública atual — Java 25, multi-plataforma (Windows, Linux, macOS).
+- Pipeline CI/CD (`release-free.yml`) atualizado para `java-version: '25'` (Temurin 25).
+- Alinhamento completo PDV Rust → Java: zonas de nav, InactivityLock, status bar, supervisor elevation, SetupGate.
+- `v3.1.2-free` rebaixada para "anterior imediata" na trilha de versões da loja.
 - `v3.0.10` permanece como referência histórica da série 3.x anterior à degustação Free.
 
 ---
 
 ## Linhas de versão
 
-### Linha atual: `java_21`
+### Linha atual: `java_25`
 
-A vitrine em `docs/` segue a trilha Java 21 da matriz, com foco em Quarkus, JavaFX, SQLite local e soberania localhost. A oficina atual declara JavaFX nativo como caminho principal; scripts e materiais baseados em Electron permanecem como histórico ou como empacotamento específico da release `v3.0.10`.
+A vitrine em `docs/` segue a trilha Java 25 da matriz, com foco em Quarkus, JavaFX, SQLite local e soberania localhost. A oficina declara JavaFX nativo como caminho principal.
 
 A página de novidades da versão atual fica em:
-<https://pdv.caracore.com.br/wiki-release-v3-1-2-free.html>
+<https://pdv.caracore.com.br/wiki-release-v3-2-2-free.html>
 
-A página de leitura comercial da versão atual fica em:
+A página de leitura comercial da versão anterior fica em:
 
 <https://pdv.caracore.com.br/wiki-analise-v3-1-1-free.html>
 
