@@ -14,13 +14,13 @@ alwaysApply: true
 
 ## Linha Rust (coexistência — não substituição)
 - **PDV Desktop (Rust + Tauri 2):** https://rust-pdv.caracore.com.br/
-- **Oficina Rust:** caracore-pdv-rust · release **v0.1.0** (piloto Windows).
+- **Oficina Rust:** caracore-pdv-rust · release **v0.1.2** (piloto Windows).
 - **Wiki institucional:** caracore-wiki — `projeto-pdv.html` (hub duas linhas).
 - Esta loja deve manter banner/texto de coexistência (`docs/wiki/index.html`, `docs/wiki/projeto-pdv.html`).
 
 ## Mensagem de produto (fixa)
 - **CaraCore PDV Desktop (Java · JavaFX)** — aplicativo **desktop** multi-plataforma (Windows · Linux · macOS).
-- Canal público atual: **v3.1.2-free**. SQLite local, operação Bunker, planos Free/Premium.
+- Canal público atual: **v3.2.2-free**. SQLite local, operação Bunker, planos Free/Premium.
 - **V3 (negócio):** PME, PIX Split 2027 — posicionamento comercial; **não** confundir com a linha Rust (v0.1.x).
 - **Evitar:** dizer que Java será descontinuado; usar "PDV v3" para a linha Rust.
 
@@ -32,7 +32,7 @@ alwaysApply: true
 - **canal-feedback.html** — Contato
 
 ## Releases
-- Tags `v*` no GitHub Releases (ex.: v3.1.2-free).
+- Tags `v*` no GitHub Releases (ex.: v3.2.2-free).
 - Artefatos gerados pela oficina caracore-pdv (jpackage / empacotamento desktop).
 
 ## Convenções
