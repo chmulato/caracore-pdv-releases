@@ -9,7 +9,7 @@ alwaysApply: true
 - **caracore-pdv-releases:** loja (vitrine e releases) do **CaraCore PDV Desktop (Java · JavaFX)**.
 - **URL:** https://pdv.caracore.com.br/
 - **Publicação:** GitHub Pages a partir da pasta **docs/**.
-- **Oficina:** caracore-pdv (Java 21, Quarkus, JavaFX).
+- **Oficina:** caracore-pdv (Java 25, Quarkus, JavaFX).
 - **Matriz:** caracore-site — `#caracore-pdv` · `#pdv-coexistencia` · footer loja → portfólio.
 
 ## Linha Rust (coexistência — não substituição)
