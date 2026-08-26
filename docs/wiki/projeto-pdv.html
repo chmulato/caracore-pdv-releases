@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CaraCore PDV - Wiki Cara Core</title>
-    <meta name="description" content="CaraCore PDV - Sistema de ponto de venda. Foco localhost e Windows Desktop (EXE), banco apenas SQLite, motor fiscal Reforma Tributária 2026-2033, PIX e modo contingência.">
+    <meta name="description" content="CaraCore PDV Desktop (Java): canal v3.2.2-free para Windows, Linux e macOS. SQLite local, PIX, Java 25, Quarkus e JavaFX. Convive com o PDV Rust piloto; nenhuma linha substitui a outra.">
     
     <!-- Bootstrap CSS -->
     <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
@@ -106,15 +106,15 @@
                             <div class="project-status">
                                 <span class="badge badge-private">Privado</span>
                                 <span class="badge badge-proprietary">Licença Proprietária</span>
-                                <span class="badge badge-active">Em Desenvolvimento</span>
-                                <span class="badge badge-java">Java 21</span>
+                                <span class="badge badge-active">Oferta madura</span>
+                                <span class="badge badge-java">Java 25</span>
                                 <span class="badge badge-quarkus">Quarkus 3</span>
                                 <span class="badge badge-sqlite">SQLite</span>
                                 <span class="badge badge-bootstrap">Bootstrap 5</span>
                                 <span class="badge badge-htmx">HTMX</span>
                                 <span class="badge badge-apexcharts">ApexCharts</span>
                                 <span class="badge badge-docker">Docker</span>
-                                <span class="badge badge-template">Windows Desktop</span>
+                                <span class="badge badge-template">Windows · Linux · macOS</span>
                             </div>
                         </div>
                     </div>
@@ -127,7 +127,7 @@
 
                     <section id="v3-pdv-transparencia" class="mb-5">
                         <h2><i class="bi bi-megaphone"></i> Transparência de posicionamento — V3 (negócio)</h2>
-                        <p class="text-muted small">A sigla <strong>V3</strong> aqui refere-se ao <strong>posicionamento comercial</strong> do CaraCore PDV (PME, PIX Split 2027) — comum às duas linhas de stack. Não confunda com o canal Java <strong>v3.1.x</strong> nem com a release Rust <strong>v0.1.x</strong>.</p>
+                        <p class="text-muted small">A sigla <strong>V3</strong> aqui refere-se ao <strong>posicionamento comercial</strong> do CaraCore PDV (PME, PIX Split 2027) — comum às duas linhas de stack. Não confunda com o canal Java <strong>v3.2.x</strong> nem com a release Rust <strong>v0.1.x</strong>.</p>
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <div class="scenario-card h-100">
@@ -166,7 +166,7 @@
                                 <tbody>
                                     <tr>
                                         <td><strong>PDV Desktop</strong> (esta wiki)</td>
-                                        <td class="small">Java 21, Quarkus, JavaFX, SQLite</td>
+                                        <td class="small">Java 25, Quarkus, JavaFX, SQLite</td>
                                         <td><span class="badge bg-success">Oferta madura</span></td>
                                         <td><a href="index.html">Wiki Java</a> · <a href="https://pdv.caracore.com.br/">Loja</a></td>
                                     </tr>
@@ -179,7 +179,7 @@
                                 </tbody>
                             </table>
                         </div>
-                        <p class="text-muted small mb-0">Ambos são PDVs Desktop instalados na máquina da loja. Nenhuma linha substitui a outra. Java: operação madura ou Linux/macOS; Rust + Tauri: piloto Windows (release v0.1.0).</p>
+                        <p class="text-muted small mb-0">Ambos são PDVs Desktop instalados na máquina da loja. Nenhuma linha substitui a outra. Java: operação madura (canal v3.2.2-free) em Windows, Linux e macOS; Rust + Tauri: piloto Windows (release v0.1.2).</p>
                     </section>
 
                     <!-- Visão Geral -->
@@ -206,7 +206,7 @@
                             <div class="col-md-6">
                                 <div class="estagiario-section">
                                     <h3><i class="bi bi-mortarboard"></i> Arquitetura Técnica</h3>
-                                    <p>Aplicação desktop/local em <strong>Java 21</strong>, <strong>JavaFX 21</strong> e <strong>Quarkus 3</strong>, com API REST local e persistência SQLite. <strong>Escopo: foco localhost e Windows Desktop;</strong> banco apenas SQLite. Módulos: PDV (caixa), vendas, produtos, clientes, estoque, dashboard, relatórios nativos do PDV, operadores e <strong>multi-loja</strong>. Perfil <code>sqlite</code> (padrão): banco em <code>./data/caracore-pdv.db</code>; backend local em <code>http://localhost:8765</code>. A oferta pública atual está na release <code>v3.1.1-free</code> e prioriza o desktop local nativo para resposta rápida no balcão e menor dependência de infraestrutura externa.</p>
+                                    <p>Aplicação desktop em <strong>Java 25</strong>, <strong>JavaFX</strong> e <strong>Quarkus 3</strong>, com API REST local e persistência SQLite. Oferta pública atual: <code>v3.2.2-free</code> em Windows, Linux e macOS. Módulos: PDV (caixa), vendas, produtos, clientes, estoque, dashboard, relatórios, operadores e multi-loja. Banco em SQLite local; backend em <code>http://localhost:8765</code>.</p>
                                     <p><strong>Componentes principais:</strong></p>
                                     <ul class="feature-list">
                                         <li><strong>Quarkus / REST / Panache:</strong> APIs locais, serviços e repositórios</li>
@@ -355,7 +355,7 @@
                             <div class="col-md-6">
                                 <h4><i class="bi bi-server text-info"></i> Backend</h4>
                                 <ul class="tech-list">
-                                    <li><strong>Java 21:</strong> Linguagem principal</li>
+                                    <li><strong>Java 25:</strong> Linguagem principal</li>
                                     <li><strong>Quarkus 3:</strong> Backend local, APIs REST e injeção de dependências</li>
                                     <li><strong>Hibernate Panache:</strong> ORM e repositórios</li>
                                     <li><strong>SQLite 3.51:</strong> <strong>Banco padrão</strong> (perfil <code>sqlite</code>); <code>./data/caracore-pdv.db</code>; carga automática na 1ª execução</li>
@@ -465,7 +465,7 @@
                                 <div class="setup-card">
                                     <h4><i class="bi bi-download text-primary"></i> Pré-requisitos</h4>
                                     <ul class="feature-list">
-                                        <li>Java 21 (JDK)</li>
+                                        <li>Java 25 (JDK)</li>
                                         <li>Maven 3.6+ (ou use <code>mvnw</code>)</li>
                                         <li>SQLite (embutido; sem servidor de banco separado)</li>
                                         <li>Git</li>
