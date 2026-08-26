@@ -20,7 +20,9 @@ alwaysApply: true
 
 ## Mensagem de produto (fixa)
 - **CaraCore PDV Desktop (Java · JavaFX)** — aplicativo **desktop** multi-plataforma (Windows · Linux · macOS).
-- Canal público atual: **v3.2.2-free**. SQLite local, operação Bunker, planos Free/Premium.
+- Canal público atual: **v3.2.2-free**. SQLite local, operação Bunker, planos Free/Premium. Requisito: Java 25+.
+- Wiki da loja: oferta atual = v3.2.2-free (não v1.0.13 / v3.1.1 como se fossem vigentes).
+- **PDV Rust:** rust-pdv.caracore.com.br · v0.1.2 · download = tag v0.1.2 em `caracore-pdv-releases` (**nunca** `/latest`).
 - **V3 (negócio):** PME, PIX Split 2027 — posicionamento comercial; **não** confundir com a linha Rust (v0.1.x).
 - **Evitar:** dizer que Java será descontinuado; usar "PDV v3" para a linha Rust.
 
@@ -38,4 +40,4 @@ alwaysApply: true
 ## Convenções
 - Ao alterar versão ou mensagem, alinhar com **oficina** (caracore-pdv) e **matriz** (portfólio/ecossistema).
 - Referenciar loja Rust como **PDV Desktop** complementar, nunca como substituto.
-- Documentos de ecossistema na matriz: ECOSYSTEM_CARA_CORE.txt, ECOSYSTEM_LOJAS.txt, COMPONENTES_LOJA.txt.
+- Documentos de ecossistema na matriz: ECOSYSTEM_CARA_CORE.md, ECOSYSTEM_LOJAS.md.
