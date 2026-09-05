@@ -41,8 +41,8 @@ A matriz de desenvolvimento fica no repositório **caracore-pdv**. Este reposit�
 
 | Campo | Valor |
 | ----- | ----- |
-| Versão | `v3.2.2-free` |
-| Status | Oferta pública atual |
+| Versão | `v3.2.2-free` (maduro) · `v4.0.0-rc1` (candidato) |
+| Status | Oferta pública atual + pré-release Qute |
 | Publicação | 06/2026 |
 | Linha | `free-edition` sobre a trilha `java_25` |
 | Stack da oficina | Java 25 + Quarkus 3 + Qute + SQLite local (v4 em homologação; canal público ainda é v3.2.2-free) |
@@ -61,6 +61,13 @@ A matriz de desenvolvimento fica no repositório **caracore-pdv**. Este reposit�
 | `RELEASE_MANIFEST.json` | Manifesto técnico da publicação | Publicado no `SHA256SUMS.txt` da release |
 | `SHA256SUMS.txt` | Lista oficial de hashes da release | Fonte de verificação |
 
+### Candidato v4.0.0-rc1
+
+| Artefato | Plataforma | SHA256 |
+| -------- | ---------- | ------ |
+| `caracore-pdv-4.0.0-rc1-qute-portable.zip` | Windows · Linux · macOS | `30b18951301a4f1523b64a0be8316e4182faefee4d107eda60de0286fe98ba0c` |
+| Release | Pré-release | <https://github.com/chmulato/caracore-pdv-releases/releases/tag/v4.0.0-rc1> |
+
 ---
 
 ## Atualização operacional - 06/2026
@@ -77,7 +84,7 @@ A matriz de desenvolvimento fica no repositório **caracore-pdv**. Este reposit�
 
 ### Linha atual: `java_25`
 
-A vitrine em `docs/` segue a trilha Java 25 da matriz, com SQLite local e soberania localhost. O download público é a tag `v3.2.2-free`. A oficina prepara o v4 (Quarkus + Qute + PWA local + launcher) para 08/11/2026; esse canal ainda não substitui os ZIPs publicados.
+A vitrine em `docs/` segue a trilha Java 25 da matriz, com SQLite local e soberania localhost. O download público maduro é a tag `v3.2.2-free`. O candidato `v4.0.0-rc1` (Quarkus + Qute) está como pré-release e não substitui a degustação Free. O GA do v4 permanece previsto para 08/11/2026.
 
 A página de novidades da versão atual fica em:
 <https://pdv.caracore.com.br/wiki-release-v3-2-2-free.html>

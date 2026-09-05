@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>v4.0.0-rc1 — Candidato Qute — CaraCore-PDV</title>
+    <meta name="description" content="Release candidate do CaraCore-PDV v4: Quarkus, Qute, SQLite local e launcher. Não substitui o canal maduro v3.2.2-free.">
+    <link rel="manifest" href="manifest.webmanifest">
+    <meta name="theme-color" content="#166534">
+    <link rel="stylesheet" href="assets/css/loja.css">
+    <link rel="stylesheet" href="assets/css/evolution-status.css">
+    <link rel="stylesheet" href="assets/css/caracore-core-typography.css">
+    <link rel="stylesheet" href="assets/css/caracore-institutional-components.css">
+</head>
+<body class="page-wiki page-wiki-release">
+    <div class="wrapper">
+        <nav class="breadcrumb" aria-label="Navegação">
+            <a href="index.html">CaraCore-PDV - Loja</a>
+            <span> · </span>
+            <a href="download.html">Download</a>
+            <span> · </span>
+            <span>v4.0.0-rc1</span>
+        </nav>
+
+        <header>
+            <h1>CaraCore-PDV v4.0.0-rc1</h1>
+            <p>Candidato da linha v4: Quarkus + Qute + SQLite local + launcher. Publicado em 05/09/2026 como <strong>pré-release</strong>.</p>
+        </header>
+
+        <p class="download-notice"><strong>Não é o canal maduro.</strong> A oferta pública para teste real continua a <a href="download.html">v3.2.2-free</a>. O GA do v4 permanece previsto para 08/11/2026 e depende do corte T032 (Edge real, suíte completa, instalador assinado).</p>
+
+        <section class="card wiki-card">
+            <h2>O que este candidato entrega</h2>
+            <ul>
+                <li>Interface web Qute em modo aplicativo (Edge no Windows; Chrome/Chromium/Edge no Linux e macOS).</li>
+                <li>Paridade de negócio das Fases 0–7 na oficina (venda, caixa, cadastros, fiscal, backup, offline, personas).</li>
+                <li>Um ZIP portátil para Windows, Linux e macOS. Requisito: Java 25+ e Python 3.</li>
+                <li>Primeiro acesso: <code>admin</code> / <code>admin</code>, com troca de senha obrigatória.</li>
+            </ul>
+        </section>
+
+        <section class="card wiki-card">
+            <h2>Como instalar</h2>
+            <ol>
+                <li>Baixe <code>caracore-pdv-4.0.0-rc1-qute-portable.zip</code>.</li>
+                <li>Extraia para uma pasta local.</li>
+                <li>Windows: execute <code>iniciar_pdv.bat</code>. Linux/macOS: <code>chmod +x iniciar_pdv.sh && ./iniciar_pdv.sh</code>.</li>
+                <li>O launcher sobe <code>http://127.0.0.1:8080</code> e abre o navegador em modo aplicativo.</li>
+            </ol>
+            <p><a class="btn-release" href="https://github.com/chmulato/caracore-pdv-releases/releases/download/v4.0.0-rc1/caracore-pdv-4.0.0-rc1-qute-portable.zip">Baixar o ZIP RC1</a> · <a class="btn-release btn-release-outline" href="https://github.com/chmulato/caracore-pdv-releases/releases/tag/v4.0.0-rc1">Abrir a pré-release</a></p>
+        </section>
+
+        <section class="card wiki-card">
+            <h2>O que ainda não está neste RC</h2>
+            <ul>
+                <li>Instalador nativo assinado (MSI/EXE jpackage).</li>
+                <li>Homologação visual no Edge 1280×800 como gate de corte.</li>
+                <li>Substituição do download Free na home da loja.</li>
+                <li>A linha Rust (<a href="https://pdv-rust.caracore.com.br/">pdv-rust.caracore.com.br</a>) não é substituída.</li>
+            </ul>
+        </section>
+    </div>
+    <script src="assets/js/loja.js"></script>
+    <script src="assets/js/pwa.js"></script>
+</body>
+</html>
