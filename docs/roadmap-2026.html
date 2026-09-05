@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="https://pdv.caracore.com.br/">
+    <title>Roadmap 2026 — CaraCore-PDV v4</title>
+    <meta name="description" content="Roadmap do CaraCore-PDV v4 com Quarkus, SQLite local e experiência PWA. Lançamento previsto para 08 de novembro de 2026.">
+    <link rel="stylesheet" href="assets/css/loja.css">
+    <link rel="stylesheet" href="assets/css/evolution-status.css">
+    <link rel="stylesheet" href="assets/css/caracore-core-typography.css">
+    <link rel="stylesheet" href="assets/css/caracore-institutional-components.css">
+</head>
+<body class="page-wiki page-wiki-release">
+    <div class="wrapper">
+        <nav class="breadcrumb" aria-label="Navegação">
+            <a href="index.html">CaraCore-PDV - Loja</a>
+            <span> · </span>
+            <span>Roadmap 2026</span>
+        </nav>
+
+        <header>
+            <p class="eyebrow">Desenvolvimento em andamento</p>
+            <h1>CaraCore-PDV v4: local, simples e pronto para a rotina</h1>
+            <p>Estamos desenvolvendo o <strong>CaraCore-PDV v4</strong>, com backend <strong>Quarkus</strong>, banco <strong>SQLite local</strong> e interface web responsiva em formato <strong>PWA</strong>, executada no próprio computador da loja.</p>
+        </header>
+
+        <section class="card wiki-card">
+            <p class="download-notice"><strong>Lançamento previsto do CaraCore-PDV v4: 08 de novembro de 2026.</strong> A data representa o objetivo público de disponibilizar a nova experiência após os gates de paridade, homologação e empacotamento. Até lá, a oferta pública atual continua sendo a <a href="download.html">v3.2.2-free</a>.</p>
+        </section>
+
+        <section class="card wiki-card">
+            <h2>O que já está em validação</h2>
+            <ul>
+                <li>Login, primeiro acesso, dashboard e sessão local.</li>
+                <li>Venda de balcão, carrinho, pagamentos simples e mistos, troco e recibo.</li>
+                <li>Clientes, produtos, estoque, abertura de turno, sangria, suprimento e relatórios operacionais.</li>
+                <li>Launcher local para iniciar o backend Quarkus e abrir a experiência no modo aplicativo.</li>
+            </ul>
+            <p>Esses fluxos já possuem implementação e testes na oficina. A homologação completa ainda precisa confirmar a paridade de negócio com a linha anterior e o comportamento no Windows real.</p>
+        </section>
+
+        <section class="card wiki-card">
+            <h2>Trabalho até o lançamento</h2>
+            <div class="wiki-table-wrap">
+                <table class="wiki-table">
+                    <thead>
+                        <tr>
+                            <th>Frente</th>
+                            <th>Objetivo</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Gestão operacional</td>
+                            <td>Vendedores, lojas, operadores e estoque gerencial na interface web.</td>
+                            <td>Em desenvolvimento</td>
+                        </tr>
+                        <tr>
+                            <td>Fiscal e configurações</td>
+                            <td>Preservar configurações fiscais, PIX, e-mail e mensageria com autorização adequada.</td>
+                            <td>Pendente</td>
+                        </tr>
+                        <tr>
+                            <td>Offline e recuperação</td>
+                            <td>Confirmar continuidade local, SQLite, recuperação e reinício sem perda de estado.</td>
+                            <td>Pendente</td>
+                        </tr>
+                        <tr>
+                            <td>Homologação e release</td>
+                            <td>Executar fluxos reais, validar empacotamento e publicar a versão prevista.</td>
+                            <td>Gate do lançamento</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="card wiki-card">
+            <h2>O que muda para a loja</h2>
+            <ul>
+                <li><strong>Operação local:</strong> os dados do PDV permanecem no computador da loja, em SQLite.</li>
+                <li><strong>Experiência PWA:</strong> acesso responsivo e adequado ao uso em tela cheia, com foco no caixa.</li>
+                <li><strong>Menos dependência da internet:</strong> a venda local continua sendo o centro do produto.</li>
+                <li><strong>Transição responsável:</strong> a linha atual permanece disponível enquanto a nova versão conclui sua homologação.</li>
+            </ul>
+        </section>
+
+        <section class="card wiki-card">
+            <h2>Acompanhe com transparência</h2>
+            <p>O roadmap do v4 pode ser ajustado conforme os testes de paridade e a validação operacional. Recursos só serão apresentados como disponíveis depois de implementados, testados e aprovados no fluxo correspondente.</p>
+            <p><a href="index.html">Voltar para a loja</a> · <a href="download.html">Conhecer a oferta atual</a> · <a href="canal-feedback.html">Enviar feedback</a></p>
+        </section>
+
+        <footer class="site-footer">
+            <p>Cara Core Informática · Roadmap atualizado em 05/09/2026.</p>
+        </footer>
+    </div>
+</body>
+</html>
