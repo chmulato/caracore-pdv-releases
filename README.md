@@ -109,7 +109,7 @@ As versões `v1.x` e `v2.x` seguem preservadas como histórico da loja, incluind
 
 ## Degustação Free e planos
 
-A loja comunica a **Versão de Degustação (Free)** como teste real, com 100 vendas completas para validar o fluxo principal da pequena operação. O objetivo da Free é provar aderência de caixa, operação local, clareza fiscal e entendimento do escopo atual.
+A loja comunica a **Versão de Degustação (Free)** como teste real, com até **100 vendas por mês** para validar o fluxo principal da pequena operação. O objetivo da Free é provar aderência de caixa, operação local, clareza fiscal e entendimento do escopo atual.
 
 O plano Premium deve ser lido como ampliação segura depois da prova do básico, com mais estrutura operacional, suporte prioritário e evolução comercial compatível com a necessidade real da loja.
 
