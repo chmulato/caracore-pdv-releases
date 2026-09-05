@@ -2,7 +2,7 @@
 
 Canal público de vitrine, documentação e distribuição do **CaraCore-PDV** para pequenas operações de balcão e varejo local.
 
-Mensagem central do produto: **quando a internet cai, o caixa não pode parar**. A oferta pública atual combina operação local em Windows com SQLite, recibo digital, leitura fiscal em linguagem simples e validação prática do básico antes de ampliar estrutura.
+Mensagem central do produto: **quando a internet cai, o caixa não pode parar**. A oferta pública atual combina operação local em Windows, Linux e macOS com SQLite, recibo digital, leitura fiscal em linguagem simples e validação prática do básico antes de ampliar estrutura.
 
 ---
 
@@ -20,7 +20,7 @@ O CaraCore-PDV foi desenhado para lojistas que precisam de:
 
 Este repositório não deve ser lido como catálogo de promessa ampla. A leitura correta da oferta pública atual é:
 
-- desktop local Windows com SQLite;
+- desktop local (Windows, Linux e macOS) com SQLite;
 - NFC-e no escopo atual;
 - PIX configurável e pagamento misto no fluxo vigente;
 - validação de aderência para pequena loja antes de expansão.
@@ -45,7 +45,7 @@ A matriz de desenvolvimento fica no repositório **caracore-pdv**. Este reposit�
 | Status | Oferta pública atual |
 | Publicação | 06/2026 |
 | Linha | `free-edition` sobre a trilha `java_25` |
-| Stack da oficina | Java 25 + JavaFX + Quarkus 3 + SQLite local |
+| Stack da oficina | Java 25 + Quarkus 3 + Qute + SQLite local (v4 em homologação; canal público ainda é v3.2.2-free) |
 | Delivery publicado | Multi-plataforma: Windows, Linux e macOS — release FREE multiplataforma Java 25 |
 | Requisito | Java 25+ instalado no sistema ([Temurin 25](https://adoptium.net/)) |
 | Release | <https://github.com/chmulato/caracore-pdv-releases/releases/tag/v3.2.2-free> |
@@ -55,9 +55,9 @@ A matriz de desenvolvimento fica no repositório **caracore-pdv**. Este reposit�
 
 | Artefato | Plataforma | SHA256 |
 | -------- | ---------- | ------ |
-| `caracore-pdv-v3.2.2-free-windows-x64.zip` | Windows 10/11 x64 | Publicado no `SHA256SUMS.txt` da release |
-| `caracore-pdv-v3.2.2-free-linux-x64.zip` | Linux x64 (Ubuntu 20.04+) | Publicado no `SHA256SUMS.txt` da release |
-| `caracore-pdv-v3.2.2-free-macos-x64.zip` | macOS 12+ x64 (Intel) | Publicado no `SHA256SUMS.txt` da release |
+| `caracore-pdv-v3.2.2-free-free-windows-x64.zip` | Windows 10/11 x64 | Publicado no `SHA256SUMS.txt` da release |
+| `caracore-pdv-v3.2.2-free-free-linux-x64.zip` | Linux x64 (Ubuntu 20.04+) | Publicado no `SHA256SUMS.txt` da release |
+| `caracore-pdv-v3.2.2-free-free-macos-x64.zip` | macOS 12+ x64 (Intel) | Publicado no `SHA256SUMS.txt` da release |
 | `RELEASE_MANIFEST.json` | Manifesto técnico da publicação | Publicado no `SHA256SUMS.txt` da release |
 | `SHA256SUMS.txt` | Lista oficial de hashes da release | Fonte de verificação |
 
@@ -77,7 +77,7 @@ A matriz de desenvolvimento fica no repositório **caracore-pdv**. Este reposit�
 
 ### Linha atual: `java_25`
 
-A vitrine em `docs/` segue a trilha Java 25 da matriz, com foco em Quarkus, JavaFX, SQLite local e soberania localhost. A oficina declara JavaFX nativo como caminho principal.
+A vitrine em `docs/` segue a trilha Java 25 da matriz, com SQLite local e soberania localhost. O download público é a tag `v3.2.2-free`. A oficina prepara o v4 (Quarkus + Qute + PWA local + launcher) para 08/11/2026; esse canal ainda não substitui os ZIPs publicados.
 
 A página de novidades da versão atual fica em:
 <https://pdv.caracore.com.br/wiki-release-v3-2-2-free.html>
@@ -121,7 +121,8 @@ Download e onboarding:
 | `README.md` | Visão institucional e operacional deste repositório |
 | `docs/` | Portal da loja em GitHub Pages |
 | `docs/index.html` | Landing page comercial |
-| `docs/download.html` | Página de download da Degustação Free |
+| `docs/download.html` | Página de download da Degustação Free (Windows, Linux e macOS) |
+| `docs/pwa.html` | PWA da vitrine (não é o caixa) |
 | `docs/tecnologia.html` | Soluções e pilares técnicos |
 | `docs/wiki.html` | Índice operacional da wiki da loja |
 | `docs/wiki-validacao-cliente-pequeno.html` | Plano público de validação do perfil de loja |
@@ -141,6 +142,7 @@ Páginas principais:
 
 - Loja: <https://pdv.caracore.com.br/>
 - Download: <https://pdv.caracore.com.br/download.html>
+- PWA da loja: <https://pdv.caracore.com.br/pwa.html>
 - Soluções: <https://pdv.caracore.com.br/tecnologia.html>
 - Documentação: <https://pdv.caracore.com.br/readme.html>
 - Wiki: <https://pdv.caracore.com.br/wiki.html>
@@ -160,7 +162,7 @@ Este repositório pode validar instaladores e assets publicados por GitHub Actio
 
 - assets públicos baixáveis sem autenticação pelo cliente final;
 - SHA256 documentado por release;
-- página de download sempre apontando para o latest release público;
+- página de download apontando para a tag pública `v3.2.2-free` (Windows, Linux e macOS);
 - wikis de release preservando contexto técnico e orientação de atualização;
 - operação Windows com foco em previsibilidade no balcão;
 - coerência entre promessa pública, escopo real e evidência documental;

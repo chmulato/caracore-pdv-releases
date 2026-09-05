@@ -6,6 +6,8 @@
     <base href="https://pdv.caracore.com.br/">
     <title>Roadmap 2026 — CaraCore-PDV v4</title>
     <meta name="description" content="Roadmap do CaraCore-PDV v4 com Quarkus, SQLite local e experiência PWA. Lançamento previsto para 08 de novembro de 2026.">
+    <link rel="manifest" href="manifest.webmanifest">
+    <meta name="theme-color" content="#166534">
     <link rel="stylesheet" href="assets/css/loja.css">
     <link rel="stylesheet" href="assets/css/evolution-status.css">
     <link rel="stylesheet" href="assets/css/caracore-core-typography.css">
@@ -37,7 +39,7 @@
                 <li>Clientes, produtos, estoque, abertura de turno, sangria, suprimento e relatórios operacionais.</li>
                 <li>Launcher local para iniciar o backend Quarkus e abrir a experiência no modo aplicativo.</li>
             </ul>
-            <p>Esses fluxos já possuem implementação e testes na oficina. A homologação completa ainda precisa confirmar a paridade de negócio com a linha anterior e o comportamento no Windows real.</p>
+            <p>As Fases 0–7 da paridade Qute estão concluídas na oficina. O corte público (T032) ainda depende de homologação visual no Edge, suíte completa, instalador Windows assinado e smoke pós-instalação. Até lá, o download da loja continua sendo a <a href="download.html">v3.2.2-free</a>.</p>
         </section>
 
         <section class="card wiki-card">
@@ -55,22 +57,22 @@
                         <tr>
                             <td>Experiência web/PWA</td>
                             <td>Interface responsiva em modo aplicativo, iniciada pelo launcher Windows.</td>
-                            <td>Implementação em validação</td>
+                            <td>Pronta na oficina; homologação de corte pendente</td>
                         </tr>
                         <tr>
                             <td>Venda e pagamento</td>
                             <td>Carrinho, quantidade, troco, recibo, pagamentos simples e mistos e baixa de estoque.</td>
-                            <td>Implementação em validação</td>
+                            <td>Pronta na oficina; homologação de corte pendente</td>
                         </tr>
                         <tr>
                             <td>Gestão operacional</td>
                             <td>Clientes, produtos, estoque, vendedores, lojas, operadores, caixa X/Z e relatórios.</td>
-                            <td>Parte pronta; paridade em desenvolvimento</td>
+                            <td>Pronta na oficina; homologação de corte pendente</td>
                         </tr>
                         <tr>
                             <td>Continuidade e desempenho</td>
                             <td>SQLite local, recuperação após reinício, menor latência percebida e operação com internet instável.</td>
-                            <td>Benchmark e homologação</td>
+                            <td>Testes de offline feitos; benchmark de corte pendente</td>
                         </tr>
                     </tbody>
                 </table>
@@ -92,22 +94,22 @@
                         <tr>
                             <td>Gestão operacional</td>
                             <td>Vendedores, lojas, operadores e estoque gerencial na interface web.</td>
-                            <td>Em desenvolvimento</td>
+                            <td>Concluída na oficina</td>
                         </tr>
                         <tr>
                             <td>Fiscal e configurações</td>
                             <td>Preservar configurações fiscais, PIX, e-mail e mensageria com autorização adequada.</td>
-                            <td>Pendente</td>
+                            <td>Concluída na oficina</td>
                         </tr>
                         <tr>
                             <td>Offline e recuperação</td>
                             <td>Confirmar continuidade local, SQLite, recuperação e reinício sem perda de estado.</td>
-                            <td>Pendente</td>
+                            <td>Concluída na oficina</td>
                         </tr>
                         <tr>
                             <td>Homologação e release</td>
-                            <td>Executar fluxos reais, validar empacotamento e publicar a versão prevista.</td>
-                            <td>Gate do lançamento</td>
+                            <td>Executar fluxos reais no Edge, assinar o instalador Windows e só então substituir o download público.</td>
+                            <td>Gate do lançamento (T032)</td>
                         </tr>
                     </tbody>
                 </table>
@@ -159,12 +161,13 @@
         <section class="card wiki-card">
             <h2>Acompanhe com transparência</h2>
             <p>O roadmap do v4 pode ser ajustado conforme os testes de paridade e a validação operacional. Recursos só serão apresentados como disponíveis depois de implementados, testados e aprovados no fluxo correspondente.</p>
-            <p><a href="index.html">Voltar para a loja</a> · <a href="download.html">Conhecer a oferta atual</a> · <a href="canal-feedback.html">Enviar feedback</a></p>
+            <p><a href="index.html">Voltar para a loja</a> · <a href="download.html">Oferta atual</a> · <a href="pwa.html">PWA da loja</a> · <a href="canal-feedback.html">Enviar feedback</a></p>
         </section>
 
         <footer class="site-footer">
             <p>Cara Core Informática · Roadmap atualizado em 05/09/2026.</p>
         </footer>
     </div>
+    <script src="assets/js/pwa.js"></script>
 </body>
 </html>

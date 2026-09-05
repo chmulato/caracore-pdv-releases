@@ -3,12 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Baixe grátis a edição Free do CaraCore-PDV para Windows e valide o produto com 100 vendas reais no balcão.">
+  <meta name="description" content="Baixe grátis a edição Free do CaraCore-PDV para Windows, Linux e macOS e valide o produto com 100 vendas reais no balcão.">
   <meta name="author" content="Cara Core Informática">
   <meta property="og:title" content="Cara Core Informática | Baixar Versão de Degustação (Free)">
-  <meta property="og:description" content="Teste a edição Free no Windows com desktop local, SQLite e limites claros e avance para o Premium quando precisar de mais automação comercial.">
+  <meta property="og:description" content="Teste a edição Free no Windows, Linux ou macOS com desktop local, SQLite e limites claros e avance para o Premium quando precisar de mais automação comercial.">
   <meta property="og:type" content="website">
   <title>CaraCore-PDV | Baixar e Testar Grátis (Free)</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="theme-color" content="#166534">
+  <link rel="apple-touch-icon" href="assets/pwa/icon.svg">
 
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
@@ -79,7 +82,7 @@
             <div class="flex flex-wrap items-center gap-2">
               <div class="inline-flex items-center gap-2 rounded-full brand-chip px-4 py-2 text-sm font-semibold border border-white/10">
                 <i class="fas fa-mug-hot text-emerald-200"></i>
-                Versão de Degustação (Free) • Windows
+                Versão de Degustação (Free) • Windows · Linux · macOS
               </div>
               <div class="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm font-semibold border border-white/10">
                 <i class="fas fa-stamp text-emerald-200"></i>
@@ -90,16 +93,16 @@
               Teste no mundo real (não é demo). Comece agora sem custo.
             </h1>
             <p class="text-lg text-white/90 mt-4 leading-relaxed">
-              A Degustação entrega <span class="font-semibold text-white">100 vendas completas</span> para você validar o produto em operação real no Windows. Instale, abra e venda com banco SQLite local, entendendo com clareza onde termina a degustação e onde começa o plano Premium. Esta é a <strong>única oferta pública atual</strong> da loja para teste real.
+              A Degustação entrega <span class="font-semibold text-white">100 vendas completas</span> para você validar o produto em operação real no Windows, Linux ou macOS. Instale, abra e venda com banco SQLite local, entendendo com clareza onde termina a degustação e onde começa o plano Premium. Esta é a <strong>única oferta pública atual</strong> da loja para teste real.
             </p>
 
             <div class="mt-7 grid sm:grid-cols-3 gap-3">
               <div class="rounded-2xl bg-white/10 border border-white/10 p-4">
                 <div class="flex items-center gap-3">
                   <i class="fab fa-windows text-white"></i>
-                  <div class="font-bold">Windows 10/11</div>
+                  <div class="font-bold">Windows · Linux · macOS</div>
                 </div>
-                <div class="text-sm text-white/85 mt-2">Pacote Windows pronto para uso.</div>
+                <div class="text-sm text-white/85 mt-2">ZIP portátil da tag v3.2.2-free.</div>
               </div>
               <div class="rounded-2xl bg-white/10 border border-white/10 p-4">
                 <div class="flex items-center gap-3">
@@ -198,7 +201,7 @@
                   <i class="fas fa-download"></i>
                 </button>
                 <div class="text-sm text-slate-600">
-                  <span class="font-semibold text-slate-900">Pacote oficial.</span> Link direto do GitHub Releases.
+                  <span class="font-semibold text-slate-900">Pacote oficial.</span> O botão escolhe o ZIP do seu sistema; os três links abaixo são diretos.
                 </div>
               </div>
 
@@ -350,7 +353,7 @@
               <div class="flex items-center justify-between gap-4">
                 <div>
                   <div class="text-sm font-semibold text-slate-700">Download da Degustação (Free)</div>
-                  <div id="downloadMeta" class="text-xs text-slate-500 mt-1">Buscando a versão mais recente do pacote...</div>
+                  <div id="downloadMeta" class="text-xs text-slate-500 mt-1">Canal público: v3.2.2-free · Windows, Linux e macOS</div>
                 </div>
                 <div class="h-10 w-10 rounded-xl bg-emerald-50 border border-emerald-100 flex items-center justify-center text-emerald-700">
                   <i class="fas fa-download"></i>
@@ -366,10 +369,20 @@
               </div>
 
               <a id="manualLink"
-                 href="installers.html"
+                 href="https://github.com/chmulato/caracore-pdv-releases/releases/tag/v3.2.2-free"
                  class="mt-3 inline-flex items-center justify-center gap-2 w-full rounded-xl border border-slate-200 px-5 py-3 text-slate-900 font-bold hover:bg-slate-50">
-                Abrir Canal de Instaladores
+                Abrir a release no GitHub
                 <i class="fas fa-arrow-right"></i>
+              </a>
+              <a href="installers.html"
+                 class="mt-3 inline-flex items-center justify-center gap-2 w-full rounded-xl border border-slate-200 px-5 py-3 text-slate-900 font-bold hover:bg-slate-50">
+                Pacotes por sistema
+                <i class="fas fa-arrow-right"></i>
+              </a>
+              <a href="pwa.html"
+                 class="mt-3 inline-flex items-center justify-center gap-2 w-full rounded-xl border border-slate-200 px-5 py-3 text-slate-900 font-bold hover:bg-slate-50">
+                Instalar a loja (PWA)
+                <i class="fas fa-mobile-screen"></i>
               </a>
 
               <details class="mt-4 rounded-xl border border-slate-200 bg-white">
@@ -399,27 +412,26 @@
       </div>
     </section>
   
-    <!-- Edição FREE 3.1.2 publicada no canal público -->
     <section class="py-10 bg-slate-50">
       <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="rounded-2xl border border-blue-200 bg-white p-6 shadow-sm">
           <div class="flex items-center gap-3 mb-4">
-            <span class="inline-flex items-center gap-1 rounded-full bg-blue-100 px-3 py-1 text-xs font-bold text-blue-700 uppercase tracking-wide">NOVO — Edição FREE 3.1.2</span>
+            <span class="inline-flex items-center gap-1 rounded-full bg-blue-100 px-3 py-1 text-xs font-bold text-blue-700 uppercase tracking-wide">Canal público — v3.2.2-free</span>
           </div>
-          <h2 class="text-xl font-bold text-slate-900 mb-2">Canal público atual da degustação</h2>
-          <p class="text-sm text-slate-600 mb-4">A publicação atual da linha FREE está disponível como pacote portátil para <strong>Windows, Linux e macOS</strong>. Requisito: Java 25+ instalado no sistema. Releases anteriores ficam somente no arquivo resumido da loja.</p>
+          <h2 class="text-xl font-bold text-slate-900 mb-2">Pacotes no GitHub Releases</h2>
+          <p class="text-sm text-slate-600 mb-4">Tag <strong>v3.2.2-free</strong> com ZIP portátil para <strong>Windows, Linux e macOS</strong>. Requisito: Java 25+ no sistema. Os nomes dos arquivos no GitHub usam <code>free-free</code> — é o nome publicado, não um segundo plano.</p>
           <div class="grid grid-cols-1 gap-3 mb-4">
-            <a href="installers.html#estavel" class="flex items-center gap-2 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-slate-900 font-semibold hover:bg-blue-50 hover:border-blue-200 transition text-sm">
-              <i class="fab fa-windows text-blue-500"></i> Windows x64 — v3.2.2-free
+            <a id="assetWindows" href="https://github.com/chmulato/caracore-pdv-releases/releases/download/v3.2.2-free/caracore-pdv-v3.2.2-free-free-windows-x64.zip" class="flex items-center gap-2 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-slate-900 font-semibold hover:bg-blue-50 hover:border-blue-200 transition text-sm">
+              <i class="fab fa-windows text-blue-500"></i> Windows x64 — baixar ZIP
             </a>
-            <a href="installers.html#estavel" class="flex items-center gap-2 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-slate-900 font-semibold hover:bg-blue-50 hover:border-blue-200 transition text-sm">
-              <i class="fab fa-linux text-orange-500"></i> Linux x64 — v3.2.2-free
+            <a id="assetLinux" href="https://github.com/chmulato/caracore-pdv-releases/releases/download/v3.2.2-free/caracore-pdv-v3.2.2-free-free-linux-x64.zip" class="flex items-center gap-2 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-slate-900 font-semibold hover:bg-blue-50 hover:border-blue-200 transition text-sm">
+              <i class="fab fa-linux text-orange-500"></i> Linux x64 — baixar ZIP
             </a>
-            <a href="installers.html#estavel" class="flex items-center gap-2 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-slate-900 font-semibold hover:bg-blue-50 hover:border-blue-200 transition text-sm">
-              <i class="fab fa-apple text-gray-700"></i> macOS x64 — v3.2.2-free
+            <a id="assetMacos" href="https://github.com/chmulato/caracore-pdv-releases/releases/download/v3.2.2-free/caracore-pdv-v3.2.2-free-free-macos-x64.zip" class="flex items-center gap-2 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-slate-900 font-semibold hover:bg-blue-50 hover:border-blue-200 transition text-sm">
+              <i class="fab fa-apple text-gray-700"></i> macOS x64 — baixar ZIP
             </a>
           </div>
-          <p class="text-xs text-slate-500">Limitações FREE: 100 vendas para teste real, 1 operador, até 100 produtos, sem NF-e e sem PIX integrado. <a href="wiki-release-v3-1-2-free.html" class="text-blue-600 hover:underline font-medium">Ver notas da versão</a></p>
+          <p class="text-xs text-slate-500">Limitações FREE: 100 vendas para teste real, 1 operador, até 100 produtos, sem NF-e e sem PIX integrado. <a href="wiki-release-v3-2-2-free.html" class="text-blue-600 hover:underline font-medium">Notas da v3.2.2-free</a> · <a href="pwa.html" class="text-blue-600 hover:underline font-medium">PWA da loja</a> · <a href="https://github.com/chmulato/caracore-pdv-releases/releases/tag/v3.2.2-free" class="text-blue-600 hover:underline font-medium">Abrir a release</a></p>
         </div>
       </div>
     </section>
@@ -479,37 +491,58 @@
     </span>
   </a>
 
+  <script src="assets/js/pwa.js"></script>
   <script>
     (function () {
-      // IMPORTANTE:
-      // Este site de download precisa apontar para um repositório PÚBLICO de releases, para que o cliente final
-      // consiga baixar sem login (o repositório de código pode continuar privado).
       const OWNER = "chmulato";
       const REPO = "caracore-pdv-releases";
-      const API_URL = `https://api.github.com/repos/${OWNER}/${REPO}/releases/latest`;
+      const TAG = "v3.2.2-free";
+      const RELEASE_URL = `https://github.com/${OWNER}/${REPO}/releases/tag/${TAG}`;
+      const ASSET_BASE = `https://github.com/${OWNER}/${REPO}/releases/download/${TAG}`;
+      const ASSETS = {
+        windows: { file: "caracore-pdv-v3.2.2-free-free-windows-x64.zip", label: "Windows 10/11 x64" },
+        linux: { file: "caracore-pdv-v3.2.2-free-free-linux-x64.zip", label: "Linux x64" },
+        macos: { file: "caracore-pdv-v3.2.2-free-free-macos-x64.zip", label: "macOS 12+ x64" }
+      };
 
       const manualLink = document.getElementById("manualLink");
       const downloadMeta = document.getElementById("downloadMeta");
       const releaseFallbackLink = document.getElementById("releaseFallbackLink");
-
       const leadForm = document.getElementById("leadForm");
       const lojaInput = document.getElementById("loja");
       const whatsappInput = document.getElementById("whatsapp");
       const leadStatus = document.getElementById("leadStatus");
 
-      let latest = { version: null, url: `https://github.com/${OWNER}/${REPO}/releases/latest`, assetUrl: null, assetName: null };
+      function detectPlatform() {
+        const ua = navigator.userAgent || "";
+        const plat = navigator.platform || "";
+        if (/Win/i.test(plat) || /Windows/i.test(ua)) return "windows";
+        if (/Mac/i.test(plat) || /Macintosh|Mac OS X/i.test(ua)) return "macos";
+        if (/Linux/i.test(plat) || /Linux/i.test(ua)) return "linux";
+        return "windows";
+      }
+
+      function assetUrl(key) {
+        return ASSET_BASE + "/" + ASSETS[key].file;
+      }
+
+      const platform = detectPlatform();
+      let latest = {
+        version: TAG,
+        url: RELEASE_URL,
+        assetUrl: assetUrl(platform),
+        assetName: ASSETS[platform].file
+      };
 
       function applyDownloadLink() {
-        const href = latest.assetUrl || latest.url;
-        manualLink.href = latest.url;
+        if (manualLink) {
+          manualLink.href = latest.url;
+        }
         if (releaseFallbackLink) {
           releaseFallbackLink.href = latest.url;
         }
-
-        if (latest.version) {
-          downloadMeta.textContent = `Latest: ${latest.version}${latest.assetName ? " • " + latest.assetName : ""}`;
-        } else {
-          downloadMeta.textContent = "Latest Release";
+        if (downloadMeta) {
+          downloadMeta.textContent = TAG + " • " + ASSETS[platform].label + " • " + latest.assetName;
         }
       }
 
@@ -524,28 +557,23 @@
         return null;
       }
 
-      async function fetchLatestRelease() {
+      async function confirmPinnedRelease() {
         try {
-          const resp = await fetch(API_URL, {
-            headers: {
-              "Accept": "application/vnd.github+json"
-            }
+          const resp = await fetch(`https://api.github.com/repos/${OWNER}/${REPO}/releases/tags/${TAG}`, {
+            headers: { "Accept": "application/vnd.github+json" }
           });
           if (!resp.ok) throw new Error("status=" + resp.status);
           const data = await resp.json();
-          latest.version = (data.tag_name || "").replace(/^desktop-v/i, "").replace(/^v/i, "").trim() || null;
           latest.url = data.html_url || latest.url;
-
+          const wanted = ASSETS[platform].file.toLowerCase();
           const assets = Array.isArray(data.assets) ? data.assets : [];
-          // Aceita o ZIP portátil atual e formatos antigos de instalador.
-          const re = /^(caracore-pdv-v?[0-9a-z._-]{1,80}-windows-portable|CaraCore\.PDV-[0-9.]+|caracore-pdv-[0-9a-z._-]{1,80}-windows-x64)\.(zip|exe|msi)$/i;
-          const asset = assets.find(a => a && typeof a.name === "string" && re.test(a.name));
+          const asset = assets.find(a => a && typeof a.name === "string" && a.name.toLowerCase() === wanted);
           if (asset && asset.browser_download_url) {
             latest.assetUrl = asset.browser_download_url;
             latest.assetName = asset.name;
           }
         } catch (e) {
-          // fallback silencioso
+          // mantém URLs pinadas da tag pública
         } finally {
           applyDownloadLink();
         }
@@ -579,9 +607,7 @@
         leadStatus.classList.remove("hidden");
         leadStatus.textContent = "Iniciando download... Em seguida, enviaremos o guia de início rápido no WhatsApp informado.";
 
-        // Dispara download do pacote (.zip/.exe/.msi). Se não houver asset, abre Latest Release.
-        const href = latest.assetUrl || latest.url;
-        window.location.href = href;
+        window.location.href = latest.assetUrl || latest.url;
       });
 
       // Se já existe lead salvo, pré-preenche (UX)
@@ -590,12 +616,12 @@
         const savedLoja = localStorage.getItem("caracore_lead_loja");
         if (savedLoja) lojaInput.value = savedLoja;
         if (saved) {
-          downloadMeta.textContent = "Buscando a versão mais recente...";
-          // não dispara download automático; apenas reduz fricção
+          applyDownloadLink();
         }
       } catch (ignore) {}
 
-      fetchLatestRelease();
+      applyDownloadLink();
+      confirmPinnedRelease();
     })();
 
     // mobile menu toggle (consistente com as demais páginas do portal)

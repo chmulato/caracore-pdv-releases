@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PWA da loja — CaraCore-PDV | pdv.caracore.com.br</title>
+    <meta name="description" content="Instale a loja do CaraCore-PDV como atalho. O caixa continua no computador da loja, com o pacote Windows, Linux ou macOS.">
+    <link rel="manifest" href="manifest.webmanifest">
+    <meta name="theme-color" content="#166534">
+    <link rel="apple-touch-icon" href="assets/pwa/icon.svg">
+    <link rel="stylesheet" href="assets/css/loja.css">
+    <link rel="stylesheet" href="assets/css/evolution-status.css">
+    <link rel="stylesheet" href="assets/css/caracore-core-typography.css">
+    <link rel="stylesheet" href="assets/css/caracore-institutional-components.css">
+</head>
+<body class="page-download">
+    <div class="wrapper">
+        <nav class="breadcrumb" aria-label="Navegação">
+            <a href="index.html">CaraCore-PDV — Loja</a>
+            <span> · </span>
+            <a href="download.html">Download</a>
+            <span> · </span>
+            <span>PWA</span>
+        </nav>
+
+        <header>
+            <h1>PWA da loja</h1>
+            <p>Este atalho abre a vitrine pública: download, instaladores e roadmap. O caixa do PDV não roda neste site.</p>
+        </header>
+
+        <p class="download-notice">O CaraCore-PDV é um sistema <strong>desktop local</strong> com SQLite no computador da loja. A PWA da loja é só a vitrine. Para vender, baixe o pacote <a href="download.html">v3.2.2-free</a> (Windows, Linux ou macOS) e execute o launcher do ZIP.</p>
+
+        <section class="card wiki-card">
+            <h2>Como instalar a loja no aparelho</h2>
+            <ol>
+                <li>Abra esta página no Chrome, Edge ou Safari.</li>
+                <li>Use <strong>Instalar aplicativo</strong> / <strong>Adicionar à tela inicial</strong>.</li>
+                <li>O ícone abre <code>pdv.caracore.com.br</code> em modo aplicativo.</li>
+            </ol>
+            <p>Sem internet, o atalho ainda mostra as páginas da loja já visitadas. Os ZIPs do GitHub exigem rede no momento do download.</p>
+        </section>
+
+        <section class="card wiki-card">
+            <h2>O que esta PWA não é</h2>
+            <ul>
+                <li>Não é o caixa, o carrinho nem o banco da loja.</li>
+                <li>Não substitui o pacote Windows, Linux ou macOS da tag <code>v3.2.2-free</code>.</li>
+                <li>Não é a linha Rust (<a href="https://pdv-rust.caracore.com.br/">pdv-rust.caracore.com.br</a>).</li>
+            </ul>
+        </section>
+
+        <section class="card wiki-card">
+            <h2>PWA do caixa (v4)</h2>
+            <p>A oficina prepara o CaraCore-PDV v4 com interface web/PWA no computador da loja, aberta pelo launcher após o backend local. Lançamento previsto: <strong>08/11/2026</strong>, depois da homologação. Até lá, o download público permanece a <a href="download.html">degustação v3.2.2-free</a>.</p>
+            <p><a class="btn-release" href="download.html">Baixar o PDV</a> · <a class="btn-release btn-release-outline" href="installers.html">Pacotes por sistema</a> · <a class="btn-release btn-release-outline" href="roadmap-2026.html">Roadmap v4</a></p>
+        </section>
+    </div>
+    <script src="assets/js/loja.js"></script>
+    <script src="assets/js/pwa.js"></script>
+</body>
+</html>

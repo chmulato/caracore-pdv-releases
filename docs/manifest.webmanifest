@@ -1,0 +1,19 @@
+{
+  "name": "CaraCore-PDV — Loja",
+  "short_name": "PDV Loja",
+  "description": "Vitrine, download e roadmap do CaraCore-PDV. O caixa fica no computador da loja; este atalho abre a loja pública.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#111918",
+  "theme_color": "#166534",
+  "lang": "pt-BR",
+  "icons": [
+    {
+      "src": "assets/pwa/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
