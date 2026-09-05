@@ -22,7 +22,7 @@
         <header>
             <p class="eyebrow">Desenvolvimento em andamento</p>
             <h1>CaraCore-PDV v4: local, simples e pronto para a rotina</h1>
-            <p>Estamos desenvolvendo o <strong>CaraCore-PDV v4</strong>, com backend <strong>Quarkus</strong>, banco <strong>SQLite local</strong> e interface web responsiva em formato <strong>PWA</strong>, executada no próprio computador da loja.</p>
+            <p>Estamos desenvolvendo o <strong>CaraCore-PDV v4</strong>, com backend <strong>Quarkus</strong>, banco <strong>SQLite local</strong>, interface web responsiva em formato <strong>PWA</strong> e <strong>launcher Windows</strong> para abrir a operação em modo aplicativo no próprio computador da loja.</p>
         </header>
 
         <section class="card wiki-card">
@@ -38,6 +38,43 @@
                 <li>Launcher local para iniciar o backend Quarkus e abrir a experiência no modo aplicativo.</li>
             </ul>
             <p>Esses fluxos já possuem implementação e testes na oficina. A homologação completa ainda precisa confirmar a paridade de negócio com a linha anterior e o comportamento no Windows real.</p>
+        </section>
+
+        <section class="card wiki-card">
+            <h2>Novidades previstas para o v4</h2>
+            <div class="wiki-table-wrap">
+                <table class="wiki-table">
+                    <thead>
+                        <tr>
+                            <th>Novidade</th>
+                            <th>O que a loja poderá esperar</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Experiência web/PWA</td>
+                            <td>Interface responsiva em modo aplicativo, iniciada pelo launcher Windows.</td>
+                            <td>Implementação em validação</td>
+                        </tr>
+                        <tr>
+                            <td>Venda e pagamento</td>
+                            <td>Carrinho, quantidade, troco, recibo, pagamentos simples e mistos e baixa de estoque.</td>
+                            <td>Implementação em validação</td>
+                        </tr>
+                        <tr>
+                            <td>Gestão operacional</td>
+                            <td>Clientes, produtos, estoque, vendedores, lojas, operadores, caixa X/Z e relatórios.</td>
+                            <td>Parte pronta; paridade em desenvolvimento</td>
+                        </tr>
+                        <tr>
+                            <td>Continuidade e desempenho</td>
+                            <td>SQLite local, recuperação após reinício, menor latência percebida e operação com internet instável.</td>
+                            <td>Benchmark e homologação</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </section>
 
         <section class="card wiki-card">
@@ -85,6 +122,38 @@
                 <li><strong>Menos dependência da internet:</strong> a venda local continua sendo o centro do produto.</li>
                 <li><strong>Transição responsável:</strong> a linha atual permanece disponível enquanto a nova versão conclui sua homologação.</li>
             </ul>
+        </section>
+
+        <section class="card wiki-card">
+            <h2>Perfil planejado do v4</h2>
+            <div class="wiki-table-wrap">
+                <table class="wiki-table">
+                    <thead>
+                        <tr>
+                            <th>Elemento</th>
+                            <th>Definição</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Backend</td>
+                            <td>Quarkus local, iniciado pelo launcher Windows.</td>
+                        </tr>
+                        <tr>
+                            <td>Dados</td>
+                            <td>SQLite local no computador da loja, com recuperação e backup validados.</td>
+                        </tr>
+                        <tr>
+                            <td>Experiência</td>
+                            <td>Interface web/PWA em modo aplicativo, com foco em caixa, gestão e continuidade offline.</td>
+                        </tr>
+                        <tr>
+                            <td>Disponibilidade</td>
+                            <td>Publicação somente após testes, paridade de negócio, homologação e empacotamento.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </section>
 
         <section class="card wiki-card">
