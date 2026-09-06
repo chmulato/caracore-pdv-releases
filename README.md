@@ -159,7 +159,7 @@ Este repositório pode validar instaladores e assets publicados por GitHub Actio
 
 - assets públicos baixáveis sem autenticação pelo cliente final;
 - SHA256 documentado por release;
-- página de download apontando para a tag pública `v3.2.2-free` (Windows, Linux e macOS);
+- página de download apontando para a tag pública `v3.2.3-free` (Windows, Linux e macOS);
 - wikis de release preservando contexto técnico e orientação de atualização;
 - operação Windows com foco em previsibilidade no balcão;
 - coerência entre promessa pública, escopo real e evidência documental;
