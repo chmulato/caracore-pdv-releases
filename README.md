@@ -41,23 +41,24 @@ A matriz de desenvolvimento fica no repositório **caracore-pdv**. Este reposit�
 
 | Campo | Valor |
 | ----- | ----- |
-| Versão | `v3.2.2-free` (maduro) · `v4.0.0-rc1` (candidato) |
+| Versão | `v3.2.3-free` (maduro) · `v4.0.0-rc2` (candidato) |
 | Status | Oferta pública atual + pré-release Qute |
-| Publicação | 06/2026 |
+| Publicação | 06/09/2026 |
 | Linha | `free-edition` sobre a trilha `java_25` |
-| Stack da oficina | Java 25 + Quarkus 3 + Qute + SQLite local (v4 em homologação; canal público ainda é v3.2.2-free) |
+| Stack da oficina | Java 25 + Quarkus 3 + SQLite local (v4 Qute em homologação; canal público é v3.2.3-free) |
 | Delivery publicado | Multi-plataforma: Windows, Linux e macOS — release FREE multiplataforma Java 25 |
 | Requisito | Java 25+ instalado no sistema ([Temurin 25](https://adoptium.net/)) |
-| Release | <https://github.com/chmulato/caracore-pdv-releases/releases/tag/v3.2.2-free> |
+| Acesso | `http://localhost:8080/login` · primeiro acesso `admin` / `admin` |
+| Release | <https://github.com/chmulato/caracore-pdv-releases/releases/tag/v3.2.3-free> |
 | Loja | <https://pdv.caracore.com.br/> |
 
-### Artefatos v3.2.2-free
+### Artefatos v3.2.3-free
 
 | Artefato | Plataforma | SHA256 |
 | -------- | ---------- | ------ |
-| `caracore-pdv-v3.2.2-free-free-windows-x64.zip` | Windows 10/11 x64 | Publicado no `SHA256SUMS.txt` da release |
-| `caracore-pdv-v3.2.2-free-free-linux-x64.zip` | Linux x64 (Ubuntu 20.04+) | Publicado no `SHA256SUMS.txt` da release |
-| `caracore-pdv-v3.2.2-free-free-macos-x64.zip` | macOS 12+ x64 (Intel) | Publicado no `SHA256SUMS.txt` da release |
+| `caracore-pdv-v3.2.3-free-free-windows-x64.zip` | Windows 10/11 x64 | Publicado no `SHA256SUMS.txt` da release |
+| `caracore-pdv-v3.2.3-free-free-linux-x64.zip` | Linux x64 (Ubuntu 20.04+) | Publicado no `SHA256SUMS.txt` da release |
+| `caracore-pdv-v3.2.3-free-free-macos-x64.zip` | macOS 12+ x64 (Intel) | Publicado no `SHA256SUMS.txt` da release |
 | `RELEASE_MANIFEST.json` | Manifesto técnico da publicação | Publicado no `SHA256SUMS.txt` da release |
 | `SHA256SUMS.txt` | Lista oficial de hashes da release | Fonte de verificação |
 
@@ -70,9 +71,10 @@ A matriz de desenvolvimento fica no repositório **caracore-pdv**. Este reposit�
 
 ---
 
-## Atualização operacional - 06/2026
+## Atualização operacional - 06/09/2026
 
-- `v3.2.2-free` publicada como oferta pública atual — Java 25, multi-plataforma (Windows, Linux, macOS).
+- `v3.2.3-free` é a oferta pública atual: porta 8080, `/login` de operador, launcher valida Java 25+, boot `3.2.3-free`.
+- `v3.2.2-free` rebaixada: backend subia, mas `/login` dava 404 e a porta era 8765.
 - Pipeline CI/CD (`release-free.yml`) atualizado para `java-version: '25'` (Temurin 25).
 - Alinhamento completo PDV Rust → Java: zonas de nav, InactivityLock, status bar, supervisor elevation, SetupGate.
 - `v3.1.2-free` rebaixada para "anterior imediata" na trilha de versões da loja.
@@ -84,9 +86,9 @@ A matriz de desenvolvimento fica no repositório **caracore-pdv**. Este reposit�
 
 ### Linha atual: `java_25`
 
-A vitrine em `docs/` segue a trilha Java 25 da matriz, com SQLite local e soberania localhost. O download público maduro é a tag `v3.2.2-free`. O candidato `v4.0.0-rc1` (Quarkus + Qute) está como pré-release e não substitui a degustação Free. O GA do v4 permanece previsto para 08/11/2026.
+A vitrine em `docs/` segue a trilha Java 25 da matriz, com SQLite local e soberania localhost. O download público maduro é a tag `v3.2.3-free`. O candidato `v4.0.0-rc2` (Quarkus + Qute) está como pré-release e não substitui a degustação Free. O GA do v4 permanece previsto para 08/11/2026.
 
-Notas da versão atual: <https://pdv.caracore.com.br/wiki-release-v3-2-2-free.html>
+Notas da versão atual: <https://pdv.caracore.com.br/wiki-release-v3-2-3-free.html>
 
 Lista de versões: <https://pdv.caracore.com.br/versoes.html>
 
