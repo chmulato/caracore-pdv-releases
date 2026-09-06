@@ -3,11 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PWA da loja — CaraCore-PDV | pdv.caracore.com.br</title>
-    <meta name="description" content="Instale a loja do CaraCore-PDV como atalho. O caixa continua no computador da loja, com o pacote Windows, Linux ou macOS.">
+    <title>4.0.0-rc2 — próxima versão — CaraCore PDV</title>
+    <meta name="description" content="CaraCore PDV 4.0.0-rc2: prévia da próxima versão, com instalação isolada. O download da loja continua a 3.2.2-free.">
     <link rel="manifest" href="manifest.webmanifest">
     <meta name="theme-color" content="#166534">
-    <link rel="apple-touch-icon" href="assets/pwa/icon.svg">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,7 +15,15 @@
     <link rel="stylesheet" href="assets/css/portal-style.css">
     <link rel="stylesheet" href="assets/css/loja.css">
 </head>
-<body class="smooth-scroll bg-gray-50 page-download">
+<body class="smooth-scroll bg-gray-50 page-wiki page-wiki-release">
+    <nav class="breadcrumb container mx-auto px-4 sm:px-6 lg:px-8 pt-3 text-sm text-gray-600" aria-label="Navegação institucional">
+        <a href="https://www.caracore.com.br/" class="hover:text-green-600">Cara Core Informática</a>
+        <span> · </span>
+        <a href="index.html" class="hover:text-green-600">CaraCore PDV</a>
+        <span> · </span>
+        <span class="text-gray-900">v4.0.0-rc2</span>
+    </nav>
+
     <header class="portal-header bg-white shadow-sm sticky top-0 z-50">
         <nav class="container mx-auto px-4 sm:px-6 lg:px-8" aria-label="Menu da loja">
             <div class="flex justify-between items-center h-20">
@@ -52,49 +59,77 @@
         </nav>
     </header>
 
+    <section class="portal-hero green-bg text-white py-12 md:py-16">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center">
+                <p class="text-sm uppercase tracking-wide text-green-100 mb-3">Próxima versão · prévia · 06/09/2026</p>
+                <h1 class="text-3xl md:text-5xl font-bold mb-4">CaraCore PDV 4.0.0-rc2</h1>
+                <p class="text-lg text-green-50">Prévia da próxima versão do mesmo PDV. O download da loja continua a 3.2.2.</p>
+            </div>
+        </div>
+    </section>
+
     <div class="wrapper">
-        <nav class="breadcrumb" aria-label="Navegação">
-            <a href="index.html">CaraCore-PDV — Loja</a>
+        <nav class="breadcrumb" aria-label="Navegação da página">
+            <a href="index.html">Loja</a>
             <span> · </span>
             <a href="download.html">Download</a>
             <span> · </span>
-            <span>PWA</span>
+            <a href="versoes.html">Versões</a>
+            <span> · </span>
+            <span>4.0.0-rc2</span>
         </nav>
 
-        <header>
-            <h1>PWA da loja</h1>
-            <p>Este atalho abre a vitrine do CaraCore PDV. O caixa não roda neste site.</p>
-        </header>
-
-        <p class="download-notice">O CaraCore PDV é um sistema <strong>desktop local</strong> com SQLite no computador da loja. Esta PWA é só a vitrine. Para vender, <a href="download.html">baixe a versão atual</a> (3.2.2-free) e execute o launcher do ZIP.</p>
+        <p class="download-notice">Esta é a <strong>próxima versão</strong> do CaraCore PDV, ainda em prévia. Substitui a <a href="wiki-release-v4-0-0-rc1.html">4.0.0-rc1</a> para teste de primeiro acesso. Para o balcão hoje, baixe a <a href="download.html">3.2.2-free</a>. A publicação plena está prevista para 08/11/2026, após homologação.</p>
 
         <section class="card wiki-card">
-            <h2>Como instalar a loja no aparelho</h2>
-            <ol>
-                <li>Abra esta página no Chrome, Edge ou Safari.</li>
-                <li>Use <strong>Instalar aplicativo</strong> / <strong>Adicionar à tela inicial</strong>.</li>
-                <li>O ícone abre <code>pdv.caracore.com.br</code> em modo aplicativo.</li>
-            </ol>
-            <p>Sem internet, o atalho ainda mostra as páginas da loja já visitadas. Os ZIPs do GitHub exigem rede no momento do download.</p>
-        </section>
-
-        <section class="card wiki-card">
-            <h2>O que esta PWA não é</h2>
+            <h2>O que mudou em relação à RC1</h2>
             <ul>
-                <li>Não é o caixa, o carrinho nem o banco da loja.</li>
-                <li>Não substitui o pacote Windows, Linux ou macOS da versão atual.</li>
-                <li>Não é a linha Rust (<a href="https://pdv-rust.caracore.com.br/">pdv-rust.caracore.com.br</a>).</li>
+                <li>Login inicial <code>admin</code> / <code>admin</code> volta a funcionar no banco isolado deste pacote.</li>
+                <li>O launcher usa só <code>./data/caracore-pdv.db</code>. Não reabre o banco legado em <code>%APPDATA%\caracore\data\banco.db</code>.</li>
+                <li>Logout web encerra a sessão e volta à tela de login.</li>
             </ul>
         </section>
 
         <section class="card wiki-card">
-            <h2>Próxima versão do caixa</h2>
-            <p>A 4.0.0-rc2 abre o mesmo CaraCore PDV em modo aplicativo no computador da loja. Publicação plena prevista para <strong>08/11/2026</strong>. Até lá, o download é a <a href="download.html">3.2.2-free</a>.</p>
-            <p><a class="btn-release" href="download.html">Baixar o PDV</a> · <a class="btn-release btn-release-outline" href="versoes.html">Versões</a></p>
+            <h2>Instalação limpa (obrigatória neste RC)</h2>
+            <ol>
+                <li>Baixe <code>caracore-pdv-4.0.0-rc2-qute-portable.zip</code>.</li>
+                <li>Extraia em uma <strong>pasta nova</strong> (exemplo: <code>C:\CaraCore\pdv-v4-rc2</code>). Não extraia por cima da pasta do RC1.</li>
+                <li>Não copie a pasta <code>data</code> de outro teste.</li>
+                <li>Windows: execute <code>iniciar_pdv.bat</code>. Linux/macOS: <code>chmod +x iniciar_pdv.sh &amp;&amp; ./iniciar_pdv.sh</code>.</li>
+                <li>Entre com <code>admin</code> / <code>admin</code> e troque a senha (8 a 15 caracteres).</li>
+            </ol>
+            <p>O banco deste RC fica só ao lado do launcher, em <code>./data/caracore-pdv.db</code>. O arquivo legado <code>%APPDATA%\caracore\data\banco.db</code> pode continuar no disco — este RC2 não o abre e não precisa ser apagado.</p>
+            <p>Se o login falhar, ou o log em <code>./logs/quarkus-kiosk.log</code> disser que a carga inicial foi ignorada com caminho fora de <code>./data</code>, extraia de novo em outro diretório.</p>
+            <p class="wiki-links">
+                <a class="btn-release" href="https://github.com/chmulato/caracore-pdv-releases/releases/download/v4.0.0-rc2/caracore-pdv-4.0.0-rc2-qute-portable.zip">Baixar o ZIP RC2</a>
+                <a class="btn-release btn-release-outline" href="https://github.com/chmulato/caracore-pdv-releases/releases/tag/v4.0.0-rc2">Abrir a pré-release</a>
+                <a class="btn-release btn-release-outline" href="versoes.html">Versões do produto</a>
+            </p>
+        </section>
+
+        <section class="card wiki-card">
+            <h2>O que esta versão já entrega</h2>
+            <ul>
+                <li>Interface web Qute em modo aplicativo (Edge no Windows; Chrome/Chromium/Edge no Linux e macOS).</li>
+                <li>Paridade de negócio das Fases 0–7 na oficina (venda, caixa, cadastros, fiscal, backup, offline, personas).</li>
+                <li>Um ZIP portátil para Windows, Linux e macOS. Requisito: Java 25+ e Python 3.</li>
+                <li>Primeiro acesso: <code>admin</code> / <code>admin</code>, com troca de senha obrigatória.</li>
+            </ul>
+        </section>
+
+        <section class="card wiki-card">
+            <h2>O que ainda não entra nesta prévia</h2>
+            <ul>
+                <li>Instalador nativo assinado (MSI/EXE).</li>
+                <li>Homologação visual no Edge como gate de publicação.</li>
+                <li>Troca do download padrão da loja — a 3.2.2 continua sendo a versão atual.</li>
+                <li>A linha Rust (<a href="https://pdv-rust.caracore.com.br/">pdv-rust.caracore.com.br</a>) é outro produto desktop, não uma versão desta loja.</li>
+            </ul>
         </section>
     </div>
-    <script src="assets/js/loja.js"></script>
-    <script src="assets/js/pwa.js"></script>
+
     <footer class="bg-gray-900 text-gray-300 py-12">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-3 gap-8 mb-8">
@@ -124,5 +159,6 @@
         </div>
     </footer>
     <script src="assets/js/store-nav.js"></script>
+    <script src="assets/js/pwa.js"></script>
 </body>
 </html>
