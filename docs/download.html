@@ -69,7 +69,7 @@
       <div class="brand-bg text-white px-6 sm:px-10 py-10">
         <div class="grid lg:grid-cols-2 gap-10 items-center">
           <div>
-            <p class="text-sm uppercase tracking-wide text-emerald-200">CaraCore PDV · versão 3.2.2 · Windows · Linux · macOS</p>
+            <p class="text-sm uppercase tracking-wide text-emerald-200">CaraCore PDV · versão 3.2.3-free · Windows · Linux · macOS</p>
             <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold mt-5 leading-tight">
               Teste o PDV no seu balcão. 100 vendas por mês, sem custo.
             </h1>
@@ -194,9 +194,9 @@
                   <div class="min-w-0">
                     <div class="font-extrabold text-slate-900">Instalação com sucesso</div>
                     <ol class="mt-2 text-sm text-slate-700 space-y-1 list-decimal list-inside">
-                      <li>Tenha <strong>Java 25+</strong> no PATH. Java 21 faz o launcher parar com mensagem clara.</li>
+                      <li>Tenha <strong>Java 25+</strong> no PATH. Depois do Temurin 25, feche e abra o terminal; <code>java -version</code> tem que mostrar 25.</li>
                       <li>Extraia o ZIP em uma <strong>pasta nova</strong> (não por cima da 3.2.2-free).</li>
-                      <li>Windows: <code>iniciar-pdv.bat</code>. Linux/macOS: <code>./iniciar-pdv.sh</code>.</li>
+                      <li>Windows: <code>iniciar-pdv.bat</code> (hífen). Linux/macOS: <code>./iniciar-pdv.sh</code>.</li>
                       <li>Abra <code>http://localhost:8080/login</code> · <code>admin</code> / <code>admin</code> · troque a senha.</li>
                     </ol>
                     <p class="text-xs text-slate-600 mt-2">
@@ -348,12 +348,20 @@
       <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
         <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
           <h2 class="text-xl font-bold text-slate-900">Instalação com sucesso — versão atual (3.2.3-free)</h2>
-          <p class="text-sm text-slate-600 mt-2">Este é o download da loja. Siga a ordem abaixo. A 3.2.2-free subia o backend, mas <code>/login</code> dava 404 e a porta era 8765 — use só a 3.2.3-free para o balcão.</p>
+          <p class="text-sm text-slate-600 mt-2">Este é o download do balcão. A 3.2.2-free subia o backend, mas <code>/login</code> dava 404 e a porta era 8765 — use só a 3.2.3-free. A 4.0.0-rc2 é prévia: pasta e dados separados.</p>
+          <div class="mt-4 rounded-xl border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm text-slate-800">
+            <p class="font-bold text-slate-900">Java 25 no PATH</p>
+            <p class="mt-1">Depois de instalar o <a href="https://adoptium.net/" class="font-semibold text-emerald-800 hover:underline" target="_blank" rel="noopener">Temurin 25</a>, feche e abra o terminal. <code>java -version</code> tem que mostrar 25. Muita máquina ainda tem Java 21 na frente — nesse caso o launcher para e explica o que falta.</p>
+          </div>
+          <div class="mt-3 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-800">
+            <p class="font-bold text-slate-900">Nome do launcher</p>
+            <p class="mt-1">Free (balcão): <code>iniciar-pdv.bat</code> (hífen). Prévia v4: <code>iniciar_pdv.bat</code> (underscore). Não misture os dois ZIPs na mesma pasta.</p>
+          </div>
           <ol class="mt-4 space-y-3 text-sm text-slate-800">
-            <li class="flex gap-3"><span class="font-extrabold text-emerald-700 w-6 shrink-0">1</span><span>Instale <strong>Java 25+</strong> (<a href="https://adoptium.net/" class="font-semibold text-emerald-800 hover:underline" target="_blank" rel="noopener">Temurin 25</a>) e confira com <code>java -version</code> num terminal novo. Se o PATH tiver Java 21, o launcher para e explica o que falta.</span></li>
+            <li class="flex gap-3"><span class="font-extrabold text-emerald-700 w-6 shrink-0">1</span><span>Confira o Java 25+ num terminal <strong>novo</strong> com <code>java -version</code>.</span></li>
             <li class="flex gap-3"><span class="font-extrabold text-emerald-700 w-6 shrink-0">2</span><span>Baixe o ZIP da sua plataforma (Windows, Linux ou macOS) nesta página.</span></li>
             <li class="flex gap-3"><span class="font-extrabold text-emerald-700 w-6 shrink-0">3</span><span>Extraia em uma <strong>pasta nova e permanente</strong>, por exemplo <code>C:\CaraCore\pdv-free</code>. Não extraia na Área de trabalho nem por cima da 3.2.2-free.</span></li>
-            <li class="flex gap-3"><span class="font-extrabold text-emerald-700 w-6 shrink-0">4</span><span>Windows: execute <code>iniciar-pdv.bat</code>. Linux/macOS: <code>chmod +x iniciar-pdv.sh</code> e depois <code>./iniciar-pdv.sh</code>.</span></li>
+            <li class="flex gap-3"><span class="font-extrabold text-emerald-700 w-6 shrink-0">4</span><span>Windows: execute <code>iniciar-pdv.bat</code> (hífen). Linux/macOS: <code>chmod +x iniciar-pdv.sh</code> e depois <code>./iniciar-pdv.sh</code>.</span></li>
             <li class="flex gap-3"><span class="font-extrabold text-emerald-700 w-6 shrink-0">5</span><span>Aguarde cerca de 10 segundos. Abra o navegador em <code>http://localhost:8080</code>. O launcher sobe o backend; o acesso do operador é nesta URL, não numa janela JavaFX.</span></li>
             <li class="flex gap-3"><span class="font-extrabold text-emerald-700 w-6 shrink-0">6</span><span>Clique em <strong>Entrar no sistema</strong> ou abra <code>http://localhost:8080/login</code>. Usuário <code>admin</code>, senha <code>admin</code>. A troca de senha é obrigatória (8 a 15 caracteres, diferente de <code>admin</code>).</span></li>
           </ol>
@@ -362,15 +370,15 @@
 
         <div class="rounded-2xl border border-amber-200 bg-amber-50 p-6 shadow-sm">
           <h2 class="text-xl font-bold text-slate-900">Prévia 4.0.0-rc2 — pasta nova, banco só nesta pasta</h2>
-          <p class="text-sm text-slate-700 mt-2">A RC2 <strong>não</strong> é o download Free. Use só se for validar a próxima versão. A RC1 reaproveitava um banco antigo e o login <code>admin</code> / <code>admin</code> falhava.</p>
+          <p class="text-sm text-slate-700 mt-2">A RC2 <strong>não</strong> é o download Free. São canais independentes: não misture pasta nem <code>data</code>. Não apague o AppData da v3 “pra limpar” a v4 — a RC2 não abre <code>%APPDATA%\caracore\data\banco.db</code>.</p>
           <ol class="mt-4 space-y-3 text-sm text-slate-800">
             <li class="flex gap-3"><span class="font-extrabold text-amber-800 w-6 shrink-0">1</span><span>Baixe <code>caracore-pdv-4.0.0-rc2-qute-portable.zip</code> na <a href="wiki-release-v4-0-0-rc2.html" class="font-semibold text-emerald-800 hover:underline">página da RC2</a>.</span></li>
-            <li class="flex gap-3"><span class="font-extrabold text-amber-800 w-6 shrink-0">2</span><span>Extraia em uma pasta <strong>nova</strong> (exemplo: <code>C:\CaraCore\pdv-v4-rc2</code>). Não extraia por cima da RC1.</span></li>
+            <li class="flex gap-3"><span class="font-extrabold text-amber-800 w-6 shrink-0">2</span><span>Extraia em uma pasta <strong>nova</strong> (exemplo: <code>C:\CaraCore\pdv-v4-rc2</code>). Não extraia por cima da RC1 nem da 3.2.3-free.</span></li>
             <li class="flex gap-3"><span class="font-extrabold text-amber-800 w-6 shrink-0">3</span><span>Não copie a pasta <code>data</code> de outro teste. O banco desta prévia fica só em <code>./data/caracore-pdv.db</code>.</span></li>
-            <li class="flex gap-3"><span class="font-extrabold text-amber-800 w-6 shrink-0">4</span><span>Windows: <code>iniciar_pdv.bat</code>. Linux/macOS: <code>./iniciar_pdv.sh</code>. Precisa de Java 25+ e Python 3.</span></li>
+            <li class="flex gap-3"><span class="font-extrabold text-amber-800 w-6 shrink-0">4</span><span>Windows: <code>iniciar_pdv.bat</code> (underscore). Linux/macOS: <code>./iniciar_pdv.sh</code>. Precisa de Java 25+ e Python 3. Feche e abra o terminal depois de instalar o Java 25.</span></li>
             <li class="flex gap-3"><span class="font-extrabold text-amber-800 w-6 shrink-0">5</span><span>Login: <code>admin</code> / <code>admin</code>, depois troque a senha. O launcher confirma o caminho do banco no arranque.</span></li>
           </ol>
-          <p class="mt-4 text-sm text-slate-700">O arquivo legado <code>%APPDATA%\caracore\data\banco.db</code> pode continuar no disco — a RC2 não o abre. Se o log em <code>./logs/quarkus-kiosk.log</code> disser que a carga inicial foi ignorada com caminho fora de <code>./data</code>, extraia de novo em outro diretório.</p>
+          <p class="mt-4 text-sm text-slate-700">O arquivo legado <code>%APPDATA%\caracore\data\banco.db</code> pode continuar no disco. Em instalação limpa, o log pode dizer que a carga inicial foi ignorada — o Flyway já criou o banco em <code>./data</code>; isso é normal. Só extraia de novo se o caminho for fora de <code>./data</code> ou se o login falhar.</p>
         </div>
       </div>
     </section>

@@ -95,13 +95,14 @@
             <h2>Instalação limpa (obrigatória neste RC)</h2>
             <ol>
                 <li>Baixe <code>caracore-pdv-4.0.0-rc2-qute-portable.zip</code>.</li>
-                <li>Extraia em uma <strong>pasta nova</strong> (exemplo: <code>C:\CaraCore\pdv-v4-rc2</code>). Não extraia por cima da pasta do RC1.</li>
+                <li>Java 25+ e Python 3. Depois do Temurin 25, feche e abra o terminal; <code>java -version</code> tem que mostrar 25.</li>
+                <li>Extraia em uma <strong>pasta nova</strong> (exemplo: <code>C:\CaraCore\pdv-v4-rc2</code>). Não extraia por cima da pasta do RC1 nem da 3.2.3-free.</li>
                 <li>Não copie a pasta <code>data</code> de outro teste.</li>
-                <li>Windows: execute <code>iniciar_pdv.bat</code>. Linux/macOS: <code>chmod +x iniciar_pdv.sh &amp;&amp; ./iniciar_pdv.sh</code>.</li>
+                <li>Windows: execute <code>iniciar_pdv.bat</code> (underscore — o Free usa <code>iniciar-pdv.bat</code>, com hífen). Linux/macOS: <code>chmod +x iniciar_pdv.sh &amp;&amp; ./iniciar_pdv.sh</code>.</li>
                 <li>Entre com <code>admin</code> / <code>admin</code> e troque a senha (8 a 15 caracteres).</li>
             </ol>
-            <p>O banco deste RC fica só ao lado do launcher, em <code>./data/caracore-pdv.db</code>. O arquivo legado <code>%APPDATA%\caracore\data\banco.db</code> pode continuar no disco — este RC2 não o abre e não precisa ser apagado.</p>
-            <p>Se o login falhar, ou o log em <code>./logs/quarkus-kiosk.log</code> disser que a carga inicial foi ignorada com caminho fora de <code>./data</code>, extraia de novo em outro diretório.</p>
+            <p>O banco deste RC fica só ao lado do launcher, em <code>./data/caracore-pdv.db</code>. O arquivo legado <code>%APPDATA%\caracore\data\banco.db</code> pode continuar no disco — este RC2 não o abre e não precisa ser apagado para “limpar” a v4.</p>
+            <p>Em instalação limpa, o log pode dizer que a carga inicial foi ignorada: o Flyway já criou o banco em <code>./data</code>. Isso é normal. Só extraia de novo se o caminho for fora de <code>./data</code> ou se o login falhar.</p>
             <p class="wiki-links">
                 <a class="btn-release" href="https://github.com/chmulato/caracore-pdv-releases/releases/download/v4.0.0-rc2/caracore-pdv-4.0.0-rc2-qute-portable.zip">Baixar o ZIP RC2</a>
                 <a class="btn-release btn-release-outline" href="https://github.com/chmulato/caracore-pdv-releases/releases/tag/v4.0.0-rc2">Abrir a pré-release</a>
@@ -125,7 +126,7 @@
             <ul>
                 <li>Instalador nativo assinado (MSI/EXE).</li>
                 <li>Homologação visual no Edge como gate de publicação.</li>
-                <li>Troca do download padrão da loja — a 3.2.2 continua sendo a versão atual.</li>
+                <li>Troca do download padrão da loja — a 3.2.3-free continua sendo a versão atual do balcão.</li>
                 <li>A linha Rust (<a href="https://pdv-rust.caracore.com.br/">pdv-rust.caracore.com.br</a>) é outro produto desktop, não uma versão desta loja.</li>
             </ul>
         </section>
