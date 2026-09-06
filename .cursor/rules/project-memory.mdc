@@ -27,7 +27,7 @@ alwaysApply: true
 
 ## Linha Rust (coexistência — não substituição)
 - **PDV Desktop (Rust + Tauri 2):** https://pdv-rust.caracore.com.br/ · **v0.1.2** piloto Windows.
-- Download Rust = tag **v0.1.2** em `chmulato/caracore-pdv-releases` — **nunca** `/releases/latest`.
+- Download Rust = loja própria `pdv-rust.caracore.com.br` + artefatos em `chmulato/caracore-rust-pdv-releases/releases` (tag **v0.1.2**). Este repo (`caracore-pdv-releases`) é só o canal Java.
 - Teto Rust piloto = **100 vendas na vida**, não por mês. Não misturar com o Free Java.
 
 ## Mensagem de produto
