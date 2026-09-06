@@ -1,8 +1,10 @@
 # CaraCore-PDV - Loja e Releases
 
-Canal público de vitrine, documentação e distribuição do **CaraCore-PDV** para pequenas operações de balcão e varejo local.
+**Download da loja = tag `v3.2.3-free`.** Não use a pré-release do topo da lista (`v4.0.0-rc2`) como se fosse o Free.
 
-Mensagem central do produto: **quando a internet cai, o caixa não pode parar**. A oferta pública atual combina operação local em Windows, Linux e macOS com SQLite, recibo digital, leitura fiscal em linguagem simples e validação prática do básico antes de ampliar estrutura.
+Não misture pasta nem data. Canais independentes.
+
+Canal público de vitrine, documentação e distribuição do **CaraCore-PDV** para pequenas operações de balcão e varejo local. Mensagem central: **quando a internet cai, o caixa não pode parar**.
 
 ---
 
@@ -41,33 +43,37 @@ A matriz de desenvolvimento fica no repositório **caracore-pdv**. Este reposit�
 
 | Campo | Valor |
 | ----- | ----- |
-| Versão | `v3.2.3-free` (maduro) · `v4.0.0-rc2` (candidato) |
-| Status | Oferta pública atual + pré-release Qute |
+| Download da loja | `v3.2.3-free` (Free / balcão) |
+| Prévia | `v4.0.0-rc2` — **não é o download da loja** |
 | Publicação | 06/09/2026 |
-| Linha | `free-edition` sobre a trilha `java_25` |
-| Stack da oficina | Java 25 + Quarkus 3 + SQLite local (v4 Qute em homologação; canal público é v3.2.3-free) |
-| Delivery publicado | Multi-plataforma: Windows, Linux e macOS — release FREE multiplataforma Java 25 |
-| Requisito | Java 25+ instalado no sistema ([Temurin 25](https://adoptium.net/)) |
-| Acesso | `http://localhost:8080/login` · primeiro acesso `admin` / `admin` |
+| Launcher Free | `iniciar-pdv.bat` (hífen) · navegador em `http://localhost:8080/login` |
+| Banco Free | `%APPDATA%\caracore\` (Windows) · `~/.caracore/` (Linux/macOS) |
+| Requisito Free | Java 25+ ([Temurin 25](https://adoptium.net/)) |
 | Release | <https://github.com/chmulato/caracore-pdv-releases/releases/tag/v3.2.3-free> |
-| Loja | <https://pdv.caracore.com.br/> |
+| Loja | <https://pdv.caracore.com.br/download.html> |
+
+O trecho `free-free` no nome do ZIP é o nome publicado, não um segundo plano.
 
 ### Artefatos v3.2.3-free
 
 | Artefato | Plataforma | SHA256 |
 | -------- | ---------- | ------ |
-| `caracore-pdv-v3.2.3-free-free-windows-x64.zip` | Windows 10/11 x64 | Publicado no `SHA256SUMS.txt` da release |
-| `caracore-pdv-v3.2.3-free-free-linux-x64.zip` | Linux x64 (Ubuntu 20.04+) | Publicado no `SHA256SUMS.txt` da release |
-| `caracore-pdv-v3.2.3-free-free-macos-x64.zip` | macOS 12+ x64 (Intel) | Publicado no `SHA256SUMS.txt` da release |
-| `RELEASE_MANIFEST.json` | Manifesto técnico da publicação | Publicado no `SHA256SUMS.txt` da release |
-| `SHA256SUMS.txt` | Lista oficial de hashes da release | Fonte de verificação |
+| `caracore-pdv-v3.2.3-free-free-windows-x64.zip` | Windows 10/11 x64 | `d9f48b769503d5294fefbc3bf57c0ccfa7dbd8b88f1331123ca25d202c2ddf81` |
+| `caracore-pdv-v3.2.3-free-free-linux-x64.zip` | Linux x64 (Ubuntu 20.04+) | `46dc89fec6c8a884bd60914f357b4cbf44a35c317ecabdbc7035af1b39fa7622` |
+| `caracore-pdv-v3.2.3-free-free-macos-x64.zip` | macOS 12+ x64 (Intel) | `cc3456010016386e9e9841cc53bf2ebe6f7345a271dd4e6de22e6d80ea531712` |
 
-### Candidato v4.0.0-rc1
+### Prévia v4.0.0-rc2 — not store download
 
 | Artefato | Plataforma | SHA256 |
 | -------- | ---------- | ------ |
-| `caracore-pdv-4.0.0-rc1-qute-portable.zip` | Windows · Linux · macOS | `30b18951301a4f1523b64a0be8316e4182faefee4d107eda60de0286fe98ba0c` |
-| Release | Pré-release | <https://github.com/chmulato/caracore-pdv-releases/releases/tag/v4.0.0-rc1> |
+| `caracore-pdv-4.0.0-rc2-qute-portable.zip` | Windows · Linux · macOS | `5e5d55b6d376c7f1d6ce91a9fb9a73f6d606289af27b508adf2d9eb2cdcd955d` |
+| Launcher | `iniciar_pdv.bat` (underscore) | Edge em modo aplicativo |
+| Banco | só `./data/caracore-pdv.db` | Não abre `%APPDATA%\caracore\` |
+| Reqs | Java 25+ e Python 3 | |
+
+### Outra linha — Rust v0.1.2
+
+A tag `v0.1.2` (MSI/EXE) é o piloto Rust em <https://pdv-rust.caracore.com.br/>. Não é o Free desta loja.
 
 ---
 
@@ -124,9 +130,12 @@ Download e onboarding:
 | `docs/download.html` | Página de download da Degustação Free (Windows, Linux e macOS) |
 | `docs/pwa.html` | PWA da vitrine (não é o caixa) |
 | `docs/tecnologia.html` | Soluções e pilares técnicos |
-| `docs/versoes.html` | Versão atual e próxima versão |
-| `docs/wiki-release-v3-2-2-free.html` | Notas da versão atual |
-| `docs/wiki-release-v4-0-0-rc1.html` | Notas da próxima versão |
+| `docs/versoes.html` | Versão atual (3.2.3-free) e prévia (4.0.0-rc2) |
+| `docs/wiki-release-v3-2-3-free.html` | Notas do canal Free atual |
+| `docs/wiki-release-v4-0-0-rc2.html` | Notas da prévia (não é o download da loja) |
+| `docs/wiki-release-v3-2-2-free.html` | Notas históricas da 3.2.2-free |
+| `docs/leia-me/` | Texto canônico do LEIA-ME dos ZIPs |
+| `docs/release-notes/` | Corpos das releases no GitHub |
 | `docs/wiki*.html` | Redirects para o wiki central ou para Versões |
 | `docs/installers/` | Espelho opcional de instaladores no mesmo domínio da loja |
 | `.github/workflows/` | Workflows de validação e publicação |

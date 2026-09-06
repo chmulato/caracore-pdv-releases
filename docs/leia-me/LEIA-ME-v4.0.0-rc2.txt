@@ -1,0 +1,42 @@
+CaraCore PDV — Prévia 4.0.0-rc2
+===============================
+Versão: 4.0.0-rc2
+Tag: v4.0.0-rc2
+Data do pacote: 06/09/2026
+
+PREVIEW — NOT STORE DOWNLOAD
+----------------------------
+Isto NÃO é o download da loja.
+O canal Free / balcão atual é v3.2.3-free.
+Não use esta pré-release como se fosse o Free.
+
+Não misture pasta nem data. Canais independentes.
+Não apague o AppData da v3 “pra limpar” a v4.
+Este RC2 NÃO abre %APPDATA%\caracore\data\banco.db.
+
+INSTALAÇÃO LIMPA (obrigatória)
+------------------------------
+1. Extraia o ZIP em uma pasta NOVA (exemplo: C:\CaraCore\pdv-v4-rc2).
+   Não extraia por cima da pasta do RC1 nem da 3.2.3-free.
+2. Não copie a pasta data de outro teste. O banco deste RC fica só em
+   ./data/caracore-pdv.db, ao lado do launcher.
+3. Windows: iniciar_pdv.bat (underscore — o Free usa iniciar-pdv.bat, com hífen)
+   Linux/macOS: chmod +x iniciar_pdv.sh && ./iniciar_pdv.sh
+4. O launcher sobe http://127.0.0.1:8080 e abre o Edge em modo aplicativo.
+5. Primeiro acesso: admin / admin (troca de senha obrigatória, 8 a 15 caracteres).
+
+REQUISITOS
+----------
+- Java 25+ no PATH (java -version deve mostrar 25)
+- Python 3
+- Windows: Microsoft Edge
+- Linux/macOS: Chrome, Chromium ou Microsoft Edge
+
+DADOS E LOG
+-----------
+Banco: ./data/caracore-pdv.db
+Log: ./logs/quarkus-kiosk.log
+O arquivo legado %APPDATA%\caracore\data\banco.db pode continuar no disco.
+
+Download da loja (Free): https://pdv.caracore.com.br/download.html
+Notas desta prévia: https://pdv.caracore.com.br/wiki-release-v4-0-0-rc2.html

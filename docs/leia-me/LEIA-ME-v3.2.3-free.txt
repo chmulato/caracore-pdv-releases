@@ -1,0 +1,45 @@
+CaraCore PDV — Free (balcão)
+============================
+Versão: 3.2.3-free
+Tag: v3.2.3-free
+Data: 06/09/2026
+
+ISTO É O DOWNLOAD DA LOJA
+-------------------------
+O que você baixa hoje em pdv.caracore.com.br é esta tag: v3.2.3-free.
+A prévia v4.0.0-rc2 NÃO é o download da loja.
+
+Não misture pasta nem data. Canais independentes.
+
+O nome free-free no arquivo ZIP é o nome publicado, não um segundo plano.
+
+INSTALAÇÃO
+----------
+1. Java 25+ no PATH. Depois do Temurin 25, feche e abra o terminal.
+   java -version tem que mostrar 25. Java 21 no PATH faz o launcher parar.
+2. Extraia em uma pasta nova e permanente (exemplo: C:\CaraCore\pdv-free).
+   Não extraia na pasta da prévia v4.
+3. Windows: iniciar-pdv.bat (hífen)
+   Linux/macOS: chmod +x iniciar-pdv.sh && ./iniciar-pdv.sh
+4. O launcher só sobe o backend. Abra o NAVEGADOR em
+   http://localhost:8080/login
+   Não espera janela JavaFX.
+5. Primeiro acesso: admin / admin (troque a senha, 8 a 15 caracteres).
+
+ACEITE
+------
+- O boot imprime 3.2.3-free
+- Health: http://localhost:8080/q/health
+- /login responde 200
+
+DADOS
+-----
+Banco: %APPDATA%\caracore\ (Windows) ou ~/.caracore/ (Linux/macOS)
+
+ZIP ANTIGO
+----------
+Se a porta for 8765 ou /login der 404, este não é o ZIP 3.2.3.
+Baixe de novo em https://pdv.caracore.com.br/download.html
+
+Loja: https://pdv.caracore.com.br/download.html
+Notas: https://pdv.caracore.com.br/wiki-release-v3-2-3-free.html

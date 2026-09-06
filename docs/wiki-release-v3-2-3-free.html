@@ -54,9 +54,9 @@
             <div class="max-w-3xl mx-auto text-center">
                 <p class="text-sm uppercase tracking-wide text-green-100 mb-3">Versão atual · Free · Windows · Linux · macOS</p>
                 <h1 class="text-3xl md:text-5xl font-bold mb-4">CaraCore PDV 3.2.3</h1>
-                <p class="text-lg text-green-50">A versão que a loja entrega hoje para o balcão. Corrige o primeiro acesso da 3.2.2-free. A 4.0.0-rc2 continua sendo a próxima versão do mesmo produto.</p>
+                <p class="text-lg text-green-50">Canal atual da loja: <strong>v3.2.3-free</strong>. A 4.0.0-rc2 é prévia — não é o download da loja.</p>
                 <p class="mt-6">
-                    <a href="download.html#instalacao" class="inline-flex items-center bg-white text-green-700 px-6 py-3 rounded-lg font-semibold hover:bg-green-50">Instalação com sucesso</a>
+                    <a href="download.html" class="inline-flex items-center bg-white text-green-700 px-6 py-3 rounded-lg font-semibold hover:bg-green-50">Baixar Free (3.2.3)</a>
                     <a href="versoes.html" class="inline-flex items-center ml-3 text-white underline hover:text-green-100">Todas as versões</a>
                 </p>
             </div>
@@ -75,7 +75,7 @@
         <header>
             <p class="eyebrow">Notas da versão</p>
             <h1>Login no navegador, porta 8080 e Java 25 no launcher</h1>
-            <p>A 3.2.2-free subia o backend, mas a landing apontava para <code>/login</code> inexistente, escutava em 8765 e o boot se identificava como 3.0.2. Esta versão fecha esse primeiro acesso.</p>
+            <p>Canal atual do balcão. O launcher sobe o backend e o operador abre o navegador em <code>/login</code> — não é janela JavaFX. ZIP antigo (porta 8765 ou <code>/login</code> 404) está em <a href="download.html#zip-antigo">ZIP antigo / problemas</a>.</p>
         </header>
 
         <p class="download-notice"><strong>Versão atual do CaraCore PDV</strong> (3.2.3-free, 06/09/2026). Windows, Linux e macOS · Java 25+. Planos Free e Premium são do produto, não desta release. A próxima versão está em <a href="versoes.html#proxima">4.0.0-rc2</a>.</p>
@@ -95,7 +95,7 @@
             <ol>
                 <li>Instale <strong>Java 25+</strong> (<a href="https://adoptium.net/" target="_blank" rel="noopener">Temurin 25</a>). Feche e abra o terminal; <code>java -version</code> tem que mostrar 25. Java 21 no PATH faz o launcher parar.</li>
                 <li>Baixe o ZIP da sua plataforma na <a href="download.html">página de download</a>.</li>
-                <li>Extraia em uma <strong>pasta nova</strong> (exemplo: <code>C:\CaraCore\pdv-free</code>). Não extraia por cima da 3.2.2-free nem da pasta da 4.0.0-rc2.</li>
+                <li>Extraia em uma <strong>pasta nova</strong> (exemplo: <code>C:\CaraCore\pdv-free</code>). Não extraia na pasta da prévia 4.0.0-rc2.</li>
                 <li><strong>Windows:</strong> execute <code>iniciar-pdv.bat</code> (hífen — a prévia v4 usa <code>iniciar_pdv.bat</code>). <strong>Linux/macOS:</strong> <code>chmod +x iniciar-pdv.sh</code> e <code>./iniciar-pdv.sh</code>.</li>
                 <li>Aguarde cerca de 10 segundos. Abra o navegador em <code>http://localhost:8080</code>.</li>
                 <li>Clique em <strong>Entrar no sistema</strong> ou abra <code>http://localhost:8080/login</code>.</li>
@@ -113,28 +113,28 @@
                         <tr>
                             <th>Plataforma</th>
                             <th>Arquivo</th>
+                            <th>SHA256</th>
                             <th>Inicialização</th>
-                            <th>Requisito</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>Windows 10/11 x64</td>
                             <td><code>caracore-pdv-v3.2.3-free-free-windows-x64.zip</code></td>
+                            <td><code>d9f48b769503d5294fefbc3bf57c0ccfa7dbd8b88f1331123ca25d202c2ddf81</code></td>
                             <td><code>iniciar-pdv.bat</code></td>
-                            <td>Java 25+</td>
                         </tr>
                         <tr>
                             <td>Linux x64 (Ubuntu 20.04+)</td>
                             <td><code>caracore-pdv-v3.2.3-free-free-linux-x64.zip</code></td>
+                            <td><code>46dc89fec6c8a884bd60914f357b4cbf44a35c317ecabdbc7035af1b39fa7622</code></td>
                             <td><code>./iniciar-pdv.sh</code></td>
-                            <td>Java 25+</td>
                         </tr>
                         <tr>
                             <td>macOS 12+ x64 (Intel)</td>
                             <td><code>caracore-pdv-v3.2.3-free-free-macos-x64.zip</code></td>
+                            <td><code>cc3456010016386e9e9841cc53bf2ebe6f7345a271dd4e6de22e6d80ea531712</code></td>
                             <td><code>./iniciar-pdv.sh</code></td>
-                            <td>Java 25+</td>
                         </tr>
                     </tbody>
                 </table>

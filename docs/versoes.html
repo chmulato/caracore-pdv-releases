@@ -62,20 +62,57 @@
     </section>
 
     <div class="wrapper">
-        <p class="download-notice">O download da loja é o CaraCore PDV <strong>3.2.3-free</strong>. A <strong>4.0.0-rc2</strong> é a próxima versão, ainda em prévia. Planos Free e Premium valem para o produto, não para um número de release.</p>
+        <p class="download-notice"><strong>O que eu baixo hoje?</strong> Só a tag <strong>v3.2.3-free</strong>. Não misture pasta nem data. Canais independentes.</p>
+
+        <section class="card wiki-card" id="canais">
+            <h2>Tabela de decisão</h2>
+            <div class="wiki-table-wrap">
+                <table class="wiki-table">
+                    <thead>
+                        <tr>
+                            <th>Canal</th>
+                            <th>Tag</th>
+                            <th>Launcher</th>
+                            <th>URL</th>
+                            <th>Banco</th>
+                            <th>Reqs</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Free balcão</td>
+                            <td><code>v3.2.3-free</code></td>
+                            <td><code>iniciar-pdv.bat</code> (hífen)</td>
+                            <td><code>localhost:8080/login</code></td>
+                            <td><code>%APPDATA%\caracore\</code></td>
+                            <td>Java 25+</td>
+                        </tr>
+                        <tr>
+                            <td>Prévia</td>
+                            <td><code>v4.0.0-rc2</code></td>
+                            <td><code>iniciar_pdv.bat</code> (underscore)</td>
+                            <td><code>127.0.0.1:8080</code></td>
+                            <td><code>./data/caracore-pdv.db</code></td>
+                            <td>Java 25+ e Python 3</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>O Free sobe o backend e abre no navegador (não é janela JavaFX). A RC2 abre o Edge em modo aplicativo.</p>
+        </section>
 
         <section class="card wiki-card" id="atual">
             <h2>Versão atual — 3.2.3-free</h2>
             <p>Pacote para Windows, Linux e macOS. Java 25+. Porta <code>8080</code>, login em <code>/login</code>, primeiro acesso <code>admin</code> / <code>admin</code>. É o que a loja entrega para teste real no balcão.</p>
             <p class="wiki-links">
-                <a class="btn-release" href="download.html#instalacao">Instalação com sucesso</a>
+                <a class="btn-release" href="download.html">Baixar Free (3.2.3)</a>
                 <a class="btn-release btn-release-outline" href="wiki-release-v3-2-3-free.html">Notas desta versão</a>
             </p>
         </section>
 
         <section class="card wiki-card" id="proxima">
-            <h2>Próxima versão — 4.0.0-rc2</h2>
-            <p>Prévia do mesmo CaraCore PDV: interface em modo aplicativo, SQLite local e launcher. Extraia em pasta nova; o banco fica só em <code>./data/caracore-pdv.db</code>. Ainda não é o download padrão da loja. Publicação plena prevista para 08/11/2026, após homologação.</p>
+            <h2>Prévia — não é o download da loja</h2>
+            <p>A <strong>4.0.0-rc2</strong> é a próxima versão, ainda em prévia. Extraia em pasta nova; o banco fica só em <code>./data/caracore-pdv.db</code>. Publicação plena prevista para 08/11/2026, após homologação.</p>
             <p class="wiki-links">
                 <a class="btn-release" href="wiki-release-v4-0-0-rc2.html">Notas da 4.0.0-rc2</a>
                 <a class="btn-release btn-release-outline" href="roadmap-2026.html">O que vem a seguir</a>
@@ -83,8 +120,13 @@
         </section>
 
         <section class="card wiki-card" id="historico">
-            <h2>Documentação e histórico</h2>
-            <p>Manuais e trilhas ficam no <a href="https://wiki.caracore.com.br/projeto-pdv.html">wiki central do PDV</a>. A 3.2.2-free permanece em <a href="wiki-release-v3-2-2-free.html">notas históricas</a>. Tags antigas estão no <a href="https://github.com/chmulato/caracore-pdv-releases/releases">GitHub Releases</a>.</p>
+            <h2>ZIP antigo e histórico</h2>
+            <p>Se a porta for <code>8765</code> ou <code>/login</code> der 404, o ZIP é o antigo 3.2.2-free — baixe a 3.2.3-free. Notas históricas da 3.2.2-free: <a href="wiki-release-v3-2-2-free.html">página de arquivo</a>. Manuais: <a href="https://wiki.caracore.com.br/projeto-pdv.html">wiki central do PDV</a>. Tags antigas: <a href="https://github.com/chmulato/caracore-pdv-releases/releases">GitHub Releases</a>.</p>
+        </section>
+
+        <section class="card wiki-card" id="rust">
+            <h2>Outra linha — Rust v0.1.2</h2>
+            <p>A tag <code>v0.1.2</code> (MSI/EXE) é o piloto Rust em <a href="https://pdv-rust.caracore.com.br/">pdv-rust.caracore.com.br</a>. Não é o Free desta loja e não substitui a <code>v3.2.3-free</code>.</p>
         </section>
     </div>
 
