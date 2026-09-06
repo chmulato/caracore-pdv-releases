@@ -3,14 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="CaraCore-PDV Desktop: desktop local para Windows com SQLite, degustação Free para teste real no balcão e plano Premium para ampliar a operação.">
-    <meta name="keywords" content="PDV Desktop, Ponto de Venda Desktop, Selo Verde, Reforma Tributária 2026, economia papel, varejo, sustentabilidade">
+    <meta name="description" content="CaraCore-PDV Desktop: reduz fila, elimina papel e funciona sem internet. Agende uma demonstração presencial.">
+    <meta name="keywords" content="PDV Desktop, ponto de venda, recibo digital, caixa offline, varejo">
     <meta name="author" content="Cara Core Informática">
-    <meta property="og:title" content="CaraCore-PDV Desktop | O PDV Selo Verde que paga sua própria mensalidade">
-    <meta property="og:description" content="Teste real no Windows com desktop local e SQLite na edição Free e avance para o Premium com mais automação comercial.">
+    <meta property="og:title" content="CaraCore-PDV | Operação de venda sem ruído">
+    <meta property="og:description" content="O PDV que reduz fila, elimina papel e funciona mesmo sem internet. Economia real que cobre a mensalidade.">
     <meta property="og:type" content="website">
-    <title>CaraCore-PDV Desktop | O PDV Selo Verde que paga sua própria mensalidade</title>
-    
+    <title>CaraCore-PDV | Operação de venda sem ruído</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,779 +21,287 @@
     <link rel="apple-touch-icon" href="assets/pwa/icon.svg">
 </head>
 <body class="smooth-scroll bg-gray-50">
-    <nav class="breadcrumb container mx-auto px-4 sm:px-6 lg:px-8 pt-3 text-sm text-gray-600" aria-label="Navegação">
+    <nav class="breadcrumb container mx-auto px-4 sm:px-6 lg:px-8 pt-3 text-sm text-gray-600" aria-label="Navegação institucional">
         <a href="https://www.caracore.com.br/" class="hover:text-green-600">Cara Core Informática</a>
         <span> · </span>
         <a href="https://www.caracore.com.br/portfolio.html#caracore-pdv" class="hover:text-green-600" rel="noopener">Portfólio</a>
         <span> · </span>
-        <span class="text-gray-900">CaraCore PDV — Loja</span>
+        <span class="text-gray-900">CaraCore PDV</span>
     </nav>
-    <!-- Header -->
+
     <header class="portal-header bg-white shadow-sm sticky top-0 z-50">
-        <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8" aria-label="Menu da loja">
             <div class="flex justify-between items-center h-20">
-                <div class="flex items-center space-x-3">
+                <a href="index.html" class="flex items-center space-x-3">
                     <div class="w-12 h-12 green-bg rounded-lg flex items-center justify-center">
-                        <i class="fas fa-cash-register text-white text-xl"></i>
+                        <i class="fas fa-cash-register text-white text-xl" aria-hidden="true"></i>
                     </div>
                     <div>
-                        <h1 class="text-xl font-bold text-gray-900">Cara Core</h1>
-                        <p class="text-xs text-gray-600">Informática</p>
+                        <p class="text-xl font-bold text-gray-900">CaraCore PDV</p>
+                        <p class="text-xs text-gray-600">Operação de venda sem ruído</p>
                     </div>
-                </div>
-                <div class="hidden md:flex items-center space-x-6">
-                    <a href="#economia" class="text-gray-700 hover:text-green-600 font-medium transition">Economia</a>
+                </a>
+                <div class="hidden lg:flex items-center space-x-6">
                     <a href="#dores" class="text-gray-700 hover:text-green-600 font-medium transition">O que resolvemos</a>
-                    <a href="#jornada" class="text-gray-700 hover:text-green-600 font-medium transition">Jornada visual</a>
-                    <a href="#fiscal" class="text-gray-700 hover:text-green-600 font-medium transition">Pronto para 2026</a>
-                    <a href="roadmap-2026.html" class="text-gray-700 hover:text-green-600 font-medium transition">PDV v4</a>
+                    <a href="#jornada" class="text-gray-700 hover:text-green-600 font-medium transition">Como funciona</a>
+                    <a href="#economia" class="text-gray-700 hover:text-green-600 font-medium transition">Economia</a>
                     <a href="#planos" class="text-gray-700 hover:text-green-600 font-medium transition">Planos</a>
-                    <a href="wiki-fiscal.html" class="text-gray-700 hover:text-green-600 font-medium transition">Wiki Fiscal</a>
-                    <a href="tecnologia.html" class="text-gray-700 hover:text-green-600 font-medium transition">Soluções</a>
-                    <a href="readme.html" class="text-gray-700 hover:text-green-600 font-medium transition">Documentação</a>
-                    <a href="download.html" class="text-gray-700 hover:text-green-600 font-medium transition">Baixar v3.2.2-free</a>
-                    <a href="consultoria.html" class="text-gray-700 hover:text-green-600 font-medium transition">Consultoria</a>
                     <a href="#demo" class="green-bg text-white px-6 py-2 rounded-lg font-semibold hover:shadow-lg transition">
-                        <i class="fas fa-calendar-check mr-2"></i>Demonstração Presencial
+                        Agendar demonstração
                     </a>
                 </div>
-                <button id="mobile-menu-button" class="md:hidden text-gray-700" aria-label="Menu"><i class="fas fa-bars text-2xl"></i></button>
+                <button id="mobile-menu-button" class="lg:hidden text-gray-700" aria-label="Abrir menu"><i class="fas fa-bars text-2xl"></i></button>
             </div>
-            <div id="mobile-menu" class="hidden md:hidden pb-4">
+            <div id="mobile-menu" class="hidden lg:hidden pb-4">
                 <div class="flex flex-col space-y-3">
-                    <a href="#economia" class="text-gray-700 hover:text-green-600 font-medium py-2">Economia</a>
-                    <a href="#dores" class="text-gray-700 hover:text-green-600 font-medium py-2">O que resolvemos</a>
-                    <a href="#jornada" class="text-gray-700 hover:text-green-600 font-medium py-2">Jornada visual</a>
-                    <a href="#fiscal" class="text-gray-700 hover:text-green-600 font-medium py-2">Pronto para 2026</a>
-                    <a href="roadmap-2026.html" class="text-gray-700 hover:text-green-600 font-medium py-2">PDV v4</a>
-                    <a href="#planos" class="text-gray-700 hover:text-green-600 font-medium py-2">Planos</a>
-                    <a href="wiki-fiscal.html" class="text-gray-700 hover:text-green-600 font-medium py-2">Wiki Fiscal</a>
-                    <a href="tecnologia.html" class="text-gray-700 hover:text-green-600 font-medium py-2">Soluções</a>
-                    <a href="readme.html" class="text-gray-700 hover:text-green-600 font-medium py-2">Documentação</a>
-                    <a href="download.html" class="text-gray-700 hover:text-green-600 font-medium py-2">Baixar v3.2.2-free</a>
-                    <a href="consultoria.html" class="text-gray-700 hover:text-green-600 font-medium py-2">Consultoria</a>
-                    <a href="#demo" class="green-bg text-white px-6 py-2 rounded-lg font-semibold text-center">Demonstração Presencial</a>
+                    <a href="#dores" class="text-gray-700 font-medium py-2">O que resolvemos</a>
+                    <a href="#jornada" class="text-gray-700 font-medium py-2">Como funciona</a>
+                    <a href="#economia" class="text-gray-700 font-medium py-2">Economia</a>
+                    <a href="#planos" class="text-gray-700 font-medium py-2">Planos</a>
+                    <a href="#demo" class="green-bg text-white px-6 py-3 rounded-lg font-semibold text-center">Agendar demonstração</a>
                 </div>
             </div>
         </nav>
     </header>
-    
-    <!-- 1. HERO (dor -> promessa -> prova) -->
-    <section class="portal-hero green-bg text-white py-20 md:py-28">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="max-w-4xl mx-auto text-center">
-                <span class="selo-badge text-green-800 bg-white/90 mb-6 inline-flex">
-                    <i class="fas fa-leaf"></i> Selo CaraCore de Sustentabilidade
-                </span>
-                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-                    Quando a internet cai, o caixa não pode parar.
-                </h1>
-                <p class="text-xl md:text-2xl text-green-50 mb-10 leading-relaxed">
-                    Chega de sistema lento, fila no balcão e fechamento confuso no fim do dia. O CaraCore-PDV Desktop foi desenhado para a pequena operação que precisa vender com rapidez, depender menos da internet e validar o básico do negócio sem entrar num sistema inchado. A oferta pública atual da loja está concentrada na edição <strong>v3.2.2-free</strong> — agora disponível para <strong>Windows, Linux e macOS</strong>.
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="#demo" class="bg-white text-green-700 px-8 py-4 rounded-lg font-bold text-lg hover:bg-green-50 transition shadow-lg">
-                        Agende uma Demonstração Presencial
-                    </a>
-                    <a href="wiki-validacao-cliente-pequeno.html" class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-green-700 transition">
-                        Ver perfil ideal e validação
-                    </a>
-                </div>
-                <div class="mt-10 grid sm:grid-cols-3 gap-4 text-left max-w-3xl mx-auto">
-                    <div class="bg-white/10 rounded-xl px-5 py-4">
-                        <div class="flex items-center gap-3 mb-1">
-                            <i class="fas fa-wifi text-white"></i>
-                            <p class="font-semibold">Venda sem parar</p>
-                        </div>
-                        <p class="text-sm text-green-50/90">Mesmo com internet instável.</p>
-                    </div>
-                    <div class="bg-white/10 rounded-xl px-5 py-4">
-                        <div class="flex items-center gap-3 mb-1">
-                            <i class="fas fa-receipt text-white"></i>
-                            <p class="font-semibold">Menos gastos</p>
-                        </div>
-                        <p class="text-sm text-green-50/90">Recibo digital e economia com papel.</p>
-                    </div>
-                    <div class="bg-white/10 rounded-xl px-5 py-4">
-                        <div class="flex items-center gap-3 mb-1">
-                            <i class="fas fa-shield-halved text-white"></i>
-                            <p class="font-semibold">Pronto para 2026</p>
-                        </div>
-                        <p class="text-sm text-green-50/90">Cálculo fiscal e relatórios com clareza.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <section id="novidades-v4" class="py-16 md:py-20 bg-gray-50">
+    <section class="portal-hero green-bg text-white py-20 md:py-24">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="max-w-4xl mx-auto text-center mb-10">
-                <span class="selo-badge text-green-800 bg-green-100 mb-4 inline-flex">Próximo lançamento</span>
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">O que chega com o CaraCore-PDV v4</h2>
-                <p class="text-lg text-gray-600">Lançamento oficial previsto para <strong>08 de novembro de 2026</strong>. A nova experiência será local, com Quarkus, SQLite e interface web/PWA aberta pelo launcher Windows.</p>
+            <div class="max-w-3xl mx-auto text-center">
+                <p class="text-sm uppercase tracking-wide text-green-100 mb-4">PDV no computador da loja · Windows, Linux e macOS</p>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+                    O PDV que reduz fila, elimina papel e funciona mesmo sem internet.
+                </h1>
+                <p class="text-xl md:text-2xl text-green-50 mb-10">
+                    Economia real que cobre a mensalidade.
+                </p>
+                <a href="consultoria.html" class="inline-flex items-center justify-center bg-white text-green-700 px-10 py-4 rounded-lg font-bold text-lg hover:bg-green-50 transition shadow-lg">
+                    Agende uma Demonstração Presencial
+                </a>
+                <p class="mt-6 text-sm text-green-100">
+                    Prefere testar sozinho? <a href="download.html" class="underline hover:text-white">Baixe o Free (v3.2.2)</a>
+                </p>
             </div>
-            <div class="grid md:grid-cols-2 xl:grid-cols-4 gap-6">
-                <article class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
-                    <i class="fas fa-window-maximize text-green-600 text-2xl mb-4" aria-hidden="true"></i>
-                    <h3 class="text-lg font-bold text-gray-900 mb-2">Experiência web local</h3>
-                    <p class="text-gray-600">PWA responsiva em modo aplicativo, com launcher Windows e foco no fluxo do caixa.</p>
-                </article>
-                <article class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
-                    <i class="fas fa-cart-shopping text-green-600 text-2xl mb-4" aria-hidden="true"></i>
-                    <h3 class="text-lg font-bold text-gray-900 mb-2">Venda mais fluida</h3>
-                    <p class="text-gray-600">Carrinho, quantidade, pagamentos simples e mistos, troco, recibo e baixa de estoque.</p>
-                </article>
-                <article class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
-                    <i class="fas fa-chart-line text-green-600 text-2xl mb-4" aria-hidden="true"></i>
-                    <h3 class="text-lg font-bold text-gray-900 mb-2">Gestão no mesmo fluxo</h3>
-                    <p class="text-gray-600">Clientes, produtos, estoque, caixa X/Z, relatórios operacionais e auditoria por perfil.</p>
-                </article>
-                <article class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
-                    <i class="fas fa-database text-green-600 text-2xl mb-4" aria-hidden="true"></i>
-                    <h3 class="text-lg font-bold text-gray-900 mb-2">Continuidade local</h3>
-                    <p class="text-gray-600">SQLite no computador da loja, recuperação após reinício e menor dependência da internet.</p>
-                </article>
-            </div>
-            <p class="text-center text-sm text-gray-500 mt-8">Recursos sujeitos a testes de paridade, homologação, validação Windows e empacotamento final.</p>
         </div>
     </section>
 
     <section id="jornada" class="py-16 md:py-20 bg-white">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Jornada visual da operação real</h2>
-                <p class="text-xl text-gray-600 max-w-4xl mx-auto">
-                    Prints atualizados em 05/05 para mostrar o fluxo de negócio como ele acontece no balcão: acesso,
-                    operação de venda, gestão de caixa e governança com backup.
-                </p>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-3">Como funciona no balcão</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Três telas. Um fluxo. Sem ruído.</p>
             </div>
-
-            <div class="grid xl:grid-cols-2 gap-8">
-                <article class="bg-gray-50 border border-gray-200 rounded-2xl p-6 shadow-sm">
-                    <div class="flex items-center gap-3 mb-4">
-                        <span class="w-9 h-9 rounded-full bg-green-600 text-white font-bold inline-flex items-center justify-center">1</span>
-                        <h3 class="text-xl font-bold text-gray-900">Acesso seguro e visão resumida</h3>
-                    </div>
-                    <p class="text-gray-600 mb-5">
-                        O operador entra rapidamente e a liderança enxerga o resumo inicial para validar o estado da loja antes de abrir o caixa.
-                    </p>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                        <figure>
-                            <img src="assets/img/caracore_pdv_tela_de_login.png"
-                                 alt="Tela de login do CaraCore-PDV"
-                                 class="w-full aspect-[4/3] object-cover object-top rounded-xl border border-gray-200"
-                                 loading="lazy"
-                                 decoding="async">
-                            <figcaption class="text-sm text-gray-600 mt-2">Login da operação com acesso direto ao PDV.</figcaption>
-                        </figure>
-                        <figure>
-                            <img src="assets/img/caracore_pdv_tela_restrita_01_resumo.png"
-                                 alt="Resumo da área restrita com visão de negócio"
-                                 class="w-full aspect-[4/3] object-cover object-top rounded-xl border border-gray-200"
-                                 loading="lazy"
-                                 decoding="async">
-                            <figcaption class="text-sm text-gray-600 mt-2">Resumo diário para leitura rápida da gestão.</figcaption>
-                        </figure>
-                        <figure>
-                            <img src="assets/img/caracore_pdv_tela_restrita_01.png"
-                                 alt="Tela restrita inicial da operação"
-                                 class="w-full aspect-[4/3] object-cover object-top rounded-xl border border-gray-200"
-                                 loading="lazy"
-                                 decoding="async">
-                            <figcaption class="text-sm text-gray-600 mt-2">Entrada da área restrita com foco no próximo passo operacional.</figcaption>
-                        </figure>
-                    </div>
-                </article>
-
-                <article class="bg-gray-50 border border-gray-200 rounded-2xl p-6 shadow-sm">
-                    <div class="flex items-center gap-3 mb-4">
-                        <span class="w-9 h-9 rounded-full bg-green-600 text-white font-bold inline-flex items-center justify-center">2</span>
-                        <h3 class="text-xl font-bold text-gray-900">Operação de venda sem ruído</h3>
-                    </div>
-                    <p class="text-gray-600 mb-5">
-                        A tela de operação centraliza ações do caixa e acelera nova venda, reduzindo clique perdido e fila em horário de pico.
-                    </p>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <figure>
-                            <img src="assets/img/caracore_pdv_tela_restrita_02_operacao.png"
-                                 alt="Tela restrita de operação principal"
-                                 class="w-full aspect-[4/3] object-cover object-top rounded-xl border border-gray-200"
-                                 loading="lazy"
-                                 decoding="async">
-                            <figcaption class="text-sm text-gray-600 mt-2">Painel principal da operação de caixa.</figcaption>
-                        </figure>
-                        <figure>
-                            <img src="assets/img/caracore_pdv_tela_restrita_02_operacao_nova_venda.png"
-                                 alt="Fluxo de nova venda no módulo de operação"
-                                 class="w-full aspect-[4/3] object-cover object-top rounded-xl border border-gray-200"
-                                 loading="lazy"
-                                 decoding="async">
-                            <figcaption class="text-sm text-gray-600 mt-2">Nova venda com fluxo objetivo para atendimento ágil.</figcaption>
-                        </figure>
-                    </div>
-                </article>
-
-                <article class="bg-gray-50 border border-gray-200 rounded-2xl p-6 shadow-sm">
-                    <div class="flex items-center gap-3 mb-4">
-                        <span class="w-9 h-9 rounded-full bg-green-600 text-white font-bold inline-flex items-center justify-center">3</span>
-                        <h3 class="text-xl font-bold text-gray-900">Gestão diária: caixa e relatórios</h3>
-                    </div>
-                    <p class="text-gray-600 mb-5">
-                        O gestor acompanha caixa e relatórios no mesmo percurso visual, melhorando fechamento e tomada de decisão no fim do dia.
-                    </p>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <figure>
-                            <img src="assets/img/caracore_pdv_tela_restrita_03_caixa.png"
-                                 alt="Tela de caixa na área restrita"
-                                 class="w-full aspect-[4/3] object-cover object-top rounded-xl border border-gray-200"
-                                 loading="lazy"
-                                 decoding="async">
-                            <figcaption class="text-sm text-gray-600 mt-2">Controle de caixa para abertura e fechamento com disciplina.</figcaption>
-                        </figure>
-                        <figure>
-                            <img src="assets/img/caracore_pdv_tela_restrita_02_operacao_relatorios.png"
-                                 alt="Tela de relatórios na operação restrita"
-                                 class="w-full aspect-[4/3] object-cover object-top rounded-xl border border-gray-200"
-                                 loading="lazy"
-                                 decoding="async">
-                            <figcaption class="text-sm text-gray-600 mt-2">Relatórios operacionais com leitura comercial imediata.</figcaption>
-                        </figure>
-                    </div>
-                </article>
-
-                <article class="bg-gray-50 border border-gray-200 rounded-2xl p-6 shadow-sm">
-                    <div class="flex items-center gap-3 mb-4">
-                        <span class="w-9 h-9 rounded-full bg-green-600 text-white font-bold inline-flex items-center justify-center">4</span>
-                        <h3 class="text-xl font-bold text-gray-900">Governança da loja e continuidade</h3>
-                    </div>
-                    <p class="text-gray-600 mb-5">
-                        Configurações e rotina de backup ficam explícitas para sustentar continuidade operacional e reduzir risco de perda de dados.
-                    </p>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <figure>
-                            <img src="assets/img/caracore_pdv_tela_restrita_03_config.png"
-                                 alt="Tela de configurações da área restrita"
-                                 class="w-full aspect-[4/3] object-cover object-top rounded-xl border border-gray-200"
-                                 loading="lazy"
-                                 decoding="async">
-                            <figcaption class="text-sm text-gray-600 mt-2">Configuração da operação para padronizar o ambiente.</figcaption>
-                        </figure>
-                        <figure>
-                            <img src="assets/img/caracore_pdv_tela_restrita_03_config_backup.png"
-                                 alt="Tela de backup nas configurações"
-                                 class="w-full aspect-[4/3] object-cover object-top rounded-xl border border-gray-200"
-                                 loading="lazy"
-                                 decoding="async">
-                            <figcaption class="text-sm text-gray-600 mt-2">Backup operacional para garantir continuidade e auditoria.</figcaption>
-                        </figure>
-                    </div>
-                </article>
-
-                <article class="bg-gray-50 border border-gray-200 rounded-2xl p-6 shadow-sm xl:col-span-2">
-                    <div class="flex items-center gap-3 mb-4">
-                        <span class="w-9 h-9 rounded-full bg-green-600 text-white font-bold inline-flex items-center justify-center">5</span>
-                        <h3 class="text-xl font-bold text-gray-900">Confiança comercial e versão pública</h3>
-                    </div>
-                    <p class="text-gray-600 mb-5">
-                        A loja também mostra a referência pública de release para apoiar confiança comercial, suporte e comunicação com parceiros.
-                    </p>
-                    <div class="max-w-3xl">
-                        <figure>
-                            <img src="assets/img/github_cara-core-pdv_release.png"
-                                 alt="Referência de release público do CaraCore-PDV no GitHub"
-                                 class="w-full aspect-[16/9] object-cover object-top rounded-xl border border-gray-200"
-                                 loading="lazy"
-                                 decoding="async">
-                            <figcaption class="text-sm text-gray-600 mt-2">Rastro público de versão para reduzir ruído no atendimento pós-venda.</figcaption>
-                        </figure>
-                    </div>
-                </article>
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <figure class="bg-gray-50 rounded-2xl overflow-hidden border border-gray-100">
+                    <img src="assets/img/caracore_pdv_tela_restrita_01_resumo.png" alt="Resumo diário da loja no CaraCore-PDV" class="w-full h-52 object-cover object-top" width="640" height="360" loading="eager">
+                    <figcaption class="p-5">
+                        <h3 class="font-bold text-gray-900 mb-1">Entra e vê o dia</h3>
+                        <p class="text-sm text-gray-600">Login rápido e resumo da operação antes de abrir o caixa.</p>
+                    </figcaption>
+                </figure>
+                <figure class="bg-gray-50 rounded-2xl overflow-hidden border border-gray-100">
+                    <img src="assets/img/caracore_pdv_tela_restrita_02_operacao_nova_venda.png" alt="Nova venda no CaraCore-PDV" class="w-full h-52 object-cover object-top" width="640" height="360" loading="lazy">
+                    <figcaption class="p-5">
+                        <h3 class="font-bold text-gray-900 mb-1">Vende sem ruído</h3>
+                        <p class="text-sm text-gray-600">Carrinho claro, atalhos e total visível. Menos clique, menos fila.</p>
+                    </figcaption>
+                </figure>
+                <figure class="bg-gray-50 rounded-2xl overflow-hidden border border-gray-100">
+                    <img src="assets/img/caracore_pdv_tela_restrita_03_caixa.png" alt="Fechamento de caixa no CaraCore-PDV" class="w-full h-52 object-cover object-top" width="640" height="360" loading="lazy">
+                    <figcaption class="p-5">
+                        <h3 class="font-bold text-gray-900 mb-1">Fecha o caixa em paz</h3>
+                        <p class="text-sm text-gray-600">Conferência do turno e relatório do dia no mesmo caminho.</p>
+                    </figcaption>
+                </figure>
             </div>
         </div>
     </section>
 
-    <!-- 1.1 PROVA VISUAL (prints / ícones modernos) -->
-    <section id="prova" class="py-16 md:py-20 bg-gray-50">
+    <section id="economia" class="py-16 md:py-20 bg-gray-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-3">Papel custa. Digital se paga.</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Estimativa para 1 caixa, 200–400 cupons/mês. Valores variam por região e volume.</p>
+            </div>
+            <div class="max-w-3xl mx-auto overflow-x-auto bg-white rounded-2xl border border-gray-200 shadow-sm">
+                <table class="w-full text-left text-sm md:text-base">
+                    <thead class="bg-gray-100 text-gray-800">
+                        <tr>
+                            <th class="px-5 py-3 font-semibold">Modelo</th>
+                            <th class="px-5 py-3 font-semibold">Custo mensal</th>
+                            <th class="px-5 py-3 font-semibold">Problema</th>
+                            <th class="px-5 py-3 font-semibold">Resultado</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-100">
+                        <tr>
+                            <td class="px-5 py-4 font-semibold text-gray-900">Papel</td>
+                            <td class="px-5 py-4 text-red-700">R$ 80–200 + manutenção</td>
+                            <td class="px-5 py-4 text-gray-600">Atolamento e parada</td>
+                            <td class="px-5 py-4 text-gray-600">Prejuízo no pico</td>
+                        </tr>
+                        <tr class="bg-green-50">
+                            <td class="px-5 py-4 font-semibold text-gray-900">Recibo digital</td>
+                            <td class="px-5 py-4 text-green-700 font-semibold">R$ 0 de bobina</td>
+                            <td class="px-5 py-4 text-gray-600">Sem impressora térmica</td>
+                            <td class="px-5 py-4 text-green-800 font-semibold">R$ 130–350/mês por caixa</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="text-center mt-8">
+                <a href="consultoria.html" class="inline-flex items-center justify-center green-bg text-white px-8 py-3 rounded-lg font-semibold hover:shadow-lg transition">
+                    Ver a conta na demonstração
+                </a>
+            </p>
+        </div>
+    </section>
+
+    <section id="dores" class="py-16 md:py-20 bg-white">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                    Veja o que muda <span class="green-accent">na prática</span>
-                </h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Veja rapidamente como o produto funciona no dia a dia da loja: venda, gestão e fechamento com menos atrito.
-                </p>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-3">O que resolvemos</h2>
+                <p class="text-lg text-gray-600">Quatro dores do balcão. Uma frase cada.</p>
             </div>
-
-            <div class="grid md:grid-cols-3 gap-8 lg:gap-10">
-                <div class="bg-white rounded-2xl overflow-hidden shadow-lg card-hover border border-gray-100">
-                    <img src="assets/img/caracore_pdv_tela_restrita_01_resumo.png"
-                        alt="Resumo da área restrita com visão comercial da operação"
-                         class="w-full h-56 object-cover object-top">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-900 mb-2">Dashboard que fala a sua língua</h3>
-                        <p class="text-gray-600 text-sm leading-relaxed">
-                            Você bate o olho e entende: <strong>lucro líquido</strong>, <strong>tributos</strong> e o que está acontecendo no dia.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-2xl overflow-hidden shadow-lg card-hover border border-gray-100">
-                    <img src="assets/img/caracore_pdv_tela_restrita_02_operacao_nova_venda.png"
-                        alt="Fluxo de nova venda no módulo de operação"
-                         class="w-full h-56 object-cover object-center">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-900 mb-2">PIX integrado no plano Premium</h3>
-                        <p class="text-gray-600 text-sm leading-relaxed">
-                            Para lojas que querem evoluir da degustação para a operação assistida, o Premium habilita o PIX dentro do sistema e reduz retrabalho no balcão.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-2xl overflow-hidden shadow-lg card-hover border border-gray-100">
-                    <img src="assets/img/caracore_pdv_tela_restrita_03_config_backup.png"
-                        alt="Tela de configuração de backup para continuidade operacional"
-                         class="w-full h-56 object-cover object-center">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-900 mb-2">Recibo digital (economia real)</h3>
-                        <p class="text-gray-600 text-sm leading-relaxed">
-                            Pare de gastar com bobina e manutenção. Economize e ainda ajude o meio ambiente.
-                        </p>
-                    </div>
-                </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+                <article class="rounded-2xl border border-gray-100 p-6 bg-gray-50">
+                    <i class="fas fa-wifi text-green-600 text-2xl mb-4" aria-hidden="true"></i>
+                    <h3 class="font-bold text-gray-900 mb-2">Venda sem parar</h3>
+                    <p class="text-sm text-gray-600 mb-3">O caixa continua mesmo com a internet oscilando.</p>
+                    <a href="tecnologia.html" class="text-sm font-semibold text-green-700 hover:text-green-800">Qualidades do PDV</a>
+                </article>
+                <article class="rounded-2xl border border-gray-100 p-6 bg-gray-50">
+                    <i class="fas fa-gauge-high text-green-600 text-2xl mb-4" aria-hidden="true"></i>
+                    <h3 class="font-bold text-gray-900 mb-2">Fila menor</h3>
+                    <p class="text-sm text-gray-600 mb-3">Fluxo linear e atalhos. Menos clique, atendimento mais curto.</p>
+                    <a href="#jornada" class="text-sm font-semibold text-green-700 hover:text-green-800">Ver detalhes</a>
+                </article>
+                <article class="rounded-2xl border-2 border-green-200 p-6 bg-green-50">
+                    <i class="fas fa-leaf text-green-600 text-2xl mb-4" aria-hidden="true"></i>
+                    <h3 class="font-bold text-gray-900 mb-2">Recibo digital</h3>
+                    <p class="text-sm text-gray-600 mb-3">Sem bobina e sem manutenção de impressora térmica.</p>
+                    <a href="#economia" class="text-sm font-semibold text-green-700 hover:text-green-800">Ver detalhes</a>
+                </article>
+                <article class="rounded-2xl border border-gray-100 p-6 bg-gray-50">
+                    <i class="fas fa-shield-halved text-green-600 text-2xl mb-4" aria-hidden="true"></i>
+                    <h3 class="font-bold text-gray-900 mb-2">Fiscal organizado</h3>
+                    <p class="text-sm text-gray-600 mb-3">Cálculo e relatórios para o contador, sem planilha no fim do mês.</p>
+                    <a href="wiki-fiscal.html" class="text-sm font-semibold text-green-700 hover:text-green-800">Wiki Fiscal</a>
+                </article>
             </div>
         </div>
     </section>
-    
-    <!-- 2. ECONOMIA (benefício e ROI, sem “tech-speak”) -->
-    <section id="economia" class="py-16 md:py-20 bg-white">
+
+    <section id="fiscal" class="py-12 bg-slate-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="text-2xl font-bold text-gray-900 mb-3">Segurança fiscal sem aula de reforma</h2>
+                <p class="text-gray-600 mb-4">Você vende. O sistema calcula. A contabilidade encontra o relatório. O detalhe da Reforma Tributária está na wiki, não no caminho da venda.</p>
+                <a href="wiki-fiscal.html" class="text-green-700 font-semibold hover:text-green-800">Abrir Wiki Fiscal</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="planos" class="py-16 md:py-20 bg-white">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Economia Real: Papel x Digital</h2>
-                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-                    O que você deixa de gastar com bobinas e manutenção vira lucro. Em muitos cenários, a economia do recibo digital já cobre a mensalidade.
-                </p>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-3">Planos</h2>
+                <p class="text-lg text-gray-600">Degustação no balcão ou operação completa.</p>
             </div>
-            
-            <div class="max-w-4xl mx-auto">
-                <div class="grid md:grid-cols-2 gap-8">
-                    <!-- Papel (custo) -->
-                    <div class="bg-red-50 rounded-2xl p-8 border-2 border-red-100">
-                        <div class="flex items-center mb-6">
-                            <div class="w-14 h-14 bg-red-200 rounded-xl flex items-center justify-center mr-4">
-                                <i class="fas fa-receipt text-red-600 text-2xl"></i>
-                            </div>
-                            <h3 class="text-xl font-bold text-gray-900">Modelo tradicional (papel)</h3>
-                        </div>
-                        <ul class="space-y-3 text-gray-700 mb-6">
-                            <li class="grid grid-cols-[1fr_auto] items-start gap-x-4">
-                                <span>Bobinas térmicas (mês)</span>
-                                <span class="font-semibold text-red-600 text-right whitespace-nowrap">R$ 80 – R$ 200</span>
-                            </li>
-                            <li class="grid grid-cols-[1fr_auto] items-start gap-x-4">
-                                <span>Manutenção de impressoras</span>
-                                <span class="font-semibold text-red-600 text-right whitespace-nowrap">R$ 50 – R$ 150/mês</span>
-                            </li>
-                            <li class="grid grid-cols-[1fr_auto] items-start gap-x-4">
-                                <span>Paradas por falha / atolamento</span>
-                                <span class="font-semibold text-red-600 text-right">Perda de tempo e vendas</span>
-                            </li>
-                        </ul>
-                        <p class="text-sm text-gray-600">Estimativa para 1 caixa, 200–400 cupons/mês. Valores variam por região e volume.</p>
-                    </div>
-                    
-                    <!-- Digital (economia) -->
-                    <div class="bg-green-50 rounded-2xl p-8 border-2 border-green-200 card-hover">
-                        <div class="flex items-center mb-6">
-                            <div class="w-14 h-14 green-bg rounded-xl flex items-center justify-center mr-4">
-                                <i class="fas fa-mobile-screen text-white text-2xl"></i>
-                            </div>
-                            <h3 class="text-xl font-bold text-gray-900">Tecnologia PDV Desktop Selo Verde (recibo digital)</h3>
-                        </div>
-                        <ul class="space-y-3 text-gray-700 mb-6">
-                            <li class="grid grid-cols-[1fr_auto] items-start gap-x-4">
-                                <span>Bobinas</span>
-                                <span class="font-semibold text-green-600 text-right whitespace-nowrap">R$ 0</span>
-                            </li>
-                            <li class="grid grid-cols-[1fr_auto] items-start gap-x-4">
-                                <span>Impressora térmica</span>
-                                <span class="font-semibold text-green-600 text-right whitespace-nowrap">Dispensável</span>
-                            </li>
-                            <li class="grid grid-cols-[1fr_auto] items-start gap-x-4">
-                                <span>Recibo por link / e-mail</span>
-                                <span class="font-semibold text-green-600 text-right whitespace-nowrap">Incluso</span>
-                            </li>
-                        </ul>
-                        <div class="pt-4 border-t border-green-200">
-                            <p class="text-green-800 font-bold">Economia típica: R$ 130 – R$ 350/mês por caixa.</p>
-                            <p class="text-sm text-gray-600 mt-2">Quer ver a conta no seu cenário? A gente faz junto na demonstração.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="personas" class="py-16 md:py-20 bg-slate-50">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="max-w-5xl mx-auto">
-                <div class="text-center mb-12">
-                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Valor percebido por perfil de decisão</h2>
-                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                        A mesma versão atual conversa com dores diferentes. A loja precisa deixar isso explícito para acelerar a leitura comercial.
-                    </p>
-                </div>
-                <div class="grid md:grid-cols-3 gap-6">
-                    <div class="bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
-                        <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center mb-4">
-                            <i class="fas fa-store"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-3">Para o dono da loja</h3>
-                        <p class="text-gray-600 text-sm leading-relaxed mb-4">
-                            O argumento principal é continuidade com controle: operação local, menos susto com internet e rota clara para crescer sem trocar de filosofia tecnológica.
-                        </p>
-                        <a href="wiki-analise-v3-1-1-free.html" class="font-semibold text-green-700 hover:text-green-800">Ver leitura comercial</a>
-                    </div>
-                    <div class="bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
-                        <div class="w-12 h-12 rounded-xl bg-blue-50 text-blue-700 flex items-center justify-center mb-4">
-                            <i class="fas fa-cash-register"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-3">Para a operação do balcão</h3>
-                        <p class="text-gray-600 text-sm leading-relaxed mb-4">
-                            Menos ruído, menos clique perdido e mais previsibilidade de uso. O foco é vender com rapidez, não ensinar o operador a sobreviver ao sistema.
-                        </p>
-                        <a href="download.html" class="font-semibold text-green-700 hover:text-green-800">Baixar para Windows, Linux ou macOS</a>
-                    </div>
-                    <div class="bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
-                        <div class="w-12 h-12 rounded-xl bg-amber-50 text-amber-700 flex items-center justify-center mb-4">
-                            <i class="fas fa-calculator"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-3">Para contador e gestão</h3>
-                        <p class="text-gray-600 text-sm leading-relaxed mb-4">
-                            O valor está na clareza fiscal e na leitura de margem. A plataforma ajuda a transformar 2026 em disciplina operacional, não em improviso.
-                        </p>
-                        <a href="wiki-fiscal.html" class="font-semibold text-green-700 hover:text-green-800">Abrir wiki fiscal</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- 3. O QUE RESOLVEMOS (dor -> benefício) -->
-    <section id="dores" class="py-16 md:py-20 bg-gray-50">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">O que resolvemos</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Dores reais do balcão — traduzidas em benefícios claros. Sem “palavrão técnico”.
-                </p>
-            </div>
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
-                <!-- Dor da Internet / Queda -->
-                <div class="bg-white rounded-2xl p-8 shadow-lg card-hover border border-gray-100">
-                    <div class="w-14 h-14 gradient-bg rounded-xl flex items-center justify-center mb-6">
-                        <i class="fas fa-wifi text-white text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Venda sem parar</h3>
-                    <p class="text-gray-600 leading-relaxed">
-                        Seu caixa continua atendendo mesmo com a internet oscilando. Vendas registradas e protegidas para você seguir trabalhando com tranquilidade.
-                    </p>
-                </div>
-
-                <!-- Dor: Sistema lento -->
-                <div class="bg-white rounded-2xl p-8 shadow-lg card-hover border border-gray-100">
-                    <div class="w-14 h-14 gradient-bg rounded-xl flex items-center justify-center mb-6">
-                        <i class="fas fa-gauge-high text-white text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Caixa rápido (fila menor)</h3>
-                    <p class="text-gray-600 leading-relaxed">
-                        Interface limpa, fluxo linear e atalhos para vender rápido. Menos cliques, menos fila, melhor experiência para o cliente.
-                    </p>
-                </div>
-                
-                <!-- Dor do Custo de Papel -->
-                <div class="bg-white rounded-2xl p-8 shadow-lg card-hover border-2 border-green-200">
-                    <div class="w-14 h-14 green-bg rounded-xl flex items-center justify-center mb-6">
-                        <i class="fas fa-leaf text-white text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Economia com recibo digital</h3>
-                    <p class="text-gray-600 leading-relaxed">
-                        Reduza gastos com bobina e manutenção. O recibo vai por link ou e-mail — mais praticidade e menos custo no fim do mês.
-                    </p>
-                </div>
-                
-                <!-- Dor: Medo da fiscalização / Reforma -->
-                <div class="bg-white rounded-2xl p-8 shadow-lg card-hover border border-gray-100">
-                    <div class="w-14 h-14 gradient-bg rounded-xl flex items-center justify-center mb-6">
-                        <i class="fas fa-shield-halved text-white text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Mais segurança fiscal</h3>
-                    <p class="text-gray-600 leading-relaxed">
-                        Você vende com mais tranquilidade: regras fiscais claras, cálculo automático e relatórios que ajudam a manter tudo organizado para a contabilidade.
-                    </p>
-                </div>
-            </div>
-
-            <div class="max-w-6xl mx-auto mt-12">
-                <div class="bg-white rounded-2xl border border-gray-200 shadow-lg overflow-hidden">
-                    <div class="grid lg:grid-cols-2 gap-0">
-                        <div class="p-8">
-                            <h3 class="text-2xl font-extrabold text-gray-900">Caixa rápido, do jeito certo</h3>
-                            <p class="text-gray-600 mt-3 leading-relaxed">
-                                O foco é reduzir atrito no balcão: entrada rápida de itens, carrinho claro e total sempre visível.
-                                Ideal para operar com consistência mesmo em horários de pico.
-                            </p>
-                            <ul class="mt-5 space-y-3 text-gray-700">
-                                <li class="flex items-start gap-3">
-                                    <i class="fas fa-bolt text-green-600 mt-1"></i>
-                                    <span><strong>Entrada rápida</strong> por código de barras/produto, com atalhos.</span>
-                                </li>
-                                <li class="flex items-start gap-3">
-                                    <i class="fas fa-cart-shopping text-green-600 mt-1"></i>
-                                    <span><strong>Carrinho organizado</strong> com preço, desconto e total da venda.</span>
-                                </li>
-                                <li class="flex items-start gap-3">
-                                    <i class="fas fa-money-bill-wave text-green-600 mt-1"></i>
-                                    <span><strong>Fechamento objetivo</strong> com opções de pagamento e validações.</span>
-                                </li>
-                            </ul>
-                            <p class="text-xs text-gray-500 mt-6">
-                                Exemplo ilustrativo da tela de cadastro de venda (PDV).
-                            </p>
-                        </div>
-                        <div class="bg-gray-50 border-t lg:border-t-0 lg:border-l border-gray-200">
-                            <img
-                                src="assets/img/caracore_pdv_tela_restrita_03_caixa.png"
-                                alt="Tela de caixa na área restrita: entrada rápida, carrinho e total"
-                                class="w-full h-full object-cover object-top"
-                                loading="lazy"
-                                decoding="async"
-                            >
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- 4. PRONTO PARA 2026 (Reforma Tributária) -->
-    <section id="fiscal" class="py-16 md:py-20 bg-white">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="max-w-4xl mx-auto">
-                <div class="text-center mb-12">
-                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Pronto para 2026</h2>
-                    <p class="text-xl text-gray-600">
-                        A Reforma Tributária chegou. O lojista só quer uma coisa: <strong>não ter problemas com o governo</strong>.
-                        Aqui o foco é clareza, cálculo correto e organização.
-                    </p>
-                </div>
-                
-                <div class="bg-gradient-to-br from-purple-50 to-indigo-50 rounded-2xl p-8 border-2 border-purple-100">
-                    <div class="grid md:grid-cols-3 gap-6 mb-8">
-                        <div class="bg-white/70 rounded-xl p-5 border border-purple-100">
-                            <div class="flex items-center gap-3 mb-2">
-                                <i class="fas fa-calculator text-purple-700"></i>
-                                <p class="font-semibold text-gray-900">Cálculo automático</p>
-                            </div>
-                            <p class="text-sm text-gray-700">Você vende. O sistema calcula. Sem planilha e sem “achismo”.</p>
-                        </div>
-                        <div class="bg-white/70 rounded-xl p-5 border border-purple-100">
-                            <div class="flex items-center gap-3 mb-2">
-                                <i class="fas fa-folder-open text-purple-700"></i>
-                                <p class="font-semibold text-gray-900">Tudo organizado</p>
-                            </div>
-                            <p class="text-sm text-gray-700">Relatórios e rastreabilidade para apoiar sua contabilidade e auditoria.</p>
-                        </div>
-                        <div class="bg-white/70 rounded-xl p-5 border border-purple-100">
-                            <div class="flex items-center gap-3 mb-2">
-                                <i class="fas fa-shield-halved text-purple-700"></i>
-                                <p class="font-semibold text-gray-900">Menos sustos</p>
-                            </div>
-                            <p class="text-sm text-gray-700">Mais previsibilidade para trabalhar em paz no dia a dia.</p>
-                        </div>
-                    </div>
-
-                    <p class="text-gray-700 mb-4">
-                        <strong>2026 — Fase de teste:</strong> CBS 0,9% e IBS 0,1%. A partir de 2027: extinção de PIS/COFINS e transição gradual até 2033.
-                    </p>
-                    <div class="overflow-x-auto">
-                        <table class="min-w-full text-sm border border-gray-200 rounded-lg overflow-hidden">
-                            <thead class="bg-purple-100">
-                                <tr>
-                                    <th class="px-4 py-2 text-left font-semibold text-gray-800">Ano</th>
-                                    <th class="px-4 py-2 text-left font-semibold text-gray-800">CBS</th>
-                                    <th class="px-4 py-2 text-left font-semibold text-gray-800">IBS</th>
-                                    <th class="px-4 py-2 text-left font-semibold text-gray-800">Observação</th>
-                                </tr>
-                            </thead>
-                            <tbody class="bg-white divide-y divide-gray-100">
-                                <tr><td class="px-4 py-2">2026</td><td>0,9%</td><td>0,1%</td><td>Fase de teste</td></tr>
-                                <tr><td class="px-4 py-2">2027</td><td>12%</td><td>12%</td><td>Extinção PIS/COFINS</td></tr>
-                                <tr><td class="px-4 py-2">2028</td><td>12,5%</td><td>12,5%</td><td>Transição</td></tr>
-                                <tr><td class="px-4 py-2">2029</td><td>13%</td><td>13%</td><td>Transição gradual</td></tr>
-                                <tr><td class="px-4 py-2">2030</td><td>13,5%</td><td>13,5%</td><td>Transição</td></tr>
-                                <tr><td class="px-4 py-2">2031</td><td>14%</td><td>14%</td><td>Transição</td></tr>
-                                <tr><td class="px-4 py-2">2032</td><td>14,5%</td><td>14,5%</td><td>Transição</td></tr>
-                                <tr><td class="px-4 py-2">2033</td><td>15%</td><td>15%</td><td>Conclusão</td></tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <p class="text-gray-600 text-sm mt-4">
-                        Quer entender em linguagem simples? Veja a <a href="wiki-fiscal.html" class="text-purple-600 hover:underline">Wiki Fiscal</a>.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- 5. PLANOS (benefícios e ROI) -->
-    <section id="planos" class="py-16 md:py-20 bg-gray-50">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Planos: retorno que compensa</h2>
-                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Escolha o que faz sentido para o tamanho e a maturidade do seu negócio.</p>
-            </div>
-            
             <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                <!-- Plano Free -->
-                <div class="bg-white rounded-2xl p-8 shadow-lg border-2 border-gray-200">
-                    <div class="flex items-center justify-between mb-6">
-                        <h3 class="text-2xl font-bold text-gray-900">Plano Free</h3>
+                <div class="bg-white rounded-2xl p-8 border-2 border-gray-200">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-2xl font-bold text-gray-900">Free</h3>
                         <span class="text-2xl font-bold text-gray-900">R$ 0</span>
                     </div>
-                    <p class="text-gray-600 mb-6">Para validar o produto em campo, com limites claros e sem compromisso inicial.</p>
+                    <p class="text-gray-600 mb-6">Teste real no computador da loja. Canal público atual: <strong>v3.2.2-free</strong>.</p>
                     <ul class="space-y-3 text-gray-700 mb-8">
-                        <li class="flex items-center"><i class="fas fa-check text-green-600 mr-3"></i>Até 100 vendas por mês para teste real</li>
-                        <li class="flex items-center"><i class="fas fa-check text-green-600 mr-3"></i>Operação local com SQLite (Windows, Linux e macOS)</li>
-                        <li class="flex items-center"><i class="fas fa-check text-green-600 mr-3"></i>1 operador de caixa e até 100 produtos</li>
-                        <li class="flex items-center"><i class="fas fa-check text-green-600 mr-3"></i>Recibo digital e base comercial para começar</li>
+                        <li class="flex items-start"><i class="fas fa-check text-green-600 mr-3 mt-1"></i>Até 100 vendas por mês</li>
+                        <li class="flex items-start"><i class="fas fa-check text-green-600 mr-3 mt-1"></i>SQLite local · Windows, Linux e macOS</li>
+                        <li class="flex items-start"><i class="fas fa-check text-green-600 mr-3 mt-1"></i>1 operador e até 100 produtos</li>
                     </ul>
-                    <p class="text-sm text-gray-500 mb-6">Sem PIX integrado e sem emissão fiscal na degustação.</p>
-                    <a href="download.html" class="block w-full text-center bg-gray-200 text-gray-800 py-3 rounded-lg font-semibold hover:bg-gray-300 transition">Conhecer Free</a>
+                    <p class="text-sm text-gray-500 mb-4">Sem PIX integrado e sem emissão fiscal na degustação.</p>
+                    <a href="download.html" class="text-green-700 font-semibold hover:text-green-800">Baixar Free</a>
                 </div>
-                
-                <!-- Plano Premium -->
-                <div class="bg-white rounded-2xl p-8 shadow-xl border-2 border-green-400 relative card-hover">
+                <div class="bg-white rounded-2xl p-8 border-2 border-green-400 relative shadow-lg">
                     <span class="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 green-bg text-white text-sm font-semibold rounded-full">Recomendado</span>
-                    <div class="flex items-center justify-between mb-6 mt-2">
-                        <h3 class="text-2xl font-bold text-gray-900">Plano Premium</h3>
+                    <div class="flex items-center justify-between mb-4 mt-2">
+                        <h3 class="text-2xl font-bold text-gray-900">Premium</h3>
                         <div><span class="text-2xl font-bold text-gray-900">R$ 79,90</span><span class="text-gray-500 text-sm">/mês</span></div>
                     </div>
-                    <p class="text-gray-600 mb-6">Para quem quer sair da validação e estruturar uma operação mais completa, com mais automação comercial e suporte.</p>
+                    <p class="text-gray-600 mb-6">Operação sem o teto da degustação, com PIX e suporte.</p>
                     <ul class="space-y-3 text-gray-700 mb-8">
-                        <li class="flex items-center"><i class="fas fa-check text-green-600 mr-3"></i>Expansão da operação além dos limites da degustação</li>
-                        <li class="flex items-center"><i class="fas fa-check text-green-600 mr-3"></i>Integração PIX no sistema para a rotina da loja</li>
-                        <li class="flex items-center"><i class="fas fa-check text-green-600 mr-3"></i>Mais operadores e estrutura para crescer sem perder simplicidade</li>
-                        <li class="flex items-center"><i class="fas fa-check text-green-600 mr-3"></i>Relatórios para apoiar contador e auditoria</li>
-                        <li class="flex items-center"><i class="fas fa-check text-green-600 mr-3"></i>Recibos digitais sem dor de cabeça</li>
-                        <li class="flex items-center"><i class="fas fa-check text-green-600 mr-3"></i>Suporte prioritário</li>
-                        <li class="flex items-center"><i class="fas fa-check text-green-600 mr-3"></i><strong>Premium+</strong>: integração Android (SMS) com configuração técnica e LGPD</li>
+                        <li class="flex items-start"><i class="fas fa-check text-green-600 mr-3 mt-1"></i>Vendas ilimitadas no mês</li>
+                        <li class="flex items-start"><i class="fas fa-check text-green-600 mr-3 mt-1"></i>PIX no fluxo do caixa</li>
+                        <li class="flex items-start"><i class="fas fa-check text-green-600 mr-3 mt-1"></i>Mais operadores e relatórios para o contador</li>
                     </ul>
-                    <a href="#demo" class="block w-full text-center green-bg text-white py-3 rounded-lg font-semibold hover:shadow-lg transition">Solicitar Demo Premium</a>
+                    <a href="consultoria.html" class="block w-full text-center green-bg text-white py-3 rounded-lg font-semibold hover:shadow-lg transition">Agendar demonstração</a>
                     <p class="text-sm text-gray-500 mt-4 text-center">A economia com papel costuma cobrir a mensalidade.</p>
                 </div>
             </div>
         </div>
     </section>
-    
-    <!-- CTA -->
+
     <section id="demo" class="py-20 green-bg">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="max-w-3xl mx-auto text-center text-white">
-                <h2 class="text-3xl md:text-4xl font-bold mb-6">Vamos até você.</h2>
+            <div class="max-w-2xl mx-auto text-center text-white">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Vamos até você.</h2>
                 <p class="text-xl text-green-50 mb-8">
-                    Agende uma demonstração presencial e valide, no ritmo da sua operação, se o CaraCore-PDV cobre o básico necessário para uma pequena loja: venda rápida, menos susto no caixa e mais previsibilidade no dia.
+                    Demonstração presencial no ritmo da sua loja: venda, fila, recibo e fechamento.
                 </p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="consultoria.html" class="bg-white text-green-700 px-8 py-4 rounded-lg font-bold text-lg hover:bg-green-50 transition shadow-lg">
-                        Agende uma Demonstração Presencial
-                    </a>
-                    <a href="wiki-validacao-cliente-pequeno.html" class="bg-green-900/30 border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-green-700 transition">
-                        Ver plano de validação
-                    </a>
-                    <a href="wiki-analise-v3-1-1-free.html" class="bg-green-900/30 border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-green-700 transition">
-                        Ver Análise Comercial
-                    </a>
-                    <a href="canal-feedback.html" class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-green-700 transition">
-                        Abrir Canal de Contato
-                    </a>
-                </div>
-                <p class="text-sm text-green-50/90 mt-6">
-                    Não atendemos ligações. Use o <a href="canal-feedback.html" class="underline hover:text-white">canal interno de contato</a> da loja para falar com a equipe por escrito.
+                <a href="consultoria.html" class="inline-flex items-center justify-center bg-white text-green-700 px-10 py-4 rounded-lg font-bold text-lg hover:bg-green-50 transition shadow-lg">
+                    Agende uma Demonstração Presencial
+                </a>
+                <p class="text-sm text-green-100 mt-6">
+                    Não atendemos ligações. <a href="canal-feedback.html" class="underline hover:text-white">Escreva pelo canal da loja</a>.
                 </p>
             </div>
         </div>
     </section>
-    
-    <!-- Footer -->
+
     <footer class="bg-gray-900 text-gray-300 py-12">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-3 gap-8 mb-8">
                 <div>
-                    <div class="flex items-center space-x-3 mb-4">
-                        <div class="w-10 h-10 green-bg rounded-lg flex items-center justify-center"><i class="fas fa-cash-register text-white"></i></div>
-                        <div>
-                            <h3 class="text-white font-bold">Cara Core</h3>
-                            <p class="text-xs">Informática</p>
-                        </div>
-                    </div>
-                    <p class="text-sm text-gray-400">Soluções de PDV com foco em ROI, sustentabilidade e conformidade fiscal para o varejo brasileiro.</p>
+                    <p class="text-white font-bold mb-2">Cara Core Informática</p>
+                    <p class="text-sm text-gray-400">PDV desktop local. Duas linhas convivem: esta loja Java e o piloto <a href="https://pdv-rust.caracore.com.br/" class="text-green-400 hover:text-white">Rust</a>. Nenhuma substitui a outra.</p>
                 </div>
                 <div>
-                    <h4 class="text-white font-bold mb-4">Contato</h4>
-                    <ul class="space-y-3 text-sm">
-                        <li class="flex items-center"><i class="fas fa-comments w-5 mr-3 text-green-400"></i><a href="canal-feedback.html" class="hover:text-white">Canal de contato da loja</a></li>
-                        <li class="flex items-center"><i class="fas fa-book-open w-5 mr-3 text-green-400"></i><a href="wiki-analise-v3-1-1-free.html" class="hover:text-white">Análise comercial</a></li>
-                        <li class="flex items-center"><i class="fas fa-headset w-5 mr-3 text-green-400"></i><a href="consultoria.html" class="hover:text-white">Implantação e demonstração</a></li>
+                    <h3 class="text-white font-bold mb-3">Nesta loja</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="download.html" class="hover:text-white">Download Free</a></li>
+                        <li><a href="consultoria.html" class="hover:text-white">Demonstração e implantação</a></li>
+                        <li><a href="wiki-fiscal.html" class="hover:text-white">Wiki Fiscal</a></li>
+                        <li><a href="tecnologia.html" class="hover:text-white">Tecnologia</a></li>
+                        <li><a href="roadmap-2026.html" class="hover:text-white">Candidato v4</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="text-white font-bold mb-4">Navegação</h4>
+                    <h3 class="text-white font-bold mb-3">Contato</h3>
                     <ul class="space-y-2 text-sm">
-                        <li><a href="#economia" class="hover:text-white">Economia</a></li>
-                        <li><a href="#dores" class="hover:text-white">O que resolvemos</a></li>
-                        <li><a href="#jornada" class="hover:text-white">Jornada visual</a></li>
-                        <li><a href="#fiscal" class="hover:text-white">Pronto para 2026</a></li>
-                        <li><a href="roadmap-2026.html" class="hover:text-white">Roadmap do PDV v4</a></li>
-                        <li><a href="pwa.html" class="hover:text-white">PWA da loja</a></li>
-                        <li><a href="#planos" class="hover:text-white">Planos</a></li>
-                        <li><a href="wiki-analise-v3-1-1-free.html" class="hover:text-white">Análise comercial</a></li>
-                        <li><a href="consultoria.html" class="hover:text-white">Consultoria</a></li>
+                        <li><a href="canal-feedback.html" class="hover:text-white">Canal da loja</a></li>
+                        <li><a href="mailto:suporte@caracore.com.br" class="hover:text-white">suporte@caracore.com.br</a></li>
+                        <li><a href="https://www.caracore.com.br/portfolio.html#caracore-pdv" class="hover:text-white" rel="noopener">Portfólio</a></li>
                     </ul>
                 </div>
             </div>
-            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
-                <p class="text-sm text-gray-400">&copy; 2024–2026 Cara Core Informática. <a href="https://www.caracore.com.br/portfolio.html#caracore-pdv" class="hover:text-white" rel="noopener">Portfólio</a> · <a href="https://www.caracore.com.br/portfolio.html#pdv-coexistencia" class="hover:text-white" rel="noopener">Duas linhas PDV</a></p>
-                <p class="text-sm text-gray-400 mt-2">Cara Core Informática · CNPJ 23.969.028/0001-37 · <a href="https://www.caracore.com.br/" class="hover:text-white">www.caracore.com.br</a> · <a href="mailto:suporte@caracore.com.br" class="hover:text-white">suporte@caracore.com.br</a></p>
-                <p class="text-xs text-gray-500 mt-2 md:mt-0">Selo CaraCore de Sustentabilidade — exclusivo.</p>
+            <div class="border-t border-gray-800 pt-6 text-sm text-gray-400">
+                <p>&copy; 2024–2026 Cara Core Informática · CNPJ 23.969.028/0001-37 · <a href="https://www.caracore.com.br/" class="hover:text-white">www.caracore.com.br</a></p>
             </div>
         </div>
     </footer>
 
-    <!-- Convite discreto: Programa de Parceiros (canto inferior direito) -->
     <a href="https://wiki.caracore.com.br/pdv/representantes.html"
        class="group fixed bottom-5 right-5 z-50 flex items-center gap-3 rounded-full border border-slate-700 bg-slate-900/90 px-4 py-3 shadow-lg backdrop-blur-sm transition hover:bg-slate-900 focus:outline-none focus:ring-2 focus:ring-emerald-400"
        aria-label="Represente a Tecnologia Cara Core">
-        <!-- Ícone SVG (handshake) -->
         <svg class="h-5 w-5 text-emerald-300" viewBox="0 0 24 24" fill="none" aria-hidden="true">
             <path d="M16 17l-1.2 1.2a2.2 2.2 0 0 1-3.1 0L10 16.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
             <path d="M8 15l1.2-1.2a2.2 2.2 0 0 1 3.1 0L14 15.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
             <path d="M2 12l5-5 4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
             <path d="M22 12l-5-5-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
-
-        <span class="hidden sm:inline text-sm font-semibold text-slate-100">
-            Represente a Tecnologia Cara Core
-        </span>
-
-        <!-- Tooltip -->
-        <span class="pointer-events-none absolute bottom-full right-0 mb-3 w-72 translate-y-1 rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 text-xs text-slate-200 opacity-0 shadow-xl transition group-hover:translate-y-0 group-hover:opacity-100">
-            <span class="font-semibold text-white">Seja nosso parceiro oficial:</span>
-            Transparência total e ganhos recorrentes.
-        </span>
+        <span class="hidden sm:inline text-sm font-semibold text-slate-100">Represente a Tecnologia Cara Core</span>
     </a>
-    
+
     <script>
         var m=document.getElementById('mobile-menu-button'),n=document.getElementById('mobile-menu');
         if(m&&n){m.addEventListener('click',function(){n.classList.toggle('hidden');});}
@@ -803,6 +310,3 @@
     <script src="assets/js/pwa.js"></script>
 </body>
 </html>
-
-
-

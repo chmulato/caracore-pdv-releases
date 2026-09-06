@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Soluções CaraCore-PDV para pequena operação: caixa local em Windows, menor dependência de internet, recibo digital e base para validar o básico do negócio.">
-    <title>Soluções | CaraCore-PDV</title>
+    <meta name="description" content="Qualidades do CaraCore-PDV: caixa local, venda sem internet, recibo digital e fechamento organizado.">
+    <title>Qualidades do PDV | CaraCore-PDV</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,140 +13,87 @@
     <link rel="stylesheet" href="assets/css/portal-style.css">
 </head>
 <body class="smooth-scroll bg-gray-50">
-    
     <header class="portal-header bg-white shadow-sm sticky top-0 z-50">
-        <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8" aria-label="Menu da loja">
             <div class="flex justify-between items-center h-20">
-                <div class="flex items-center space-x-3">
-                    <a href="index.html" class="flex items-center space-x-3">
-                        <div class="w-12 h-12 green-bg rounded-lg flex items-center justify-center"><i class="fas fa-cash-register text-white text-xl"></i></div>
-                        <div><h1 class="text-xl font-bold text-gray-900">Cara Core</h1><p class="text-xs text-gray-600">Informática</p></div>
-                    </a>
-                </div>
-                <div class="hidden md:flex items-center space-x-6">
-                    <a href="index.html#economia" class="text-gray-700 hover:text-green-600 font-medium">Economia</a>
+                <a href="index.html" class="flex items-center space-x-3">
+                    <div class="w-12 h-12 green-bg rounded-lg flex items-center justify-center"><i class="fas fa-cash-register text-white text-xl" aria-hidden="true"></i></div>
+                    <div>
+                        <p class="text-xl font-bold text-gray-900">CaraCore PDV</p>
+                        <p class="text-xs text-gray-600">Operação de venda sem ruído</p>
+                    </div>
+                </a>
+                <div class="hidden lg:flex items-center space-x-6">
                     <a href="index.html#dores" class="text-gray-700 hover:text-green-600 font-medium">O que resolvemos</a>
-                    <a href="index.html#fiscal" class="text-gray-700 hover:text-green-600 font-medium">Pronto para 2026</a>
-                    <a href="roadmap-2026.html" class="text-gray-700 hover:text-green-600 font-medium">PDV v4</a>
+                    <a href="index.html#jornada" class="text-gray-700 hover:text-green-600 font-medium">Como funciona</a>
+                    <a href="index.html#economia" class="text-gray-700 hover:text-green-600 font-medium">Economia</a>
                     <a href="index.html#planos" class="text-gray-700 hover:text-green-600 font-medium">Planos</a>
-                    <a href="wiki-fiscal.html" class="text-gray-700 hover:text-green-600 font-medium">Wiki Fiscal</a>
-                    <a href="tecnologia.html" class="text-green-600 font-semibold">Soluções</a>
-                    <a href="readme.html" class="text-gray-700 hover:text-green-600 font-medium">Documentação</a>
-                    <a href="download.html" class="text-gray-700 hover:text-green-600 font-medium">Baixar v3.2.2-free</a>
-                    <a href="consultoria.html" class="text-gray-700 hover:text-green-600 font-medium">Consultoria</a>
-                    <a href="index.html#demo" class="green-bg text-white px-6 py-2 rounded-lg font-semibold">Demonstração Presencial</a>
+                    <a href="consultoria.html" class="green-bg text-white px-6 py-2 rounded-lg font-semibold">Agendar demonstração</a>
                 </div>
-                <button id="mobile-menu-button" class="md:hidden text-gray-700" aria-label="Menu"><i class="fas fa-bars text-2xl"></i></button>
+                <button id="mobile-menu-button" class="lg:hidden text-gray-700" aria-label="Abrir menu"><i class="fas fa-bars text-2xl"></i></button>
             </div>
-            <div id="mobile-menu" class="hidden md:hidden pb-4">
+            <div id="mobile-menu" class="hidden lg:hidden pb-4">
                 <div class="flex flex-col space-y-3">
-                    <a href="index.html#economia" class="text-gray-700 hover:text-green-600 font-medium py-2">Economia</a>
-                    <a href="index.html#dores" class="text-gray-700 hover:text-green-600 font-medium py-2">O que resolvemos</a>
-                    <a href="index.html#fiscal" class="text-gray-700 hover:text-green-600 font-medium py-2">Pronto para 2026</a>
-                    <a href="roadmap-2026.html" class="text-gray-700 hover:text-green-600 font-medium py-2">PDV v4</a>
-                    <a href="index.html#planos" class="text-gray-700 hover:text-green-600 font-medium py-2">Planos</a>
-                    <a href="wiki-fiscal.html" class="text-gray-700 hover:text-green-600 font-medium py-2">Wiki Fiscal</a>
-                    <a href="tecnologia.html" class="text-green-600 font-semibold py-2">Soluções</a>
-                    <a href="readme.html" class="text-gray-700 hover:text-green-600 font-medium py-2">Documentação</a>
-                    <a href="download.html" class="text-gray-700 hover:text-green-600 font-medium py-2">Baixar v3.2.2-free</a>
-                    <a href="consultoria.html" class="text-gray-700 hover:text-green-600 font-medium py-2">Consultoria</a>
-                    <a href="index.html#demo" class="green-bg text-white px-6 py-2 rounded-lg font-semibold text-center">Demonstração Presencial</a>
+                    <a href="index.html#dores" class="text-gray-700 font-medium py-2">O que resolvemos</a>
+                    <a href="index.html#jornada" class="text-gray-700 font-medium py-2">Como funciona</a>
+                    <a href="index.html#economia" class="text-gray-700 font-medium py-2">Economia</a>
+                    <a href="index.html#planos" class="text-gray-700 font-medium py-2">Planos</a>
+                    <a href="consultoria.html" class="green-bg text-white px-6 py-3 rounded-lg font-semibold text-center">Agendar demonstração</a>
                 </div>
             </div>
         </nav>
     </header>
-    
-    <section class="portal-hero green-bg text-white py-12">
+
+    <section class="portal-hero green-bg text-white py-16">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="max-w-4xl mx-auto text-center">
-                <h1 class="text-4xl md:text-5xl font-bold mb-4">Soluções CaraCore</h1>
-                <p class="text-xl text-green-50">Pilares da oferta pública atual para pequena operação: caixa local em Windows, menor dependência de internet, recibo digital e estrutura para validar o básico antes de ampliar a operação.</p>
+            <div class="max-w-3xl mx-auto text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">Qualidades do PDV no balcão</h1>
+                <p class="text-xl text-green-50">Desktop no computador da loja. Sem nuvem para vender. Sem aula de stack.</p>
             </div>
         </div>
     </section>
-    
-    <main class="page-shell container mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        
-        <div id="fluxo-continuo" class="sol-card">
-            <h2 class="text-2xl font-bold text-gray-900 mb-4"><i class="fas fa-water text-blue-500 me-2"></i>Tecnologia de Fluxo Contínuo</h2>
-            <p class="text-gray-700 leading-relaxed">
-                O caixa segue funcionando mesmo quando a internet oscila ou cai. Para a pequena loja, isso significa menos susto em horário de pico e mais previsibilidade no balcão.
-            </p>
-        </div>
-        
-        <div id="blindagem-dados" class="sol-card">
-            <h2 class="text-2xl font-bold text-gray-900 mb-4"><i class="fas fa-database text-green-600 me-2"></i>Blindagem de Dados Local</h2>
-            <p class="text-gray-700 leading-relaxed">
-                Seus dados de vendas, produtos e clientes ficam protegidos no próprio ambiente da loja. Isso ajuda quem quer controle e previsibilidade, sem depender totalmente de nuvem para trabalhar no dia a dia.
-            </p>
-        </div>
-        
-        <div id="motor-inteligencia" class="sol-card">
-            <h2 class="text-2xl font-bold text-gray-900 mb-4"><i class="fas fa-brain text-purple-600 me-2"></i>Motor de Inteligência CaraCore</h2>
-            <p class="text-gray-700 leading-relaxed">
-                Cálculo automático de impostos em linha com a Reforma Tributária 2026–2033. Para o pequeno negócio, o valor aqui é reduzir insegurança fiscal e melhorar a leitura do que está acontecendo na venda.
-            </p>
-        </div>
-        
-        <div id="selo-verde" class="sol-card">
-            <h2 class="text-2xl font-bold text-gray-900 mb-4"><i class="fas fa-leaf text-green-600 me-2"></i>Tecnologia Selo Verde</h2>
-            <p class="text-gray-700 leading-relaxed">
-                Recibo digital em vez de bobina: menos gasto com papel e menos dor com impressora térmica. O cliente recebe o comprovante por link ou e-mail. Sustentabilidade aqui importa porque também vira economia no caixa.
-            </p>
-        </div>
-        
-        <div id="app-desktop" class="sol-card">
-            <h2 class="text-2xl font-bold text-gray-900 mb-4"><i class="fas fa-desktop text-indigo-600 me-2"></i>Desktop local para operação de balcão</h2>
-            <p class="text-gray-700 leading-relaxed">
-                A oferta pública atual é a <strong>v3.2.2-free</strong>, com pacotes portáteis para <strong>Windows, Linux e macOS</strong>, backend local e <strong>SQLite</strong> no computador da loja. Há também a <a href="pwa.html">PWA da loja</a> (vitrine, não o caixa). O próximo marco é o <strong>v4</strong>, previsto para 08 de novembro de 2026, com Quarkus, web/PWA local e launcher — ainda em homologação. <a href="roadmap-2026.html">Consulte o roadmap e os gates de publicação.</a>
-            </p>
-        </div>
 
-        <div id="infra-externa" class="sol-card">
-            <h2 class="text-2xl font-bold text-gray-900 mb-4"><i class="fas fa-plug text-amber-600 me-2"></i>Infraestruturas externas (PIX e SEFAZ)</h2>
-            <p class="text-gray-700 leading-relaxed">
-                O PDV conecta-se a serviços que ficam fora do controle da Cara Core: <strong>gateways de pagamento (PIX)</strong> e <strong>Web Services da SEFAZ</strong>. A mensagem importante para a pequena loja é simples: o sistema foi desenhado para lidar melhor com oscilação e contingência, sem transformar isso em promessa irreal sobre serviços externos.
-            </p>
+    <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            <article class="rounded-2xl bg-white border border-gray-100 p-8">
+                <h2 class="text-xl font-bold text-gray-900 mb-2">O caixa não para</h2>
+                <p class="text-gray-600">Vendas ficam no SQLite local. Internet instável não trava o atendimento.</p>
+            </article>
+            <article class="rounded-2xl bg-white border border-gray-100 p-8">
+                <h2 class="text-xl font-bold text-gray-900 mb-2">Venda rápida</h2>
+                <p class="text-gray-600">Código, carrinho, pagamento e troco no mesmo fluxo. Menos fila no pico.</p>
+            </article>
+            <article class="rounded-2xl bg-white border-2 border-green-200 p-8">
+                <h2 class="text-xl font-bold text-gray-900 mb-2">Recibo sem papel</h2>
+                <p class="text-gray-600">Link ou e-mail. Sem bobina, sem manutenção de impressora térmica.</p>
+            </article>
+            <article class="rounded-2xl bg-white border border-gray-100 p-8">
+                <h2 class="text-xl font-bold text-gray-900 mb-2">Fechamento claro</h2>
+                <p class="text-gray-600">Caixa do turno e relatório do dia. O contador acha o número sem planilha.</p>
+            </article>
         </div>
-        
-        <div id="sms-premium-plus" class="sol-card">
-            <h2 class="text-2xl font-bold text-gray-900 mb-4"><i class="fas fa-sms text-red-600 me-2"></i>Premium+ (Android + SMS com LGPD)</h2>
-            <p class="text-gray-700 leading-relaxed">
-                Para operações que precisam de um canal alternativo em situações críticas, existe a integração com o módulo <code>android-sms-enviar</code>.
-                Um celular Android dedicado fica conectado ao Windows (USB/ADB) para envio de SMS quando necessário.
-            </p>
-            <p class="text-gray-700 leading-relaxed mt-3">
-                A configuração exige <strong>visita técnica</strong> para preparar o dispositivo e garantir procedimentos compatíveis com a LGPD (consentimento e uso estritamente necessário).
-            </p>
-        </div>
-        
-        <div class="mt-8 p-6 bg-green-50 border border-green-200 rounded-xl">
-            <p class="text-gray-700 text-center">
-                <strong class="text-green-800">Leitura correta da oferta atual:</strong> primeiro validar se o produto atende o básico necessário da pequena operação; depois ampliar estrutura, integrações e suporte.
-            </p>
-        </div>
-        
-        <div class="mt-10 text-center space-x-3">
-            <a href="wiki-validacao-cliente-pequeno.html" class="inline-flex items-center bg-white text-green-700 border border-green-600 px-6 py-3 rounded-lg font-semibold hover:bg-green-50 transition">
-                <i class="fas fa-clipboard-check me-2"></i>Validar perfil da loja
+        <p class="max-w-4xl mx-auto text-center text-sm text-gray-500 mt-10">
+            Canal público: <strong>v3.2.2-free</strong> (Windows, Linux e macOS). PIX e emissão fiscal entram no Premium.
+            Detalhe tributário: <a href="wiki-fiscal.html" class="text-green-700 font-semibold">Wiki Fiscal</a>.
+        </p>
+        <div class="text-center mt-10">
+            <a href="consultoria.html" class="inline-flex items-center green-bg text-white px-10 py-4 rounded-lg font-bold text-lg hover:shadow-lg transition">
+                Agendar demonstração
             </a>
-            <a href="index.html#demo" class="inline-flex items-center green-bg text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition">
-                <i class="fas fa-calendar-check me-2"></i>Solicitar Demonstração
-            </a>
+            <p class="mt-4 text-sm text-gray-600">
+                <a href="download.html" class="text-green-700 font-semibold hover:text-green-800">Baixar Free</a>
+            </p>
         </div>
     </main>
-    
-    <footer class="bg-gray-900 text-gray-300 py-8 mt-12">
-        <div class="container mx-auto px-4 text-center">
-            <p class="text-sm text-gray-400">&copy; 2024–2026 Cara Core Informática. Todos os direitos reservados.</p>
+
+    <footer class="bg-gray-900 text-gray-400 py-8">
+        <div class="container mx-auto px-4 text-sm text-center">
+            <p>&copy; 2024–2026 Cara Core Informática · <a href="index.html" class="text-green-400 hover:text-white">Voltar à loja</a></p>
         </div>
     </footer>
-    
     <script>
         var m=document.getElementById('mobile-menu-button'),n=document.getElementById('mobile-menu');
         if(m&&n) m.addEventListener('click',function(){n.classList.toggle('hidden');});
     </script>
 </body>
 </html>
-
-
