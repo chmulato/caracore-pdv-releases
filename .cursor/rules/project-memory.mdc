@@ -6,38 +6,53 @@ alwaysApply: true
 # Memória da Loja — caracore-pdv-releases
 
 ## Repositório e papel
-- **caracore-pdv-releases:** loja (vitrine e releases) do **CaraCore PDV Desktop (Java · JavaFX)**.
+- **caracore-pdv-releases:** loja (vitrine, download e feedback) do **CaraCore PDV Desktop (Java)**.
 - **URL:** https://pdv.caracore.com.br/
 - **Publicação:** GitHub Pages a partir da pasta **docs/**.
-- **Oficina:** caracore-pdv (Java 25, Quarkus, JavaFX).
-- **Matriz:** caracore-site — `#caracore-pdv` · `#pdv-coexistencia` · footer loja → portfólio.
+- **Oficina:** caracore-pdv (Java 25 · Quarkus). Canal Free publicado ainda é JavaFX `v3.2.2-free`. Candidato v4 = Qute `v4.0.0-rc1` (pré-release; T032 aberto).
+- **Matriz:** caracore-site — `#caracore-pdv` · `#pdv-coexistencia`.
+
+## CTA e copy (05/09/2026)
+- CTA primário: **Agendar demonstração presencial** → `consultoria.html` → `canal-feedback.html`.
+- Quatro qualidades: SQLite offline, checkout mais rápido, recibo digital, fechamento organizado.
+- Menu do produto: O que resolvemos · Como funciona · Economia · Planos · **Versões** · Agendar demonstração.
+- **Versões** (`versoes.html`): um produto, números de release. Atual = 3.2.2-free. Próxima = 4.0.0-rc1. Sem “canal” vs “candidato” na vitrine.
+- Sem depoimento inventado. Sem % de economia inventada.
+- PWA da loja (`pwa.html`) = vitrine/atalho, **não** é o caixa.
+
+## Planos (alinhar com `PlanoLicencaService` da oficina)
+- **Free (R$ 0):** 100 vendas/mês, 100 produtos, 1 operador, 4 vendedores, 1 loja, 10 SMS recibo/mês; sem PIX; sem emissão fiscal.
+- **Premium (R$ 79,90/mês):** vendas ilimitadas, PIX no caixa, mais operadores, relatório ao contador, suporte prioritário.
+- Fonte de verdade dos tetos: oficina `pdv-apps/.../PlanoLicencaService.java`. Não inventar outros números.
 
 ## Linha Rust (coexistência — não substituição)
-- **PDV Desktop (Rust + Tauri 2):** https://pdv-rust.caracore.com.br/
-- **Oficina Rust:** caracore-pdv-rust · release **v0.1.2** (piloto Windows).
-- **Wiki institucional:** caracore-wiki — `projeto-pdv.html` (hub duas linhas).
-- Esta loja deve manter banner/texto de coexistência (`docs/wiki/index.html`, `docs/wiki/projeto-pdv.html`).
+- **PDV Desktop (Rust + Tauri 2):** https://pdv-rust.caracore.com.br/ · **v0.1.2** piloto Windows.
+- Download Rust = tag **v0.1.2** em `chmulato/caracore-pdv-releases` — **nunca** `/releases/latest`.
+- Teto Rust piloto = **100 vendas na vida**, não por mês. Não misturar com o Free Java.
 
-## Mensagem de produto (fixa)
-- **CaraCore PDV Desktop (Java · JavaFX)** — aplicativo **desktop** multi-plataforma (Windows · Linux · macOS).
-- Canal público atual: **v3.2.2-free**. SQLite local, operação Bunker, planos Free/Premium. Requisito: Java 25+.
-- Wiki da loja: oferta atual = v3.2.2-free (não v1.0.13 / v3.1.1 como se fossem vigentes).
-- **PDV Rust:** pdv-rust.caracore.com.br · v0.1.2 · download = tag v0.1.2 em `caracore-pdv-releases` (**nunca** `/latest`).
+## Mensagem de produto
+- Versão atual do download: **3.2.2-free** (ZIP Windows/Linux/macOS). Requisito: Java 25+.
+- Nomes reais dos ZIP: `caracore-pdv-v3.2.2-free-free-{windows,linux,macos}-x64.zip`.
+- **4.0.0-rc1** é a próxima versão (prévia). Não é outro produto. Publicação plena prevista 08/11/2026 se T032 passar.
 - **V3 (negócio):** PME, PIX Split 2027 — posicionamento comercial; **não** confundir com a linha Rust (v0.1.x).
-- **Evitar:** dizer que Java será descontinuado; usar "PDV v3" para a linha Rust.
+- **Evitar:** Java descontinuado; “PDV v3” para a linha Rust; “nova geração”; “substitui”.
 
 ## Estrutura do site (docs/)
-- **index.html** — Portal da loja
-- **download.html** — Download oficial
-- **tecnologia.html** — Stack e requisitos
-- **wiki/** — Documentação de produto (projeto-pdv.html, trilhas cliente/suporte/contador)
+- **index.html** — Portal (qualidades + planos + CTA demonstração)
+- **download.html** — Download oficial Free + lead
+- **consultoria.html** — Agendar demonstração
+- **tecnologia.html** — Qualidades (não stack/SMS)
 - **canal-feedback.html** — Contato
+- **versoes.html** — lista de versões do produto (no menu)
+- Fora do menu: notas **só das versões atuais** (`wiki-release-v3-2-2-free.html`, `wiki-release-v4-0-0-rc1.html`), roadmap, PWA. `installers.html` → Versões.
+- **Sem wiki na loja.** Manuais, trilhas e guia fiscal vivem em `wiki.caracore.com.br` (`projeto-pdv.html`, `pdv/`). URLs antigas `wiki-*.html` da loja redirecionam.
 
-## Releases
-- Tags `v*` no GitHub Releases (ex.: v3.2.2-free).
-- Artefatos gerados pela oficina caracore-pdv (jpackage / empacotamento desktop).
+## Identidade visual (05/09/2026)
+- Uma loja, um visual: Inter + verde esmeralda (`#059669` / `#10b981`) + fundo claro + cabeçalho CaraCore PDV + rodapé cinza.
+- Vitrine: Tailwind + `assets/css/portal-style.css`.
+- Documentos (v3.2.2-free, v4 RC1, roadmap, canal, instaladores): o mesmo chrome + `assets/css/loja.css` (tema claro). Sem o tema escuro/ouro antigo.
+- Menu e marca iguais em todas as páginas públicas.
 
 ## Convenções
-- Ao alterar versão ou mensagem, alinhar com **oficina** (caracore-pdv) e **matriz** (portfólio/ecossistema).
-- Referenciar loja Rust como **PDV Desktop** complementar, nunca como substituto.
-- Documentos de ecossistema na matriz: ECOSYSTEM_CARA_CORE.md, ECOSYSTEM_LOJAS.md.
+- Ao alterar versão, planos ou CTA, alinhar oficina (`caracore-pdv`) e memória mestre (`AGENTS.md`).
+- Referenciar loja Rust como PDV Desktop complementar, nunca como substituto.

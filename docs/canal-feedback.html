@@ -3,15 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <base href="https://pdv.caracore.com.br/">
     <title>Canal de feedback — CaraCore-PDV | Cara Core Informática</title>
     <meta name="description" content="Suporte e feedback do CaraCore-PDV Desktop (PDV Selo Verde): e-mail suporte@caracore.com.br, WhatsApp e Telegram. Não atendemos ligações telefônicas.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/portal-style.css">
     <link rel="stylesheet" href="assets/css/loja.css">
-    <link rel="stylesheet" href="assets/css/evolution-status.css">
-  <link rel="stylesheet" href="assets/css/caracore-core-typography.css">
-  <link rel="stylesheet" href="assets/css/caracore-institutional-components.css">
 </head>
-<body class="page-canal">
+<body class="smooth-scroll bg-gray-50 page-canal">
+    <header class="portal-header bg-white shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8" aria-label="Menu da loja">
+            <div class="flex justify-between items-center h-20">
+                <a href="index.html" class="flex items-center space-x-3">
+                    <div class="w-12 h-12 green-bg rounded-lg flex items-center justify-center">
+                        <i class="fas fa-cash-register text-white text-xl" aria-hidden="true"></i>
+                    </div>
+                    <div>
+                        <p class="text-xl font-bold text-gray-900">CaraCore PDV</p>
+                        <p class="text-xs text-gray-600">Operação de venda sem ruído</p>
+                    </div>
+                </a>
+                <div class="hidden lg:flex items-center space-x-6">
+                    <a href="index.html#dores" class="text-gray-700 hover:text-green-600 font-medium transition">O que resolvemos</a>
+                    <a href="index.html#jornada" class="text-gray-700 hover:text-green-600 font-medium transition">Como funciona</a>
+                    <a href="index.html#economia" class="text-gray-700 hover:text-green-600 font-medium transition">Economia</a>
+                    <a href="index.html#planos" class="text-gray-700 hover:text-green-600 font-medium transition">Planos</a>
+                    <a href="versoes.html" class="text-gray-700 hover:text-green-600 font-medium transition">Versões</a>
+                    <a href="consultoria.html" class="green-bg text-white px-6 py-2 rounded-lg font-semibold hover:shadow-lg transition">Agendar demonstração</a>
+                </div>
+                <button id="mobile-menu-button" class="lg:hidden text-gray-700" aria-label="Abrir menu"><i class="fas fa-bars text-2xl"></i></button>
+            </div>
+            <div id="mobile-menu" class="hidden lg:hidden pb-4">
+                <div class="flex flex-col space-y-3">
+                    <a href="index.html#dores" class="text-gray-700 font-medium py-2">O que resolvemos</a>
+                    <a href="index.html#jornada" class="text-gray-700 font-medium py-2">Como funciona</a>
+                    <a href="index.html#economia" class="text-gray-700 font-medium py-2">Economia</a>
+                    <a href="index.html#planos" class="text-gray-700 font-medium py-2">Planos</a>
+                    <a href="versoes.html" class="text-gray-700 font-medium py-2">Versões</a>
+                    <a href="consultoria.html" class="green-bg text-white px-6 py-3 rounded-lg font-semibold text-center">Agendar demonstração</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
     <div class="wrapper">
         <nav class="breadcrumb" aria-label="Navegação">
             <a href="index.html">CaraCore-PDV — Loja</a>
@@ -56,8 +93,35 @@
     </div>
     <script src="assets/js/loja.js"></script>
 
-    <footer class="evo-roadmap-footer" role="contentinfo"><p class="evo-roadmap-title">Próximos passos</p><ul class="evo-roadmap-list"><li>Domínio próprio <span class="evo-roadmap-tag">Ativo</span></li><li>Desktop local como trilha principal</li><li>Integração PIX nativa</li><li>IA para estoque</li></ul></footer>
-    <div class="evo-feedback-fab"><a href="canal-feedback.html" class="evo-feedback-btn" aria-label="Sugira uma melhoria no canal da loja"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> Sugira uma melhoria</a></div>
+        <footer class="bg-gray-900 text-gray-300 py-12">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <p class="text-white font-bold mb-2">Cara Core Informática</p>
+                    <p class="text-sm text-gray-400">PDV desktop local. Duas linhas convivem: esta loja Java e o piloto <a href="https://pdv-rust.caracore.com.br/" class="text-green-400 hover:text-white">Rust</a>. Nenhuma substitui a outra.</p>
+                </div>
+                <div>
+                    <h3 class="text-white font-bold mb-3">O produto</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="download.html" class="hover:text-white">Download Free</a></li>
+                        <li><a href="versoes.html" class="hover:text-white">Versões</a></li>
+                        <li><a href="consultoria.html" class="hover:text-white">Demonstração</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white font-bold mb-3">Contato</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="canal-feedback.html" class="hover:text-white">Canal da loja</a></li>
+                        <li><a href="mailto:suporte@caracore.com.br" class="hover:text-white">suporte@caracore.com.br</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-6 text-sm text-gray-400">
+                <p>&copy; 2024–2026 Cara Core Informática · CNPJ 23.969.028/0001-37</p>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/js/store-nav.js"></script>
 </body>
 </html>
 

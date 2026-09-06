@@ -86,24 +86,15 @@ A matriz de desenvolvimento fica no repositório **caracore-pdv**. Este reposit�
 
 A vitrine em `docs/` segue a trilha Java 25 da matriz, com SQLite local e soberania localhost. O download público maduro é a tag `v3.2.2-free`. O candidato `v4.0.0-rc1` (Quarkus + Qute) está como pré-release e não substitui a degustação Free. O GA do v4 permanece previsto para 08/11/2026.
 
-A página de novidades da versão atual fica em:
-<https://pdv.caracore.com.br/wiki-release-v3-2-2-free.html>
+Notas da versão atual: <https://pdv.caracore.com.br/wiki-release-v3-2-2-free.html>
 
-A página de leitura comercial da versão anterior fica em:
+Lista de versões: <https://pdv.caracore.com.br/versoes.html>
 
-<https://pdv.caracore.com.br/wiki-analise-v3-1-1-free.html>
-
-O plano público de validação do perfil de loja fica em:
-
-<https://pdv.caracore.com.br/wiki-validacao-cliente-pequeno.html>
-
-A ficha padrão de visita piloto fica em:
-
-<https://pdv.caracore.com.br/wiki-ficha-visita-piloto.html>
+Documentação de produto: <https://wiki.caracore.com.br/projeto-pdv.html>
 
 ### Linhas anteriores
 
-As versões `v1.x` e `v2.x` seguem preservadas como histórico da loja, incluindo páginas de wiki por release e referências aos instaladores antigos. A linha Spring + Electron WAR da branch `master` permanece como referência histórica, não como canal principal atual.
+Tags antigas permanecem no GitHub Releases. A documentação de produto vive em `wiki.caracore.com.br`. A linha Spring + Electron WAR da branch `master` é só referência histórica.
 
 ---
 
@@ -131,11 +122,10 @@ Download e onboarding:
 | `docs/download.html` | Página de download da Degustação Free (Windows, Linux e macOS) |
 | `docs/pwa.html` | PWA da vitrine (não é o caixa) |
 | `docs/tecnologia.html` | Soluções e pilares técnicos |
-| `docs/wiki.html` | Índice operacional da wiki da loja |
-| `docs/wiki-validacao-cliente-pequeno.html` | Plano público de validação do perfil de loja |
-| `docs/wiki-ficha-visita-piloto.html` | Ficha padrão para demonstração, piloto e visita |
-| `docs/wiki-fiscal.html` | Guia fiscal público alinhado ao escopo atual |
-| `docs/wiki-release-*.html` | Páginas por versão |
+| `docs/versoes.html` | Versão atual e próxima versão |
+| `docs/wiki-release-v3-2-2-free.html` | Notas da versão atual |
+| `docs/wiki-release-v4-0-0-rc1.html` | Notas da próxima versão |
+| `docs/wiki*.html` | Redirects para o wiki central ou para Versões |
 | `docs/installers/` | Espelho opcional de instaladores no mesmo domínio da loja |
 | `.github/workflows/` | Workflows de validação e publicação |
 
@@ -151,11 +141,9 @@ Páginas principais:
 - Download: <https://pdv.caracore.com.br/download.html>
 - PWA da loja: <https://pdv.caracore.com.br/pwa.html>
 - Soluções: <https://pdv.caracore.com.br/tecnologia.html>
-- Documentação: <https://pdv.caracore.com.br/readme.html>
-- Wiki: <https://pdv.caracore.com.br/wiki.html>
-- Validação do cliente pequeno: <https://pdv.caracore.com.br/wiki-validacao-cliente-pequeno.html>
-- Ficha de visita piloto: <https://pdv.caracore.com.br/wiki-ficha-visita-piloto.html>
-- Wiki fiscal: <https://pdv.caracore.com.br/wiki-fiscal.html>
+- Versões: <https://pdv.caracore.com.br/versoes.html>
+- Wiki do produto: <https://wiki.caracore.com.br/projeto-pdv.html>
+- Guia fiscal: <https://wiki.caracore.com.br/pdv/wiki-fiscal.html>
 - Consultoria: <https://pdv.caracore.com.br/consultoria.html>
 - Canal de feedback: <https://pdv.caracore.com.br/canal-feedback.html>
 

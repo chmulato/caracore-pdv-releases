@@ -3,30 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <base href="https://pdv.caracore.com.br/">
     <title>Versão 3.2.2 FREE — Java 25 — CaraCore-PDV</title>
     <meta name="description" content="Notas da versão 3.2.2 FREE do CaraCore-PDV: Java 25, alinhamento completo PDV Rust→Java, multi-plataforma (Windows, Linux e macOS).">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/portal-style.css">
     <link rel="stylesheet" href="assets/css/loja.css">
-    <link rel="stylesheet" href="assets/css/evolution-status.css">
-    <link rel="stylesheet" href="assets/css/caracore-core-typography.css">
-    <link rel="stylesheet" href="assets/css/caracore-institutional-components.css">
 </head>
-<body class="page-wiki page-wiki-release">
+<body class="smooth-scroll bg-gray-50 page-wiki page-wiki-release">
+    <header class="portal-header bg-white shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8" aria-label="Menu da loja">
+            <div class="flex justify-between items-center h-20">
+                <a href="index.html" class="flex items-center space-x-3">
+                    <div class="w-12 h-12 green-bg rounded-lg flex items-center justify-center">
+                        <i class="fas fa-cash-register text-white text-xl" aria-hidden="true"></i>
+                    </div>
+                    <div>
+                        <p class="text-xl font-bold text-gray-900">CaraCore PDV</p>
+                        <p class="text-xs text-gray-600">Operação de venda sem ruído</p>
+                    </div>
+                </a>
+                <div class="hidden lg:flex items-center space-x-6">
+                    <a href="index.html#dores" class="text-gray-700 hover:text-green-600 font-medium transition">O que resolvemos</a>
+                    <a href="index.html#jornada" class="text-gray-700 hover:text-green-600 font-medium transition">Como funciona</a>
+                    <a href="index.html#economia" class="text-gray-700 hover:text-green-600 font-medium transition">Economia</a>
+                    <a href="index.html#planos" class="text-gray-700 hover:text-green-600 font-medium transition">Planos</a>
+                    <a href="versoes.html" class="text-gray-700 hover:text-green-600 font-medium transition">Versões</a>
+                    <a href="consultoria.html" class="green-bg text-white px-6 py-2 rounded-lg font-semibold hover:shadow-lg transition">Agendar demonstração</a>
+                </div>
+                <button id="mobile-menu-button" class="lg:hidden text-gray-700" aria-label="Abrir menu"><i class="fas fa-bars text-2xl"></i></button>
+            </div>
+            <div id="mobile-menu" class="hidden lg:hidden pb-4">
+                <div class="flex flex-col space-y-3">
+                    <a href="index.html#dores" class="text-gray-700 font-medium py-2">O que resolvemos</a>
+                    <a href="index.html#jornada" class="text-gray-700 font-medium py-2">Como funciona</a>
+                    <a href="index.html#economia" class="text-gray-700 font-medium py-2">Economia</a>
+                    <a href="index.html#planos" class="text-gray-700 font-medium py-2">Planos</a>
+                    <a href="versoes.html" class="text-gray-700 font-medium py-2">Versões</a>
+                    <a href="consultoria.html" class="green-bg text-white px-6 py-3 rounded-lg font-semibold text-center">Agendar demonstração</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="portal-hero green-bg text-white py-12 md:py-16">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center">
+                <p class="text-sm uppercase tracking-wide text-green-100 mb-3">Versão atual · Free · Windows · Linux · macOS</p>
+                <h1 class="text-3xl md:text-5xl font-bold mb-4">CaraCore PDV 3.2.2</h1>
+                <p class="text-lg text-green-50">A versão que a loja entrega hoje para o balcão. A 4.0.0-rc1 é a próxima versão do mesmo produto.</p>
+                <p class="mt-6">
+                    <a href="download.html" class="inline-flex items-center bg-white text-green-700 px-6 py-3 rounded-lg font-semibold hover:bg-green-50">Baixar o PDV</a>
+                    <a href="versoes.html" class="inline-flex items-center ml-3 text-white underline hover:text-green-100">Todas as versões</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
     <div class="wrapper">
         <nav class="breadcrumb" aria-label="Navegação">
             <a href="index.html">CaraCore-PDV - Loja</a>
             <span> · </span>
-            <a href="https://wiki.caracore.com.br/projeto-pdv.html">Wiki da Loja</a>
+            <a href="https://wiki.caracore.com.br/projeto-pdv.html">Wiki do PDV</a>
             <span> · </span>
             <span>Versão 3.2.2 FREE</span>
         </nav>
 
         <header>
-            <h1>Versão 3.2.2 FREE: Java 25 + Alinhamento PDV Rust→Java</h1>
-            <p>Evolução da linha <strong>FREE</strong> do CaraCore-PDV. Runtime atualizado para <strong>Java 25</strong>; alinhamento completo com a referência PDV Rust (navegação por zonas, InactivityLock, status bar, supervisor elevation e SetupGate). Multi-plataforma: <strong>Windows, Linux e macOS</strong>. Requisito: <strong>Java 25+</strong> instalado no sistema.</p>
+            <p class="eyebrow">Notas da versão</p>
+            <h1>Java 25 e operação de balcão na linha Free</h1>
+            <p>Runtime <strong>Java 25</strong>, alinhamento com a referência PDV Rust (zonas, InactivityLock, status bar, supervisor elevation e SetupGate). Multi-plataforma: <strong>Windows, Linux e macOS</strong>.</p>
         </header>
 
-        <p class="download-notice"><strong>Versão FREE 3.2.2 — lançada em 06/2026.</strong> Esta é a <strong>oferta pública canônica atual</strong> da loja para teste real. Disponível para Windows, Linux e macOS com Java 25. Para ampliar operação, integrar PIX no sistema e adicionar mais estrutura comercial, consulte a edição PREMIUM.</p>
+        <p class="download-notice"><strong>Versão atual do CaraCore PDV</strong> (3.2.2-free, junho/2026). Windows, Linux e macOS · Java 25+. Planos Free e Premium são do produto, não desta release. A próxima versão está em <a href="versoes.html#proxima">4.0.0-rc1</a>.</p>
 
         <section class="card wiki-card">
             <h2>O que foi adicionado e alterado nesta versão</h2>
@@ -55,14 +107,34 @@
                     </thead>
                     <tbody>
                         <tr>
+                            <td>Vendas por mês</td>
+                            <td>Até 100</td>
+                            <td>Ilimitado</td>
+                        </tr>
+                        <tr>
                             <td>Operadores de caixa</td>
                             <td>1 operador</td>
                             <td>Ilimitado</td>
                         </tr>
                         <tr>
+                            <td>Vendedores</td>
+                            <td>Até 4</td>
+                            <td>Sem o teto Free</td>
+                        </tr>
+                        <tr>
+                            <td>Lojas</td>
+                            <td>1 loja</td>
+                            <td>Sem o teto Free</td>
+                        </tr>
+                        <tr>
                             <td>Catálogo de produtos</td>
                             <td>Até 100 itens</td>
                             <td>Ilimitado</td>
+                        </tr>
+                        <tr>
+                            <td>Recibos SMS / mês</td>
+                            <td>Até 10</td>
+                            <td>Sem o teto Free</td>
                         </tr>
                         <tr>
                             <td>Emissão de NF-e / Fiscal</td>
@@ -109,7 +181,7 @@
                 <li><strong>Leitura de gestão (3 min):</strong> mostrar visão rápida do dia para dono/gerente.</li>
                 <li><strong>Fechamento comercial (2 min):</strong> alinhar limites da Free e próximos passos para evolução Premium.</li>
             </ol>
-            <p><a href="wiki-validacao-cliente-pequeno.html">Abrir plano de validação detalhado</a> para visitas em campo.</p>
+            <p>Documentação de produto: <a href="https://wiki.caracore.com.br/projeto-pdv.html">wiki.caracore.com.br/projeto-pdv.html</a>.</p>
         </section>
 
         <section class="card wiki-card">
@@ -154,7 +226,7 @@
             <div class="wiki-links">
                 <a href="download.html" class="btn-release">Testar agora (Free)</a>
                 <a href="consultoria.html" class="btn-release">Agendar demonstração</a>
-                <a href="wiki-analise-v3-1-1-free.html" class="btn-release btn-release-outline">Ver análise comercial</a>
+                <a href="https://wiki.caracore.com.br/projeto-pdv.html" class="btn-release btn-release-outline">Wiki do PDV</a>
             </div>
         </section>
 
@@ -230,7 +302,7 @@ shasum -a 256 caracore-pdv-v3.2.2-free-free-macos-x64.zip</code></pre>
                 <li>Fluxo de venda, carrinho e fechamento de caixa.</li>
                 <li>Trilha de auditoria e perfis de operador.</li>
                 <li>Banco SQLite local preservado — migrações Flyway automáticas.</li>
-                <li>Limites da edição FREE: 100 vendas por mês, 1 operador, 100 produtos, sem NF-e e sem PIX.</li>
+                <li>Limites da edição FREE: 100 vendas/mês, 1 operador, 4 vendedores, 1 loja, 100 produtos, 10 SMS recibo/mês; sem NF-e e sem PIX.</li>
             </ul>
         </section>
 
@@ -244,20 +316,47 @@ shasum -a 256 caracore-pdv-v3.2.2-free-free-macos-x64.zip</code></pre>
             </ul>
             <div class="wiki-links">
                 <a href="download.html" class="btn-release">Baixar versão FREE</a>
-                <a href="wiki-caracteristicas.html" class="btn-release btn-release-outline">Características da aplicação</a>
-                <a href="wiki-release-v3-1-2-free.html" class="btn-release btn-release-outline">Arquivo: v3.1.2-free</a>
+                <a href="versoes.html" class="btn-release btn-release-outline">Versões do produto</a>
+                <a href="https://wiki.caracore.com.br/projeto-pdv.html" class="btn-release btn-release-outline">Wiki do PDV</a>
                 <a href="https://wiki.caracore.com.br/projeto-pdv.html" class="btn-release btn-release-outline">Voltar à wiki</a>
                 <a href="index.html" class="btn-release btn-release-outline">Portal da loja</a>
             </div>
         </section>
 
         <nav class="back">
-            <a href="https://wiki.caracore.com.br/projeto-pdv.html">← Voltar à wiki</a> · <a href="https://wiki.caracore.com.br/projeto-pdv.html">Trilha de versões</a> · <a href="download.html">Download</a> · <a href="tecnologia.html">Tecnologia</a> · Release 3.2.2-free — oferta canônica atual
+            <a href="https://wiki.caracore.com.br/projeto-pdv.html">Wiki do PDV</a> · <a href="versoes.html">Versões</a> · <a href="download.html">Download</a>
         </nav>
     </div>
     <script src="assets/js/loja.js"></script>
 
-    <footer class="evo-roadmap-footer" role="contentinfo"><p class="evo-roadmap-title">Próximos passos</p><ul class="evo-roadmap-list"><li>Instalador NSIS Windows e AppImage Linux nativo</li><li>Assinatura digital macOS (Apple Developer)</li><li>Upgrade in-place FREE → PREMIUM</li></ul></footer>
-    <div class="evo-feedback-fab"><a href="canal-feedback.html" class="evo-feedback-btn" aria-label="Sugira uma melhoria no canal da loja"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> Sugira uma melhoria</a></div>
+        <footer class="bg-gray-900 text-gray-300 py-12">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <p class="text-white font-bold mb-2">Cara Core Informática</p>
+                    <p class="text-sm text-gray-400">PDV desktop local. Duas linhas convivem: esta loja Java e o piloto <a href="https://pdv-rust.caracore.com.br/" class="text-green-400 hover:text-white">Rust</a>. Nenhuma substitui a outra.</p>
+                </div>
+                <div>
+                    <h3 class="text-white font-bold mb-3">O produto</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="download.html" class="hover:text-white">Download Free</a></li>
+                        <li><a href="versoes.html" class="hover:text-white">Versões</a></li>
+                        <li><a href="consultoria.html" class="hover:text-white">Demonstração</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white font-bold mb-3">Contato</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="canal-feedback.html" class="hover:text-white">Canal da loja</a></li>
+                        <li><a href="mailto:suporte@caracore.com.br" class="hover:text-white">suporte@caracore.com.br</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-6 text-sm text-gray-400">
+                <p>&copy; 2024–2026 Cara Core Informática · CNPJ 23.969.028/0001-37</p>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/js/store-nav.js"></script>
 </body>
 </html>

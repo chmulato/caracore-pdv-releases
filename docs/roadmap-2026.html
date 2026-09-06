@@ -3,17 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <base href="https://pdv.caracore.com.br/">
-    <title>Roadmap 2026 — CaraCore-PDV v4</title>
-    <meta name="description" content="Roadmap do CaraCore-PDV v4 com Quarkus, SQLite local e experiência PWA. Lançamento previsto para 08 de novembro de 2026.">
+    <title>O que vem a seguir — CaraCore PDV</title>
+    <meta name="description" content="Próxima versão do CaraCore PDV: SQLite local, interface em modo aplicativo e launcher. Publicação prevista para 08 de novembro de 2026.">
     <link rel="manifest" href="manifest.webmanifest">
     <meta name="theme-color" content="#166534">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/portal-style.css">
     <link rel="stylesheet" href="assets/css/loja.css">
-    <link rel="stylesheet" href="assets/css/evolution-status.css">
-    <link rel="stylesheet" href="assets/css/caracore-core-typography.css">
-    <link rel="stylesheet" href="assets/css/caracore-institutional-components.css">
 </head>
-<body class="page-wiki page-wiki-release">
+<body class="smooth-scroll bg-gray-50 page-wiki page-wiki-release">
+    <header class="portal-header bg-white shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8" aria-label="Menu da loja">
+            <div class="flex justify-between items-center h-20">
+                <a href="index.html" class="flex items-center space-x-3">
+                    <div class="w-12 h-12 green-bg rounded-lg flex items-center justify-center">
+                        <i class="fas fa-cash-register text-white text-xl" aria-hidden="true"></i>
+                    </div>
+                    <div>
+                        <p class="text-xl font-bold text-gray-900">CaraCore PDV</p>
+                        <p class="text-xs text-gray-600">Operação de venda sem ruído</p>
+                    </div>
+                </a>
+                <div class="hidden lg:flex items-center space-x-6">
+                    <a href="index.html#dores" class="text-gray-700 hover:text-green-600 font-medium transition">O que resolvemos</a>
+                    <a href="index.html#jornada" class="text-gray-700 hover:text-green-600 font-medium transition">Como funciona</a>
+                    <a href="index.html#economia" class="text-gray-700 hover:text-green-600 font-medium transition">Economia</a>
+                    <a href="index.html#planos" class="text-gray-700 hover:text-green-600 font-medium transition">Planos</a>
+                    <a href="versoes.html" class="text-gray-700 hover:text-green-600 font-medium transition">Versões</a>
+                    <a href="consultoria.html" class="green-bg text-white px-6 py-2 rounded-lg font-semibold hover:shadow-lg transition">Agendar demonstração</a>
+                </div>
+                <button id="mobile-menu-button" class="lg:hidden text-gray-700" aria-label="Abrir menu"><i class="fas fa-bars text-2xl"></i></button>
+            </div>
+            <div id="mobile-menu" class="hidden lg:hidden pb-4">
+                <div class="flex flex-col space-y-3">
+                    <a href="index.html#dores" class="text-gray-700 font-medium py-2">O que resolvemos</a>
+                    <a href="index.html#jornada" class="text-gray-700 font-medium py-2">Como funciona</a>
+                    <a href="index.html#economia" class="text-gray-700 font-medium py-2">Economia</a>
+                    <a href="index.html#planos" class="text-gray-700 font-medium py-2">Planos</a>
+                    <a href="versoes.html" class="text-gray-700 font-medium py-2">Versões</a>
+                    <a href="consultoria.html" class="green-bg text-white px-6 py-3 rounded-lg font-semibold text-center">Agendar demonstração</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="portal-hero green-bg text-white py-12 md:py-16">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center">
+                <p class="text-sm uppercase tracking-wide text-green-100 mb-3">Próxima versão · prevista 08/11/2026</p>
+                <h1 class="text-3xl md:text-5xl font-bold mb-4">O que vem no CaraCore PDV</h1>
+                <p class="text-lg text-green-50">A 4.0.0-rc1 é a prévia. O download da loja hoje é a 3.2.2.</p>
+                <p class="mt-6">
+                    <a href="wiki-release-v4-0-0-rc1.html" class="inline-flex items-center bg-white text-green-700 px-6 py-3 rounded-lg font-semibold hover:bg-green-50">Notas da 4.0.0-rc1</a>
+                    <a href="download.html" class="inline-flex items-center ml-3 text-white underline hover:text-green-100">Baixar a versão atual</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
     <div class="wrapper">
         <nav class="breadcrumb" aria-label="Navegação">
             <a href="index.html">CaraCore-PDV - Loja</a>
@@ -23,12 +74,13 @@
 
         <header>
             <p class="eyebrow">Desenvolvimento em andamento</p>
-            <h1>CaraCore-PDV v4: local, simples e pronto para a rotina</h1>
-            <p>Estamos desenvolvendo o <strong>CaraCore-PDV v4</strong>, com backend <strong>Quarkus</strong>, banco <strong>SQLite local</strong>, interface web responsiva em formato <strong>PWA</strong> e <strong>launcher Windows</strong> para abrir a operação em modo aplicativo no próprio computador da loja.</p>
+            <p class="eyebrow">Mesmo produto</p>
+            <h1>Local, simples e pronto para a rotina</h1>
+            <p>A próxima versão do <strong>CaraCore PDV</strong> mantém o caixa no computador da loja: banco <strong>SQLite local</strong>, interface em modo aplicativo e <strong>launcher</strong> para abrir a operação sem nuvem obrigatória.</p>
         </header>
 
         <section class="card wiki-card">
-            <p class="download-notice"><strong>Candidato publicado: <a href="wiki-release-v4-0-0-rc1.html">v4.0.0-rc1</a>.</strong> O GA permanece previsto para 08 de novembro de 2026. Até o corte T032, a oferta pública para teste real continua a <a href="download.html">v3.2.2-free</a>.</p>
+            <p class="download-notice">Prévia publicada: <a href="wiki-release-v4-0-0-rc1.html">4.0.0-rc1</a>. O download da loja continua a <a href="download.html">3.2.2-free</a> até a homologação. Lista completa em <a href="versoes.html">Versões</a>.</p>
         </section>
 
         <section class="card wiki-card">
@@ -39,11 +91,11 @@
                 <li>Clientes, produtos, estoque, abertura de turno, sangria, suprimento e relatórios operacionais.</li>
                 <li>Launcher local para iniciar o backend Quarkus e abrir a experiência no modo aplicativo.</li>
             </ul>
-            <p>As Fases 0–7 da paridade Qute estão concluídas na oficina. O corte público (T032) ainda depende de homologação visual no Edge, suíte completa, instalador Windows assinado e smoke pós-instalação. Até lá, o download da loja continua sendo a <a href="download.html">v3.2.2-free</a>.</p>
+            <p>A oficina já cobre venda, caixa, cadastros e continuidade local. A publicação da 4.0 como versão atual da loja ainda depende de homologação no Edge, suíte completa e instalador Windows assinado. Até lá, baixe a <a href="download.html">3.2.2-free</a>.</p>
         </section>
 
         <section class="card wiki-card">
-            <h2>Novidades previstas para o v4</h2>
+            <h2>O que a próxima versão traz</h2>
             <div class="wiki-table-wrap">
                 <table class="wiki-table">
                     <thead>
@@ -127,7 +179,7 @@
         </section>
 
         <section class="card wiki-card">
-            <h2>Perfil planejado do v4</h2>
+            <h2>Como o produto continua</h2>
             <div class="wiki-table-wrap">
                 <table class="wiki-table">
                     <thead>
@@ -160,8 +212,8 @@
 
         <section class="card wiki-card">
             <h2>Acompanhe com transparência</h2>
-            <p>O roadmap do v4 pode ser ajustado conforme os testes de paridade e a validação operacional. Recursos só serão apresentados como disponíveis depois de implementados, testados e aprovados no fluxo correspondente.</p>
-            <p><a href="index.html">Voltar para a loja</a> · <a href="download.html">Oferta atual</a> · <a href="pwa.html">PWA da loja</a> · <a href="canal-feedback.html">Enviar feedback</a></p>
+            <p>O calendário pode ajustar conforme os testes. Recurso só aparece como disponível depois de implementado, testado e aprovado.</p>
+            <p><a href="index.html">Loja</a> · <a href="download.html">Download</a> · <a href="versoes.html">Versões</a> · <a href="canal-feedback.html">Canal da loja</a></p>
         </section>
 
         <footer class="site-footer">
@@ -169,5 +221,34 @@
         </footer>
     </div>
     <script src="assets/js/pwa.js"></script>
+    <footer class="bg-gray-900 text-gray-300 py-12">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <p class="text-white font-bold mb-2">Cara Core Informática</p>
+                    <p class="text-sm text-gray-400">PDV desktop local. Duas linhas convivem: esta loja Java e o piloto <a href="https://pdv-rust.caracore.com.br/" class="text-green-400 hover:text-white">Rust</a>. Nenhuma substitui a outra.</p>
+                </div>
+                <div>
+                    <h3 class="text-white font-bold mb-3">O produto</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="download.html" class="hover:text-white">Download Free</a></li>
+                        <li><a href="versoes.html" class="hover:text-white">Versões</a></li>
+                        <li><a href="consultoria.html" class="hover:text-white">Demonstração</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white font-bold mb-3">Contato</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="canal-feedback.html" class="hover:text-white">Canal da loja</a></li>
+                        <li><a href="mailto:suporte@caracore.com.br" class="hover:text-white">suporte@caracore.com.br</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-6 text-sm text-gray-400">
+                <p>&copy; 2024–2026 Cara Core Informática · CNPJ 23.969.028/0001-37</p>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/js/store-nav.js"></script>
 </body>
 </html>
