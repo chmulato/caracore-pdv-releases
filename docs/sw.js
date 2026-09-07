@@ -1,4 +1,4 @@
-const CACHE = "caracore-pdv-loja-v2";
+const CACHE = "caracore-pdv-loja-v3";
 const SHELL = [
   "./index.html",
   "./download.html",

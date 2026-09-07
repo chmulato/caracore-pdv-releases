@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Versão 3.2.3 FREE — histórico — CaraCore-PDV</title>
-    <meta name="description" content="Notas históricas da 3.2.3-free. O download da loja hoje é a 3.2.4-free.">
+    <title>Versão 3.2.4 FREE — primeira venda no balcão — CaraCore-PDV</title>
+    <meta name="description" content="Notas da versão 3.2.4 FREE: cadastre um produto e registre a primeira venda no navegador. Sem PIX integrado e sem NF-e/NFC-e.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -52,9 +52,9 @@
     <section class="portal-hero green-bg text-white py-12 md:py-16">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="max-w-3xl mx-auto text-center">
-                <p class="text-sm uppercase tracking-wide text-green-100 mb-3">Histórico · 3.2.3-free · não é o download da loja</p>
-                <h1 class="text-3xl md:text-5xl font-bold mb-4">CaraCore PDV 3.2.3</h1>
-                <p class="text-lg text-green-50">Arquivo. O download da loja hoje é a <strong>3.2.4-free</strong>.</p>
+                <p class="text-sm uppercase tracking-wide text-green-100 mb-3">Versão atual · Free · Windows · Linux · macOS</p>
+                <h1 class="text-3xl md:text-5xl font-bold mb-4">CaraCore PDV 3.2.4</h1>
+                <p class="text-lg text-green-50">Canal atual da loja: <strong>v3.2.4-free</strong>. QA do balcão: criar produto, vender e pagar em dinheiro no navegador. A 4.0.0-rc2 é prévia — não é o download da loja.</p>
                 <p class="mt-6">
                     <a href="download.html" class="inline-flex items-center bg-white text-green-700 px-6 py-3 rounded-lg font-semibold hover:bg-green-50">Baixar Free (3.2.4)</a>
                     <a href="versoes.html" class="inline-flex items-center ml-3 text-white underline hover:text-green-100">Todas as versões</a>
@@ -69,24 +69,25 @@
             <span> · </span>
             <a href="https://wiki.caracore.com.br/projeto-pdv.html">Wiki do PDV</a>
             <span> · </span>
-            <span>Versão 3.2.3 FREE</span>
+            <span>Versão 3.2.4 FREE</span>
         </nav>
 
         <header>
             <p class="eyebrow">Notas da versão</p>
-            <h1>Login no navegador, porta 8080 e Java 25 no launcher</h1>
-            <p>Canal do balcão nesta tag. O launcher sobe o backend e o operador abre o navegador em <code>/login</code> — não é janela JavaFX. O download atual da loja é a <a href="wiki-release-v3-2-4-free.html">3.2.4-free</a>.</p>
+            <h1>Primeira venda no navegador, porta 8080 e Java 25</h1>
+            <p>Canal atual do balcão. O launcher sobe o backend e o operador abre o navegador em <code>/login</code> — não é janela JavaFX. Depois do login, cadastre um produto e registre a primeira venda no caixa pela interface do navegador.</p>
         </header>
 
-        <p class="download-notice">Histórico: 3.2.3-free (06/09/2026). O download da loja passou para a <a href="wiki-release-v3-2-4-free.html">3.2.4-free</a> (primeira venda na UI do navegador). A próxima versão está em <a href="versoes.html#proxima">4.0.0-rc2</a>.</p>
+        <p class="download-notice"><strong>Versão atual do CaraCore PDV</strong> (3.2.4-free, 07/09/2026). Windows, Linux e macOS · Java 25+. Sem PIX integrado (sem QR/gateway) e sem NF-e/NFC-e. Pagamentos no Free: dinheiro, débito, crédito e outros — “outros” não é o PIX integrado. A prévia está em <a href="versoes.html#proxima">4.0.0-rc2</a>.</p>
 
         <section class="card wiki-card">
-            <h2>O que foi corrigido</h2>
+            <h2>O que esta versão entrega no Free</h2>
             <ul>
-                <li><strong>Porta 8080:</strong> o pacote escuta em <code>http://localhost:8080</code>. Health em <code>/q/health</code>.</li>
-                <li><strong>Tela de operador:</strong> <code>/login</code> e <code>/j_security_check</code> funcionam. Primeiro acesso <code>admin</code> / <code>admin</code> com troca obrigatória de senha (8 a 15 caracteres, diferente de <code>admin</code>).</li>
-                <li><strong>Versão no boot e na UI:</strong> <code>3.2.3-free</code>, não mais 3.0.2.</li>
-                <li><strong>Launcher:</strong> <code>iniciar-pdv.bat</code> e <code>iniciar-pdv.sh</code> recusam Java ausente ou abaixo de 25, com mensagem clara (o Java 21 no PATH não inicia este pacote).</li>
+                <li><strong>UI de balcão no browser:</strong> criar produto, vender e pagar em dinheiro — aceite QA desta tag.</li>
+                <li><strong>Porta 8080:</strong> <code>http://localhost:8080</code>. Health em <code>/q/health</code>.</li>
+                <li><strong>Tela de operador:</strong> <code>/login</code>. Primeiro acesso <code>admin</code> / <code>admin</code> com troca obrigatória de senha.</li>
+                <li><strong>Versão no boot:</strong> <code>3.2.4-free</code>.</li>
+                <li><strong>Launcher:</strong> <code>iniciar-pdv.bat</code> (hífen). Java 21 no PATH faz o launcher parar.</li>
             </ul>
         </section>
 
@@ -100,9 +101,11 @@
                 <li>Aguarde cerca de 10 segundos. Abra o navegador em <code>http://localhost:8080</code>.</li>
                 <li>Clique em <strong>Entrar no sistema</strong> ou abra <code>http://localhost:8080/login</code>.</li>
                 <li>Entre com <code>admin</code> / <code>admin</code> e defina a senha nova.</li>
+                <li>Cadastre um produto e registre a primeira venda no caixa pela interface do navegador.</li>
             </ol>
-            <p>O launcher só sobe o backend local. Não espera uma janela JavaFX: o acesso do operador desta edição Free é no navegador. O log de arranque deve dizer <strong>3.2.3-free</strong>.</p>
+            <p>O launcher só sobe o backend local. Não espera uma janela JavaFX: o acesso do operador desta edição Free é no navegador. O log de arranque deve dizer <strong>3.2.4-free</strong>.</p>
             <p><strong>Dados:</strong> SQLite local em <code>%APPDATA%\caracore\</code> (Windows) ou <code>~/.caracore/</code> (Linux/macOS).</p>
+            <p><strong>Pagamentos no Free:</strong> dinheiro, débito, crédito e outros. “Outros” não é o PIX integrado (QR/gateway) da loja. Sem emissão fiscal (NF-e/NFC-e).</p>
         </section>
 
         <section class="card wiki-card">
@@ -120,35 +123,35 @@
                     <tbody>
                         <tr>
                             <td>Windows 10/11 x64</td>
-                            <td><code>caracore-pdv-v3.2.3-free-free-windows-x64.zip</code></td>
-                            <td><code>d9f48b769503d5294fefbc3bf57c0ccfa7dbd8b88f1331123ca25d202c2ddf81</code></td>
+                            <td><code>caracore-pdv-v3.2.4-free-free-windows-x64.zip</code></td>
+                            <td><code>1b9b5062437f34c83d75eac89fd18df7993e6b15d1677dfb6350cfe975635bc8</code></td>
                             <td><code>iniciar-pdv.bat</code></td>
                         </tr>
                         <tr>
                             <td>Linux x64 (Ubuntu 20.04+)</td>
-                            <td><code>caracore-pdv-v3.2.3-free-free-linux-x64.zip</code></td>
-                            <td><code>46dc89fec6c8a884bd60914f357b4cbf44a35c317ecabdbc7035af1b39fa7622</code></td>
+                            <td><code>caracore-pdv-v3.2.4-free-free-linux-x64.zip</code></td>
+                            <td><code>40cfdf0f55f9476725920bb276e090239b2e2c106747719cac5ba39a427f54ba</code></td>
                             <td><code>./iniciar-pdv.sh</code></td>
                         </tr>
                         <tr>
                             <td>macOS 12+ x64 (Intel)</td>
-                            <td><code>caracore-pdv-v3.2.3-free-free-macos-x64.zip</code></td>
-                            <td><code>cc3456010016386e9e9841cc53bf2ebe6f7345a271dd4e6de22e6d80ea531712</code></td>
+                            <td><code>caracore-pdv-v3.2.4-free-free-macos-x64.zip</code></td>
+                            <td><code>2cbcdead4476e16fe4deb8cda2d0f12fa692999f6d76104abad39cf412447da8</code></td>
                             <td><code>./iniciar-pdv.sh</code></td>
                         </tr>
                     </tbody>
                 </table>
             </div>
-            <p>Valide a integridade com <code>SHA256SUMS.txt</code> e <code>RELEASE_MANIFEST.json</code> da tag <a href="https://github.com/chmulato/caracore-pdv-releases/releases/tag/v3.2.3-free">v3.2.3-free</a>. Os nomes usam <code>free-free</code> — é o nome publicado, não um segundo plano.</p>
+            <p>Valide a integridade com <code>SHA256SUMS.txt</code> e <code>RELEASE_MANIFEST.json</code> da tag <a href="https://github.com/chmulato/caracore-pdv-releases/releases/tag/v3.2.4-free">v3.2.4-free</a>. Os nomes usam <code>free-free</code> — é o nome publicado, não um segundo plano.</p>
         </section>
 
         <section class="card wiki-card">
-            <h2>Limitações da edição FREE</h2>
-            <p>100 vendas/mês, 1 operador, 4 vendedores, 1 loja, 100 produtos; sem NF-e/NFC-e e sem PIX integrado. Premium: <a href="consultoria.html">agende a demonstração</a>.</p>
+            <h2>Limites da edição FREE</h2>
+            <p>Até 100 vendas/mês, 100 produtos, 1 operador, 4 vendedores, 1 loja; offline SQLite; balcão no browser. Sem PIX integrado (sem QR/gateway) e sem emissão fiscal (NF-e/NFC-e). Pagamentos: dinheiro, débito, crédito e outros — “outros” não é o PIX integrado. Premium (teto, PIX integrado, fiscal, suporte): <a href="consultoria.html">agende a demonstração</a>.</p>
         </section>
 
         <nav class="back">
-            <a href="download.html#instalacao">Instalação com sucesso</a> · <a href="versoes.html">Versões</a> · <a href="wiki-release-v3-2-4-free.html">Notas da 3.2.4-free</a>
+            <a href="download.html#instalacao">Instalação com sucesso</a> · <a href="versoes.html">Versões</a> · <a href="wiki-release-v3-2-3-free.html">Notas da 3.2.3-free</a>
         </nav>
     </div>
 
