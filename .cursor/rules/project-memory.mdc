@@ -36,7 +36,7 @@ alwaysApply: true
 - Versão atual do download: **3.2.4-free** (ZIP Windows/Linux/macOS). Requisito: Java 25+.
 - Nomes reais dos ZIP: `caracore-pdv-v3.2.4-free-free-{windows,linux,macos}-x64.zip`.
 - Launcher Free: `iniciar-pdv.bat` (hífen). Banco: `%APPDATA%\caracore\` (Win) / `~/.caracore/`.
-- **4.0.0-rc2** é prévia (`iniciar_pdv.bat` underscore; Java 25 + Python 3; Edge app mode; banco `./data/caracore-pdv.db`). Não é o download da loja.
+- **4.0.0-rc2** é prévia **estacionada** (`iniciar_pdv.bat` underscore; Java 25 + Python 3; Edge app mode; banco `./data/caracore-pdv.db`; SHA256 `5e5d55b6d376c7f1d6ce91a9fb9a73f6d606289af27b508adf2d9eb2cdcd955d`). Não é o download da loja. Retomada: oficina `CONTINUIDADE_DESENVOLVIMENTO.md` / T032.
 - ZIP 3.2.4 **não** contém LEIA-ME; texto canônico = sidecar na release + `docs/leia-me/LEIA-ME-v3.2.4-free.txt`.
 - **V3 (negócio):** PME, PIX Split 2027 — posicionamento comercial; **não** confundir com a linha Rust (v0.1.x).
 - **Evitar:** Java descontinuado; “PDV v3” para a linha Rust; “nova geração”; “substitui”; PIX no Free; recibo no Free.
