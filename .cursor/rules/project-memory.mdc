@@ -27,6 +27,12 @@ alwaysApply: true
 - **Premium (R$ 79,90/mês):** sem teto de 100 vendas, PIX integrado (QR/gateway), fiscal quando aplicável, suporte prioritário.
 - Fonte de tetos: oficina `PlanoLicencaService.java`. Copy pública não inventa recibo SMS.
 
+## Quem entra (Free) — 2026-09-08
+- **1 operador:** `admin` / `admin` em `http://localhost:8080/login`. Troca de senha obrigatória.
+- Copy canónica: `docs/download.html#perfis` (também em `wiki-release-v3-2-4-free.html`).
+- Não inventar elenco `operador`/`gestor`/`auditoria` neste ZIP. Não usar senhas do piloto Rust.
+- Banco: `%APPDATA%\caracore\` (Win) / `~/.caracore/` — ≠ `%APPDATA%\caracore-pdv\` do Rust.
+
 ## Linha Rust (coexistência — não substituição)
 - **PDV Desktop (Rust + Tauri 2):** https://pdv-rust.caracore.com.br/ · **v0.1.4** piloto Windows.
 - Download Rust = loja própria + artefatos em `chmulato/caracore-rust-pdv-releases/releases` (tag **v0.1.4**). Este repo é só o canal Java.
