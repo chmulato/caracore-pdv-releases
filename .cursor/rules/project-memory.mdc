@@ -28,8 +28,8 @@ alwaysApply: true
 - Fonte de tetos: oficina `PlanoLicencaService.java`. Copy pública não inventa recibo SMS.
 
 ## Linha Rust (coexistência — não substituição)
-- **PDV Desktop (Rust + Tauri 2):** https://pdv-rust.caracore.com.br/ · **v0.1.2** piloto Windows.
-- Download Rust = loja própria + artefatos em `chmulato/caracore-rust-pdv-releases/releases` (tag **v0.1.2**). Este repo é só o canal Java.
+- **PDV Desktop (Rust + Tauri 2):** https://pdv-rust.caracore.com.br/ · **v0.1.4** piloto Windows.
+- Download Rust = loja própria + artefatos em `chmulato/caracore-rust-pdv-releases/releases` (tag **v0.1.4**). Este repo é só o canal Java.
 - Teto Rust piloto = **100 vendas na vida**, não por mês. Não misturar com o Free Java.
 
 ## Mensagem de produto

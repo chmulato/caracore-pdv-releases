@@ -71,9 +71,9 @@ O trecho `free-free` no nome do ZIP é o nome publicado, não um segundo plano.
 | Banco | só `./data/caracore-pdv.db` | Não abre `%APPDATA%\caracore\` |
 | Reqs | Java 25+ e Python 3 | |
 
-### Outra linha — Rust v0.1.2
+### Outra linha — Rust v0.1.4
 
-A tag `v0.1.2` (MSI/EXE) é o piloto Rust em <https://pdv-rust.caracore.com.br/>. Não é o Free desta loja.
+A tag `v0.1.4` (MSI/EXE/ZIP) é o piloto Rust em <https://pdv-rust.caracore.com.br/>. Não é o Free desta loja.
 
 ---
 
