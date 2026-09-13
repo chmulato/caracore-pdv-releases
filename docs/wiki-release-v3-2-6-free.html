@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Versão 3.2.6 FREE — PDV de balcão / registradora — CaraCore-PDV</title>
+    <meta name="description" content="Notas da versão 3.2.6 FREE: shell PDV em coluna, caixa tipo registradora (busca+Enter, total grande, atalhos), Restrito empilhado. Sem PIX gateway e sem NF-e.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/portal-style.css">
+    <link rel="stylesheet" href="assets/css/loja.css">
+</head>
+<body class="smooth-scroll bg-gray-50 page-wiki page-wiki-release">
+    <header class="portal-header bg-white shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8" aria-label="Menu da loja">
+            <div class="flex justify-between items-center h-20">
+                <a href="index.html" class="flex items-center space-x-3">
+                    <div class="w-12 h-12 green-bg rounded-lg flex items-center justify-center">
+                        <i class="fas fa-cash-register text-white text-xl" aria-hidden="true"></i>
+                    </div>
+                    <div>
+                        <p class="text-xl font-bold text-gray-900">CaraCore PDV</p>
+                        <p class="text-xs text-gray-600">Operação de venda sem ruído</p>
+                    </div>
+                </a>
+                <div class="hidden lg:flex items-center space-x-6">
+                    <a href="index.html#dores" class="text-gray-700 hover:text-green-600 font-medium transition">O que resolvemos</a>
+                    <a href="index.html#jornada" class="text-gray-700 hover:text-green-600 font-medium transition">Como funciona</a>
+                    <a href="index.html#economia" class="text-gray-700 hover:text-green-600 font-medium transition">Economia</a>
+                    <a href="index.html#planos" class="text-gray-700 hover:text-green-600 font-medium transition">Planos</a>
+                    <a href="versoes.html" class="text-gray-700 hover:text-green-600 font-medium transition">Versões</a>
+                    <a href="consultoria.html" class="green-bg text-white px-6 py-2 rounded-lg font-semibold hover:shadow-lg transition">Agendar demonstração</a>
+                </div>
+                <button id="mobile-menu-button" class="lg:hidden text-gray-700" aria-label="Abrir menu"><i class="fas fa-bars text-2xl"></i></button>
+            </div>
+            <div id="mobile-menu" class="hidden lg:hidden pb-4">
+                <div class="flex flex-col space-y-3">
+                    <a href="index.html#dores" class="text-gray-700 font-medium py-2">O que resolvemos</a>
+                    <a href="index.html#jornada" class="text-gray-700 font-medium py-2">Como funciona</a>
+                    <a href="index.html#economia" class="text-gray-700 font-medium py-2">Economia</a>
+                    <a href="index.html#planos" class="text-gray-700 font-medium py-2">Planos</a>
+                    <a href="versoes.html" class="text-gray-700 font-medium py-2">Versões</a>
+                    <a href="consultoria.html" class="green-bg text-white px-6 py-3 rounded-lg font-semibold text-center">Agendar demonstração</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="portal-hero green-bg text-white py-12 md:py-16">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center">
+                <p class="text-sm uppercase tracking-wide text-green-100 mb-3">Versão atual · Free · Windows · Linux · macOS</p>
+                <h1 class="text-3xl md:text-5xl font-bold mb-4">CaraCore PDV 3.2.6</h1>
+                <p class="text-lg text-green-50">Canal atual da loja: <strong>v3.2.6-free</strong>. Patch de UX: shell de PDV em coluna + caixa tipo registradora. A 4.0.0-rc2 é prévia — não é o download da loja.</p>
+                <p class="mt-6">
+                    <a href="download.html" class="inline-flex items-center bg-white text-green-700 px-6 py-3 rounded-lg font-semibold hover:bg-green-50">Baixar Free (3.2.6)</a>
+                    <a href="versoes.html" class="inline-flex items-center ml-3 text-white underline hover:text-green-100">Todas as versões</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <div class="wrapper">
+        <nav class="breadcrumb" aria-label="Navegação">
+            <a href="index.html">CaraCore-PDV - Loja</a>
+            <span> · </span>
+            <a href="https://wiki.caracore.com.br/projeto-pdv.html">Wiki do PDV</a>
+            <span> · </span>
+            <span>Versão 3.2.6 FREE</span>
+        </nav>
+
+        <header>
+            <p class="eyebrow">Notas da versão</p>
+            <h1>PDV de balcão: sidebar em coluna e caixa registradora</h1>
+            <p>Corrige o QA de UX do Free: o menu deixa de virar fila de links e o <code>/caixa</code> deixa de parecer formulário admin. Continua honestidade de plano — sem PIX gateway, sem NF-e, teto 100 vendas/mês.</p>
+        </header>
+
+        <p class="download-notice"><strong>Versão atual do CaraCore PDV</strong> (3.2.6-free, 13/09/2026). Windows, Linux e macOS · Java 25+. Sem PIX integrado (sem QR/gateway) e sem NF-e/NFC-e. Pagamentos no Free: dinheiro, débito, crédito e outros — “outros” não é o PIX integrado. A prévia está em <a href="versoes.html#proxima">4.0.0-rc2</a>.</p>
+
+        <section class="card wiki-card">
+            <h2>O que esta versão entrega no Free</h2>
+            <ul>
+                <li><strong>Shell PDV:</strong> coluna esquerda fixa (~264px) com Início, Produtos e Caixa / venda; usuário/Sair na sidebar; header só com marca + versão.</li>
+                <li><strong>Mapa Premium:</strong> itens com badge <strong>Restrito</strong> empilhados (um por linha). Em 1280px+ não há fila horizontal.</li>
+                <li><strong>Caixa registradora:</strong> busca/código dominante com foco ao abrir; Enter adiciona 1 un.; carrinho legível; total grande e sempre visível.</li>
+                <li><strong>Pagamento:</strong> Dinheiro / Débito / Crédito / Outros (registro manual honesto). Atalhos na UI: F2 busca, F4 pagar, Esc cancelar.</li>
+                <li><strong>Aviso PIX:</strong> um aviso compacto — sem empilhar banners.</li>
+                <li><strong>Login:</strong> depois da troca de senha, <code>/login</code> não vende <code>admin</code>/<code>admin</code> como válido.</li>
+                <li><strong>Versão no boot:</strong> <code>3.2.6-free</code> (Maven <code>3.2.6</code> · display <code>3.2.6-free</code>).</li>
+            </ul>
+        </section>
+
+        <section class="card wiki-card">
+            <h2>Aceite QA (Windows)</h2>
+            <ul>
+                <li>Sidebar em coluna em <code>/inicio</code>, <code>/produtos</code>, <code>/caixa</code></li>
+                <li>Restrito empilhado (não em linha)</li>
+                <li>Caixa usável só com teclado: buscar → Enter → pagar</li>
+                <li>Total visualmente dominante</li>
+                <li>Sem PIX/NF-e falso; contadores e Restrito intactos</li>
+            </ul>
+        </section>
+
+        <section class="card wiki-card">
+            <h2>Instalação com sucesso</h2>
+            <ol>
+                <li>Instale <strong>Java 25+</strong> (<a href="https://adoptium.net/" target="_blank" rel="noopener">Temurin 25</a>). <code>java -version</code> tem que mostrar 25.</li>
+                <li>Baixe o ZIP da sua plataforma na <a href="download.html">página de download</a>.</li>
+                <li>Extraia em pasta nova. <strong>Windows:</strong> <code>iniciar-pdv.bat</code>. <strong>Linux/macOS:</strong> <code>./iniciar-pdv.sh</code>.</li>
+                <li>Abra <code>http://localhost:8080/login</code>, troque a senha no primeiro acesso e use a senha nova daí em diante.</li>
+                <li>No caixa: foque a busca (F2), digite o código, Enter, F4 para pagar.</li>
+            </ol>
+            <p>O log de arranque deve dizer <strong>3.2.6-free</strong>. Banco em <code>%APPDATA%\caracore\</code> (Windows) ou <code>~/.caracore/</code> (Linux/macOS).</p>
+        </section>
+
+        <section class="card wiki-card">
+            <h2>Pacotes no GitHub Releases</h2>
+            <p>Publique a tag <code>v3.2.6-free</code> com os ZIPs e preencha SHA256 em <code>SHA256SUMS.txt</code> / <code>RELEASE_MANIFEST.json</code>. Enquanto os binários não estiverem na tag, use o artefato da branch de patch ou a <a href="wiki-release-v3-2-5-free.html">3.2.5-free</a> publicada.</p>
+            <ul>
+                <li><code>caracore-pdv-v3.2.6-free-free-windows-x64.zip</code></li>
+                <li><code>caracore-pdv-v3.2.6-free-free-linux-x64.zip</code></li>
+                <li><code>caracore-pdv-v3.2.6-free-free-macos-x64.zip</code></li>
+            </ul>
+        </section>
+
+        <section class="card wiki-card">
+            <h2>Limites da edição FREE</h2>
+            <p>Até 100 vendas/mês, 100 produtos, 1 operador, 4 vendedores, 1 loja; offline SQLite; balcão no browser. Sem PIX integrado e sem NF-e/NFC-e. Premium: <a href="consultoria.html">agende a demonstração</a>.</p>
+        </section>
+
+        <nav class="back">
+            <a href="download.html#instalacao">Instalação com sucesso</a> · <a href="versoes.html">Versões</a> · <a href="wiki-release-v3-2-5-free.html">Notas da 3.2.5-free</a>
+        </nav>
+    </div>
+
+    <footer class="bg-gray-900 text-gray-300 py-12">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <p class="text-white font-bold mb-2">Cara Core Informática</p>
+                    <p class="text-sm text-gray-400">PDV desktop local. Operação de venda sem ruído.</p>
+                </div>
+                <div>
+                    <h3 class="text-white font-bold mb-3">O produto</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="download.html" class="hover:text-white">Download</a></li>
+                        <li><a href="versoes.html" class="hover:text-white">Versões</a></li>
+                        <li><a href="consultoria.html" class="hover:text-white">Demonstração</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white font-bold mb-3">Contato</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="canal-feedback.html" class="hover:text-white">Canal da loja</a></li>
+                        <li><a href="mailto:suporte@caracore.com.br" class="hover:text-white">suporte@caracore.com.br</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-6 text-sm text-gray-400">
+                <p>&copy; 2024–2026 Cara Core Informática · CNPJ 23.969.028/0001-37</p>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/js/store-nav.js"></script>
+</body>
+</html>
