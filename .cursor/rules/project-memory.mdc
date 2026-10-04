@@ -9,7 +9,7 @@ alwaysApply: true
 - **caracore-pdv-releases:** loja (vitrine, download e feedback) do **CaraCore PDV Desktop (Java)**.
 - **URL:** https://pdv.caracore.com.br/
 - **Publicação:** GitHub Pages a partir da pasta **docs/**.
-- **Oficina:** caracore-pdv (Java 25 · Quarkus). Canal Free publicado: `v3.2.6-free` (UI no navegador `http://localhost:8080/login`). Pré-release v4 pública para avaliação = Qute `v4.0.0-rc3` (T032 aberto; não é GA nem download Free).
+- **Oficina:** caracore-pdv (Java 25 · Quarkus). Canal Free estável publicado: `v3.2.6-free` (UI no navegador `http://localhost:8080/login`). Pré-release pública da edição Free para avaliação = Qute `v4.0.0-rc3`, até 100 vendas finalizadas/mês (T032 aberto; não é GA nem substitui o download estável).
 - **Matriz:** caracore-site — `#caracore-pdv` · `#pdv-coexistencia`.
 - **Wiki:** wiki.caracore.com.br — `projeto-pdv.html`, `pdv/`.
 
@@ -18,7 +18,7 @@ alwaysApply: true
 - Qualidades: SQLite offline, venda no navegador, fechamento organizado. Copy Free **não** anuncia recibo nem emissão fiscal.
 - Menu do produto: O que resolvemos · Como funciona · Economia · Planos · **Versões** · Agendar demonstração.
 - **Versões** (`versoes.html`): mapa de canais + detalhe RC3 + histórico. Atual = 3.2.6-free. Prévia = 4.0.0-rc3. Sem misturar pasta nem data.
-- Download: página do Free (ZIPs + SHA + 5 passos); RC3/histórico em `versoes.html` ou `<details>`.
+- Download: página do Free (ZIPs + SHA + 5 passos); RC3/histórico em `versoes.html` ou `<details>`. ZIP público RC3 reconstruído e verificado: SHA-256 `51f46120dac04dfbbe7fbfb6d442d4f79717327940452b043cc8ec65b9bcd4f3`.
 - Sem depoimento inventado. Sem % de economia inventada.
 - PWA da loja (`pwa.html`) = vitrine/atalho, **não** é o caixa.
 
