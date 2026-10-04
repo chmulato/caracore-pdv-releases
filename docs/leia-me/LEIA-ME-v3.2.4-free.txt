@@ -7,7 +7,7 @@ Data: 07/09/2026
 ISTO É O DOWNLOAD DA LOJA
 -------------------------
 O que você baixa hoje em pdv.caracore.com.br é esta tag: v3.2.4-free.
-A prévia v4.0.0-rc2 NÃO é o download da loja.
+A pré-release v4.0.0-rc3 NÃO é o download da loja.
 
 Não misture pasta nem data. Canais independentes.
 
