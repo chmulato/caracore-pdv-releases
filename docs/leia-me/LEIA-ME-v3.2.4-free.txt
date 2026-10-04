@@ -4,10 +4,10 @@ Versão: 3.2.4-free
 Tag: v3.2.4-free
 Data: 07/09/2026
 
-ISTO É O DOWNLOAD DA LOJA
--------------------------
-O que você baixa hoje em pdv.caracore.com.br é esta tag: v3.2.4-free.
-A pré-release v4.0.0-rc4 NÃO é o download da loja.
+REGISTRO HISTÓRICO
+------------------
+Esta tag não é o download estável atual. A versão Free estável da loja é
+v3.2.6-free. A pré-release v4.0.0-rc4 é um canal separado para avaliação.
 
 Não misture pasta nem data. Canais independentes.
 
@@ -23,7 +23,7 @@ INSTALAÇÃO
    Linux/macOS: chmod +x iniciar-pdv.sh && ./iniciar-pdv.sh
 4. O launcher só sobe o backend. Abra o NAVEGADOR em
    http://localhost:8080/login
-   Não espera janela JavaFX.
+   A interface do caixa abre no navegador.
 5. Primeiro acesso: admin / admin (troque a senha, 8 a 15 caracteres).
 6. Cadastre um produto e registre a primeira venda no caixa
    pela interface do navegador.

@@ -6,7 +6,7 @@
   <meta name="description" content="Baixe grátis a edição Free do CaraCore-PDV para Windows, Linux e macOS e valide o produto com até 100 vendas por mês no balcão.">
   <meta name="author" content="Cara Core Informática">
   <meta property="og:title" content="Cara Core Informática | Baixar Versão de Degustação (Free)">
-  <meta property="og:description" content="Teste a edição Free no Windows, Linux ou macOS com desktop local, SQLite e limites claros e avance para o Premium quando precisar de mais automação comercial.">
+  <meta property="og:description" content="Teste a edição Free no Windows, Linux ou macOS com a aplicação web local no navegador, SQLite e limites claros; conheça o Premium quando precisar de mais automação comercial.">
   <meta property="og:type" content="website">
   <title>CaraCore-PDV | Baixar e Testar Grátis (Free)</title>
   <link rel="manifest" href="manifest.webmanifest">
@@ -86,24 +86,46 @@
                 <i class="fab fa-windows text-blue-500"></i> Windows x64 — baixar ZIP
               </a>
               <p class="mt-2 text-xs text-slate-600 break-all"><code>caracore-pdv-v3.2.6-free-free-windows-x64.zip</code></p>
-              <p class="mt-1 text-xs text-slate-500 break-all font-mono">SHA256 4b15a12dbe9b525bdb31be59aff5c226f32cbb40f766eca752744996fda634d9</p>
+              <div class="mt-1 flex items-center gap-2 text-xs text-slate-500">
+                <span class="font-mono">SHA256 4b15a12d…fda634d9</span>
+                <button type="button" class="rounded border border-slate-300 px-2 py-1 hover:bg-white" onclick="copyHash('4b15a12dbe9b525bdb31be59aff5c226f32cbb40f766eca752744996fda634d9', this)" aria-label="Copiar SHA256 completo do ZIP Windows">Copiar</button>
+              </div>
             </div>
             <div class="rounded-xl border border-slate-200 bg-slate-50 px-4 py-3">
               <a id="assetLinux" href="https://github.com/chmulato/caracore-pdv-releases/releases/download/v3.2.6-free/caracore-pdv-v3.2.6-free-free-linux-x64.zip" class="flex items-center gap-2 text-slate-900 font-semibold hover:text-emerald-800 text-sm">
                 <i class="fab fa-linux text-orange-500"></i> Linux x64 — baixar ZIP
               </a>
               <p class="mt-2 text-xs text-slate-600 break-all"><code>caracore-pdv-v3.2.6-free-free-linux-x64.zip</code></p>
-              <p class="mt-1 text-xs text-slate-500 break-all font-mono">SHA256 028e5987d35650fd0b2f5f4b2146033e92707b413c0cc8242d05df27e1a26e72</p>
+              <div class="mt-1 flex items-center gap-2 text-xs text-slate-500">
+                <span class="font-mono">SHA256 028e5987…e1a26e72</span>
+                <button type="button" class="rounded border border-slate-300 px-2 py-1 hover:bg-white" onclick="copyHash('028e5987d35650fd0b2f5f4b2146033e92707b413c0cc8242d05df27e1a26e72', this)" aria-label="Copiar SHA256 completo do ZIP Linux">Copiar</button>
+              </div>
             </div>
             <div class="rounded-xl border border-slate-200 bg-slate-50 px-4 py-3">
               <a id="assetMacos" href="https://github.com/chmulato/caracore-pdv-releases/releases/download/v3.2.6-free/caracore-pdv-v3.2.6-free-free-macos-x64.zip" class="flex items-center gap-2 text-slate-900 font-semibold hover:text-emerald-800 text-sm">
                 <i class="fab fa-apple text-gray-700"></i> macOS x64 — baixar ZIP
               </a>
               <p class="mt-2 text-xs text-slate-600 break-all"><code>caracore-pdv-v3.2.6-free-free-macos-x64.zip</code></p>
-              <p class="mt-1 text-xs text-slate-500 break-all font-mono">SHA256 7e617aebe895d87ffe0446643751886263f29cbab7422a9e2ac3bcdd0aa5deff</p>
+              <div class="mt-1 flex items-center gap-2 text-xs text-slate-500">
+                <span class="font-mono">SHA256 7e617aeb…0aa5deff</span>
+                <button type="button" class="rounded border border-slate-300 px-2 py-1 hover:bg-white" onclick="copyHash('7e617aebe895d87ffe0446643751886263f29cbab7422a9e2ac3bcdd0aa5deff', this)" aria-label="Copiar SHA256 completo do ZIP macOS">Copiar</button>
+              </div>
             </div>
           </div>
         </div>
+
+        <aside id="pre-release-v4" class="rounded-2xl border border-amber-300 bg-amber-50 p-5" aria-labelledby="rc4-title">
+          <h2 id="rc4-title" class="text-lg font-extrabold text-slate-900">Pré-release 4.0.0-rc4</h2>
+          <p class="mt-1 text-sm text-slate-700">Preview para teste; não é a versão estável. O canal estável para Windows, Linux e macOS continua sendo a 3.2.6-free.</p>
+          <p class="mt-2 text-xs text-slate-600 break-all font-mono">SHA256 31a0cded…c3c1fdf2
+            <button type="button" class="ml-2 rounded border border-amber-400 px-2 py-1 hover:bg-amber-100" onclick="copyHash('31a0cdeda68dce058079c5d0d3d5652084ba8a8cc073dfce60e021c4b3c1fdf2', this)" aria-label="Copiar SHA256 completo da pré-release 4.0.0-rc4">Copiar</button>
+          </p>
+          <a class="mt-3 inline-flex items-center rounded-xl border border-amber-500 px-4 py-2 text-sm font-semibold text-slate-900 hover:bg-amber-100"
+             href="https://github.com/chmulato/caracore-pdv-releases/releases/download/v4.0.0-rc4/CaraCore-PDV-4.0.0-rc4-qute-portable-windows-x64.zip">
+            Baixar preview RC4 (Windows x64)
+          </a>
+          <a class="ml-2 text-sm font-semibold text-emerald-800 hover:underline" href="wiki-release-v4-0-0-rc4.html">Detalhes e instruções</a>
+        </aside>
 
         <div id="instalacao" class="rounded-2xl border border-emerald-200 bg-emerald-50 p-5">
           <h2 class="text-lg font-extrabold text-slate-900">Instalação</h2>
@@ -124,6 +146,7 @@
           <ul class="mt-3 text-sm text-slate-700 space-y-2">
             <li class="flex items-start gap-2"><i class="fas fa-check text-emerald-600 mt-0.5"></i><span>Até <strong>100 vendas/mês</strong> · 100 produtos · 1 operador · 4 vendedores · 1 loja.</span></li>
             <li class="flex items-start gap-2"><i class="fas fa-check text-emerald-600 mt-0.5"></i><span>Offline (SQLite) · balcão no navegador. Pagamentos: dinheiro, débito, crédito e outros — <strong>“outros” não é PIX integrado</strong>.</span></li>
+            <li class="flex items-start gap-2"><i class="fas fa-check text-emerald-600 mt-0.5"></i><span>Recibo digital por link e PDF, sem valor fiscal.</span></li>
             <li class="flex items-start gap-2"><i class="fas fa-triangle-exclamation text-amber-600 mt-0.5"></i><span>Sem PIX integrado (QR/gateway) e sem NF-e/NFC-e.</span></li>
           </ul>
           <p class="mt-4 text-sm text-slate-700">
@@ -138,24 +161,12 @@
         <details class="border-t border-slate-200 pt-8">
           <summary class="cursor-pointer select-none text-sm font-semibold text-slate-800">Guia no WhatsApp (opcional)</summary>
           <div class="mt-4 max-w-xl">
-            <p class="text-sm text-slate-600">Os ZIPs acima já estão livres. Se quiser o guia de início no WhatsApp, preencha e o download do seu sistema começa em seguida.</p>
-            <form id="leadForm" class="mt-4 space-y-4" autocomplete="on">
-              <div>
-                <label for="loja" class="block text-sm font-semibold text-slate-900">Nome da Loja</label>
-                <input id="loja" name="loja" autocomplete="organization" placeholder="Ex: Mercado do Gilvan"
-                       class="mt-2 w-full h-11 rounded-xl border border-slate-200 px-4 text-slate-900 focus-ring" required>
-              </div>
-              <div>
-                <label for="whatsapp" class="block text-sm font-semibold text-slate-900">WhatsApp</label>
-                <input id="whatsapp" name="whatsapp" inputmode="tel" autocomplete="tel" placeholder="Ex: (41) 99999-9999"
-                       class="mt-2 w-full h-11 rounded-xl border border-slate-200 px-4 text-slate-900 focus-ring" required>
-              </div>
-              <button type="submit"
-                      class="inline-flex items-center justify-center gap-2 rounded-xl bg-emerald-600 px-6 py-3 text-white font-bold hover:bg-emerald-700">
-                Baixar Free (3.2.6) <i class="fas fa-download"></i>
-              </button>
-              <div id="leadStatus" class="hidden rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-700"></div>
-            </form>
+            <p class="text-sm text-slate-600">O download é livre e não depende de cadastro. Se quiser pedir o guia, abra uma conversa no WhatsApp; a mensagem só será enviada se você confirmar no aplicativo. Consulte a <a class="font-semibold text-emerald-700 underline" href="https://www.caracore.com.br/politica/politica-privacidade.html" target="_blank" rel="noopener">Política de Privacidade (LGPD)</a>.</p>
+            <a class="mt-3 inline-flex items-center gap-2 rounded-xl border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-900 hover:bg-slate-50"
+               href="https://wa.me/5541999097797?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20o%20guia%20de%20in%C3%ADcio%20do%20CaraCore%20PDV."
+               target="_blank" rel="noopener">
+              Pedir guia pelo WhatsApp <i class="fab fa-whatsapp text-emerald-700"></i>
+            </a>
           </div>
         </details>
 
@@ -216,6 +227,30 @@
 
   <script src="assets/js/pwa.js"></script>
   <script>
+    window.copyHash = async function (hash, button) {
+      const original = button.textContent;
+      try {
+        if (navigator.clipboard && window.isSecureContext) {
+          await navigator.clipboard.writeText(hash);
+        } else {
+          const input = document.createElement("textarea");
+          input.value = hash;
+          input.setAttribute("readonly", "");
+          input.style.position = "fixed";
+          input.style.opacity = "0";
+          document.body.appendChild(input);
+          input.select();
+          const copied = document.execCommand("copy");
+          input.remove();
+          if (!copied) throw new Error("O navegador não copiou o SHA-256.");
+        }
+        button.textContent = "Copiado";
+      } catch (error) {
+        button.textContent = "Falha ao copiar";
+      }
+      window.setTimeout(function () { button.textContent = original; }, 1800);
+    };
+
     (function () {
       const OWNER = "chmulato";
       const REPO = "caracore-pdv-releases";
@@ -231,10 +266,6 @@
       const manualLink = document.getElementById("manualLink");
       const downloadMeta = document.getElementById("downloadMeta");
       const releaseFallbackLink = document.getElementById("releaseFallbackLink");
-      const leadForm = document.getElementById("leadForm");
-      const lojaInput = document.getElementById("loja");
-      const whatsappInput = document.getElementById("whatsapp");
-      const leadStatus = document.getElementById("leadStatus");
 
       function detectPlatform() {
         const ua = navigator.userAgent || "";
@@ -269,16 +300,6 @@
         }
       }
 
-      function normalizeWhatsApp(raw) {
-        const digits = (raw || "").replace(/\D/g, "");
-        if (!digits) return null;
-
-        if (digits.length === 11) return "55" + digits;
-        if (digits.length === 13 && digits.startsWith("55")) return digits;
-        if (digits.length === 10) return "55" + digits;
-        return null;
-      }
-
       async function confirmPinnedRelease() {
         try {
           const resp = await fetch(`https://api.github.com/repos/${OWNER}/${REPO}/releases/tags/${TAG}`, {
@@ -300,45 +321,6 @@
           applyDownloadLink();
         }
       }
-
-      leadForm.addEventListener("submit", function (e) {
-        e.preventDefault();
-        const loja = (lojaInput.value || "").trim();
-        if (!loja) {
-          leadStatus.classList.remove("hidden");
-          leadStatus.textContent = "Informe o nome da loja.";
-          lojaInput.focus();
-          return;
-        }
-
-        const normalized = normalizeWhatsApp(whatsappInput.value);
-        if (!normalized) {
-          leadStatus.classList.remove("hidden");
-          leadStatus.textContent = "Informe um WhatsApp válido (com DDD). Ex: (41) 99999-9999.";
-          whatsappInput.focus();
-          return;
-        }
-
-        try {
-          localStorage.setItem("caracore_lead_loja", loja);
-          localStorage.setItem("caracore_lead_whatsapp", normalized);
-          localStorage.setItem("caracore_lead_ts", String(Date.now()));
-        } catch (ignore) {}
-
-        leadStatus.classList.remove("hidden");
-        leadStatus.textContent = "Iniciando download... Em seguida, enviaremos o guia de início rápido no WhatsApp informado.";
-
-        window.location.href = latest.assetUrl || latest.url;
-      });
-
-      try {
-        const saved = localStorage.getItem("caracore_lead_whatsapp");
-        const savedLoja = localStorage.getItem("caracore_lead_loja");
-        if (savedLoja) lojaInput.value = savedLoja;
-        if (saved) {
-          applyDownloadLink();
-        }
-      } catch (ignore) {}
 
       applyDownloadLink();
       confirmPinnedRelease();
