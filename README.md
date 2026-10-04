@@ -1,6 +1,6 @@
 # CaraCore-PDV - Loja e Releases
 
-**Download principal da loja = tag `v3.2.6-free`.** A pré-release mais recente é `v4.0.0-rc3`; ela não é o Free nem está homologada para produção.
+**Download principal da loja = tag `v3.2.6-free`.** A pré-release mais recente é `v4.0.0-rc4`; ela não é o download estável nem está homologada para produção.
 
 Não misture pasta nem data. Canais independentes.
 
@@ -44,7 +44,7 @@ A matriz de desenvolvimento fica no repositório **caracore-pdv**. Este reposit�
 | Campo | Valor |
 | ----- | ----- |
 | Download da loja | `v3.2.6-free` (Free / balcão) |
-| Pré-release de avaliação | `v4.0.0-rc3` — Windows x64 · ZIP sem Authenticode · **não é o download da loja** |
+| Pré-release de avaliação | `v4.0.0-rc4` — Windows x64 · ZIP sem Authenticode · **não é o download da loja** |
 | Publicação | 13/09/2026 |
 | Launcher Free | `iniciar-pdv.bat` (hífen) · navegador em `http://localhost:8080/login` |
 | Banco Free | `%APPDATA%\caracore\` (Windows) · `~/.caracore/` (Linux/macOS) |
@@ -62,16 +62,22 @@ O trecho `free-free` no nome do ZIP é o nome publicado, não um segundo plano.
 | `caracore-pdv-v3.2.6-free-free-linux-x64.zip` | Linux x64 (Ubuntu 20.04+) | `028e5987d35650fd0b2f5f4b2146033e92707b413c0cc8242d05df27e1a26e72` |
 | `caracore-pdv-v3.2.6-free-free-macos-x64.zip` | macOS 12+ x64 (Intel) | `7e617aebe895d87ffe0446643751886263f29cbab7422a9e2ac3bcdd0aa5deff` |
 
-### Pré-release atual v4.0.0-rc3 — not store download
+### Pré-release atual v4.0.0-rc4 — not store download
 
 | Artefato | Plataforma | SHA256 |
 | -------- | ---------- | ------ |
-| `CaraCore-PDV-4.0.0-rc3-qute-portable-windows-x64.zip` | Windows x64 | Publicado separadamente em <https://pdv.caracore.com.br/wiki-release-v4-0-0-rc3.html> |
+| `CaraCore-PDV-4.0.0-rc4-qute-portable-windows-x64.zip` | Windows x64 | `31a0cdeda68dce058079c5d0d3d5652084ba8a8cc073dfce60e021c4b3c1fdf2` |
 | Launcher | `iniciar_pdv.bat` (underscore) | Edge em modo aplicativo |
 | Banco | só `./data/caracore-pdv.db` | Não abre `%APPDATA%\caracore\` |
-| Requisitos | Java 25+, Python 3 e Microsoft Edge | T032 ainda aberto; não usar como GA |
+| Requisitos | Java 25+, Python 3 e Microsoft Edge | T032 mantém o roteiro operacional formal como gate; não usar como GA |
+
+Notas, instruções de verificação e link de download: <https://pdv.caracore.com.br/wiki-release-v4-0-0-rc4.html>.
 
 O ZIP é unsigned; o hash detecta alterações, mas não autentica a identidade do publicador. Não desative SmartScreen, Defender nem antivírus. O Free 3.2.6 continua sendo o download principal da loja.
+
+### Histórico técnico — v4.0.0-rc3
+
+RC3 permanece arquivada e foi substituída pela RC4. O hash de seu artefato histórico é `51f46120dac04dfbbe7fbfb6d442d4f79717327940452b043cc8ec65b9bcd4f3`; não o reutilize para a RC4.
 
 ### Histórico técnico — v4.0.0-rc2
 
@@ -104,7 +110,7 @@ A tag `v0.1.4` (MSI/EXE/ZIP) é o piloto Rust em <https://pdv-rust.caracore.com.
 
 ### Linha atual: `java_25`
 
-A vitrine em `docs/` segue a trilha Java 25 da matriz, com SQLite local e soberania localhost. O download público maduro é a tag `v3.2.6-free`. O candidato `v4.0.0-rc2` (Quarkus + Qute) está como pré-release e não substitui a degustação Free. O GA do v4 permanece previsto para 08/11/2026.
+A vitrine em `docs/` segue a trilha Java 25 da matriz, com SQLite local e soberania localhost. O download público maduro é a tag `v3.2.6-free`. A pré-release `v4.0.0-rc4` (Quarkus + Qute) não substitui o download estável; o GA do v4 permanece previsto para 08/11/2026, condicionado aos gates do plano.
 
 Notas da versão atual: <https://pdv.caracore.com.br/wiki-release-v3-2-6-free.html>
 
@@ -142,10 +148,11 @@ Download e onboarding:
 | `docs/download.html` | Página de download da Degustação Free (Windows, Linux e macOS) |
 | `docs/pwa.html` | PWA da vitrine (não é o caixa) |
 | `docs/tecnologia.html` | Soluções e pilares técnicos |
-| `docs/versoes.html` | Versão atual (3.2.6-free) e pré-release atual (4.0.0-rc3) |
+| `docs/versoes.html` | Versão estável (3.2.6-free), pré-release atual (4.0.0-rc4) e histórico |
 | `docs/wiki-release-v3-2-6-free.html` | Notas do canal Free atual |
 | `docs/wiki-release-v3-2-5-free.html` | Notas históricas da 3.2.5-free |
-| `docs/wiki-release-v4-0-0-rc3.html` | Notas e SHA-256 da pré-release (não é o download da loja) |
+| `docs/wiki-release-v4-0-0-rc4.html` | Notas e SHA-256 da pré-release atual (não é o download estável da loja) |
+| `docs/wiki-release-v4-0-0-rc3.html` | Notas e hash histórico da RC3 |
 | `docs/wiki-release-v4-0-0-rc2.html` | Notas históricas da RC2 |
 | `docs/wiki-release-v3-2-3-free.html` | Notas históricas da 3.2.3-free |
 | `docs/wiki-release-v3-2-2-free.html` | Notas históricas da 3.2.2-free |

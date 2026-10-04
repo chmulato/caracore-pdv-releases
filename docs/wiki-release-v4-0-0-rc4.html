@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CaraCore PDV 4.0.0-rc4 — pré-release</title>
+    <meta name="description" content="Pré-release da edição Free CaraCore PDV 4.0.0-rc4 para avaliação, com limite de 100 vendas finalizadas por mês civil.">
+    <meta name="theme-color" content="#166534">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/css/portal-style.css">
+    <link rel="stylesheet" href="assets/css/loja.css">
+</head>
+<body class="smooth-scroll bg-gray-50 page-wiki page-wiki-release">
+    <nav class="container mx-auto px-4 sm:px-6 lg:px-8 pt-4 text-sm text-gray-600" aria-label="Navegação">
+        <a href="https://www.caracore.com.br/" class="hover:text-green-600">Cara Core Informática</a>
+        <span> · </span>
+        <a href="index.html" class="hover:text-green-600">CaraCore PDV</a>
+        <span> · </span>
+        <a href="versoes.html" class="hover:text-green-600">Versões</a>
+        <span> · v4.0.0-rc4</span>
+    </nav>
+    <header class="portal-hero green-bg text-white py-12 md:py-16">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
+            <p class="text-sm uppercase tracking-wide text-amber-100 mb-3">Edição Free em pré-release para avaliação · Windows x64</p>
+            <h1 class="text-3xl md:text-5xl font-bold mb-4">CaraCore PDV 4.0.0-rc4</h1>
+            <p class="text-lg text-green-50">Até <strong>100 vendas finalizadas por mês civil</strong>. Ainda não é GA nem está homologada para operação de produção; a versão Free estável permanece <strong>3.2.6-free</strong>.</p>
+        </div>
+    </header>
+    <main class="wrapper space-y-6">
+        <section class="card wiki-card border-amber-300">
+            <h2 class="text-xl font-bold">Status da pré-release</h2>
+            <p>A RC4 corrige achados de QA da RC3. O fluxo de primeiro acesso e a homologação Edge/Windows em 1280×800 foram concluídos; o roteiro operacional formal permanece como gate antes do GA.</p>
+            <p>Esta pré-release usa o plano Free, com limite de 100 vendas finalizadas por mês civil. A versão 3.2.6-free continua sendo a versão estável e multiplataforma. Não misture instalações, launchers nem bancos.</p>
+        </section>
+        <section class="card wiki-card">
+            <h2 class="text-xl font-bold">Correções desta pré-release</h2>
+            <ul class="list-disc pl-6 space-y-2">
+                <li>Versão RC4 unificada no boot, heartbeat, manifesto e telas de entrada.</li>
+                <li>Heartbeat, logs e banco isolados sob <code>./data</code>; sem escrita nos diretórios legados do usuário.</li>
+                <li>Superfícies Premium/fiscais do Free ocultadas ou bloqueadas com resposta amigável; correções nas telas de pagamento e fiscal.</li>
+                <li>Caixa considera o valor líquido após o troco; atalhos e apresentação do caixa ajustados.</li>
+                <li>Documentação da API fechada em produção, shutdown protegido e recibo com CSS local para uso offline.</li>
+                <li>Correção do bootstrap administrativo no primeiro acesso.</li>
+            </ul>
+            <p class="mt-4">O Free não inclui PIX integrado nem emissão de NF-e/NFC-e.</p>
+        </section>
+        <section class="card wiki-card">
+            <h2 class="text-xl font-bold">Download e verificação</h2>
+            <p class="mb-4">Antes de extrair, compare o SHA-256 abaixo com o resultado local. O hash ajuda a detectar alteração do arquivo, mas não autentica a identidade do publicador.</p>
+            <p class="font-mono break-all mb-4"><strong>Arquivo:</strong> <code>CaraCore-PDV-4.0.0-rc4-qute-portable-windows-x64.zip</code><br><strong>SHA-256:</strong> <code>31a0cdeda68dce058079c5d0d3d5652084ba8a8cc073dfce60e021c4b3c1fdf2</code></p>
+            <p class="mb-4">No PowerShell: <code>Get-FileHash .\CaraCore-PDV-4.0.0-rc4-qute-portable-windows-x64.zip -Algorithm SHA256</code></p>
+            <p class="mb-4">Este ZIP não tem assinatura Authenticode. O Windows pode exibir alertas de editor desconhecido ou reputação. Não desative SmartScreen, Defender ou antivírus; interrompa se o hash divergir.</p>
+            <p class="flex flex-wrap gap-3">
+                <a class="btn-release" href="https://github.com/chmulato/caracore-pdv-releases/releases/download/v4.0.0-rc4/CaraCore-PDV-4.0.0-rc4-qute-portable-windows-x64.zip">Baixar prévia Free RC4</a>
+                <a class="btn-release btn-release-outline" href="https://github.com/chmulato/caracore-pdv-releases/releases/tag/v4.0.0-rc4">Release e arquivos</a>
+                <a class="btn-release btn-release-outline" href="download.html">Baixar Free estável 3.2.6</a>
+            </p>
+        </section>
+        <section class="card wiki-card">
+            <h2 class="text-xl font-bold">Instalação isolada</h2>
+            <ol class="list-decimal pl-6 space-y-2">
+                <li>Use Windows x64 com Java 25+, Python 3 e Microsoft Edge.</li>
+                <li>Extraia o ZIP verificado em uma pasta nova e gravável pelo usuário.</li>
+                <li>Execute <code>iniciar_pdv.bat</code> (underscore); o launcher inicia o backend e abre o Edge em modo aplicativo.</li>
+                <li>No primeiro acesso, <code>admin/admin</code> exige troca de senha.</li>
+            </ol>
+            <p class="mt-4">O banco é criado em <code>./data/caracore-pdv.db</code>. Esta versão não abre nem altera <code>%APPDATA%\caracore\data\banco.db</code>. Não copie uma pasta <code>data</code> de outra instalação.</p>
+        </section>
+        <p class="text-sm text-gray-600">Versão anterior: <a class="underline" href="wiki-release-v4-0-0-rc3.html">RC3</a>. Para uma versão Free estável e multiplataforma, use <a class="underline" href="download.html">a 3.2.6-free</a>.</p>
+    </main>
+    <script src="assets/js/loja.js"></script>
+</body>
+</html>
