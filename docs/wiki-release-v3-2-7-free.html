@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Versão 3.2.5 FREE — shell com menu lateral — CaraCore-PDV</title>
-    <meta name="description" content="Notas da versão 3.2.5 FREE: shell com menu lateral (Início/Produtos/Caixa; mapa Premium com Restrito), loja de exemplo opcional e badge de limites. Sem PIX integrado e sem NF-e/NFC-e.">
+    <title>Versão 3.2.7 FREE — estoque, turno e recibo — CaraCore-PDV</title>
+    <meta name="description" content="Notas da versão 3.2.7 FREE: baixa de estoque, caixa do turno, saldo em dinheiro, recibo offline com itens e PDF. Sem PIX integrado e sem NF-e/NFC-e.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -52,12 +52,12 @@
     <section class="portal-hero green-bg text-white py-12 md:py-16">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="max-w-3xl mx-auto text-center">
-                <p class="text-sm uppercase tracking-wide text-green-100 mb-3">Histórica · Free · Windows · Linux · macOS</p>
-                <h1 class="text-3xl md:text-5xl font-bold mb-4">CaraCore PDV 3.2.5</h1>
-                <p class="text-lg text-green-50">Histórica: <strong>v3.2.5-free</strong>. Shell com menu lateral; Início/Produtos/Caixa operáveis; mapa Premium com badges <strong>Restrito</strong>. O download da loja hoje é <strong>v3.2.7-free</strong>. A 4.0.0-rc5 é pré-release para avaliação — não é o download da loja.</p>
+                <p class="text-sm uppercase tracking-wide text-green-100 mb-3">Versão atual · Free · Windows · Linux · macOS</p>
+                <h1 class="text-3xl md:text-5xl font-bold mb-4">CaraCore PDV 3.2.7</h1>
+                <p class="text-lg text-green-50">Canal estável da loja: <strong>v3.2.7-free</strong>. App web local no computador da loja. A pré-release pública da linha v4 é a <strong>4.0.0-rc5</strong> — não é o download estável.</p>
                 <p class="mt-6">
                     <a href="download.html" class="inline-flex items-center bg-white text-green-700 px-6 py-3 rounded-lg font-semibold hover:bg-green-50">Baixar Free (3.2.7)</a>
-                    <a href="wiki-release-v3-2-6-free.html" class="inline-flex items-center ml-3 text-white underline hover:text-green-100">Notas da 3.2.7-free</a>
+                    <a href="versoes.html" class="inline-flex items-center ml-3 text-white underline hover:text-green-100">Todas as versões</a>
                 </p>
             </div>
         </div>
@@ -69,46 +69,50 @@
             <span> · </span>
             <a href="https://wiki.caracore.com.br/projeto-pdv.html">Wiki do PDV</a>
             <span> · </span>
-            <span>Versão 3.2.5 FREE</span>
+            <span>Versão 3.2.7 FREE</span>
         </nav>
 
         <header>
             <p class="eyebrow">Notas da versão</p>
-            <h1>Shell realista no Free, menu lateral e mapa Premium com Restrito</h1>
-            <p>Canal histórico do balcão (sucedida pela 3.2.7-free). O launcher sobe o backend e o operador abre o navegador em <code>/login</code> — não é janela JavaFX. Depois do login, o shell mostra o menu lateral com Início, Produtos e Caixa operáveis; os itens do mapa Premium aparecem com badge <strong>Restrito</strong>.</p>
+            <h1>Estoque, turno e recibo no Free</h1>
+            <p>Correção do QA de 07/10/2026 sobre a 3.2.6-free. O balcão que a 3.2.6 já entregava permanece: Java 25, login em <code>/login</code>, menu em coluna, caixa com busca e atalhos, teto de 100 vendas/mês. Sem NF-e, NFC-e nem PIX integrado.</p>
         </header>
 
-        <p class="download-notice"><strong>Versão histórica</strong> (3.2.5-free, 13/09/2026). Download da loja hoje: <a href="download.html">3.2.7-free</a>. Windows, Linux e macOS · Java 25+. Sem PIX integrado (sem QR/gateway) e sem NF-e/NFC-e. Pagamentos no Free: dinheiro, débito, crédito e outros — “outros” não é o PIX integrado. A pré-release de avaliação está em <a href="versoes.html#proxima">4.0.0-rc5</a>.</p>
+        <p class="download-notice"><strong>Versão atual do CaraCore PDV</strong> (3.2.7-free, 07/10/2026). Windows, Linux e macOS · Java 25+. Sem PIX integrado (sem QR/gateway) e sem NF-e/NFC-e. Pagamentos no Free: dinheiro, débito, crédito e outros — “outros” não é o PIX integrado. A pré-release de avaliação está em <a href="versoes.html#proxima">4.0.0-rc5</a>.</p>
 
         <section class="card wiki-card">
-            <h2>O que esta versão entrega no Free</h2>
+            <h2>O que esta versão corrige</h2>
             <ul>
-                <li><strong>Shell com menu lateral:</strong> Início, Produtos e Caixa operáveis; itens Premium do mapa com badge <strong>Restrito</strong> (sem liberar o que não está no plano).</li>
-                <li><strong>Loja de exemplo (opcional):</strong> «Carregar loja de exemplo» / «Remover exemplos»; empty states quando não há dados.</li>
-                <li><strong>Badge de limites:</strong> <code>Plano Free · X/100 vendas neste mês · Y/100 produtos</code>.</li>
-                <li><strong>UI de balcão no browser:</strong> criar produto, vender e pagar em dinheiro — aceite QA do fluxo.</li>
-                <li><strong>Porta 8080:</strong> <code>http://localhost:8080</code>. Health em <code>/q/health</code>.</li>
-                <li><strong>Tela de operador:</strong> <code>/login</code>. Primeiro acesso <code>admin</code> / <code>admin</code> com troca obrigatória de senha.</li>
-                <li><strong>Versão no boot:</strong> <code>3.2.5-free</code> (Maven <code>3.2.5</code> · display <code>3.2.5-free</code>).</li>
-                <li><strong>Launcher:</strong> <code>iniciar-pdv.bat</code> (hífen). Java 21 no PATH faz o launcher parar.</li>
+                <li><strong>Estoque:</strong> a venda finalizada baixa a quantidade e grava o movimento. Cancelamento ou estorno devolve. Sem estoque suficiente, a finalização é bloqueada.</li>
+                <li><strong>Turno:</strong> abertura, fundo de troco, sangria, suprimento, fechamento, relatórios X e Z na tela e em PDF. Saldo em dinheiro usa o valor da venda; o troco não entra no caixa.</li>
+                <li><strong>Recibo:</strong> página <code>/r/&lt;token&gt;</code> com CSS embutido, itens, total, pagamento, valor recebido e troco. Botão para o PDF. Documento sem valor fiscal.</li>
+                <li><strong>Computador da loja:</strong> o programa escuta só em <code>127.0.0.1</code>. A rede local exige <code>CARACORE_BIND</code>, explicado no <code>INSTALACAO.txt</code>.</li>
+                <li><strong>Logs:</strong> <code>%APPDATA%\caracore\logs</code> no Windows.</li>
+                <li><strong>Versão no boot e no login:</strong> <code>3.2.7-free</code>.</li>
+            </ul>
+        </section>
+
+        <section class="card wiki-card">
+            <h2>O que a 3.2.6 continua valendo</h2>
+            <ul>
+                <li>Java 25, ZIP, <code>iniciar-pdv.bat</code> ou <code>iniciar-pdv.sh</code>, <code>http://localhost:8080/login</code>.</li>
+                <li>Primeiro acesso <code>admin</code> / <code>admin</code> com troca obrigatória de senha.</li>
+                <li>Menu em coluna e itens Premium marcados como Restrito.</li>
+                <li>Caixa com busca, Enter, total grande e atalhos F2, F4 e Esc.</li>
+                <li>Até 100 vendas finalizadas por mês e 100 produtos.</li>
             </ul>
         </section>
 
         <section class="card wiki-card">
             <h2>Instalação com sucesso</h2>
             <ol>
-                <li>Instale <strong>Java 25+</strong> (<a href="https://adoptium.net/" target="_blank" rel="noopener">Temurin 25</a>). Feche e abra o terminal; <code>java -version</code> tem que mostrar 25. Java 21 no PATH faz o launcher parar.</li>
+                <li>Instale <strong>Java 25+</strong> (<a href="https://adoptium.net/" target="_blank" rel="noopener">Temurin 25</a>). <code>java -version</code> tem que mostrar 25.</li>
                 <li>Baixe o ZIP da sua plataforma na <a href="download.html">página de download</a>.</li>
-                <li>Extraia em uma <strong>pasta nova</strong> (exemplo: <code>C:\CaraCore\pdv-free</code>). Não extraia na pasta da pré-release 4.0.0-rc5.</li>
-                <li><strong>Windows:</strong> execute <code>iniciar-pdv.bat</code> (hífen — a prévia v4 usa <code>iniciar_pdv.bat</code>). <strong>Linux/macOS:</strong> <code>chmod +x iniciar-pdv.sh</code> e <code>./iniciar-pdv.sh</code>.</li>
-                <li>Aguarde cerca de 10 segundos. Abra o navegador em <code>http://localhost:8080</code>.</li>
-                <li>Clique em <strong>Entrar no sistema</strong> ou abra <code>http://localhost:8080/login</code>.</li>
-                <li>Entre com <code>admin</code> / <code>admin</code> e defina a senha nova.</li>
-                <li>Cadastre um produto (ou use «Carregar loja de exemplo») e registre a primeira venda no caixa pela interface do navegador.</li>
+                <li>Extraia em pasta nova. <strong>Windows:</strong> <code>iniciar-pdv.bat</code>. <strong>Linux/macOS:</strong> <code>./iniciar-pdv.sh</code>.</li>
+                <li>Abra <code>http://localhost:8080/login</code>, troque a senha no primeiro acesso e use a senha nova daí em diante.</li>
+                <li>O caixa do turno fica em <code>/caixa/turno</code>.</li>
             </ol>
-            <p>O launcher só sobe o backend local. Não espera uma janela JavaFX: o acesso do operador desta edição Free é no navegador. O log de arranque deve dizer <strong>3.2.5-free</strong>.</p>
-            <p><strong>Quem entra:</strong> um operador — <code>admin</code> / <code>admin</code>, com troca obrigatória de senha. O Free limita a 1 operador; não há os quatro logins do piloto Rust. Banco em <code>%APPDATA%\caracore\</code> (Windows) ou <code>~/.caracore/</code> (Linux/macOS).</p>
-            <p><strong>Pagamentos no Free:</strong> dinheiro, débito, crédito e outros. “Outros” não é o PIX integrado (QR/gateway) da loja. Sem emissão fiscal (NF-e/NFC-e).</p>
+            <p>O log de arranque deve dizer <strong>3.2.7-free</strong>. Banco em <code>%APPDATA%\caracore\data\banco.db</code> (Windows) ou <code>~/.caracore/</code> (Linux/macOS). Logs em <code>%APPDATA%\caracore\logs</code>.</p>
         </section>
 
         <section class="card wiki-card">
@@ -126,35 +130,35 @@
                     <tbody>
                         <tr>
                             <td>Windows 10/11 x64</td>
-                            <td><code>caracore-pdv-v3.2.5-free-free-windows-x64.zip</code></td>
-                            <td><code>e772ca5d57d1c368d80716ce2e8fce5ada488593cf65e2f00206694e79a00fc0</code></td>
+                            <td><code>caracore-pdv-v3.2.7-free-free-windows-x64.zip</code></td>
+                            <td><code>37110b7c07a045942bd89628fd473e649c7b57756707ce8a71908a1ec4c03c89</code></td>
                             <td><code>iniciar-pdv.bat</code></td>
                         </tr>
                         <tr>
                             <td>Linux x64 (Ubuntu 20.04+)</td>
-                            <td><code>caracore-pdv-v3.2.5-free-free-linux-x64.zip</code></td>
-                            <td><code>85ca05555bb1da59dd0ca493a6a76f7071f7da97d4100cba92f288eec909c6ca</code></td>
+                            <td><code>caracore-pdv-v3.2.7-free-free-linux-x64.zip</code></td>
+                            <td><code>bc8b67462a4505ad54e2d0afe18982321536101fb66f9e2c06c91bd3f7a63df7</code></td>
                             <td><code>./iniciar-pdv.sh</code></td>
                         </tr>
                         <tr>
                             <td>macOS 12+ x64 (Intel)</td>
-                            <td><code>caracore-pdv-v3.2.5-free-free-macos-x64.zip</code></td>
-                            <td><code>dc6cb9666b07900dc01f5b54446281e841e55c854f4bdf84cd8981387b4f110d</code></td>
+                            <td><code>caracore-pdv-v3.2.7-free-free-macos-x64.zip</code></td>
+                            <td><code>c0ffcf3992327df0dd31e5e2e2fc8173f3e1bf32c97178355e22994fa56b630a</code></td>
                             <td><code>./iniciar-pdv.sh</code></td>
                         </tr>
                     </tbody>
                 </table>
             </div>
-            <p>Valide a integridade com <code>SHA256SUMS.txt</code> e <code>RELEASE_MANIFEST.json</code> da tag <a href="https://github.com/chmulato/caracore-pdv-releases/releases/tag/v3.2.5-free">v3.2.5-free</a>. Os nomes usam <code>free-free</code> — é o nome publicado, não um segundo plano.</p>
+            <p>Valide a integridade com <code>SHA256SUMS.txt</code> e <code>RELEASE_MANIFEST.json</code> da tag <a href="https://github.com/chmulato/caracore-pdv-releases/releases/tag/v3.2.7-free">v3.2.7-free</a>. Os nomes usam <code>free-free</code> — é o nome publicado, não um segundo plano.</p>
         </section>
 
         <section class="card wiki-card">
             <h2>Limites da edição FREE</h2>
-            <p>Até 100 vendas/mês, 100 produtos, 1 operador, 4 vendedores, 1 loja; offline SQLite; balcão no browser. Sem PIX integrado (sem QR/gateway) e sem emissão fiscal (NF-e/NFC-e). Pagamentos: dinheiro, débito, crédito e outros — “outros” não é o PIX integrado. Premium (teto, PIX integrado, fiscal, suporte): <a href="consultoria.html">agende a demonstração</a>.</p>
+            <p>Até 100 vendas/mês, 100 produtos, 1 operador, 4 vendedores, 1 loja; offline SQLite; balcão no browser. Sem PIX integrado e sem NF-e/NFC-e. Premium: <a href="consultoria.html">agende a demonstração</a>.</p>
         </section>
 
         <nav class="back">
-            <a href="download.html#instalacao">Instalação com sucesso</a> · <a href="versoes.html">Versões</a> · <a href="wiki-release-v3-2-6-free.html">Notas da 3.2.7-free</a> · <a href="wiki-release-v3-2-4-free.html">Notas da 3.2.4-free</a>
+            <a href="download.html#instalacao">Instalação com sucesso</a> · <a href="versoes.html">Versões</a> · <a href="wiki-release-v3-2-6-free.html">Notas da 3.2.7-free</a>
         </nav>
     </div>
 

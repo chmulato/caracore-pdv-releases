@@ -7,7 +7,7 @@ Data: 07/09/2026
 REGISTRO HISTÓRICO
 ------------------
 Esta tag não é o download estável atual. A versão Free estável da loja é
-v3.2.6-free. A pré-release v4.0.0-rc4 é um canal separado para avaliação.
+v3.2.7-free. A pré-release v4.0.0-rc4 é um canal separado para avaliação.
 
 Não misture pasta nem data. Canais independentes.
 
