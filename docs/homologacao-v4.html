@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homologação CaraCore PDV v4 — Edge / Windows 1280×800</title>
+    <meta name="description" content="Roteiro formal de homologação da pré-release CaraCore PDV v4 em Edge/Windows 1280×800. Resultado obtido ainda pendente.">
+    <meta name="theme-color" content="#166534">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/css/portal-style.css">
+    <link rel="stylesheet" href="assets/css/loja.css">
+</head>
+<body class="smooth-scroll bg-gray-50 page-wiki">
+    <nav class="container mx-auto px-4 sm:px-6 lg:px-8 pt-4 text-sm text-gray-600" aria-label="Navegação">
+        <a href="https://www.caracore.com.br/" class="hover:text-green-600">Cara Core Informática</a>
+        <span> · </span>
+        <a href="index.html" class="hover:text-green-600">CaraCore PDV</a>
+        <span> · </span>
+        <a href="wiki-release-v4-0-0-rc5.html" class="hover:text-green-600">v4.0.0-rc5</a>
+        <span> · homologação</span>
+    </nav>
+    <header class="portal-hero green-bg text-white py-12">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
+            <h1 class="text-3xl md:text-4xl font-bold mb-4">Roteiro de homologação v4</h1>
+            <p class="text-lg text-green-50">Edge / Windows, janela 1280×800. Validada em testes internos; roteiro formal pendente. A coluna resultado obtido ainda está em branco.</p>
+        </div>
+    </header>
+    <main class="wrapper space-y-6">
+        <section class="card wiki-card">
+            <p>Gate T032 da pré-release Qute portátil, edição Free. Não é o canal estável 3.2.6-free. O plano Free não emite NF-e/NFC-e e não tem PIX integrado.</p>
+            <p class="mt-3">Ambiente: Windows x64, Edge em modo aplicativo 1280×800, Java 25+, Python 3, ZIP extraído em pasta nova, banco em <code>./data/caracore-pdv.db</code>. Um ciclo com rede e um ciclo com a rede desligada. Conferir o SHA-256 do ZIP com a loja, o GitHub e a wiki antes de extrair.</p>
+            <p class="mt-3">Bootstrap, Font Awesome, ApexCharts e Quagga são servidos pelo próprio aplicativo. Não há fallback de CDN. Se o arquivo local faltar, a tela quebra; o aplicativo não busca o arquivo na internet.</p>
+        </section>
+        <section class="card wiki-card overflow-x-auto">
+            <h2 class="text-xl font-bold mb-3">Registro</h2>
+            <table class="wiki-table w-full text-sm">
+                <tbody>
+                    <tr><th>Versão testada</th><td></td></tr>
+                    <tr><th>Data</th><td></td></tr>
+                    <tr><th>SHA-256 do ZIP conferido</th><td></td></tr>
+                    <tr><th>Executor</th><td></td></tr>
+                    <tr><th>Resultado geral</th><td>Pendente</td></tr>
+                </tbody>
+            </table>
+        </section>
+        <section class="card wiki-card overflow-x-auto">
+            <h2 class="text-xl font-bold mb-3">Passos</h2>
+            <table class="wiki-table w-full text-sm">
+                <thead>
+                    <tr><th>#</th><th>Passo</th><th>Resultado esperado</th><th>Resultado obtido</th><th>Data</th><th>Versão</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>1</td><td>Extrair o ZIP em pasta nova e executar <code>iniciar_pdv.bat</code></td><td>Edge abre em 1280×800. Primeira subida em cerca de 11 s. Se a senha ainda não foi trocada, o console diz “Primeiro acesso: admin / admin (só antes da troca de senha)”. Depois da troca, essa linha não aparece.</td><td>Pendente</td><td></td><td></td></tr>
+                    <tr><td>2</td><td>Se existir <code>%APPDATA%\caracore\data\banco.db</code> com conteúdo</td><td>O aviso cita o arquivo e diz que ele não será usado nem alterado. Sem arquivo, sem aviso.</td><td>Pendente</td><td></td><td></td></tr>
+                    <tr><td>3</td><td>Primeiro acesso admin / admin</td><td>A troca de senha é obrigatória. /login não oferece essas credenciais como válidas depois da troca.</td><td>Pendente</td><td></td><td></td></tr>
+                    <tr><td>4</td><td>Conferir versão</td><td>A mesma versão aparece no boot, no heartbeat, no manifesto, no login e no rodapé.</td><td>Pendente</td><td></td><td></td></tr>
+                    <tr><td>5</td><td>Abrir <code>./data/runtime/heartbeat.json</code> duas vezes</td><td>status UP. startedAt igual nas duas leituras. lastSeen e updatedAt mudam.</td><td>Pendente</td><td></td><td></td></tr>
+                    <tr><td>6</td><td>Menu do Free</td><td>Sem superfície Premium. Rotas Premium respondem 403 amigável.</td><td>Pendente</td><td></td><td></td></tr>
+                    <tr><td>7</td><td>Frente de caixa</td><td>F2 busca, F4 paga, Esc volta. Vendedor padrão pré-selecionado. Seed opcional de 8 produtos.</td><td>Pendente</td><td></td><td></td></tr>
+                    <tr><td>8</td><td>Com a rede desligada, abrir o leitor de código de barras</td><td>O script local /vendor/quagga/quagga.min.js carrega. A câmera é solicitada. O console não mostra erro de script.</td><td>Pendente</td><td></td><td></td></tr>
+                    <tr><td>9</td><td>Pagar em dinheiro, débito, crédito e outros</td><td>Troco e Relatório X corretos. Sem texto de IBS, CBS, PIX ou SEFAZ no Free, além do aviso de documento fiscal ausente.</td><td>Pendente</td><td></td><td></td></tr>
+                    <tr><td>10</td><td>Abrir /r/&lt;token&gt; e o PDF, ainda sem rede</td><td>Itens com descrição, quantidade, preço unitário e subtotal. Total, forma de pagamento e troco. Documento sem valor fiscal e CPF mascarado.</td><td>Pendente</td><td></td><td></td></tr>
+                    <tr><td>11</td><td>Durante a execução, abrir os logs em <code>./data/logs</code></td><td>caracore-pdv.log e caracore-pdv-audit.log têm conteúdo antes de encerrar. A auditoria contém login, troca de senha, venda finalizada, cancelamento e shutdown.</td><td>Pendente</td><td></td><td></td></tr>
+                    <tr><td>12</td><td>Conferência de caixa, Auditoria recente</td><td>Os mesmos eventos aparecem na tela.</td><td>Pendente</td><td></td><td></td></tr>
+                    <tr><td>13</td><td>Limite Free</td><td>A 101ª venda finalizada do mês civil é recusada.</td><td>Pendente</td><td></td><td></td></tr>
+                    <tr><td>14</td><td>GET /q/openapi e GET /q/swagger-ui</td><td>Fechados.</td><td>Pendente</td><td></td><td></td></tr>
+                    <tr><td>15</td><td>GET /internal/shutdown</td><td>405.</td><td>Pendente</td><td></td><td></td></tr>
+                    <tr><td>16</td><td>POST /internal/shutdown sem token e com token</td><td>Sem token: 404. Com token: 202. Heartbeat fica DOWN. Nada é gravado em %APPDATA%\caracore nem em ~\.caracore.</td><td>Pendente</td><td></td><td></td></tr>
+                </tbody>
+            </table>
+        </section>
+        <p class="text-sm text-gray-600">Notas da pré-release: <a class="underline" href="wiki-release-v4-0-0-rc5.html">4.0.0-rc5</a>.</p>
+    </main>
+    <script src="assets/js/loja.js"></script>
+</body>
+</html>
