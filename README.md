@@ -1,6 +1,6 @@
 # CaraCore-PDV - Loja e Releases
 
-**Download principal da loja = tag `v3.2.7-free`.** A pré-release mais recente é `v4.0.0-rc5`; ela não é o download estável. Validada em testes internos; roteiro formal pendente.
+**Download principal da loja = tag `v3.2.7-free`.** A pré-release oferecida para download é `v4.0.0-rc5`; ela não é o download estável. O candidato da oficina é `v4.0.0-rc6` e o ZIP ainda não está neste repositório.
 
 Não misture pasta nem data. Canais independentes.
 
@@ -45,6 +45,7 @@ A matriz de desenvolvimento fica no repositório **caracore-pdv**. Este reposit�
 | ----- | ----- |
 | Download da loja | `v3.2.7-free` (Free / balcão) |
 | Pré-release de avaliação | `v4.0.0-rc5` — Windows x64 · ZIP sem Authenticode · **não é o download da loja** |
+| Candidato da oficina | `v4.0.0-rc6` — ZIP local, ainda sem release neste repositório |
 | Publicação | 07/10/2026 |
 | Launcher Free | `iniciar-pdv.bat` (hífen) · navegador em `http://localhost:8080/login` |
 | Banco Free | `%APPDATA%\caracore\` (Windows) · `~/.caracore/` (Linux/macOS) |
@@ -73,7 +74,9 @@ O trecho `free-free` no nome do ZIP é o nome publicado, não um segundo plano.
 
 Notas, instruções de verificação e link de download: <https://pdv.caracore.com.br/wiki-release-v4-0-0-rc5.html>. Roteiro: <https://pdv.caracore.com.br/homologacao-v4.html>.
 
-O ZIP é unsigned; o hash detecta alterações, mas não autentica a identidade do publicador. Não desative SmartScreen, Defender nem antivírus. O Free 3.2.6 continua sendo o download principal da loja.
+O ZIP é unsigned; o hash detecta alterações, mas não autentica a identidade do publicador. Não desative SmartScreen, Defender nem antivírus. O Free 3.2.7 continua sendo o download principal da loja.
+
+O candidato `v4.0.0-rc6` tem nota em <https://pdv.caracore.com.br/wiki-release-v4-0-0-rc6.html>. O SHA-256 local `cab76f040cbcef6f030a91808f47fd93f637eededf15005ad6a333b40dac0734` ainda não tem arquivo publicado aqui.
 
 ### Histórico técnico — v4.0.0-rc3
 
@@ -110,9 +113,9 @@ A tag `v0.1.4` (MSI/EXE/ZIP) é o piloto Rust em <https://pdv-rust.caracore.com.
 
 ### Linha atual: `java_25`
 
-A vitrine em `docs/` segue a trilha Java 25 da matriz, com SQLite local e soberania localhost. O download público maduro é a tag `v3.2.7-free`. A pré-release `v4.0.0-rc5` (Quarkus + Qute) não substitui o download estável; o GA do v4 permanece previsto para 08/11/2026, condicionado aos gates do plano.
+A vitrine em `docs/` segue a trilha Java 25 da matriz, com SQLite local e soberania localhost. O download público maduro é a tag `v3.2.7-free`. A pré-release oferecida é a `v4.0.0-rc5` (Quarkus + Qute) e não substitui o download estável. O candidato `v4.0.0-rc6` ainda não tem arquivo publicado. O GA do v4 permanece previsto para 08/11/2026, condicionado aos gates do plano.
 
-Notas da versão atual: <https://pdv.caracore.com.br/wiki-release-v3-2-6-free.html>
+Notas da versão estável: <https://pdv.caracore.com.br/wiki-release-v3-2-7-free.html>
 
 Lista de versões: <https://pdv.caracore.com.br/versoes.html>
 
@@ -148,8 +151,10 @@ Download e onboarding:
 | `docs/download.html` | Página de download da Degustação Free (Windows, Linux e macOS) |
 | `docs/pwa.html` | PWA da vitrine (não é o caixa) |
 | `docs/tecnologia.html` | Soluções e pilares técnicos |
-| `docs/versoes.html` | Versão estável (3.2.7-free), pré-release atual (4.0.0-rc5) e histórico |
-| `docs/wiki-release-v3-2-6-free.html` | Notas do canal Free atual |
+| `docs/versoes.html` | Versão estável (3.2.7-free), pré-release pública (4.0.0-rc5), candidato rc6 e histórico |
+| `docs/wiki-release-v3-2-7-free.html` | Notas do canal Free estável |
+| `docs/wiki-release-v3-2-6-free.html` | Notas históricas da 3.2.6-free |
+| `docs/wiki-release-v4-0-0-rc6.html` | Nota do candidato de oficina, sem arquivo para baixar |
 | `docs/wiki-release-v3-2-5-free.html` | Notas históricas da 3.2.5-free |
 | `docs/wiki-release-v4-0-0-rc5.html` | Notas e SHA-256 da pré-release atual (não é o download estável da loja) |
 | `docs/wiki-release-v4-0-0-rc3.html` | Notas e hash histórico da RC3 |
