@@ -29,7 +29,7 @@
     <main class="wrapper space-y-6">
         <section class="card wiki-card border-amber-300">
             <h2 class="text-xl font-bold">Status da pré-release</h2>
-            <p>A RC5 é o ZIP público de avaliação e corrige achados de QA da RC4. O candidato da oficina passou a ser a <a href="wiki-release-v4-0-0-rc6.html">4.0.0-rc6</a>; essa página ainda não oferece o arquivo. O roteiro está em <a href="homologacao-v4.html">homologação v4</a>.</p>
+            <p>A RC5 é o ZIP público de avaliação e corrige achados de QA da RC4. O <a href="homologacao-v4.html#rc5">roteiro da RC5</a> está publicado. O ciclo manual no Edge em 1280×800 não foi executado; a coluna de resultado obtido permanece pendente. A 4.0.0-rc6 está em preparação e ainda não tem arquivo nem SHA-256.</p>
             <p>Esta pré-release usa o plano Free, com limite de 100 vendas finalizadas por mês civil. A versão 3.2.7-free continua sendo a versão estável e multiplataforma. Não misture instalações, launchers nem bancos. O Free não inclui PIX integrado nem emissão de NF-e/NFC-e.</p>
         </section>
         <section class="card wiki-card">
@@ -51,8 +51,8 @@
             <p class="flex flex-wrap gap-3">
                 <a class="btn-release" href="https://github.com/chmulato/caracore-pdv-releases/releases/download/v4.0.0-rc5/CaraCore-PDV-4.0.0-rc5-qute-portable-windows-x64.zip">Baixar prévia Free RC5</a>
                 <a class="btn-release btn-release-outline" href="https://github.com/chmulato/caracore-pdv-releases/releases/tag/v4.0.0-rc5">Release e arquivos</a>
-                <a class="btn-release btn-release-outline" href="homologacao-v4.html">Roteiro de homologação</a>
-                <a class="btn-release btn-release-outline" href="download.html">Baixar Free estável 3.2.6</a>
+                <a class="btn-release btn-release-outline" href="homologacao-v4.html#rc5">Roteiro de homologação</a>
+                <a class="btn-release btn-release-outline" href="download.html">Baixar Free estável 3.2.7</a>
             </p>
         </section>
         <section class="card wiki-card">
@@ -60,7 +60,7 @@
             <ol class="list-decimal pl-6 space-y-2">
                 <li>Use Windows x64 com Java 25+, Python 3 e Microsoft Edge.</li>
                 <li>Extraia o ZIP verificado em uma pasta nova e gravável pelo usuário.</li>
-                <li>Execute <code>iniciar_pdv.bat</code> (underscore); o launcher inicia o backend e abre o Edge em 1280×800.</li>
+                <li>Execute <code>iniciar_pdv.bat</code> (underscore); o launcher inicia o backend e abre o Edge. Se o Java padrão não for o 25, defina <code>JAVA_HOME</code> ou <code>PDV_JAVA</code> para o JDK 25 antes de executar.</li>
                 <li>No primeiro acesso, <code>admin/admin</code> exige troca de senha. Depois da troca, o console não repete essas credenciais.</li>
             </ol>
             <p class="mt-4">O banco é criado em <code>./data/caracore-pdv.db</code>. Um banco legado em <code>%APPDATA%\caracore\data\banco.db</code>, se existir, não é aberto nem alterado.</p>

@@ -1,6 +1,6 @@
 # CaraCore-PDV - Loja e Releases
 
-**Download principal da loja = tag `v3.2.7-free`.** A pré-release oferecida para download é `v4.0.0-rc5`; ela não é o download estável. O candidato da oficina é `v4.0.0-rc6` e o ZIP ainda não está neste repositório.
+**Download principal da loja = tag `v3.2.7-free`.** A pré-release publicada é `v4.0.0-rc5`; ela não é o download estável. A `v4.0.0-rc6` está em preparação e ainda não tem release neste repositório.
 
 Não misture pasta nem data. Canais independentes.
 
@@ -45,7 +45,7 @@ A matriz de desenvolvimento fica no repositório **caracore-pdv**. Este reposit�
 | ----- | ----- |
 | Download da loja | `v3.2.7-free` (Free / balcão) |
 | Pré-release de avaliação | `v4.0.0-rc5` — Windows x64 · ZIP sem Authenticode · **não é o download da loja** |
-| Candidato da oficina | `v4.0.0-rc6` — ZIP local, ainda sem release neste repositório |
+| Em preparação | `v4.0.0-rc6` — sem arquivo e sem SHA-256 publicados |
 | Publicação | 07/10/2026 |
 | Launcher Free | `iniciar-pdv.bat` (hífen) · navegador em `http://localhost:8080/login` |
 | Banco Free | `%APPDATA%\caracore\` (Windows) · `~/.caracore/` (Linux/macOS) |
@@ -76,7 +76,7 @@ Notas, instruções de verificação e link de download: <https://pdv.caracore.c
 
 O ZIP é unsigned; o hash detecta alterações, mas não autentica a identidade do publicador. Não desative SmartScreen, Defender nem antivírus. O Free 3.2.7 continua sendo o download principal da loja.
 
-O candidato `v4.0.0-rc6` tem nota em <https://pdv.caracore.com.br/wiki-release-v4-0-0-rc6.html>. O SHA-256 local `cab76f040cbcef6f030a91808f47fd93f637eededf15005ad6a333b40dac0734` ainda não tem arquivo publicado aqui.
+A `v4.0.0-rc6` está em preparação. Ainda não há arquivo nem SHA-256 publicados.
 
 ### Histórico técnico — v4.0.0-rc3
 
@@ -154,7 +154,7 @@ Download e onboarding:
 | `docs/versoes.html` | Versão estável (3.2.7-free), pré-release pública (4.0.0-rc5), candidato rc6 e histórico |
 | `docs/wiki-release-v3-2-7-free.html` | Notas do canal Free estável |
 | `docs/wiki-release-v3-2-6-free.html` | Notas históricas da 3.2.6-free |
-| `docs/wiki-release-v4-0-0-rc6.html` | Nota do candidato de oficina, sem arquivo para baixar |
+| `docs/wiki-release-v4-0-0-rc6.html` | Aviso de preparação, sem arquivo e sem SHA-256 |
 | `docs/wiki-release-v3-2-5-free.html` | Notas históricas da 3.2.5-free |
 | `docs/wiki-release-v4-0-0-rc5.html` | Notas e SHA-256 da pré-release atual (não é o download estável da loja) |
 | `docs/wiki-release-v4-0-0-rc3.html` | Notas e hash histórico da RC3 |

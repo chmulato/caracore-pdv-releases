@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Versões — CaraCore PDV</title>
-    <meta name="description" content="Versões do CaraCore PDV: Free estável 3.2.6 e pré-release Free 4.0 para avaliação, com limites, requisitos e SHA-256.">
+    <meta name="description" content="Versões do CaraCore PDV: Free estável 3.2.7-free e pré-release 4.0.0-rc5 para avaliação, com limites, requisitos e SHA-256.">
     <link rel="manifest" href="manifest.webmanifest">
     <meta name="theme-color" content="#166534">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -98,7 +98,7 @@
                     </tbody>
                 </table>
             </div>
-            <p>As duas versões seguem o plano Free, com limite de 100 vendas finalizadas por mês civil. A 3.2.7-free é a versão estável multiplataforma e abre no navegador; a RC5 é a pré-release Windows oferecida para avaliação e abre o Edge em modo aplicativo. O candidato da oficina é a <a href="wiki-release-v4-0-0-rc6.html">4.0.0-rc6</a>, ainda sem arquivo nesta loja.</p>
+            <p>As duas versões seguem o plano Free, com limite de 100 vendas finalizadas por mês civil. A 3.2.7-free é a versão estável multiplataforma e abre no navegador; a RC5 é a pré-release Windows oferecida para avaliação e abre o Edge em modo aplicativo. A 4.0.0-rc6 está em preparação: ainda não há arquivo nem SHA-256 para baixar.</p>
         </section>
 
         <section class="card wiki-card" id="atual">
@@ -113,7 +113,7 @@
         <section class="card wiki-card" id="proxima">
             <span id="previa" hidden></span>
             <h2>Pré-release Free 4.0.0-rc5 — somente para avaliação</h2>
-            <p>A <strong>4.0.0-rc5</strong> usa o plano Free, com até 100 vendas finalizadas por mês civil. Ainda não é GA. A versão Free estável continua sendo a 3.2.7-free. Extraia em pasta nova; launcher <code>iniciar_pdv.bat</code> (underscore); banco só em <code>./data/caracore-pdv.db</code>. Requer Java 25+, Python 3 e Microsoft Edge. O candidato <a href="wiki-release-v4-0-0-rc6.html">4.0.0-rc6</a> tem o roteiro preenchido e ainda não tem arquivo para baixar.</p>
+            <p>A <strong>4.0.0-rc5</strong> usa o plano Free, com até 100 vendas finalizadas por mês civil. Ainda não é GA. A versão Free estável continua sendo a 3.2.7-free. Extraia em pasta nova; launcher <code>iniciar_pdv.bat</code> (underscore); banco e logs em <code>./data</code>. Requer <a href="https://adoptium.net/temurin/releases/?version=25">JDK 25</a>, <a href="https://www.python.org/downloads/">Python 3.10</a> ou mais novo e Microsoft Edge. Se o Java padrão for outro, defina <code>JAVA_HOME</code> ou <code>PDV_JAVA</code> para o Java 25. A 4.0.0-rc6 está em preparação: ainda não há arquivo nem SHA-256 para baixar.</p>
             <p>Distribuição somente em ZIP portátil Windows x64 sem Authenticode; MSI não incluído. SHA-256: <code>d45d12d9fbf6e3923f69ddbbf6173ef2128be0341e30e75f038b7dc1f3ab6f81</code>. Confira o hash na página das notas antes de extrair.</p>
             <p class="wiki-links">
                 <a class="btn-release" href="wiki-release-v4-0-0-rc5.html">Prévia RC5 e SHA-256</a>
@@ -131,7 +131,7 @@
             <p>Se a instalação abrir na porta <code>8765</code> ou <code>/login</code> retornar 404, o pacote é antigo: baixe a versão estável <a href="download.html">3.2.7-free</a> e extraia em uma pasta nova. Essa versão abre no navegador em <code>http://localhost:8080/login</code>; no Windows, os dados ficam em <code>%APPDATA%\caracore\</code> e, no Linux/macOS, em <code>~/.caracore/</code>.</p>
             <details class="mt-3 text-sm text-slate-600">
                 <summary class="cursor-pointer">Histórico das versões Free anteriores</summary>
-                <p class="mt-2"><a href="wiki-release-v3-2-6-free.html">3.2.7-free</a> · <a href="wiki-release-v3-2-5-free.html">3.2.5-free</a> · <a href="wiki-release-v3-2-4-free.html">3.2.4-free</a> · <a href="wiki-release-v3-2-3-free.html">3.2.3-free</a> · <a href="wiki-release-v3-2-2-free.html">3.2.2-free</a>.</p>
+                <p class="mt-2"><a href="wiki-release-v3-2-7-free.html">3.2.7-free</a> · <a href="wiki-release-v3-2-6-free.html">3.2.6-free</a> · <a href="wiki-release-v3-2-5-free.html">3.2.5-free</a> · <a href="wiki-release-v3-2-4-free.html">3.2.4-free</a> · <a href="wiki-release-v3-2-3-free.html">3.2.3-free</a> · <a href="wiki-release-v3-2-2-free.html">3.2.2-free</a>.</p>
             </details>
             <p>Manual: <a href="https://wiki.caracore.com.br/projeto-pdv.html">wiki central do PDV</a>.</p>
         </section>
