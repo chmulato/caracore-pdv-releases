@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homologação CaraCore PDV v4 — Edge / Windows 1280×800</title>
-    <meta name="description" content="Roteiro formal de homologação da pré-release CaraCore PDV v4 em Edge/Windows 1280×800. Resultado obtido ainda pendente.">
+    <title>Homologação CaraCore PDV v4.0.0-rc6</title>
+    <meta name="description" content="Roteiro de homologação da pré-release CaraCore PDV 4.0.0-rc6. Resultados do fechamento de 09/10/2026.">
     <meta name="theme-color" content="#166534">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="assets/css/portal-style.css">
@@ -16,30 +16,30 @@
         <span> · </span>
         <a href="index.html" class="hover:text-green-600">CaraCore PDV</a>
         <span> · </span>
-        <a href="wiki-release-v4-0-0-rc5.html" class="hover:text-green-600">v4.0.0-rc5</a>
+        <a href="wiki-release-v4-0-0-rc6.html" class="hover:text-green-600">v4.0.0-rc6</a>
         <span> · homologação</span>
     </nav>
     <header class="portal-hero green-bg text-white py-12">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
             <h1 class="text-3xl md:text-4xl font-bold mb-4">Roteiro de homologação v4</h1>
-            <p class="text-lg text-green-50">Edge / Windows, janela 1280×800. Validada em testes internos; roteiro formal pendente. A coluna resultado obtido ainda está em branco.</p>
+            <p class="text-lg text-green-50">Candidato 4.0.0-rc6, fechamento de 09/10/2026. O plano Free não emite NF-e/NFC-e e não tem PIX integrado. O ciclo manual no Edge ainda falta antes do GA de 08/11/2026.</p>
         </div>
     </header>
     <main class="wrapper space-y-6">
         <section class="card wiki-card">
             <p>Gate T032 da pré-release Qute portátil, edição Free. Não é o canal estável 3.2.7-free. O plano Free não emite NF-e/NFC-e e não tem PIX integrado.</p>
-            <p class="mt-3">Ambiente: Windows x64, Edge em modo aplicativo 1280×800, Java 25+, Python 3, ZIP extraído em pasta nova, banco em <code>./data/caracore-pdv.db</code>. Um ciclo com rede e um ciclo com a rede desligada. Conferir o SHA-256 do ZIP com a loja, o GitHub e a wiki antes de extrair.</p>
-            <p class="mt-3">Bootstrap, Font Awesome, ApexCharts e Quagga são servidos pelo próprio aplicativo. Não há fallback de CDN. Se o arquivo local faltar, a tela quebra; o aplicativo não busca o arquivo na internet.</p>
+            <p class="mt-3">Ambiente deste fechamento: Windows x64, Java 25, testes Quarkus e um ZIP local. O launcher abre o Edge maximizado, com perfil fixo em <code>./data/edge-profile</code>. Conferir o SHA-256 do ZIP com a loja, o GitHub e a wiki antes de extrair. Esse hash ainda está só na oficina.</p>
+            <p class="mt-3">Bootstrap, Font Awesome, ApexCharts e Quagga são servidos pelo próprio aplicativo. Não há fallback de CDN.</p>
         </section>
         <section class="card wiki-card overflow-x-auto">
             <h2 class="text-xl font-bold mb-3">Registro</h2>
             <table class="wiki-table w-full text-sm">
                 <tbody>
-                    <tr><th>Versão testada</th><td></td></tr>
-                    <tr><th>Data</th><td></td></tr>
-                    <tr><th>SHA-256 do ZIP conferido</th><td></td></tr>
-                    <tr><th>Executor</th><td></td></tr>
-                    <tr><th>Resultado geral</th><td>Pendente</td></tr>
+                    <tr><th>Versão testada</th><td>4.0.0-rc6</td></tr>
+                    <tr><th>Data</th><td>09/10/2026</td></tr>
+                    <tr><th>SHA-256 do ZIP conferido</th><td>cab76f040cbcef6f030a91808f47fd93f637eededf15005ad6a333b40dac0734 — só no artefato local <code>CaraCore-PDV-4.0.0-rc6-qute-portable-windows-x64.zip</code>. Loja, GitHub e wiki ainda não publicam este arquivo.</td></tr>
+                    <tr><th>Executor</th><td>Verificação automatizada na oficina (testes Quarkus e do launcher). Ciclo manual no Edge não executado.</td></tr>
+                    <tr><th>Resultado geral</th><td>Correções do QA do rc5 cobertas por teste. Publicação do ZIP e roteiro manual no Edge continuam pendentes para o GA.</td></tr>
                 </tbody>
             </table>
         </section>
@@ -50,26 +50,32 @@
                     <tr><th>#</th><th>Passo</th><th>Resultado esperado</th><th>Resultado obtido</th><th>Data</th><th>Versão</th></tr>
                 </thead>
                 <tbody>
-                    <tr><td>1</td><td>Extrair o ZIP em pasta nova e executar <code>iniciar_pdv.bat</code></td><td>Edge abre em 1280×800. Primeira subida em cerca de 11 s. Se a senha ainda não foi trocada, o console diz “Primeiro acesso: admin / admin (só antes da troca de senha)”. Depois da troca, essa linha não aparece.</td><td>Pendente</td><td></td><td></td></tr>
-                    <tr><td>2</td><td>Se existir <code>%APPDATA%\caracore\data\banco.db</code> com conteúdo</td><td>O aviso cita o arquivo e diz que ele não será usado nem alterado. Sem arquivo, sem aviso.</td><td>Pendente</td><td></td><td></td></tr>
-                    <tr><td>3</td><td>Primeiro acesso admin / admin</td><td>A troca de senha é obrigatória. /login não oferece essas credenciais como válidas depois da troca.</td><td>Pendente</td><td></td><td></td></tr>
-                    <tr><td>4</td><td>Conferir versão</td><td>A mesma versão aparece no boot, no heartbeat, no manifesto, no login e no rodapé.</td><td>Pendente</td><td></td><td></td></tr>
-                    <tr><td>5</td><td>Abrir <code>./data/runtime/heartbeat.json</code> duas vezes</td><td>status UP. startedAt igual nas duas leituras. lastSeen e updatedAt mudam.</td><td>Pendente</td><td></td><td></td></tr>
-                    <tr><td>6</td><td>Menu do Free</td><td>Sem superfície Premium. Rotas Premium respondem 403 amigável.</td><td>Pendente</td><td></td><td></td></tr>
-                    <tr><td>7</td><td>Frente de caixa</td><td>F2 busca, F4 paga, Esc volta. Vendedor padrão pré-selecionado. Seed opcional de 8 produtos.</td><td>Pendente</td><td></td><td></td></tr>
-                    <tr><td>8</td><td>Com a rede desligada, abrir o leitor de código de barras</td><td>O script local /vendor/quagga/quagga.min.js carrega. A câmera é solicitada. O console não mostra erro de script.</td><td>Pendente</td><td></td><td></td></tr>
-                    <tr><td>9</td><td>Pagar em dinheiro, débito, crédito e outros</td><td>Troco e Relatório X corretos. Sem texto de IBS, CBS, PIX ou SEFAZ no Free, além do aviso de documento fiscal ausente.</td><td>Pendente</td><td></td><td></td></tr>
-                    <tr><td>10</td><td>Abrir /r/&lt;token&gt; e o PDF, ainda sem rede</td><td>Itens com descrição, quantidade, preço unitário e subtotal. Total, forma de pagamento e troco. Documento sem valor fiscal e CPF mascarado.</td><td>Pendente</td><td></td><td></td></tr>
-                    <tr><td>11</td><td>Durante a execução, abrir os logs em <code>./data/logs</code></td><td>caracore-pdv.log e caracore-pdv-audit.log têm conteúdo antes de encerrar. A auditoria contém login, troca de senha, venda finalizada, cancelamento e shutdown.</td><td>Pendente</td><td></td><td></td></tr>
-                    <tr><td>12</td><td>Conferência de caixa, Auditoria recente</td><td>Os mesmos eventos aparecem na tela.</td><td>Pendente</td><td></td><td></td></tr>
-                    <tr><td>13</td><td>Limite Free</td><td>A 101ª venda finalizada do mês civil é recusada.</td><td>Pendente</td><td></td><td></td></tr>
-                    <tr><td>14</td><td>GET /q/openapi e GET /q/swagger-ui</td><td>Fechados.</td><td>Pendente</td><td></td><td></td></tr>
-                    <tr><td>15</td><td>GET /internal/shutdown</td><td>405.</td><td>Pendente</td><td></td><td></td></tr>
-                    <tr><td>16</td><td>POST /internal/shutdown sem token e com token</td><td>Sem token: 404. Com token: 202. Heartbeat fica DOWN. Nada é gravado em %APPDATA%\caracore nem em ~\.caracore.</td><td>Pendente</td><td></td><td></td></tr>
+                    <tr><td>1</td><td>Extrair o ZIP em pasta nova e executar <code>iniciar_pdv.bat</code></td><td>Edge abre maximizado. Se a senha ainda não foi trocada, o console diz “Primeiro acesso: admin / admin (só antes da troca de senha)”. Depois da troca, essa linha não aparece.</td><td>ZIP local gerado. Teste do launcher confirma perfil <code>./data/edge-profile</code>, <code>--start-maximized</code>, <code>--no-first-run</code>, <code>--disable-sync</code>, <code>--password-store=basic</code> e a frase de primeiro acesso. O <code>iniciar_pdv.bat</code> não aponta para <code>D:\dev\.venv</code>. O Edge não foi aberto neste ciclo.</td><td>09/10/2026</td><td>4.0.0-rc6</td></tr>
+                    <tr><td>2</td><td>Se existir <code>%APPDATA%\caracore\data\banco.db</code> com conteúdo</td><td>O aviso cita o arquivo e diz que ele não será usado nem alterado. Sem arquivo, sem aviso.</td><td>Teste do launcher confirma o aviso só quando o arquivo legado existe. Não houve um banco legado real neste ciclo.</td><td>09/10/2026</td><td>4.0.0-rc6</td></tr>
+                    <tr><td>3</td><td>Primeiro acesso admin / admin</td><td>A troca de senha é obrigatória. /login não oferece essas credenciais como válidas depois da troca.</td><td>Banco novo aplica a flag e o bootstrap registra a troca obrigatória. Senha aceita de 8 a 64 caracteres. A tela de troca não foi percorrida no navegador neste fechamento.</td><td>09/10/2026</td><td>4.0.0-rc6</td></tr>
+                    <tr><td>4</td><td>Conferir versão</td><td>A mesma versão aparece no boot, no heartbeat, no manifesto, no login e no rodapé.</td><td>Heartbeat e a página de login do processo local mostraram 4.0.0-rc6. O parent Maven é 4.0.0-rc6.</td><td>09/10/2026</td><td>4.0.0-rc6</td></tr>
+                    <tr><td>5</td><td>Abrir <code>./data/runtime/heartbeat.json</code> duas vezes</td><td>status UP. startedAt igual nas duas leituras. lastSeen e updatedAt mudam.</td><td>Uma leitura do processo local: status UP, version 4.0.0-rc6, startedAt preenchido. A segunda leitura comparada não foi feita neste fechamento. O comportamento de startedAt fixo do rc5 permanece no código.</td><td>09/10/2026</td><td>4.0.0-rc6</td></tr>
+                    <tr><td>6</td><td>Menu do Free</td><td>Sem superfície Premium. Rotas Premium respondem 403 amigável.</td><td>Teste do filtro: 403 com a página “disponível apenas no plano Premium” em fiscal, mensageria, <code>/restrito/qualquer</code> e GET <code>/api/public/pix-split/webhook</code>. O caixa não mostra Gestão NFC-e, Pagamentos e PIX, Mensageria nem Auditoria.</td><td>09/10/2026</td><td>4.0.0-rc6</td></tr>
+                    <tr><td>7</td><td>Frente de caixa</td><td>F2 busca, F4 paga, F8 confirma o pagamento, Esc cancela com confirmação. Vendedor padrão pré-selecionado.</td><td>Teste da persona do caixa: legenda com F2 busca, F4 pagar, F8 confirma pagamento e Esc cancela. CAIXA cancela a venda aberta e volta para <code>/vendas/nova</code>.</td><td>09/10/2026</td><td>4.0.0-rc6</td></tr>
+                    <tr><td>8</td><td>Com a rede desligada, abrir o leitor de código de barras</td><td>O script local /vendor/quagga/quagga.min.js carrega. A câmera é solicitada. O console não mostra erro de script.</td><td>O HTML do caixa inclui <code>/vendor/quagga/quagga.min.js</code> e não cita CDN. A câmera com a rede desligada não foi exercitada.</td><td>09/10/2026</td><td>4.0.0-rc6</td></tr>
+                    <tr><td>9</td><td>Pagar em dinheiro, débito, crédito e outros</td><td>Troco e Relatório X corretos. Sem texto de IBS, CBS, PIX ou SEFAZ no Free, além do aviso de documento fiscal ausente.</td><td>Teste de pagamento em dinheiro com troco passou. O CAIXA não vê o resumo tributário. O botão é “Outros”, sem rótulo PIX. Débito, crédito e o Relatório X não foram reabertos na tela neste fechamento.</td><td>09/10/2026</td><td>4.0.0-rc6</td></tr>
+                    <tr><td>10</td><td>Abrir /r/&lt;token&gt; e o PDF, ainda sem rede</td><td>Itens, subtotal, desconto, total, valor recebido e troco. Sem CPF, o recibo não mostra a máscara. Documento sem valor fiscal. PDF com acentos.</td><td>O recibo e o PDF passam a listar subtotal, desconto, total, valor recebido e troco. CPF vazio não vira <code>***.***.***-**</code>. Fonte DejaVu embutida nos PDFs. Abertura offline do arquivo não feita neste ciclo.</td><td>09/10/2026</td><td>4.0.0-rc6</td></tr>
+                    <tr><td>11</td><td>Durante a execução, abrir os logs em <code>./data/logs</code></td><td>Os logs têm conteúdo antes de encerrar. A auditoria contém login (sucesso e falha), logout, troca de senha, venda finalizada, cancelamento e shutdown, com o operador real.</td><td>O processo local gravou log na subida. A auditoria de venda finalizada, cancelamento, login, logout e shutdown usa o operador da sessão, não o texto fixo CAIXA. A tela de auditoria não foi aberta.</td><td>09/10/2026</td><td>4.0.0-rc6</td></tr>
+                    <tr><td>12</td><td>Conferência de caixa, Auditoria recente</td><td>Os mesmos eventos aparecem na tela. “Saldo bate” só depois da contagem.</td><td>O fechamento pede o valor contado e só então mostra a diferença. Botões de PDF do X e do Z existem. A tela não foi operada neste ciclo.</td><td>09/10/2026</td><td>4.0.0-rc6</td></tr>
+                    <tr><td>13</td><td>Limite Free</td><td>A venda nova é bloqueada ao atingir 100 no mês, antes de lançar itens. O caixa mostra o contador.</td><td>A criação da venda consulta o limite e o caixa recebe o contador N/100. A 101ª venda não foi simulada ponta a ponta.</td><td>09/10/2026</td><td>4.0.0-rc6</td></tr>
+                    <tr><td>14</td><td>GET /q/openapi e GET /q/swagger-ui</td><td>Fechados.</td><td>Sem sessão, os dois endereços respondem 302 para o login. Não conferido depois de autenticar.</td><td>09/10/2026</td><td>4.0.0-rc6</td></tr>
+                    <tr><td>15</td><td>GET /internal/shutdown</td><td>405.</td><td>405 no processo local.</td><td>09/10/2026</td><td>4.0.0-rc6</td></tr>
+                    <tr><td>16</td><td>POST /internal/shutdown sem token e com token</td><td>Sem token: 404. Com token: 202. Heartbeat fica DOWN.</td><td>POST sem token: 404. POST com token não foi chamado, para não derrubar o processo.</td><td>09/10/2026</td><td>4.0.0-rc6</td></tr>
+                    <tr><td>17</td><td>Venda finalizada</td><td>Nenhum endpoint muda total, itens, desconto ou pagamento. A tela esconde Atualizar, Del, Desconto e F4.</td><td>Depois do pagamento em dinheiro, POST do desconto respondeu 409 com “Venda finalizada não pode ser alterada.”</td><td>09/10/2026</td><td>4.0.0-rc6</td></tr>
+                    <tr><td>18</td><td>Uma venda aberta</td><td>Esc confirma o cancelamento e a venda seguinte não herda itens.</td><td>O fluxo de teste cancela a venda aberta e a massa seguinte zera vendas em aberto antes de criar outra. O vazamento de carrinho entre testes deixou de ocorrer.</td><td>09/10/2026</td><td>4.0.0-rc6</td></tr>
+                    <tr><td>19</td><td>Depois do login</td><td>O operador vai para <code>/vendas/nova</code>. A página “Receba com Pix” não aparece.</td><td>Landing e a troca de senha redirecionam para <code>/vendas/nova</code>. GET <code>/</code> sem sessão vai ao login, não à página de marketing. O caminho completo no navegador não foi clicado neste fechamento.</td><td>09/10/2026</td><td>4.0.0-rc6</td></tr>
+                    <tr><td>20</td><td>Desconto de 10% sobre R$ 50,90</td><td>O valor exibido é R$ 5,09. Recibo e PDF mostram subtotal, desconto, total, recebido e troco.</td><td>Teste unitário: 10% de 50,90 = 5,09. Os campos foram incluídos no recibo e no PDF.</td><td>09/10/2026</td><td>4.0.0-rc6</td></tr>
+                    <tr><td>21</td><td>Licença Free</td><td><code>/licenca</code> não cita PIX integrado.</td><td>O texto do plano Free é “Sem NF-e, NFC-e nem PIX integrado.”</td><td>09/10/2026</td><td>4.0.0-rc6</td></tr>
+                    <tr><td>22</td><td>Senha e coluna operador.senha</td><td>Senha de 8 a 64. A coluna guarda só o hash.</td><td>Política e o teste de sessão aceitam 16 caracteres e recusam 65. O backfill copia o hash bcrypt para a coluna <code>senha</code>.</td><td>09/10/2026</td><td>4.0.0-rc6</td></tr>
                 </tbody>
             </table>
         </section>
-        <p class="text-sm text-gray-600">Notas da pré-release: <a class="underline" href="wiki-release-v4-0-0-rc5.html">4.0.0-rc5</a>.</p>
+        <p class="text-sm text-gray-600">Artefato local: <code>target/release-rc6/CaraCore-PDV-4.0.0-rc6-qute-portable-windows-x64.zip</code>. SHA-256 <code>cab76f040cbcef6f030a91808f47fd93f637eededf15005ad6a333b40dac0734</code>.</p>
     </main>
     <script src="assets/js/loja.js"></script>
 </body>
