@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CaraCore PDV 4.0.0-rc6 — em preparação</title>
-    <meta name="description" content="A 4.0.0-rc6 está em preparação. Ainda não há arquivo nem SHA-256. A pré-release publicada é a 4.0.0-rc5.">
+    <title>CaraCore PDV 4.0.0-rc6 — pré-release</title>
+    <meta name="description" content="Pré-release Free CaraCore PDV 4.0.0-rc6 para avaliação no Windows. A versão estável continua a 3.2.7-free.">
     <meta name="theme-color" content="#166534">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="assets/css/portal-style.css">
@@ -17,24 +17,39 @@
         <a href="index.html" class="hover:text-green-600">CaraCore PDV</a>
         <span> · </span>
         <a href="versoes.html" class="hover:text-green-600">Versões</a>
-        <span> · em preparação</span>
+        <span> · v4.0.0-rc6</span>
     </nav>
     <header class="portal-hero green-bg text-white py-12 md:py-16">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
-            <p class="text-sm uppercase tracking-wide text-amber-100 mb-3">Em preparação · sem arquivo nesta loja</p>
+            <p class="text-sm uppercase tracking-wide text-amber-100 mb-3">Pré-release Free · Windows x64 · não é GA</p>
             <h1 class="text-3xl md:text-5xl font-bold mb-4">CaraCore PDV 4.0.0-rc6</h1>
-            <p class="text-lg text-green-50">Ainda não há release no GitHub. SHA-256: a publicar. O download da pré-release continua a <a class="underline" href="wiki-release-v4-0-0-rc5.html">4.0.0-rc5</a>. A versão estável permanece a <strong>3.2.7-free</strong>.</p>
+            <p class="text-lg text-green-50">Até <strong>100 vendas finalizadas por mês civil</strong>. A versão estável continua a <strong>3.2.7-free</strong>. Sem NF-e, NFC-e nem PIX integrado.</p>
         </div>
     </header>
     <main class="wrapper space-y-6">
         <section class="card wiki-card border-amber-300">
-            <h2 class="text-xl font-bold">Sem download</h2>
-            <p>Esta página não oferece arquivo. O plano Free não inclui PIX integrado nem emissão de NF-e/NFC-e.</p>
+            <h2 class="text-xl font-bold">Download</h2>
+            <p class="font-mono break-all mb-4"><strong>Arquivo:</strong> <code>CaraCore-PDV-4.0.0-rc6-qute-portable-windows-x64.zip</code><br><strong>Bytes:</strong> 113.889.451<br><strong>SHA-256:</strong> <code>a2ec0d8019e8f492369aaf6aa2de40b96904b72e87193d5933c212f4c4adf892</code></p>
+            <p>ZIP portátil, sem assinatura digital e sem MSI. O ciclo manual completo do roteiro no Edge ainda não foi preenchido.</p>
             <p class="flex flex-wrap gap-3 mt-4">
-                <a class="btn-release" href="wiki-release-v4-0-0-rc5.html">Baixar a prévia pública RC5</a>
-                <a class="btn-release btn-release-outline" href="homologacao-v4.html#rc6">O que falta na homologação</a>
+                <a class="btn-release" href="https://github.com/chmulato/caracore-pdv-releases/releases/download/v4.0.0-rc6/CaraCore-PDV-4.0.0-rc6-qute-portable-windows-x64.zip">Baixar RC6 (Windows)</a>
+                <a class="btn-release btn-release-outline" href="https://github.com/chmulato/caracore-pdv-releases/releases/tag/v4.0.0-rc6">Release no GitHub</a>
+                <a class="btn-release btn-release-outline" href="download.html#instalacao-rc6">Como instalar</a>
                 <a class="btn-release btn-release-outline" href="download.html">Baixar Free estável 3.2.7</a>
             </p>
+        </section>
+        <section class="card wiki-card">
+            <h2 class="text-xl font-bold">Nesta pré-release</h2>
+            <ul class="list-disc pl-6 space-y-2">
+                <li>Launcher <code>iniciar_pdv.bat</code> abre o Edge em modo aplicativo, com perfil em <code>.\data\edge-profile</code>.</li>
+                <li>Java 25. Se o Java padrão for outro, a mensagem pede o JDK 25 ou <code>PDV_JAVA</code>.</li>
+                <li>Depois do login, o caixa abre em <code>/vendas/nova</code>.</li>
+                <li>Venda paga não volta a ser alterada. Pagamento em dinheiro pelo teclado, com troco na tela.</li>
+                <li>Desconto em reais no recibo, no PDF e no Relatório X.</li>
+                <li>Auditoria de login, falha de login, venda e logout com o nome do operador.</li>
+                <li>Banco e logs em <code>.\data</code>, separados da 3.2.7-free.</li>
+            </ul>
+            <p class="mt-4 text-sm text-gray-600">Versão anterior: <a class="underline" href="wiki-release-v4-0-0-rc5.html">4.0.0-rc5</a>. Roteiro: <a class="underline" href="homologacao-v4.html#rc6">homologação</a>.</p>
         </section>
     </main>
     <script src="assets/js/loja.js"></script>

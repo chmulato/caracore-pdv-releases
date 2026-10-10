@@ -1,6 +1,6 @@
 # CaraCore-PDV - Loja e Releases
 
-**Download principal da loja = tag `v3.2.7-free`.** A pré-release publicada é `v4.0.0-rc5`; ela não é o download estável. A `v4.0.0-rc6` está em preparação e ainda não tem release neste repositório.
+**Download principal da loja = tag `v3.2.7-free`.** A pré-release de avaliação é `v4.0.0-rc6`; ela não é o download estável. A `v4.0.0-rc5` fica no histórico.
 
 Não misture pasta nem data. Canais independentes.
 
@@ -44,8 +44,8 @@ A matriz de desenvolvimento fica no repositório **caracore-pdv**. Este reposit�
 | Campo | Valor |
 | ----- | ----- |
 | Download da loja | `v3.2.7-free` (Free / balcão) |
-| Pré-release de avaliação | `v4.0.0-rc5` — Windows x64 · ZIP sem Authenticode · **não é o download da loja** |
-| Em preparação | `v4.0.0-rc6` — sem arquivo e sem SHA-256 publicados |
+| Pré-release de avaliação | `v4.0.0-rc6` — Windows x64 · ZIP sem Authenticode · **não é o download da loja** |
+| Histórico imediato | `v4.0.0-rc5` — permanece publicada, não é a pré-release atual |
 | Publicação | 07/10/2026 |
 | Launcher Free | `iniciar-pdv.bat` (hífen) · navegador em `http://localhost:8080/login` |
 | Banco Free | `%APPDATA%\caracore\` (Windows) · `~/.caracore/` (Linux/macOS) |
@@ -63,20 +63,20 @@ O trecho `free-free` no nome do ZIP é o nome publicado, não um segundo plano.
 | `caracore-pdv-v3.2.7-free-free-linux-x64.zip` | Linux x64 (Ubuntu 20.04+) | `bc8b67462a4505ad54e2d0afe18982321536101fb66f9e2c06c91bd3f7a63df7` |
 | `caracore-pdv-v3.2.7-free-free-macos-x64.zip` | macOS 12+ x64 (Intel) | `c0ffcf3992327df0dd31e5e2e2fc8173f3e1bf32c97178355e22994fa56b630a` |
 
-### Pré-release atual v4.0.0-rc5 — not store download
+### Pré-release atual v4.0.0-rc6 — not store download
 
 | Artefato | Plataforma | SHA256 |
 | -------- | ---------- | ------ |
-| `CaraCore-PDV-4.0.0-rc5-qute-portable-windows-x64.zip` | Windows x64 | `d45d12d9fbf6e3923f69ddbbf6173ef2128be0341e30e75f038b7dc1f3ab6f81` |
+| `CaraCore-PDV-4.0.0-rc6-qute-portable-windows-x64.zip` | Windows x64 | `a2ec0d8019e8f492369aaf6aa2de40b96904b72e87193d5933c212f4c4adf892` |
 | Launcher | `iniciar_pdv.bat` (underscore) | Edge em modo aplicativo |
 | Banco | só `./data/caracore-pdv.db` | Não abre `%APPDATA%\caracore\` |
-| Requisitos | Java 25+, Python 3 e Microsoft Edge | Validada em testes internos; roteiro formal pendente |
+| Requisitos | Java 25+, Python 3 e Microsoft Edge | Ciclo manual completo do roteiro ainda pendente |
 
-Notas, instruções de verificação e link de download: <https://pdv.caracore.com.br/wiki-release-v4-0-0-rc5.html>. Roteiro: <https://pdv.caracore.com.br/homologacao-v4.html>.
+Notas e download: <https://pdv.caracore.com.br/wiki-release-v4-0-0-rc6.html>. Roteiro: <https://pdv.caracore.com.br/homologacao-v4.html#rc6>.
 
 O ZIP é unsigned; o hash detecta alterações, mas não autentica a identidade do publicador. Não desative SmartScreen, Defender nem antivírus. O Free 3.2.7 continua sendo o download principal da loja.
 
-A `v4.0.0-rc6` está em preparação. Ainda não há arquivo nem SHA-256 publicados.
+A `v4.0.0-rc5` fica no histórico, com SHA-256 `d45d12d9fbf6e3923f69ddbbf6173ef2128be0341e30e75f038b7dc1f3ab6f81`.
 
 ### Histórico técnico — v4.0.0-rc3
 
