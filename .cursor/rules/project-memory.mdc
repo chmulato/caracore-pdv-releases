@@ -9,7 +9,7 @@ alwaysApply: true
 - **caracore-pdv-releases:** loja (vitrine, download e feedback) do **CaraCore PDV Desktop (Java)**.
 - **URL:** https://pdv.caracore.com.br/
 - **Publicação:** GitHub Pages a partir da pasta **docs/**.
-- **Oficina:** caracore-pdv (Java 25 · Quarkus). Canal Free estável publicado: `v3.2.7-free` (UI no navegador `http://localhost:8080/login`; ramo `hotfix/3.2.7-free`). Pré-release pública atual da edição Free para avaliação = Qute `v4.0.0-rc5`, até 100 vendas finalizadas/mês (T032 mantém o roteiro operacional formal como gate; não é GA nem substitui o download estável).
+- **Oficina:** caracore-pdv (Java 25 · Quarkus). Canal Free estável publicado: `v3.2.7-free` (UI no navegador `http://localhost:8080/login`; ramo `hotfix/3.2.7-free`). Pré-release pública atual da edição Free para avaliação = Qute `v4.0.0-rc6`, até 100 vendas finalizadas/mês (fonte `master` tag `v4.0.0-rc6`, commit `b3358fe`; T032 mantém o roteiro operacional formal como gate; não é GA nem substitui o download estável).
 - **Matriz:** caracore-site — `#caracore-pdv` · `#pdv-coexistencia`.
 - **Wiki:** wiki.caracore.com.br — `projeto-pdv.html`, `pdv/`.
 
@@ -17,8 +17,8 @@ alwaysApply: true
 - CTA Free: **Baixar Free (3.2.7)** → `download.html`. Premium: demonstração → `consultoria.html`. Sem misturar NF-e/Reforma no funil Free.
 - Qualidades: SQLite offline, venda no navegador, fechamento organizado. Copy Free pode informar recibo digital por link e PDF, sempre sem valor fiscal. Sem NF-e, NFC-e nem PIX integrado.
 - Menu do produto: O que resolvemos · Como funciona · Economia · Planos · **Versões** · Agendar demonstração.
-- **Versões** (`versoes.html`): mapa de canais + detalhe RC5 + histórico. Atual/estável = 3.2.7-free. Prévia = 4.0.0-rc5. Sem misturar pasta nem data.
-- Download: página do Free (ZIPs + SHA + 5 passos). SHA256 Windows `37110b7c07a045942bd89628fd473e649c7b57756707ce8a71908a1ec4c03c89` · Linux `bc8b67462a4505ad54e2d0afe18982321536101fb66f9e2c06c91bd3f7a63df7` · macOS `c0ffcf3992327df0dd31e5e2e2fc8173f3e1bf32c97178355e22994fa56b630a`. ZIP RC5: SHA-256 `d45d12d9fbf6e3923f69ddbbf6173ef2128be0341e30e75f038b7dc1f3ab6f81`.
+- **Versões** (`versoes.html`): mapa de canais + detalhe RC6 + histórico. Atual/estável = 3.2.7-free. Prévia = 4.0.0-rc6. Sem misturar pasta nem data.
+- Download: página do Free (ZIPs + SHA + 5 passos). SHA256 Windows `37110b7c07a045942bd89628fd473e649c7b57756707ce8a71908a1ec4c03c89` · Linux `bc8b67462a4505ad54e2d0afe18982321536101fb66f9e2c06c91bd3f7a63df7` · macOS `c0ffcf3992327df0dd31e5e2e2fc8173f3e1bf32c97178355e22994fa56b630a`. ZIP RC6: SHA-256 `a2ec0d8019e8f492369aaf6aa2de40b96904b72e87193d5933c212f4c4adf892`. A RC5 fica no histórico.
 - Sem depoimento inventado. Sem % de economia inventada.
 - PWA da loja (`pwa.html`) = vitrine/atalho, **não** é o caixa.
 
