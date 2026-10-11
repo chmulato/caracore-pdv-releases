@@ -117,8 +117,8 @@
         <aside id="pre-release-v4" class="rounded-2xl border border-amber-300 bg-amber-50 p-5" aria-labelledby="rc6-title">
           <h2 id="rc6-title" class="text-lg font-extrabold text-slate-900">Pré-release 4.0.0-rc6</h2>
           <p class="mt-1 text-sm text-slate-700">Preview para teste no Windows. O canal estável para Windows, Linux e macOS continua a 3.2.7-free.</p>
-          <p class="mt-2 text-xs text-slate-600 break-all font-mono">SHA256 a2ec0d80…c4adf892
-            <button type="button" class="ml-2 rounded border border-amber-400 px-2 py-1 hover:bg-amber-100" onclick="copyHash('a2ec0d8019e8f492369aaf6aa2de40b96904b72e87193d5933c212f4c4adf892', this)" aria-label="Copiar SHA256 completo da pré-release 4.0.0-rc6">Copiar</button>
+          <p class="mt-2 text-xs text-slate-600 break-all font-mono">SHA256 847f0cfe…29dc840f
+            <button type="button" class="ml-2 rounded border border-amber-400 px-2 py-1 hover:bg-amber-100" onclick="copyHash('847f0cfec022b33e0d4c1c7d608cc0772ab1c46064004a093037dd7a29dc840f', this)" aria-label="Copiar SHA256 completo da pré-release 4.0.0-rc6">Copiar</button>
           </p>
           <a class="mt-3 inline-flex items-center rounded-xl border border-amber-500 px-4 py-2 text-sm font-semibold text-slate-900 hover:bg-amber-100"
              href="https://github.com/chmulato/caracore-pdv-releases/releases/download/v4.0.0-rc6/CaraCore-PDV-4.0.0-rc6-qute-portable-windows-x64.zip">
@@ -148,11 +148,10 @@
           <h2 class="text-lg font-extrabold text-slate-900">Instalação 4.0.0-rc6 (pré-release)</h2>
           <p class="mt-2 text-sm text-slate-700">Windows x64. Não é a versão estável. Sem NF-e, NFC-e nem PIX integrado.</p>
           <ul class="mt-3 text-sm text-slate-800 space-y-2 list-disc list-inside">
-            <li><a class="font-semibold text-emerald-800 underline" href="https://adoptium.net/temurin/releases/?version=25">JDK 25</a> (Java 25).</li>
-            <li><a class="font-semibold text-emerald-800 underline" href="https://www.python.org/downloads/">Python 3.10</a> ou mais novo. Na instalação, marque “Add python.exe to PATH”.</li>
             <li>Microsoft Edge.</li>
+            <li>O Java 25 já está em <code>runtime\</code> dentro do ZIP. Não instale JDK nem Python para este pacote.</li>
           </ul>
-          <p class="mt-3 text-sm text-slate-800">Se o seu computador tem outro Java como padrão (ex.: 21), defina JAVA_HOME ou PDV_JAVA apontando para o Java 25.</p>
+          <p class="mt-3 text-sm text-slate-800">Depois da senha, o Edge abre a frente de caixa. Essa tela cobre o menu.</p>
           <ol class="mt-3 text-sm text-slate-800 space-y-2 list-decimal list-inside">
             <li>Extraia o ZIP em uma pasta nova, separada da 3.2.7-free.</li>
             <li>Execute <code>iniciar_pdv.bat</code> (sublinhado). O launcher sobe o caixa e abre o Edge.</li>

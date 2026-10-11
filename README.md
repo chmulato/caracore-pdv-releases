@@ -67,7 +67,7 @@ O trecho `free-free` no nome do ZIP é o nome publicado, não um segundo plano.
 
 | Artefato | Plataforma | SHA256 |
 | -------- | ---------- | ------ |
-| `CaraCore-PDV-4.0.0-rc6-qute-portable-windows-x64.zip` | Windows x64 | `a2ec0d8019e8f492369aaf6aa2de40b96904b72e87193d5933c212f4c4adf892` |
+| `CaraCore-PDV-4.0.0-rc6-qute-portable-windows-x64.zip` | Windows x64 | `847f0cfec022b33e0d4c1c7d608cc0772ab1c46064004a093037dd7a29dc840f` |
 | Launcher | `iniciar_pdv.bat` (underscore) | Edge em modo aplicativo |
 | Banco | só `./data/caracore-pdv.db` | Não abre `%APPDATA%\caracore\` |
 | Requisitos | Java 25+, Python 3 e Microsoft Edge | Ciclo manual completo do roteiro ainda pendente |
