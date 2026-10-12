@@ -70,7 +70,7 @@ O trecho `free-free` no nome do ZIP é o nome publicado, não um segundo plano.
 | `CaraCore-PDV-4.0.0-rc6-qute-portable-windows-x64.zip` | Windows x64 | `0c00b24b33b3c365fd1f24ec173bfa4e35bedf1946b2df4151035250780d5325` |
 | Launcher | `iniciar_pdv.bat` (underscore) | Edge em modo aplicativo |
 | Banco | só `./data/caracore-pdv.db` | Não abre `%APPDATA%\caracore\` |
-| Requisitos | Java 25+, Python 3 e Microsoft Edge | Ciclo manual completo do roteiro ainda pendente |
+| Requisitos | Windows 10/11 x64 e Microsoft Edge; Java 25 incluído em `runtime\`, sem JDK/Python do sistema | Ciclo manual completo do roteiro ainda pendente |
 
 Notas e download: <https://pdv.caracore.com.br/wiki-release-v4-0-0-rc6.html>. Roteiro: <https://pdv.caracore.com.br/homologacao-v4.html#rc6>.
 
@@ -113,7 +113,7 @@ A tag `v0.1.4` (MSI/EXE/ZIP) é o piloto Rust em <https://pdv-rust.caracore.com.
 
 ### Linha atual: `java_25`
 
-A vitrine em `docs/` segue a trilha Java 25 da matriz, com SQLite local e soberania localhost. O download público maduro é a tag `v3.2.7-free`. A pré-release oferecida é a `v4.0.0-rc5` (Quarkus + Qute) e não substitui o download estável. O candidato `v4.0.0-rc6` ainda não tem arquivo publicado. O GA do v4 permanece previsto para 08/11/2026, condicionado aos gates do plano.
+A vitrine em `docs/` segue a trilha Java 25 da matriz, com SQLite local e soberania localhost. O download público maduro é a tag `v3.2.7-free`. A pré-release oferecida é a `v4.0.0-rc6` (Quarkus + Qute), build de 11/10/2026 com o SHA-256 registrado acima, e não substitui o download estável. A RC7 está somente em homologação local na oficina, sem publicação ou aceite global. O corte de GA foi recusado; a data 08/11/2026 está em reavaliação, sem data nova.
 
 Notas da versão estável: <https://pdv.caracore.com.br/wiki-release-v3-2-7-free.html>
 
@@ -151,12 +151,12 @@ Download e onboarding:
 | `docs/download.html` | Página de download da Degustação Free (Windows, Linux e macOS) |
 | `docs/pwa.html` | PWA da vitrine (não é o caixa) |
 | `docs/tecnologia.html` | Soluções e pilares técnicos |
-| `docs/versoes.html` | Versão estável (3.2.7-free), pré-release pública (4.0.0-rc5), candidato rc6 e histórico |
+| `docs/versoes.html` | Versão estável (3.2.7-free), pré-release pública (4.0.0-rc6) e histórico |
 | `docs/wiki-release-v3-2-7-free.html` | Notas do canal Free estável |
 | `docs/wiki-release-v3-2-6-free.html` | Notas históricas da 3.2.6-free |
-| `docs/wiki-release-v4-0-0-rc6.html` | Aviso de preparação, sem arquivo e sem SHA-256 |
+| `docs/wiki-release-v4-0-0-rc6.html` | Notas e SHA-256 da pré-release pública atual (não é o download estável da loja) |
 | `docs/wiki-release-v3-2-5-free.html` | Notas históricas da 3.2.5-free |
-| `docs/wiki-release-v4-0-0-rc5.html` | Notas e SHA-256 da pré-release atual (não é o download estável da loja) |
+| `docs/wiki-release-v4-0-0-rc5.html` | Notas e SHA-256 históricos da RC5 |
 | `docs/wiki-release-v4-0-0-rc3.html` | Notas e hash histórico da RC3 |
 | `docs/wiki-release-v4-0-0-rc2.html` | Notas históricas da RC2 |
 | `docs/wiki-release-v3-2-3-free.html` | Notas históricas da 3.2.3-free |
