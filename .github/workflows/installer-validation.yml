@@ -60,6 +60,12 @@ jobs:
           $assets = @($release.assets)
           if ($assets.Count -eq 0) { throw "Release $($release.tag_name) has no assets." }
 
+          $expectedLauncher = switch -Regex ($release.tag_name) {
+            '^v3\.' { 'iniciar-pdv.bat'; break }
+            '^v4\.' { 'iniciar_pdv.bat'; break }
+            default { throw "Unsupported PDV release tag: $($release.tag_name)" }
+          }
+
           $archiveAsset = $null
           if (-not [string]::IsNullOrWhiteSpace($assetName)) {
             $archiveAsset = $assets | Where-Object { $_.name -eq $assetName } | Select-Object -First 1
@@ -81,8 +87,8 @@ jobs:
           try {
             $entries = @($archive.Entries)
             $entryNames = @($entries | ForEach-Object { $_.Name })
-            if (-not ($entryNames -contains 'iniciar_pdv.bat')) {
-              throw 'Portable archive is missing iniciar_pdv.bat.'
+            if (-not ($entryNames -contains $expectedLauncher)) {
+              throw "Portable archive is missing expected launcher $expectedLauncher for $($release.tag_name)."
             }
             if (-not ($entryNames -match '\.jar$')) {
               throw 'Portable archive is missing the application JAR.'

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Versão 3.2.8 FREE — novo caixa e recibos — CaraCore-PDV</title>
+  <meta name="description" content="Notas da versão 3.2.8 FREE do CaraCore PDV: caixa redesenhado, leitura de produtos, descontos, CPF opcional e recibo detalhado.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="assets/css/portal-style.css">
+  <link rel="stylesheet" href="assets/css/loja.css">
+</head>
+<body class="smooth-scroll bg-gray-50 page-wiki page-wiki-release">
+  <main class="wrapper max-w-4xl mx-auto px-4 py-10">
+    <nav class="mb-6 text-sm" aria-label="Navegação">
+      <a href="download.html" class="text-emerald-700 underline">Download</a>
+      · <a href="versoes.html" class="text-emerald-700 underline">Versões</a>
+    </nav>
+
+    <header class="mb-8">
+      <p class="eyebrow">Notas da versão · 14/10/2026</p>
+      <h1 class="text-3xl font-bold">CaraCore PDV Free 3.2.8</h1>
+      <p class="mt-3 text-lg">Caixa redesenhado para operação de balcão, com leitura rápida, controles de venda e recibos mais completos.</p>
+      <p class="mt-3 text-sm text-slate-600">Canal estável multiplataforma. Requer Java 25+. Limite Free de 100 vendas finalizadas por mês civil permanece.</p>
+    </header>
+
+    <section class="card wiki-card mb-6">
+      <h2>O que mudou</h2>
+      <ul class="list-disc pl-6 space-y-2">
+        <li>Leituras repetidas do mesmo produto consolidam quantidade; a entrada <code>quantidade*código</code> também é aceita.</li>
+        <li>Baixa e estorno de estoque agregam linhas repetidas pelo produto.</li>
+        <li>Caixa redesenhado com inclusão assíncrona, foco preservado, atalhos e confirmação para remover item ou cancelar venda.</li>
+        <li>Quantidade, desconto com motivo auditado e CPF opcional validado e mascarado na venda.</li>
+        <li>Pagamento em modal com cálculo de falta e troco; recibos HTML/PDF exibem subtotal e desconto, mantendo o CPF mascarado.</li>
+        <li>Launcher seleciona Java 25+ por <code>PDV_JAVA</code>, <code>JAVA_HOME</code> ou <code>PATH</code> e abre a página de login quando o servidor está pronto.</li>
+      </ul>
+    </section>
+
+    <section class="card wiki-card mb-6">
+      <h2>Limites e validação</h2>
+      <p>O plano Free continua sem PIX integrado e sem emissão de NF-e/NFC-e. O segundo turno no mesmo dia permanece adiado enquanto o modelo de movimentos não identifica turnos persistentes.</p>
+      <p class="mt-3"><strong>Transparência de QA:</strong> testes automatizados focados passaram. A homologação manual completa no Edge, incluindo o roteiro com leitor físico, não foi concluída nesta publicação.</p>
+      <p class="mt-3">A versão mantém a operação local; faça backup dos dados antes de atualizar uma instalação existente.</p>
+    </section>
+
+    <p class="flex flex-wrap gap-3">
+      <a href="download.html" class="btn-release">Baixar 3.2.8-free</a>
+      <a href="https://github.com/chmulato/caracore-pdv-releases/releases/tag/v3.2.8-free" class="btn-release btn-release-outline">Release e checksums</a>
+      <a href="wiki-release-v3-2-7-free.html" class="btn-release btn-release-outline">Notas da 3.2.7-free</a>
+    </p>
+  </main>
+</body>
+</html>
