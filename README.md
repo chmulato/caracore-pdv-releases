@@ -1,6 +1,8 @@
 # CaraCore-PDV - Loja e Releases
 
-**Download principal da loja = tag `v3.2.8-free` (Latest).** A pré-release de avaliação é `v4.0.0-rc6`; ela não é o download estável. A `v4.0.0-rc5` fica no histórico.
+**Download principal da loja = tag `v3.2.12-free` (Latest).** A pré-release de avaliação é `v4.0.0-rc6`; ela não é o download estável. A `v4.0.0-rc5` fica no histórico.
+
+**Publicação de 15/10/2026:** corretiva de HTTP 405 e estorno/cancelamento, fonte `hotfix/3.2.12-free` commit `72ace488aed4ee91001c60cf40a3934ddfe8faf1`. 19/19 testes focados Java 25/H2 e CRC/estrutura dos ZIPs aprovados; hashes dos cinco assets remotos conferidos. Suíte completa, smoke portátil SQLite/health/navegador, execução Linux/macOS e homologação operacional completa seguem pendentes. Publicação estável/Latest autorizada explicitamente com essas ressalvas; não significa homologação completa. A 3.2.8 permanece no histórico. [Notas da corretiva](docs/wiki-release-v3-2-12-free.html).
 
 Não misture pasta nem data. Canais independentes.
 
@@ -43,25 +45,25 @@ A matriz de desenvolvimento fica no repositório **caracore-pdv**. Este reposit�
 
 | Campo | Valor |
 | ----- | ----- |
-| Download da loja | `v3.2.8-free` (Free / balcão) |
+| Download da loja | `v3.2.12-free` (Free / balcão) |
 | Pré-release de avaliação | `v4.0.0-rc6` — Windows x64 · ZIP sem Authenticode · **não é o download da loja** |
 | Histórico imediato | `v4.0.0-rc5` — permanece publicada, não é a pré-release atual |
-| Publicação | 14/10/2026 |
+| Publicação | 15/10/2026 |
 | Launcher Free | `iniciar-pdv.bat` (hífen) · navegador em `http://localhost:8080/login` |
 | Banco Free | `%APPDATA%\caracore\` (Windows) · `~/.caracore/` (Linux/macOS) |
 | Requisito Free | Java 25+ ([Temurin 25](https://adoptium.net/)) |
-| Release | <https://github.com/chmulato/caracore-pdv-releases/releases/tag/v3.2.8-free> |
+| Release | <https://github.com/chmulato/caracore-pdv-releases/releases/tag/v3.2.12-free> |
 | Loja | <https://pdv.caracore.com.br/download.html> |
 
 O trecho `free-free` no nome do ZIP é o nome publicado, não um segundo plano.
 
-### Artefatos v3.2.8-free
+### Artefatos v3.2.12-free
 
 | Artefato | Plataforma | SHA256 |
 | -------- | ---------- | ------ |
-| `caracore-pdv-v3.2.8-free-windows-x64.zip` | Windows 10/11 x64 | `ef0116c383ae35df8fff96866cf8a767665db3a555bf2873435e9e8f985e612e` |
-| `caracore-pdv-v3.2.8-free-linux-x64.zip` | Linux x64 (Ubuntu 20.04+) | `50c30fad7c13825c95beba55a281934b008cbf330490d981c09592eba7eb57a5` |
-| `caracore-pdv-v3.2.8-free-macos-x64.zip` | macOS 12+ x64 (Intel) | `1ade201a3c84b6f445f417c6cc8e4123096f1b1f8ed3702c70898af07d637476` |
+| `caracore-pdv-v3.2.12-free-windows-x64.zip` | Windows 10/11 x64 | `6d7a50b0acf2a05620a090eebdd48f049a1dd5599ccb6c40c419c38145f7c0e2` |
+| `caracore-pdv-v3.2.12-free-linux-x64.zip` | Linux x64 (Ubuntu 20.04+) | `795a396318da61d1bd45dcfe816879d2184706f1c7849f1cd2ad98baa99fd9c1` |
+| `caracore-pdv-v3.2.12-free-macos-x64.zip` | macOS 12+ x64 (Intel) | `795a396318da61d1bd45dcfe816879d2184706f1c7849f1cd2ad98baa99fd9c1` |
 
 ### Pré-release atual v4.0.0-rc6 — not store download
 
@@ -74,7 +76,7 @@ O trecho `free-free` no nome do ZIP é o nome publicado, não um segundo plano.
 
 Notas e download: <https://pdv.caracore.com.br/wiki-release-v4-0-0-rc6.html>. Roteiro: <https://pdv.caracore.com.br/homologacao-v4.html#rc6>.
 
-O ZIP é unsigned; o hash detecta alterações, mas não autentica a identidade do publicador. Não desative SmartScreen, Defender nem antivírus. A homologação manual completa no Edge e com leitor físico ainda não foi concluída; a publicação foi autorizada com essa ressalva. O Free 3.2.8 é o download principal da loja.
+O ZIP é unsigned; o hash detecta alterações, mas não autentica a identidade do publicador. Não desative SmartScreen, Defender nem antivírus. A homologação manual completa no Edge e com leitor físico ainda não foi concluída; a publicação foi autorizada com essa ressalva. O Free 3.2.12 é o download principal da loja.
 
 A `v4.0.0-rc5` fica no histórico, com SHA-256 `d45d12d9fbf6e3923f69ddbbf6173ef2128be0341e30e75f038b7dc1f3ab6f81`.
 
@@ -99,7 +101,7 @@ A tag `v0.1.4` (MSI/EXE/ZIP) é o piloto Rust em <https://pdv-rust.caracore.com.
 
 ## Atualização operacional - 13/09/2026
 
-- `v3.2.8-free` é a oferta pública atual: caixa redesenhado, leitura de quantidade/código, descontos com auditoria e recibo com subtotal/desconto; porta 8080, `/login`, Java 25+.
+- `v3.2.12-free` é a oferta pública atual: caixa redesenhado, leitura de quantidade/código, descontos com auditoria e recibo com subtotal/desconto; porta 8080, `/login`, Java 25+.
 - Sem PIX integrado e sem NF-e/NFC-e no Free. Pagamentos: dinheiro, débito, crédito e outros — “outros” não é PIX integrado.
 - `v3.2.5-free` rebaixada a histórico imediato (shell com menu lateral e seed opcional).
 - `v3.2.4-free` / `v3.2.3-free` / `v3.2.2-free` permanecem históricas.
@@ -113,9 +115,9 @@ A tag `v0.1.4` (MSI/EXE/ZIP) é o piloto Rust em <https://pdv-rust.caracore.com.
 
 ### Linha atual: `java_25`
 
-A vitrine em `docs/` segue a trilha Java 25 da matriz, com SQLite local e soberania localhost. O download público maduro é a tag `v3.2.8-free`. A pré-release oferecida é a `v4.0.0-rc6` (Quarkus + Qute), build de 11/10/2026 com o SHA-256 registrado acima, e não substitui o download estável. A RC7 está somente em homologação local na oficina, sem publicação ou aceite global. O corte de GA foi recusado; a data 08/11/2026 está em reavaliação, sem data nova.
+A vitrine em `docs/` segue a trilha Java 25 da matriz, com SQLite local e soberania localhost. O download público maduro é a tag `v3.2.12-free`. A pré-release oferecida é a `v4.0.0-rc6` (Quarkus + Qute), build de 11/10/2026 com o SHA-256 registrado acima, e não substitui o download estável. A RC7 está somente em homologação local na oficina, sem publicação ou aceite global. O corte de GA foi recusado; a data 08/11/2026 está em reavaliação, sem data nova.
 
-Notas da versão estável: <https://pdv.caracore.com.br/wiki-release-v3-2-8-free.html>
+Notas da versão estável: <https://pdv.caracore.com.br/wiki-release-v3-2-12-free.html>
 
 Lista de versões: <https://pdv.caracore.com.br/versoes.html>
 
@@ -151,8 +153,8 @@ Download e onboarding:
 | `docs/download.html` | Página de download da Degustação Free (Windows, Linux e macOS) |
 | `docs/pwa.html` | PWA da vitrine (não é o caixa) |
 | `docs/tecnologia.html` | Soluções e pilares técnicos |
-| `docs/versoes.html` | Versão estável (3.2.8-free), pré-release pública (4.0.0-rc6) e histórico |
-| `docs/wiki-release-v3-2-8-free.html` | Notas do canal Free estável |
+| `docs/versoes.html` | Versão estável (3.2.12-free), pré-release pública (4.0.0-rc6) e histórico |
+| `docs/wiki-release-v3-2-12-free.html` | Notas do canal Free estável |
 | `docs/wiki-release-v3-2-7-free.html` | Notas históricas da 3.2.7-free |
 | `docs/wiki-release-v3-2-6-free.html` | Notas históricas da 3.2.6-free |
 | `docs/wiki-release-v4-0-0-rc6.html` | Notas e SHA-256 da pré-release pública atual (não é o download estável da loja) |
@@ -196,7 +198,7 @@ Este repositório pode validar instaladores e assets publicados por GitHub Actio
 
 - assets públicos baixáveis sem autenticação pelo cliente final;
 - SHA256 documentado por release;
-- página de download apontando para a tag pública `v3.2.8-free` (Windows, Linux e macOS);
+- página de download apontando para a tag pública `v3.2.12-free` (Windows, Linux e macOS);
 - wikis de release preservando contexto técnico e orientação de atualização;
 - operação Windows com foco em previsibilidade no balcão;
 - coerência entre promessa pública, escopo real e evidência documental;

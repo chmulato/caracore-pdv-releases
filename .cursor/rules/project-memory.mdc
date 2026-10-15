@@ -5,20 +5,27 @@ alwaysApply: true
 
 # Memória da Loja — caracore-pdv-releases
 
+## PDV Free — publicação de 15/10/2026
+
+- Atual: `v3.2.12-free` Latest, fonte `hotfix/3.2.12-free` commit `72ace488aed4ee91001c60cf40a3934ddfe8faf1`. 3.2.8 preservada no histórico; RC6 pré-release separada.
+- 19/19 testes focados em Java 25/H2 aprovados; CRC/estrutura dos três ZIPs e hashes dos cinco assets remotos conferidos. Suíte completa, smoke portátil SQLite/health/navegador, execução Linux/macOS e homologação operacional completa pendentes. Publicação estável/Latest autorizada explicitamente em 15/10/2026; não significa homologação completa.
+- Corretiva de HTTP 405 e ESTORNADA/CANCELADA, migração V047 e fila em transação independente. Mesmos limites, sem PIX/NF-e/NFC-e.
+
+
 ## Repositório e papel
 - **caracore-pdv-releases:** loja (vitrine, download e feedback) do **CaraCore PDV Desktop (Java)**.
 - **URL:** https://pdv.caracore.com.br/
 - **Publicação:** GitHub Pages a partir da pasta **docs/**.
-- **Oficina:** caracore-pdv (Java 25 · Quarkus). Canal Free estável publicado: `v3.2.8-free` (UI no navegador `http://localhost:8080/login`; ramo `hotfix/3.2.8-free`). Pré-release pública atual da edição Free para avaliação = Qute `v4.0.0-rc6`, até 100 vendas finalizadas/mês (fonte `master` `681ea32`; a tag Git permanece em `b3358fe`; T032 mantém o roteiro operacional formal como gate; não é GA nem substitui o download estável).
+- **Oficina:** caracore-pdv (Java 25 · Quarkus). Canal Free estável publicado: `v3.2.12-free` (UI no navegador `http://localhost:8080/login`; ramo `hotfix/3.2.12-free`). Pré-release pública atual da edição Free para avaliação = Qute `v4.0.0-rc6`, até 100 vendas finalizadas/mês (fonte `master` `681ea32`; a tag Git permanece em `b3358fe`; T032 mantém o roteiro operacional formal como gate; não é GA nem substitui o download estável).
 - **Matriz:** caracore-site — `#caracore-pdv` · `#pdv-coexistencia`.
 - **Wiki:** wiki.caracore.com.br — `projeto-pdv.html`, `pdv/`.
 
 ## CTA e copy (14/09/2026)
-- CTA Free: **Baixar Free (3.2.8)** → `download.html`. Premium: demonstração → `consultoria.html`. Sem misturar NF-e/Reforma no funil Free.
+- CTA Free: **Baixar Free (3.2.12)** → `download.html`. Premium: demonstração → `consultoria.html`. Sem misturar NF-e/Reforma no funil Free.
 - Qualidades: SQLite offline, venda no navegador, fechamento organizado. Copy Free pode informar recibo digital por link e PDF, sempre sem valor fiscal. Sem NF-e, NFC-e nem PIX integrado.
 - Menu do produto: O que resolvemos · Como funciona · Economia · Planos · **Versões** · Agendar demonstração.
-- **Versões** (`versoes.html`): mapa de canais + detalhe RC6 + histórico. Atual/estável = 3.2.8-free. Prévia = 4.0.0-rc6. Sem misturar pasta nem data.
-- Download: página do Free (ZIPs + SHA + instalação). ZIPs 3.2.8: Windows `ef0116c383ae35df8fff96866cf8a767665db3a555bf2873435e9e8f985e612e` · Linux `50c30fad7c13825c95beba55a281934b008cbf330490d981c09592eba7eb57a5` · macOS `1ade201a3c84b6f445f417c6cc8e4123096f1b1f8ed3702c70898af07d637476`. ZIP RC6: SHA-256 `0c00b24b33b3c365fd1f24ec173bfa4e35bedf1946b2df4151035250780d5325`, 178.166.244 bytes. A RC5 fica no histórico. A homologação manual completa da 3.2.8 no Edge/leitor segue pendente.
+- **Versões** (`versoes.html`): mapa de canais + detalhe RC6 + histórico. Atual/estável = 3.2.12-free. Prévia = 4.0.0-rc6. Sem misturar pasta nem data.
+- Download: página do Free (ZIPs + SHA + instalação). ZIPs 3.2.12: Windows `6d7a50b0acf2a05620a090eebdd48f049a1dd5599ccb6c40c419c38145f7c0e2` · Linux `795a396318da61d1bd45dcfe816879d2184706f1c7849f1cd2ad98baa99fd9c1` · macOS `795a396318da61d1bd45dcfe816879d2184706f1c7849f1cd2ad98baa99fd9c1`. ZIP RC6: SHA-256 `0c00b24b33b3c365fd1f24ec173bfa4e35bedf1946b2df4151035250780d5325`, 178.166.244 bytes. A RC5 fica no histórico. A homologação manual completa da 3.2.12 no Edge/leitor segue pendente.
 - Sem depoimento inventado. Sem % de economia inventada.
 - PWA da loja (`pwa.html`) = vitrine/atalho, **não** é o caixa.
 
@@ -39,12 +46,12 @@ alwaysApply: true
 - Teto Rust piloto = **100 vendas na vida**, não por mês. Não misturar com o Free Java.
 
 ## Mensagem de produto
-- Versão atual do download: **3.2.8-free** (ZIP Windows/Linux/macOS). Requisito: Java 25+.
-- Nomes reais dos ZIP: `caracore-pdv-v3.2.8-free-{windows,linux,macos}-x64.zip`.
-- SHA256 Windows `ef0116c383ae35df8fff96866cf8a767665db3a555bf2873435e9e8f985e612e` · Linux `50c30fad7c13825c95beba55a281934b008cbf330490d981c09592eba7eb57a5` · macOS `1ade201a3c84b6f445f417c6cc8e4123096f1b1f8ed3702c70898af07d637476`.
+- Versão atual do download: **3.2.12-free** (ZIP Windows/Linux/macOS). Requisito: Java 25+.
+- Nomes reais dos ZIP: `caracore-pdv-v3.2.12-free-{windows,linux,macos}-x64.zip`.
+- SHA256 Windows `6d7a50b0acf2a05620a090eebdd48f049a1dd5599ccb6c40c419c38145f7c0e2` · Linux `795a396318da61d1bd45dcfe816879d2184706f1c7849f1cd2ad98baa99fd9c1` · macOS `795a396318da61d1bd45dcfe816879d2184706f1c7849f1cd2ad98baa99fd9c1`.
 - Launcher Free: `iniciar-pdv.bat` (hífen). Banco: `%APPDATA%\caracore\` (Win) / `~/.caracore/`.
 - **4.0.0-rc4** é pré-release pública para avaliação (`iniciar_pdv.bat` underscore; Windows x64 + Java 25+ + Python 3 + Edge app mode; banco `./data/caracore-pdv.db`; ZIP unsigned sem MSI). SHA-256 `31a0cdeda68dce058079c5d0d3d5652084ba8a8cc073dfce60e021c4b3c1fdf2`; notas e avisos: `wiki-release-v4-0-0-rc4.html`. Não é GA nem download estável da loja. T032 mantém o roteiro operacional formal como gate; troca de senha e homologação Edge/Windows 1280×800 estão resolvidas. Retomada: oficina `CONTINUIDADE_DESENVOLVIMENTO.md`.
-- ZIP 3.2.8 inclui `INSTALACAO.txt`; notas atuais em `wiki-release-v3-2-8-free.html`; 3.2.7 e anteriores permanecem no histórico.
+- ZIP 3.2.12 inclui `INSTALACAO.txt`; notas atuais em `wiki-release-v3-2-12-free.html`; 3.2.8, 3.2.7 e anteriores permanecem no histórico.
 - **V3 (negócio):** PME, PIX Split 2027 — posicionamento comercial; **não** confundir com a linha Rust (v0.1.x).
 - **Evitar:** Java descontinuado; “PDV v3” para a linha Rust; “nova geração”; “substitui”; PIX no Free; recibo no Free.
 
@@ -55,5 +62,5 @@ alwaysApply: true
 - **tecnologia.html** — Qualidades (não stack/SMS)
 - **canal-feedback.html** — Contato
 - **versoes.html** — lista de versões do produto (no menu)
-- Notas: `wiki-release-v3-2-6-free.html` (download atual), RC4, RC3/RC2/RC1 arquivadas, histórico 3.2.5/3.2.4/3.2.3/3.2.2.
+- Notas atuais: `wiki-release-v3-2-12-free.html`; 3.2.8 e anteriores no histórico. RC6 é pré-release separada.
 - **Sem wiki operacional na loja.** Manuais vivem em `wiki.caracore.com.br`.

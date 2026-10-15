@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Versões — CaraCore PDV</title>
-    <meta name="description" content="Versões do CaraCore PDV: Free estável 3.2.8-free e pré-release 4.0.0-rc6 para avaliação.">
+    <meta name="description" content="Versões do CaraCore PDV: Free estável 3.2.12-free e pré-release 4.0.0-rc6 para avaliação.">
     <link rel="manifest" href="manifest.webmanifest">
     <meta name="theme-color" content="#166534">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -62,7 +62,7 @@
     </section>
 
     <div class="wrapper">
-        <p class="download-notice"><strong>Canal estável:</strong> baixe a tag <strong>v3.2.8-free</strong>, última versão Free da linha 3.2.x. A pré-release <strong>v4.0.0-rc6</strong> também está disponível para avaliação no Windows; são canais e pastas independentes.</p>
+        <p class="download-notice"><strong>Canal estável:</strong> baixe a tag <strong>v3.2.12-free</strong>, atualização corretiva da linha 3.2.x. A pré-release <strong>v4.0.0-rc6</strong> também está disponível para avaliação no Windows; são canais e pastas independentes.</p>
 
         <section class="card wiki-card" id="canais">
             <h2>Tabela de decisão</h2>
@@ -81,7 +81,7 @@
                     <tbody>
                         <tr>
                             <td>Free balcão</td>
-                            <td><code>v3.2.8-free</code></td>
+                            <td><code>v3.2.12-free</code></td>
                             <td><code>iniciar-pdv.bat</code> (hífen)</td>
                             <td><code>localhost:8080/login</code></td>
                             <td><code>%APPDATA%\caracore\</code></td>
@@ -98,24 +98,25 @@
                     </tbody>
                 </table>
             </div>
-            <p>As duas versões seguem o plano Free, com limite de 100 vendas finalizadas por mês civil. A 3.2.8-free é a versão estável multiplataforma e abre no navegador; é a última da linha 3.2.x, em manutenção restrita até 08/11/2026. A 4.0.0-rc6 é a pré-release Windows e abre o Edge em modo aplicativo. A v4 avança pelo ciclo de RCs e só será GA após aprovação formal dos gates e aceites; 08/11 não é data de GA.</p>
+            <p>As duas versões seguem o plano Free, com limite de 100 vendas finalizadas por mês civil. A 3.2.12-free é a versão estável multiplataforma e abre no navegador; é uma atualização corretiva da linha 3.2.x, em manutenção restrita até 08/11/2026. A 4.0.0-rc6 é a pré-release Windows e abre o Edge em modo aplicativo. A v4 avança pelo ciclo de RCs e só será GA após aprovação formal dos gates e aceites; 08/11 não é data de GA.</p>
         </section>
 
         <section class="card wiki-card" id="atual">
-            <h2>Edição Free estável — 3.2.8-free</h2>
+            <h2>Edição Free estável — 3.2.12-free</h2>
+            <p>Corretiva de 15/10/2026: HTTP 405 preservado, status ESTORNADA distinto de CANCELADA em recibos e relatórios, migração V047 e fila em transação independente.</p>
             <p>Novo caixa com leitura e consolidação de itens, quantidade, desconto auditado, CPF opcional mascarado, pagamento em modal e recibos com subtotal/desconto. Estoque baixa e estorna linhas repetidas pelo produto. O limite de 100 vendas/mês permanece. Sem PIX integrado e sem NF-e/NFC-e.</p>
-            <p class="text-sm text-slate-600">Esta é a versão final da linha 3.2.x. Até 08/11/2026, a linha recebe apenas manutenção restrita, sem novos recursos. A sucessão é a PDV v4 pelo ciclo de RCs; o encerramento da manutenção não promove automaticamente a v4 a GA.</p>
-            <p class="text-sm text-slate-600"><strong>Validação:</strong> testes automatizados focados passaram; a homologação manual completa no Edge, incluindo o roteiro com leitor físico, não foi concluída nesta publicação.</p>
+            <p class="text-sm text-slate-600">Esta é uma atualização corretiva da linha 3.2.x. Até 08/11/2026, a linha recebe apenas manutenção restrita, sem novos recursos. A sucessão é a PDV v4 pelo ciclo de RCs; o encerramento da manutenção não promove automaticamente a v4 a GA.</p>
+            <p class="text-sm text-slate-600"><strong>Validação:</strong> 19/19 testes focados em Java 25/H2 e CRC/estrutura dos ZIPs aprovados; hashes remotos conferidos. Suíte completa, smoke portátil SQLite/health/navegador, execução Linux/macOS e homologação operacional completa permanecem pendentes. Publicação estável/Latest autorizada explicitamente com essas ressalvas; não representa homologação completa.</p>
             <p class="wiki-links">
                 <a class="btn-release" href="download.html">Baixar Free</a>
-                <a class="btn-release btn-release-outline" href="wiki-release-v3-2-8-free.html">Notas desta versão</a>
+                <a class="btn-release btn-release-outline" href="wiki-release-v3-2-12-free.html">Notas desta versão</a>
             </p>
         </section>
 
         <section class="card wiki-card" id="proxima">
             <span id="previa" hidden></span>
             <h2>Pré-release Free 4.0.0-rc6 — somente para avaliação</h2>
-            <p>A <strong>4.0.0-rc6</strong> usa o plano Free, com até 100 vendas finalizadas por mês civil. Ainda não é GA. A versão Free estável é a 3.2.8-free. A v4 seguirá o ciclo de RCs; GA somente após gates e aceites formais, sem data automática em 08/11/2026. A RC7 está em QA local, sem download público. Extraia a RC6 em pasta nova; launcher <code>iniciar_pdv.bat</code> (underscore); banco e logs em <code>./data</code>. Requer Windows 10/11 x64 e Microsoft Edge. O launcher usa o Java 25 incluído no ZIP; não é necessário instalar JDK ou Python nem configurar <code>JAVA_HOME</code> ou <code>PDV_JAVA</code>.</p>
+            <p>A <strong>4.0.0-rc6</strong> usa o plano Free, com até 100 vendas finalizadas por mês civil. Ainda não é GA. A versão Free estável é a 3.2.12-free. A v4 seguirá o ciclo de RCs; GA somente após gates e aceites formais, sem data automática em 08/11/2026. A RC7 está em QA local, sem download público. Extraia a RC6 em pasta nova; launcher <code>iniciar_pdv.bat</code> (underscore); banco e logs em <code>./data</code>. Requer Windows 10/11 x64 e Microsoft Edge. O launcher usa o Java 25 incluído no ZIP; não é necessário instalar JDK ou Python nem configurar <code>JAVA_HOME</code> ou <code>PDV_JAVA</code>.</p>
             <p>Distribuição somente em ZIP portátil Windows x64 sem Authenticode; MSI não incluído. SHA-256: <code>0c00b24b33b3c365fd1f24ec173bfa4e35bedf1946b2df4151035250780d5325</code>. Java 25 em <code>runtime\</code>. Sem JDK e sem Python do sistema.</p>
             <p class="wiki-links">
                 <a class="btn-release" href="wiki-release-v4-0-0-rc6.html">Notas da RC6</a>
@@ -130,7 +131,7 @@
 
         <section class="card wiki-card" id="historico">
             <h2>Ajuda para instalações antigas</h2>
-            <p>Se a instalação abrir na porta <code>8765</code> ou <code>/login</code> retornar 404, o pacote é antigo: baixe a versão estável <a href="download.html">3.2.8-free</a> e extraia em uma pasta nova. Essa versão abre no navegador em <code>http://localhost:8080/login</code>; no Windows, os dados ficam em <code>%APPDATA%\caracore\</code> e, no Linux/macOS, em <code>~/.caracore/</code>.</p>
+            <p>Se a instalação abrir na porta <code>8765</code> ou <code>/login</code> retornar 404, o pacote é antigo: baixe a versão estável <a href="download.html">3.2.12-free</a> e extraia em uma pasta nova. Essa versão abre no navegador em <code>http://localhost:8080/login</code>; no Windows, os dados ficam em <code>%APPDATA%\caracore\</code> e, no Linux/macOS, em <code>~/.caracore/</code>.</p>
             <details class="mt-3 text-sm text-slate-600">
                 <summary class="cursor-pointer">Histórico das versões Free anteriores</summary>
                 <p class="mt-2"><a href="wiki-release-v3-2-8-free.html">3.2.8-free</a> · <a href="wiki-release-v3-2-7-free.html">3.2.7-free</a> · <a href="wiki-release-v3-2-6-free.html">3.2.6-free</a> · <a href="wiki-release-v3-2-5-free.html">3.2.5-free</a> · <a href="wiki-release-v3-2-4-free.html">3.2.4-free</a> · <a href="wiki-release-v3-2-3-free.html">3.2.3-free</a> · <a href="wiki-release-v3-2-2-free.html">3.2.2-free</a>.</p>

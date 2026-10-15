@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Versão 3.2.12 FREE — correções de estorno e HTTP 405 — CaraCore PDV</title>
+  <meta name="description" content="CaraCore PDV Free 3.2.12: estorno distinto de cancelamento, resposta HTTP 405 preservada e transparência das validações pendentes.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="assets/css/portal-style.css">
+  <link rel="stylesheet" href="assets/css/loja.css">
+</head>
+<body class="smooth-scroll bg-gray-50 page-wiki page-wiki-release">
+  <main class="wrapper max-w-4xl mx-auto px-4 py-10">
+    <nav class="mb-6 text-sm" aria-label="Navegação">
+      <a href="download.html" class="text-emerald-700 underline">Download</a>
+      · <a href="versoes.html" class="text-emerald-700 underline">Versões</a>
+    </nav>
+    <header class="mb-8">
+      <p class="eyebrow">Notas da versão · 15/10/2026</p>
+      <h1 class="text-3xl font-bold">CaraCore PDV Free 3.2.12</h1>
+      <p class="mt-3 text-lg">Atualização corretiva: estorno de venda finalizada não é cancelamento de venda em andamento.</p>
+      <p class="mt-3 text-sm text-slate-600">Canal estável/Latest para Windows x64, Linux x64 e macOS Intel x64. Requer Java 25+ instalado separadamente. Manutenção restrita da linha 3.2.x até 08/11/2026; essa data não define GA da v4.</p>
+    </header>
+    <section class="card wiki-card mb-6">
+      <h2>O que mudou</h2>
+      <ul class="list-disc pl-6 space-y-2">
+        <li>Métodos HTTP não permitidos preservam a resposta 405, em vez de erro interno 500.</li>
+        <li>Venda finalizada estornada recebe status <code>ESTORNADA</code>; cancelamento em andamento mantém <code>CANCELADA</code>. Recibos HTML/PDF e relatórios distinguem os casos.</li>
+        <li>A migração V047 reconhece estornos antigos apenas quando há auditoria correspondente.</li>
+        <li>Gravação da fila de sincronização em transação independente, verificada nos testes focados; isso não habilita sincronização em nuvem no Free.</li>
+      </ul>
+      <p class="mt-3">Mesmos limites Free: 100 vendas finalizadas/mês, 100 produtos, um operador. Sem PIX integrado e sem NF-e/NFC-e; recibo sem valor fiscal.</p>
+    </section>
+    <section class="card wiki-card mb-6" aria-labelledby="validacao">
+      <h2 id="validacao">Validação e ressalvas</h2>
+      <p><strong>Publicação estável/Latest autorizada explicitamente em 15/10/2026, ciente das validações pendentes. Não representa homologação completa.</strong></p>
+      <ul class="list-disc pl-6 space-y-2 mt-3">
+        <li>19/19 testes focados passaram com Java 25 e H2.</li>
+        <li>Três ZIPs passaram CRC/estrutura e compartilham o mesmo engine; hashes dos cinco assets remotos conferidos.</li>
+        <li>Pendentes: suíte completa, smoke portátil com SQLite (boot/health/navegador), execução em Linux/macOS e homologação operacional completa, incluindo Edge/leitor físico.</li>
+        <li>Aceites e percentuais da 3.2.8 não certificam a 3.2.12.</li>
+      </ul>
+    </section>
+    <section class="card wiki-card mb-6">
+      <h2>Atualização e rastreabilidade</h2>
+      <p>Encerre o PDV e faça backup antes de atualizar. Extraia em pasta nova e preserve os dados existentes; não substitua o banco da loja por um banco vazio. Consulte <code>INSTALACAO.txt</code> no ZIP. Senhas existentes são preservadas; <code>admin/admin</code> é somente o primeiro acesso de uma instalação nova.</p>
+      <p class="mt-3">Fonte: branch <code>hotfix/3.2.12-free</code>, commit <code>72ace488aed4ee91001c60cf40a3934ddfe8faf1</code>. A tag pública identifica a distribuição; o manifesto registra o commit de origem. A 3.2.8 permanece no histórico; a v4 RC6 continua pré-release separada.</p>
+    </section>
+    <p class="flex flex-wrap gap-3">
+      <a href="download.html" class="btn-release">Baixar 3.2.12-free</a>
+      <a href="https://github.com/chmulato/caracore-pdv-releases/releases/tag/v3.2.12-free" class="btn-release btn-release-outline">Release e checksums</a>
+      <a href="wiki-release-v3-2-8-free.html" class="btn-release btn-release-outline">Histórico 3.2.8</a>
+    </p>
+  </main>
+</body>
+</html>

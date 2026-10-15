@@ -67,7 +67,7 @@
   <main class="page-shell max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
     <section class="portal-panel card overflow-hidden">
       <div class="brand-bg text-white px-6 sm:px-10 py-8">
-        <p class="text-sm uppercase tracking-wide text-emerald-200">Versão atual: <strong>3.2.8-free</strong> · Windows · Linux · macOS</p>
+        <p class="text-sm uppercase tracking-wide text-emerald-200">Versão atual: <strong>3.2.12-free</strong> · Windows · Linux · macOS</p>
         <h1 class="text-3xl sm:text-4xl font-extrabold mt-3 leading-tight">
           Teste o PDV no seu balcão. 100 vendas por mês, sem custo.
         </h1>
@@ -79,41 +79,45 @@
       <div class="px-6 sm:px-10 py-8 space-y-8">
         <aside class="rounded-2xl border border-emerald-200 bg-emerald-50 p-5" aria-label="Ciclo de vida das versões Java">
           <h2 class="text-lg font-extrabold text-slate-900">Ciclo de vida do PDV Java</h2>
-          <p class="mt-1 text-sm text-slate-700"><strong>v3.2.8-free</strong> é a última versão da linha 3.2.x e permanece estável/Latest durante a manutenção restrita, até 08/11/2026. Não haverá novos recursos na linha 3.2.x. A v4 segue pelo ciclo de RCs: a RC6 está disponível para avaliação no Windows; RC7 permanece em QA local, sem download público. 08/11 encerra a manutenção da 3.2.8 e não é data automática de GA da v4.</p>
+          <p class="mt-1 text-sm text-slate-700"><strong>v3.2.12-free</strong> é uma atualização corretiva da linha 3.2.x e permanece estável/Latest durante a manutenção restrita, até 08/11/2026. Não haverá novos recursos na linha 3.2.x. A v4 segue pelo ciclo de RCs: a RC6 está disponível para avaliação no Windows; RC7 permanece em QA local, sem download público. 08/11 encerra a manutenção da 3.2.12 e não é data automática de GA da v4.</p>
         </aside>
 
         <div id="pacotes">
-          <h2 class="text-xl font-extrabold text-slate-900">Pacotes do Free (v3.2.8-free)</h2>
-          <p class="text-sm text-slate-600 mt-1">ZIP + SHA256 da tag <strong>v3.2.8-free</strong>. Confira o nome e o hash do arquivo antes de abrir o pacote.</p>
+          <aside class="mb-4 rounded-xl border border-amber-300 bg-amber-50 p-4 text-sm text-slate-800" aria-label="Validação da 3.2.12">
+            <p><strong>3.2.12-free publicada como estável/Latest por autorização explícita, com validações pendentes.</strong> Passaram 19/19 testes focados em Java 25/H2 e a integridade dos ZIPs/hashes remotos. Suíte completa, smoke portátil com SQLite/health/navegador, execução Linux/macOS e homologação operacional completa permanecem pendentes. Isso não representa homologação completa.</p>
+            <p class="mt-2">Corrige HTTP 405 e distingue estorno de cancelamento. Antes de atualizar, encerre o PDV, faça backup e preserve os dados e a senha existentes. Consulte as <a href="wiki-release-v3-2-12-free.html" class="font-semibold underline">notas da 3.2.12</a> e <code>INSTALACAO.txt</code> no ZIP.</p>
+          </aside>
+          <h2 class="text-xl font-extrabold text-slate-900">Pacotes do Free (v3.2.12-free)</h2>
+          <p class="text-sm text-slate-600 mt-1">ZIP + SHA256 da tag <strong>v3.2.12-free</strong>. Confira o nome e o hash do arquivo antes de abrir o pacote.</p>
           <div class="mt-4 grid grid-cols-1 gap-3">
             <div class="rounded-xl border border-slate-200 bg-slate-50 px-4 py-3">
-              <a id="assetWindows" href="https://github.com/chmulato/caracore-pdv-releases/releases/download/v3.2.8-free/caracore-pdv-v3.2.8-free-windows-x64.zip" class="flex items-center gap-2 text-slate-900 font-semibold hover:text-emerald-800 text-sm">
+              <a id="assetWindows" href="https://github.com/chmulato/caracore-pdv-releases/releases/download/v3.2.12-free/caracore-pdv-v3.2.12-free-windows-x64.zip" class="flex items-center gap-2 text-slate-900 font-semibold hover:text-emerald-800 text-sm">
                 <i class="fab fa-windows text-blue-500"></i> Windows x64 — baixar ZIP
               </a>
-              <p class="mt-2 text-xs text-slate-600 break-all"><code>caracore-pdv-v3.2.8-free-windows-x64.zip</code></p>
+              <p class="mt-2 text-xs text-slate-600 break-all"><code>caracore-pdv-v3.2.12-free-windows-x64.zip</code></p>
               <div class="mt-1 flex items-center gap-2 text-xs text-slate-500">
-                <span class="font-mono">SHA256 ef0116c3…985e612e</span>
-                <button type="button" class="rounded border border-slate-300 px-2 py-1 hover:bg-white" onclick="copyHash('ef0116c383ae35df8fff96866cf8a767665db3a555bf2873435e9e8f985e612e', this)" aria-label="Copiar SHA256 completo do ZIP Windows">Copiar</button>
+                <span class="font-mono">SHA256 6d7a50b0…45f7c0e2</span>
+                <button type="button" class="rounded border border-slate-300 px-2 py-1 hover:bg-white" onclick="copyHash('6d7a50b0acf2a05620a090eebdd48f049a1dd5599ccb6c40c419c38145f7c0e2', this)" aria-label="Copiar SHA256 completo do ZIP Windows">Copiar</button>
               </div>
             </div>
             <div class="rounded-xl border border-slate-200 bg-slate-50 px-4 py-3">
-              <a id="assetLinux" href="https://github.com/chmulato/caracore-pdv-releases/releases/download/v3.2.8-free/caracore-pdv-v3.2.8-free-linux-x64.zip" class="flex items-center gap-2 text-slate-900 font-semibold hover:text-emerald-800 text-sm">
+              <a id="assetLinux" href="https://github.com/chmulato/caracore-pdv-releases/releases/download/v3.2.12-free/caracore-pdv-v3.2.12-free-linux-x64.zip" class="flex items-center gap-2 text-slate-900 font-semibold hover:text-emerald-800 text-sm">
                 <i class="fab fa-linux text-orange-500"></i> Linux x64 — baixar ZIP
               </a>
-              <p class="mt-2 text-xs text-slate-600 break-all"><code>caracore-pdv-v3.2.8-free-linux-x64.zip</code></p>
+              <p class="mt-2 text-xs text-slate-600 break-all"><code>caracore-pdv-v3.2.12-free-linux-x64.zip</code></p>
               <div class="mt-1 flex items-center gap-2 text-xs text-slate-500">
-                <span class="font-mono">SHA256 50c30fad…a7eb57a5</span>
-                <button type="button" class="rounded border border-slate-300 px-2 py-1 hover:bg-white" onclick="copyHash('50c30fad7c13825c95beba55a281934b008cbf330490d981c09592eba7eb57a5', this)" aria-label="Copiar SHA256 completo do ZIP Linux">Copiar</button>
+                <span class="font-mono">SHA256 795a3963…a99fd9c1</span>
+                <button type="button" class="rounded border border-slate-300 px-2 py-1 hover:bg-white" onclick="copyHash('795a396318da61d1bd45dcfe816879d2184706f1c7849f1cd2ad98baa99fd9c1', this)" aria-label="Copiar SHA256 completo do ZIP Linux">Copiar</button>
               </div>
             </div>
             <div class="rounded-xl border border-slate-200 bg-slate-50 px-4 py-3">
-              <a id="assetMacos" href="https://github.com/chmulato/caracore-pdv-releases/releases/download/v3.2.8-free/caracore-pdv-v3.2.8-free-macos-x64.zip" class="flex items-center gap-2 text-slate-900 font-semibold hover:text-emerald-800 text-sm">
+              <a id="assetMacos" href="https://github.com/chmulato/caracore-pdv-releases/releases/download/v3.2.12-free/caracore-pdv-v3.2.12-free-macos-x64.zip" class="flex items-center gap-2 text-slate-900 font-semibold hover:text-emerald-800 text-sm">
                 <i class="fab fa-apple text-gray-700"></i> macOS x64 — baixar ZIP
               </a>
-              <p class="mt-2 text-xs text-slate-600 break-all"><code>caracore-pdv-v3.2.8-free-macos-x64.zip</code></p>
+              <p class="mt-2 text-xs text-slate-600 break-all"><code>caracore-pdv-v3.2.12-free-macos-x64.zip</code></p>
               <div class="mt-1 flex items-center gap-2 text-xs text-slate-500">
-                <span class="font-mono">SHA256 1ade201a…0d637476</span>
-                <button type="button" class="rounded border border-slate-300 px-2 py-1 hover:bg-white" onclick="copyHash('1ade201a3c84b6f445f417c6cc8e4123096f1b1f8ed3702c70898af07d637476', this)" aria-label="Copiar SHA256 completo do ZIP macOS">Copiar</button>
+                <span class="font-mono">SHA256 795a3963…a99fd9c1</span>
+                <button type="button" class="rounded border border-slate-300 px-2 py-1 hover:bg-white" onclick="copyHash('795a396318da61d1bd45dcfe816879d2184706f1c7849f1cd2ad98baa99fd9c1', this)" aria-label="Copiar SHA256 completo do ZIP macOS">Copiar</button>
               </div>
             </div>
           </div>
@@ -121,7 +125,7 @@
 
         <aside id="pre-release-v4" class="rounded-2xl border border-amber-300 bg-amber-50 p-5" aria-labelledby="rc6-title">
           <h2 id="rc6-title" class="text-lg font-extrabold text-slate-900">Pré-release 4.0.0-rc6</h2>
-          <p class="mt-1 text-sm text-slate-700">Preview para teste no Windows. O canal estável para Windows, Linux e macOS é a 3.2.8-free.</p>
+          <p class="mt-1 text-sm text-slate-700">Preview para teste no Windows. O canal estável para Windows, Linux e macOS é a 3.2.12-free.</p>
           <p class="mt-2 text-xs text-slate-600 break-all font-mono">SHA256 0c00b24b…780d5325
             <button type="button" class="ml-2 rounded border border-amber-400 px-2 py-1 hover:bg-amber-100" onclick="copyHash('0c00b24b33b3c365fd1f24ec173bfa4e35bedf1946b2df4151035250780d5325', this)" aria-label="Copiar SHA256 completo da pré-release 4.0.0-rc6">Copiar</button>
           </p>
@@ -134,7 +138,7 @@
         </aside>
 
         <div id="instalacao" class="rounded-2xl border border-emerald-200 bg-emerald-50 p-5">
-          <h2 class="text-lg font-extrabold text-slate-900">Instalação 3.2.8-free (estável)</h2>
+          <h2 class="text-lg font-extrabold text-slate-900">Instalação 3.2.12-free (estável)</h2>
           <ol class="mt-3 text-sm text-slate-800 space-y-2 list-decimal list-inside">
             <li>Tenha o <a class="font-semibold text-emerald-800 underline" href="https://adoptium.net/temurin/releases/?version=25">JDK 25</a> (<code>java -version</code> mostra 25).</li>
             <li>Extraia o ZIP em uma <strong>pasta nova</strong> (exemplo: <code>C:\CaraCore\pdv-free</code>).</li>
@@ -158,7 +162,7 @@
           </ul>
           <p class="mt-3 text-sm text-slate-800">Depois da senha, o Edge abre a frente de caixa. Abrir menu mostra as outras telas e Fechar menu volta à venda. Sair encerra a sessão e o login pede o próximo perfil.</p>
           <ol class="mt-3 text-sm text-slate-800 space-y-2 list-decimal list-inside">
-            <li>Extraia o ZIP em uma pasta nova, separada da 3.2.8-free.</li>
+            <li>Extraia o ZIP em uma pasta nova, separada da 3.2.12-free.</li>
             <li>Execute <code>iniciar_pdv.bat</code> (sublinhado). O launcher sobe o caixa e abre o Edge.</li>
             <li>Primeiro acesso: <code>admin</code> / <code>admin</code>, com troca de senha obrigatória. Depois da troca, essas credenciais deixam de valer.</li>
           </ol>
@@ -175,7 +179,7 @@
             <li class="flex items-start gap-2"><i class="fas fa-triangle-exclamation text-amber-600 mt-0.5"></i><span>Sem PIX integrado (QR/gateway) e sem NF-e/NFC-e.</span></li>
           </ul>
           <p class="mt-4 text-sm text-slate-700">
-            <a href="wiki-release-v3-2-8-free.html" class="font-semibold text-emerald-700 hover:underline">Notas 3.2.8</a>
+            <a href="wiki-release-v3-2-12-free.html" class="font-semibold text-emerald-700 hover:underline">Notas 3.2.12</a>
             · <a href="versoes.html#proxima" class="font-semibold text-emerald-700 hover:underline">Pré-release Free 4.0 e orientações técnicas</a>
           </p>
           <p class="mt-2 text-sm text-slate-600">
@@ -196,9 +200,9 @@
         </details>
 
         <p class="text-sm text-slate-600 border-t border-slate-200 pt-6">
-          <a id="manualLink" href="https://github.com/chmulato/caracore-pdv-releases/releases/tag/v3.2.8-free" class="font-semibold text-emerald-700 hover:underline">Release no GitHub</a>
+          <a id="manualLink" href="https://github.com/chmulato/caracore-pdv-releases/releases/tag/v3.2.12-free" class="font-semibold text-emerald-700 hover:underline">Release no GitHub</a>
           · <a href="canal-feedback.html" class="font-semibold text-emerald-700 hover:underline">Suporte</a>
-          · tag <span id="downloadMeta" class="font-mono text-slate-700">v3.2.8-free</span>
+          · tag <span id="downloadMeta" class="font-mono text-slate-700">v3.2.12-free</span>
         </p>
 
       </div>
@@ -212,7 +216,7 @@
           <div>
             <div class="text-sm font-extrabold text-slate-900">Suporte de Instalação</div>
             <div class="text-sm text-slate-600 mt-1">
-              Antes de abrir chamado, confira a <a href="#instalacao" class="font-semibold text-emerald-700 hover:underline">instalação 3.2.8-free</a> ou a <a href="#instalacao-rc6" class="font-semibold text-emerald-700 hover:underline">instalação 4.0.0-rc6</a>. Log da 3.2.8-free: <span class="font-mono text-slate-700">%APPDATA%\caracore\logs</span>. Log da pré-release: <span class="font-mono text-slate-700">.\data\logs</span>, na pasta onde o ZIP foi extraído.
+              Antes de abrir chamado, confira a <a href="#instalacao" class="font-semibold text-emerald-700 hover:underline">instalação 3.2.12-free</a> ou a <a href="#instalacao-rc6" class="font-semibold text-emerald-700 hover:underline">instalação 4.0.0-rc6</a>. Log da 3.2.12-free: <span class="font-mono text-slate-700">%APPDATA%\caracore\logs</span>. Log da pré-release: <span class="font-mono text-slate-700">.\data\logs</span>, na pasta onde o ZIP foi extraído.
             </div>
           </div>
           <div class="flex flex-col sm:flex-row gap-2">
@@ -279,13 +283,13 @@
     (function () {
       const OWNER = "chmulato";
       const REPO = "caracore-pdv-releases";
-      const TAG = "v3.2.8-free";
+      const TAG = "v3.2.12-free";
       const RELEASE_URL = `https://github.com/${OWNER}/${REPO}/releases/tag/${TAG}`;
       const ASSET_BASE = `https://github.com/${OWNER}/${REPO}/releases/download/${TAG}`;
       const ASSETS = {
-        windows: { file: "caracore-pdv-v3.2.8-free-windows-x64.zip", label: "Windows 10/11 x64" },
-        linux: { file: "caracore-pdv-v3.2.8-free-linux-x64.zip", label: "Linux x64" },
-        macos: { file: "caracore-pdv-v3.2.8-free-macos-x64.zip", label: "macOS 12+ x64" }
+        windows: { file: "caracore-pdv-v3.2.12-free-windows-x64.zip", label: "Windows 10/11 x64" },
+        linux: { file: "caracore-pdv-v3.2.12-free-linux-x64.zip", label: "Linux x64" },
+        macos: { file: "caracore-pdv-v3.2.12-free-macos-x64.zip", label: "macOS 12+ x64" }
       };
 
       const manualLink = document.getElementById("manualLink");
