@@ -102,63 +102,22 @@
                         <tr>
                             <th>Recurso</th>
                             <th>FREE</th>
-                            <th>PREMIUM</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>Vendas por mês</td>
-                            <td>Até 100</td>
-                            <td>Ilimitado</td>
-                        </tr>
-                        <tr>
-                            <td>Operadores de caixa</td>
-                            <td>1 operador</td>
-                            <td>Ilimitado</td>
-                        </tr>
-                        <tr>
-                            <td>Vendedores</td>
-                            <td>Até 4</td>
-                            <td>Sem o teto Free</td>
-                        </tr>
-                        <tr>
-                            <td>Lojas</td>
-                            <td>1 loja</td>
-                            <td>Sem o teto Free</td>
-                        </tr>
-                        <tr>
-                            <td>Catálogo de produtos</td>
-                            <td>Até 100 itens</td>
-                            <td>Ilimitado</td>
-                        </tr>
-                        <tr>
-                            <td>Recibos SMS / mês</td>
-                            <td>Até 10</td>
-                            <td>Sem o teto Free</td>
-                        </tr>
-                        <tr>
-                            <td>Emissão de NF-e / Fiscal</td>
-                            <td>Não disponível</td>
-                            <td>Em desenvolvimento (roadmap), não disponível hoje</td>
-                        </tr>
-                        <tr>
-                            <td>Integração PIX</td>
-                            <td>Não disponível</td>
-                            <td>Em desenvolvimento (roadmap), não disponível hoje</td>
-                        </tr>
-                        <tr>
-                            <td>Sincronização em nuvem</td>
-                            <td>Não disponível</td>
-                            <td>Incluído</td>
-                        </tr>
-                        <tr>
-                            <td>Suporte técnico</td>
-                            <td>Comunidade</td>
-                            <td>Canal dedicado</td>
-                        </tr>
+                        <tr><td>Vendas por mês</td><td>Até 100</td></tr>
+                        <tr><td>Operadores de caixa</td><td>1 operador</td></tr>
+                        <tr><td>Vendedores</td><td>Até 4</td></tr>
+                        <tr><td>Lojas</td><td>1 loja</td></tr>
+                        <tr><td>Catálogo de produtos</td><td>Até 100 itens</td></tr>
+                        <tr><td>Recibos SMS / mês</td><td>Até 10</td></tr>
+                        <tr><td>Emissão de NF-e / Fiscal</td><td>Não disponível</td></tr>
+                        <tr><td>Integração PIX</td><td>Não disponível</td></tr>
+                        <tr><td>Suporte técnico</td><td>Comunidade</td></tr>
                     </tbody>
                 </table>
             </div>
+            <p>Premium: assinatura mensal de suporte, {{PRECO_MENSAL}}. PIX, NF-e/NFC-e e CBS/IBS estão no roadmap, sem data. <a href="https://pdv.caracore.com.br/roadmap-2026.html#premium">Saiba mais</a>.</p>
         </section>
 
         <section class="card wiki-card">
@@ -169,7 +128,7 @@
                 <li><strong>Linux/macOS:</strong> equipes técnicas ou pequenas operações que preferem sistemas não-Windows podem testar o PDV na plataforma de sua escolha.</li>
                 <li><strong>Baixa aderência:</strong> operação que já exige integração fiscal completa, múltiplas integrações legadas e automações além do escopo Free.</li>
             </ul>
-            <p><strong>Regra comercial:</strong> primeiro validar o básico com a Free; depois avançar para o Premium quando houver necessidade real de expansão.</p>
+            <p><strong>Regra comercial:</strong> primeiro validar o básico com a Free.</p>
         </section>
 
         <section class="card wiki-card">
@@ -179,7 +138,7 @@
                 <li><strong>Operação de venda (5 min):</strong> cadastrar item simples, registrar venda e concluir recibo digital.</li>
                 <li><strong>Prova de continuidade (3 min):</strong> destacar operação local e explicar como o fluxo se mantém previsível com oscilação de internet.</li>
                 <li><strong>Leitura de gestão (3 min):</strong> mostrar visão rápida do dia para dono/gerente.</li>
-                <li><strong>Fechamento comercial (2 min):</strong> alinhar limites da Free e próximos passos para evolução Premium.</li>
+                <li><strong>Fechamento comercial (2 min):</strong> alinhar os limites da Free.</li>
             </ol>
             <p>Documentação de produto: <a href="https://wiki.caracore.com.br/projeto-pdv.html">wiki.caracore.com.br/projeto-pdv.html</a>.</p>
         </section>
@@ -209,7 +168,7 @@
                         </tr>
                         <tr>
                             <td>"Quando entra PIX integrado e expansão?"</td>
-                            <td>É trilha Premium: primeiro prove aderência do fluxo, depois evolua com mais automação.</td>
+                            <td>PIX integrado está no roadmap, sem data, e não existe em nenhum plano hoje.</td>
                         </tr>
                     </tbody>
                 </table>
@@ -221,7 +180,7 @@
             <p><strong>Preciso pagar para testar?</strong><br>Não. A edição Free foi criada para validação real com limites explícitos.</p>
             <p><strong>Consigo usar em produção?</strong><br>Sim, para operação pequena dentro dos limites da edição Free.</p>
             <p><strong>Preciso instalar Java?</strong><br>Sim. O requisito é Java 25+ no sistema (<a href="https://adoptium.net/" target="_blank" rel="noopener">Temurin 25</a> é a recomendação). Verifique com <code>java -version</code> antes de executar.</p>
-            <p><strong>A Free já inclui tudo?</strong><br>Não. Ela valida o fluxo principal; recursos de expansão ficam no Premium.</p>
+            <p><strong>A Free já inclui tudo?</strong><br>Não. Ela valida o fluxo principal, dentro dos limites da edição Free.</p>
             <p><strong>Qual o próximo passo após validar?</strong><br>Agendar demonstração comercial para plano de implantação e evolução de operação.</p>
             <div class="wiki-links">
                 <a href="download.html" class="btn-release">Baixar Free (3.2.7)</a>
@@ -311,7 +270,6 @@ shasum -a 256 caracore-pdv-v3.2.2-free-free-macos-x64.zip</code></pre>
             <ul>
                 <li>Pacote instalador nativo NSIS (Windows) — próxima release.</li>
                 <li>Assinatura digital no macOS (requer certificado Apple Developer).</li>
-                <li>Upgrade in-place para edição PREMIUM sem reinstalação.</li>
                 <li>Dashboard simplificado otimizado para o plano FREE.</li>
             </ul>
             <div class="wiki-links">
