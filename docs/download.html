@@ -6,7 +6,7 @@
   <meta name="description" content="Baixe grátis a edição Free do CaraCore-PDV para Windows, Linux e macOS e valide o produto com até 100 vendas por mês no balcão.">
   <meta name="author" content="Cara Core Informática">
   <meta property="og:title" content="Cara Core Informática | Baixar Versão de Degustação (Free)">
-  <meta property="og:description" content="Teste a edição Free no Windows, Linux ou macOS com a aplicação web local no navegador, SQLite e limites claros; conheça o Premium quando precisar de mais automação comercial.">
+  <meta property="og:description" content="Teste a edição Free 3.2.12 no Windows, Linux ou macOS, com dados no computador da loja e limites claros. Homologação em andamento.">
   <meta property="og:type" content="website">
   <title>CaraCore-PDV | Baixar e Testar Grátis (Free)</title>
   <link rel="manifest" href="manifest.webmanifest">
@@ -71,24 +71,14 @@
         <h1 class="text-3xl sm:text-4xl font-extrabold mt-3 leading-tight">
           Teste o PDV no seu balcão. 100 vendas por mês, sem custo.
         </h1>
-        <p class="text-base text-white/90 mt-3 max-w-3xl">
-          Instala, cadastra produto e registra a venda no caixa pelo navegador. Dados no SQLite local. Canais independentes: não misture pasta nem data.
-        </p>
       </div>
 
       <div class="px-6 sm:px-10 py-8 space-y-8">
-        <aside class="rounded-2xl border border-emerald-200 bg-emerald-50 p-5" aria-label="Ciclo de vida das versões Java">
-          <h2 class="text-lg font-extrabold text-slate-900">Ciclo de vida do PDV Java</h2>
-          <p class="mt-1 text-sm text-slate-700"><strong>v3.2.12-free</strong> é uma atualização corretiva da linha 3.2.x e permanece estável/Latest durante a manutenção restrita, até 08/11/2026. Não haverá novos recursos na linha 3.2.x. A v4 segue pelo ciclo de RCs: a RC6 está disponível para avaliação no Windows; RC7 permanece em QA local, sem download público. 08/11 encerra a manutenção da 3.2.12 e não é data automática de GA da v4.</p>
-        </aside>
+        <p class="text-base text-slate-700">Versão estável 3.2.12-free (15/10/2026) — homologação em andamento (<a href="wiki-release-v3-2-12-free.html#validacao" class="font-semibold underline">ressalvas</a>). Já usa a 3.2.x? Feche o PDV, faça backup de <code>%APPDATA%\caracore</code> e extraia o ZIP novo em outra pasta. Seus dados e sua senha são mantidos.</p>
 
         <div id="pacotes">
-          <aside class="mb-4 rounded-xl border border-amber-300 bg-amber-50 p-4 text-sm text-slate-800" aria-label="Validação da 3.2.12">
-            <p><strong>3.2.12-free publicada como estável/Latest por autorização explícita, com validações pendentes.</strong> Passaram 19/19 testes focados em Java 25/H2 e a integridade dos ZIPs/hashes remotos. Suíte completa, smoke portátil com SQLite/health/navegador, execução Linux/macOS e homologação operacional completa permanecem pendentes. Isso não representa homologação completa.</p>
-            <p class="mt-2">Corrige HTTP 405 e distingue estorno de cancelamento. Antes de atualizar, encerre o PDV, faça backup e preserve os dados e a senha existentes. Consulte as <a href="wiki-release-v3-2-12-free.html" class="font-semibold underline">notas da 3.2.12</a> e <code>INSTALACAO.txt</code> no ZIP.</p>
-          </aside>
           <h2 class="text-xl font-extrabold text-slate-900">Pacotes do Free (v3.2.12-free)</h2>
-          <p class="text-sm text-slate-600 mt-1">ZIP + SHA256 da tag <strong>v3.2.12-free</strong>. Confira o nome e o hash do arquivo antes de abrir o pacote.</p>
+          <p class="text-sm text-slate-600 mt-1">Confira o nome e o SHA256 do arquivo antes de abrir o pacote. Requer JDK 25 instalado.</p>
           <div class="mt-4 grid grid-cols-1 gap-3">
             <div class="rounded-xl border border-slate-200 bg-slate-50 px-4 py-3">
               <a id="assetWindows" href="https://github.com/chmulato/caracore-pdv-releases/releases/download/v3.2.12-free/caracore-pdv-v3.2.12-free-windows-x64.zip" class="flex items-center gap-2 text-slate-900 font-semibold hover:text-emerald-800 text-sm">
@@ -105,40 +95,25 @@
                 <i class="fab fa-linux text-orange-500"></i> Linux x64 — baixar ZIP
               </a>
               <p class="mt-2 text-xs text-slate-600 break-all"><code>caracore-pdv-v3.2.12-free-linux-x64.zip</code></p>
-              <div class="mt-1 flex items-center gap-2 text-xs text-slate-500">
-                <span class="font-mono">SHA256 795a3963…a99fd9c1</span>
-                <button type="button" class="rounded border border-slate-300 px-2 py-1 hover:bg-white" onclick="copyHash('795a396318da61d1bd45dcfe816879d2184706f1c7849f1cd2ad98baa99fd9c1', this)" aria-label="Copiar SHA256 completo do ZIP Linux">Copiar</button>
-              </div>
             </div>
             <div class="rounded-xl border border-slate-200 bg-slate-50 px-4 py-3">
               <a id="assetMacos" href="https://github.com/chmulato/caracore-pdv-releases/releases/download/v3.2.12-free/caracore-pdv-v3.2.12-free-macos-x64.zip" class="flex items-center gap-2 text-slate-900 font-semibold hover:text-emerald-800 text-sm">
                 <i class="fab fa-apple text-gray-700"></i> macOS x64 — baixar ZIP
               </a>
               <p class="mt-2 text-xs text-slate-600 break-all"><code>caracore-pdv-v3.2.12-free-macos-x64.zip</code></p>
-              <div class="mt-1 flex items-center gap-2 text-xs text-slate-500">
+            </div>
+            <div class="rounded-xl border border-slate-200 px-4 py-3 text-xs text-slate-600">
+              <p>Linux e macOS usam o mesmo pacote (Java portátil), distribuído com nomes diferentes. Ambos requerem JDK 25 instalado.</p>
+              <div class="mt-2 flex items-center gap-2">
                 <span class="font-mono">SHA256 795a3963…a99fd9c1</span>
-                <button type="button" class="rounded border border-slate-300 px-2 py-1 hover:bg-white" onclick="copyHash('795a396318da61d1bd45dcfe816879d2184706f1c7849f1cd2ad98baa99fd9c1', this)" aria-label="Copiar SHA256 completo do ZIP macOS">Copiar</button>
+                <button type="button" class="rounded border border-slate-300 px-2 py-1 hover:bg-slate-50" onclick="copyHash('795a396318da61d1bd45dcfe816879d2184706f1c7849f1cd2ad98baa99fd9c1', this)" aria-label="Copiar SHA256 completo do pacote Linux e macOS">Copiar</button>
               </div>
             </div>
           </div>
         </div>
 
-        <aside id="pre-release-v4" class="rounded-2xl border border-amber-300 bg-amber-50 p-5" aria-labelledby="rc6-title">
-          <h2 id="rc6-title" class="text-lg font-extrabold text-slate-900">Pré-release 4.0.0-rc6</h2>
-          <p class="mt-1 text-sm text-slate-700">Preview para teste no Windows. O canal estável para Windows, Linux e macOS é a 3.2.12-free.</p>
-          <p class="mt-2 text-xs text-slate-600 break-all font-mono">SHA256 0c00b24b…780d5325
-            <button type="button" class="ml-2 rounded border border-amber-400 px-2 py-1 hover:bg-amber-100" onclick="copyHash('0c00b24b33b3c365fd1f24ec173bfa4e35bedf1946b2df4151035250780d5325', this)" aria-label="Copiar SHA256 completo da pré-release 4.0.0-rc6">Copiar</button>
-          </p>
-          <a class="mt-3 inline-flex items-center rounded-xl border border-amber-500 px-4 py-2 text-sm font-semibold text-slate-900 hover:bg-amber-100"
-             href="https://github.com/chmulato/caracore-pdv-releases/releases/download/v4.0.0-rc6/CaraCore-PDV-4.0.0-rc6-qute-portable-windows-x64.zip">
-            Baixar preview RC6 (Windows x64)
-          </a>
-          <a class="ml-2 text-sm font-semibold text-emerald-800 hover:underline" href="wiki-release-v4-0-0-rc6.html">Notas</a>
-          <a class="ml-2 text-sm font-semibold text-emerald-800 hover:underline" href="homologacao-v4.html#rc6">Homologação</a>
-        </aside>
-
         <div id="instalacao" class="rounded-2xl border border-emerald-200 bg-emerald-50 p-5">
-          <h2 class="text-lg font-extrabold text-slate-900">Instalação 3.2.12-free (estável)</h2>
+          <h2 class="text-lg font-extrabold text-slate-900">Instalação 3.2.12-free</h2>
           <ol class="mt-3 text-sm text-slate-800 space-y-2 list-decimal list-inside">
             <li>Tenha o <a class="font-semibold text-emerald-800 underline" href="https://adoptium.net/temurin/releases/?version=25">JDK 25</a> (<code>java -version</code> mostra 25).</li>
             <li>Extraia o ZIP em uma <strong>pasta nova</strong> (exemplo: <code>C:\CaraCore\pdv-free</code>).</li>
@@ -152,29 +127,11 @@
           </div>
         </div>
 
-        <div id="instalacao-rc6" class="rounded-2xl border border-amber-200 bg-amber-50 p-5">
-          <span id="instalacao-rc5"></span>
-          <h2 class="text-lg font-extrabold text-slate-900">Instalação 4.0.0-rc6 (pré-release)</h2>
-          <p class="mt-2 text-sm text-slate-700">Windows 10/11 x64. Não é a versão estável. Sem NF-e, NFC-e nem PIX integrado.</p>
-          <ul class="mt-3 text-sm text-slate-800 space-y-2 list-disc list-inside">
-            <li>Microsoft Edge.</li>
-            <li>O Java 25 já está em <code>runtime\</code> dentro do ZIP. Não instale JDK nem Python para este pacote.</li>
-          </ul>
-          <p class="mt-3 text-sm text-slate-800">Depois da senha, o Edge abre a frente de caixa. Abrir menu mostra as outras telas e Fechar menu volta à venda. Sair encerra a sessão e o login pede o próximo perfil.</p>
-          <ol class="mt-3 text-sm text-slate-800 space-y-2 list-decimal list-inside">
-            <li>Extraia o ZIP em uma pasta nova, separada da 3.2.12-free.</li>
-            <li>Execute <code>iniciar_pdv.bat</code> (sublinhado). O launcher sobe o caixa e abre o Edge.</li>
-            <li>Primeiro acesso: <code>admin</code> / <code>admin</code>, com troca de senha obrigatória. Depois da troca, essas credenciais deixam de valer.</li>
-          </ol>
-          <p class="mt-3 text-sm text-slate-700">Banco e logs ficam na pasta extraída: <code>.\data\caracore-pdv.db</code> e <code>.\data\logs</code>. Essa instalação não usa <code>%APPDATA%\caracore\</code>.</p>
-          <p class="mt-3 text-sm text-slate-600">A 4.0.0-rc5 fica no <a class="font-semibold text-emerald-800 underline" href="wiki-release-v4-0-0-rc5.html">histórico</a>.</p>
-        </div>
-
         <div>
           <h2 class="text-lg font-extrabold text-slate-900">Limites do Free</h2>
           <ul class="mt-3 text-sm text-slate-700 space-y-2">
-            <li class="flex items-start gap-2"><i class="fas fa-check text-emerald-600 mt-0.5"></i><span>Até <strong>100 vendas/mês</strong> · 100 produtos · 1 operador · 4 vendedores · 1 loja.</span></li>
-            <li class="flex items-start gap-2"><i class="fas fa-check text-emerald-600 mt-0.5"></i><span>Offline (SQLite) · balcão no navegador. Pagamentos: dinheiro, débito, crédito e outros — <strong>“outros” não é PIX integrado</strong>.</span></li>
+            <li class="flex items-start gap-2"><i class="fas fa-check text-emerald-600 mt-0.5"></i><span>Até <strong>100 vendas/mês</strong> · 100 produtos · 1 operador · 1 loja.</span></li>
+            <li class="flex items-start gap-2"><i class="fas fa-check text-emerald-600 mt-0.5"></i><span>Funciona sem internet: os dados ficam no computador da loja. Pagamentos: dinheiro, débito, crédito e outros — <strong>“outros” não é PIX integrado</strong>.</span></li>
             <li class="flex items-start gap-2"><i class="fas fa-check text-emerald-600 mt-0.5"></i><span>Recibo digital por link e PDF, sem valor fiscal.</span></li>
             <li class="flex items-start gap-2"><i class="fas fa-triangle-exclamation text-amber-600 mt-0.5"></i><span>Sem PIX integrado (QR/gateway) e sem NF-e/NFC-e.</span></li>
           </ul>
@@ -183,9 +140,34 @@
             · <a href="versoes.html#proxima" class="font-semibold text-emerald-700 hover:underline">Pré-release Free 4.0 e orientações técnicas</a>
           </p>
           <p class="mt-2 text-sm text-slate-600">
-            Quer PIX integrado e vendas sem teto? <a href="consultoria.html" class="font-semibold text-emerald-700 hover:text-emerald-800">Agende a demonstração do Premium</a>.
+            Premium: suporte prioritário. PIX integrado e emissão fiscal estão em desenvolvimento (<a href="roadmap-2026.html" class="font-semibold underline">roadmap</a>), não disponíveis hoje.
           </p>
         </div>
+
+        <details id="pre-release-v4" class="rounded-2xl border border-amber-300 bg-amber-50 p-5">
+          <summary class="cursor-pointer text-lg font-extrabold text-slate-900">Prévia da v4 (só Windows, para avaliação)</summary>
+          <div id="instalacao-rc6" class="mt-4">
+            <h2 class="text-lg font-extrabold text-slate-900">Instalação 4.0.0-rc6</h2>
+            <p class="mt-2 text-sm text-slate-700">Windows 10/11 x64 e Microsoft Edge. Somente para avaliação. Sem NF-e, NFC-e nem PIX integrado. Não precisa instalar Java: ele vem dentro do ZIP.</p>
+            <ol class="mt-3 text-sm text-slate-800 space-y-2 list-decimal list-inside">
+              <li>Extraia o ZIP em uma pasta nova, separada da 3.2.12-free.</li>
+              <li>Execute <code>iniciar_pdv.bat</code> (sublinhado). O PDV abre no Edge.</li>
+              <li>Primeiro acesso: <code>admin</code> / <code>admin</code>, com troca de senha obrigatória. Depois da troca, essas credenciais deixam de valer.</li>
+            </ol>
+            <p class="mt-3 text-sm text-slate-700">Os dados ficam em <code>.\data</code> e os registros de execução em <code>.\data\logs</code>, dentro da pasta extraída. Essa instalação não usa <code>%APPDATA%\caracore</code>.</p>
+            <p class="mt-3 text-xs text-slate-600 font-mono">SHA256 0c00b24b…780d5325
+              <button type="button" class="ml-2 rounded border border-amber-400 px-2 py-1 hover:bg-amber-100" onclick="copyHash('0c00b24b33b3c365fd1f24ec173bfa4e35bedf1946b2df4151035250780d5325', this)" aria-label="Copiar SHA256 completo da prévia 4.0.0-rc6">Copiar</button>
+            </p>
+            <a class="mt-3 inline-flex rounded-xl border border-amber-500 px-4 py-2 text-sm font-semibold text-slate-900 hover:bg-amber-100" href="https://github.com/chmulato/caracore-pdv-releases/releases/download/v4.0.0-rc6/CaraCore-PDV-4.0.0-rc6-qute-portable-windows-x64.zip">Baixar prévia RC6 (Windows x64)</a>
+            <a class="ml-2 text-sm font-semibold text-emerald-800 underline" href="wiki-release-v4-0-0-rc6.html">Notas</a>
+            <a class="ml-2 text-sm font-semibold text-emerald-800 underline" href="homologacao-v4.html#rc6">Homologação</a>
+          </div>
+        </details>
+
+        <section id="suporte" class="border-t border-slate-200 pt-6">
+          <h2 class="text-lg font-extrabold text-slate-900">Suporte de instalação</h2>
+          <p class="mt-2 text-sm text-slate-600">Confira as instruções acima. Se precisar de ajuda, <a href="canal-feedback.html" class="font-semibold text-emerald-700 underline">escreva para o suporte</a> e informe a versão e a mensagem exibida.</p>
+        </section>
 
         <details class="border-t border-slate-200 pt-8">
           <summary class="cursor-pointer select-none text-sm font-semibold text-slate-800">Guia no WhatsApp (opcional)</summary>
@@ -202,57 +184,44 @@
         <p class="text-sm text-slate-600 border-t border-slate-200 pt-6">
           <a id="manualLink" href="https://github.com/chmulato/caracore-pdv-releases/releases/tag/v3.2.12-free" class="font-semibold text-emerald-700 hover:underline">Release no GitHub</a>
           · <a href="canal-feedback.html" class="font-semibold text-emerald-700 hover:underline">Suporte</a>
-          · tag <span id="downloadMeta" class="font-mono text-slate-700">v3.2.12-free</span>
         </p>
 
       </div>
     </section>
   </main>
 
-  <footer class="py-10">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="rounded-2xl border border-slate-200 bg-white p-6">
-        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-          <div>
-            <div class="text-sm font-extrabold text-slate-900">Suporte de Instalação</div>
-            <div class="text-sm text-slate-600 mt-1">
-              Antes de abrir chamado, confira a <a href="#instalacao" class="font-semibold text-emerald-700 hover:underline">instalação 3.2.12-free</a> ou a <a href="#instalacao-rc6" class="font-semibold text-emerald-700 hover:underline">instalação 4.0.0-rc6</a>. Log da 3.2.12-free: <span class="font-mono text-slate-700">%APPDATA%\caracore\logs</span>. Log da pré-release: <span class="font-mono text-slate-700">.\data\logs</span>, na pasta onde o ZIP foi extraído.
-            </div>
-          </div>
-          <div class="flex flex-col sm:flex-row gap-2">
-            <a href="consultoria.html" class="inline-flex items-center justify-center gap-2 rounded-xl bg-emerald-600 px-4 py-2 text-white font-bold hover:bg-emerald-700">
-              Agendar demonstração
-            </a>
-            <a href="canal-feedback.html" class="inline-flex items-center justify-center gap-2 rounded-xl border border-slate-200 px-4 py-2 text-slate-900 font-semibold hover:bg-slate-50">
-              Suporte de instalação
-            </a>
-          </div>
+  <footer class="bg-gray-900 text-gray-300 py-12">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-3 gap-8 mb-8">
+        <div>
+          <p class="text-white font-bold mb-2">Cara Core Informática</p>
+          <p class="text-sm text-gray-400">Venda local para o balcão, com dados no computador da loja.</p>
+        </div>
+        <div>
+          <h3 class="text-white font-bold mb-3">O produto</h3>
+          <ul class="space-y-2 text-sm">
+            <li><a href="download.html" class="hover:text-white">Download Free</a></li>
+            <li><a href="consultoria.html" class="hover:text-white">Demonstração e implantação</a></li>
+            <li><a href="https://wiki.caracore.com.br/projeto-pdv.html" class="hover:text-white">Wiki do PDV</a></li>
+            <li><a href="tecnologia.html" class="hover:text-white">Tecnologia</a></li>
+            <li><a href="versoes.html" class="hover:text-white">Versões</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-white font-bold mb-3">Contato</h3>
+          <ul class="space-y-2 text-sm">
+            <li><a href="canal-feedback.html" class="hover:text-white">Canal da loja</a></li>
+            <li><a href="https://wiki.caracore.com.br/pdv/representantes.html" class="hover:text-white">Seja representante</a></li>
+            <li><a href="mailto:suporte@caracore.com.br" class="hover:text-white">suporte@caracore.com.br</a></li>
+            <li><a href="https://www.caracore.com.br/portfolio.html#caracore-pdv" class="hover:text-white" rel="noopener">Portfólio</a></li>
+          </ul>
         </div>
       </div>
-
-      <div class="mt-6 text-sm text-slate-500">
-        <div class="flex flex-col sm:flex-row gap-2 items-start sm:items-center justify-between">
-          <div>© Cara Core Informática. Todos os direitos reservados.</div>
-          <div class="text-xs text-slate-400">PDV com foco em resiliência, velocidade e operação no balcão.</div>
-        </div>
+      <div class="border-t border-gray-800 pt-6 text-sm text-gray-400">
+        <p>&copy; 2024–2026 Cara Core Informática · CNPJ 23.969.028/0001-37 · <a href="https://www.caracore.com.br/" class="hover:text-white">www.caracore.com.br</a></p>
       </div>
     </div>
   </footer>
-
-  <a href="https://wiki.caracore.com.br/pdv/representantes.html"
-     class="group fixed bottom-5 right-5 z-50 flex items-center gap-3 rounded-full border border-slate-700 bg-slate-900/90 px-4 py-3 shadow-lg backdrop-blur-sm transition hover:bg-slate-900 focus:outline-none focus:ring-2 focus:ring-emerald-400"
-     aria-label="Represente a Tecnologia Cara Core">
-    <svg class="h-5 w-5 text-emerald-300" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-      <path d="M16 17l-1.2 1.2a2.2 2.2 0 0 1-3.1 0L10 16.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-      <path d="M8 15l1.2-1.2a2.2 2.2 0 0 1 3.1 0L14 15.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-      <path d="M2 12l5-5 4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-      <path d="M22 12l-5-5-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>
-
-    <span class="hidden sm:inline text-sm font-semibold text-slate-100">
-      Represente a Tecnologia Cara Core
-    </span>
-  </a>
 
   <script src="assets/js/pwa.js"></script>
   <script>

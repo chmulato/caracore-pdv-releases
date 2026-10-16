@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Versões — CaraCore PDV</title>
-    <meta name="description" content="Versões do CaraCore PDV: Free estável 3.2.12-free e pré-release 4.0.0-rc6 para avaliação.">
+    <meta name="description" content="Versões do CaraCore PDV: Free 3.2.12-free, publicada como estável com homologação em andamento, e prévia 4.0.0-rc6 para avaliação.">
     <link rel="manifest" href="manifest.webmanifest">
     <meta name="theme-color" content="#166534">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -62,7 +62,7 @@
     </section>
 
     <div class="wrapper">
-        <p class="download-notice"><strong>Canal estável:</strong> baixe a tag <strong>v3.2.12-free</strong>, atualização corretiva da linha 3.2.x. A pré-release <strong>v4.0.0-rc6</strong> também está disponível para avaliação no Windows; são canais e pastas independentes.</p>
+        <p class="download-notice"><strong>Versão atual: 3.2.12-free</strong>, publicada como estável com homologação em andamento. A prévia <strong>4.0.0-rc6</strong> está disponível para avaliação no Windows. Instale cada versão em uma pasta separada.</p>
 
         <section class="card wiki-card" id="canais">
             <h2>Tabela de decisão</h2>
@@ -70,12 +70,12 @@
                 <table class="wiki-table">
                     <thead>
                         <tr>
-                            <th>Canal</th>
-                            <th>Tag</th>
-                            <th>Launcher</th>
-                            <th>URL</th>
-                            <th>Banco</th>
-                            <th>Reqs</th>
+                            <th>Versão</th>
+                            <th>Identificação</th>
+                            <th>Como abrir</th>
+                            <th>Endereço local</th>
+                            <th>Dados</th>
+                            <th>Requisitos</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -85,12 +85,12 @@
                             <td><code>iniciar-pdv.bat</code> (hífen)</td>
                             <td><code>localhost:8080/login</code></td>
                             <td><code>%APPDATA%\caracore\</code></td>
-                            <td>Java 25+</td>
+                            <td>JDK 25 instalado</td>
                         </tr>
                         <tr>
                             <td>Prévia</td>
                             <td><code>v4.0.0-rc6</code></td>
-                            <td><code>iniciar_pdv.bat</code> (underscore)</td>
+                            <td><code>iniciar_pdv.bat</code> (sublinhado)</td>
                             <td><code>127.0.0.1:8080</code></td>
                             <td><code>./data/caracore-pdv.db</code></td>
                             <td>Windows 10/11 x64 e Microsoft Edge; Java 25 incluído</td>
@@ -98,15 +98,15 @@
                     </tbody>
                 </table>
             </div>
-            <p>As duas versões seguem o plano Free, com limite de 100 vendas finalizadas por mês civil. A 3.2.12-free é a versão estável multiplataforma e abre no navegador; é uma atualização corretiva da linha 3.2.x, em manutenção restrita até 08/11/2026. A 4.0.0-rc6 é a pré-release Windows e abre o Edge em modo aplicativo. A v4 avança pelo ciclo de RCs e só será GA após aprovação formal dos gates e aceites; 08/11 não é data de GA.</p>
+            <p>As duas versões seguem o plano Free, com limite de 100 vendas por mês. A 3.2.12-free abre no navegador no Windows, Linux e macOS; sua homologação está em andamento. A 4.0.0-rc6 é uma prévia para avaliação no Windows e abre no Edge. A versão final da v4 depende de aprovação formal, sem data automática de lançamento.</p>
         </section>
 
         <section class="card wiki-card" id="atual">
-            <h2>Edição Free estável — 3.2.12-free</h2>
+            <h2>Edição Free atual — 3.2.12-free</h2>
             <p>Corretiva de 15/10/2026: HTTP 405 preservado, status ESTORNADA distinto de CANCELADA em recibos e relatórios, migração V047 e fila em transação independente.</p>
             <p>Novo caixa com leitura e consolidação de itens, quantidade, desconto auditado, CPF opcional mascarado, pagamento em modal e recibos com subtotal/desconto. Estoque baixa e estorna linhas repetidas pelo produto. O limite de 100 vendas/mês permanece. Sem PIX integrado e sem NF-e/NFC-e.</p>
             <p class="text-sm text-slate-600">Esta é uma atualização corretiva da linha 3.2.x. Até 08/11/2026, a linha recebe apenas manutenção restrita, sem novos recursos. A sucessão é a PDV v4 pelo ciclo de RCs; o encerramento da manutenção não promove automaticamente a v4 a GA.</p>
-            <p class="text-sm text-slate-600"><strong>Validação:</strong> 19/19 testes focados em Java 25/H2 e CRC/estrutura dos ZIPs aprovados; hashes remotos conferidos. Suíte completa, smoke portátil SQLite/health/navegador, execução Linux/macOS e homologação operacional completa permanecem pendentes. Publicação estável/Latest autorizada explicitamente com essas ressalvas; não representa homologação completa.</p>
+            <p class="text-sm text-slate-600"><strong>Homologação em andamento:</strong> consulte os testes concluídos e as validações pendentes nas <a href="wiki-release-v3-2-12-free.html#validacao">notas técnicas</a>. A publicação como estável não representa homologação completa.</p>
             <p class="wiki-links">
                 <a class="btn-release" href="download.html">Baixar Free</a>
                 <a class="btn-release btn-release-outline" href="wiki-release-v3-2-12-free.html">Notas desta versão</a>
@@ -116,8 +116,8 @@
         <section class="card wiki-card" id="proxima">
             <span id="previa" hidden></span>
             <h2>Pré-release Free 4.0.0-rc6 — somente para avaliação</h2>
-            <p>A <strong>4.0.0-rc6</strong> usa o plano Free, com até 100 vendas finalizadas por mês civil. Ainda não é GA. A versão Free estável é a 3.2.12-free. A v4 seguirá o ciclo de RCs; GA somente após gates e aceites formais, sem data automática em 08/11/2026. A RC7 está em QA local, sem download público. Extraia a RC6 em pasta nova; launcher <code>iniciar_pdv.bat</code> (underscore); banco e logs em <code>./data</code>. Requer Windows 10/11 x64 e Microsoft Edge. O launcher usa o Java 25 incluído no ZIP; não é necessário instalar JDK ou Python nem configurar <code>JAVA_HOME</code> ou <code>PDV_JAVA</code>.</p>
-            <p>Distribuição somente em ZIP portátil Windows x64 sem Authenticode; MSI não incluído. SHA-256: <code>0c00b24b33b3c365fd1f24ec173bfa4e35bedf1946b2df4151035250780d5325</code>. Java 25 em <code>runtime\</code>. Sem JDK e sem Python do sistema.</p>
+            <p>A <strong>4.0.0-rc6</strong> usa o plano Free, com até 100 vendas por mês. É uma prévia para avaliação, não a versão final. Extraia em pasta nova e execute <code>iniciar_pdv.bat</code> (sublinhado). Os dados e registros de execução ficam em <code>.\data</code>. Requer Windows 10/11 x64 e Microsoft Edge. Não precisa instalar Java: ele vem dentro do ZIP.</p>
+            <p>Distribuição somente em ZIP portátil Windows x64 sem assinatura digital; sem instalador MSI. SHA256: <code class="break-all">0c00b24b33b3c365fd1f24ec173bfa4e35bedf1946b2df4151035250780d5325</code>.</p>
             <p class="wiki-links">
                 <a class="btn-release" href="wiki-release-v4-0-0-rc6.html">Notas da RC6</a>
                 <a class="btn-release btn-release-outline" href="homologacao-v4.html#rc6">Homologação</a>
@@ -130,8 +130,8 @@
         </section>
 
         <section class="card wiki-card" id="historico">
-            <h2>Ajuda para instalações antigas</h2>
-            <p>Se a instalação abrir na porta <code>8765</code> ou <code>/login</code> retornar 404, o pacote é antigo: baixe a versão estável <a href="download.html">3.2.12-free</a> e extraia em uma pasta nova. Essa versão abre no navegador em <code>http://localhost:8080/login</code>; no Windows, os dados ficam em <code>%APPDATA%\caracore\</code> e, no Linux/macOS, em <code>~/.caracore/</code>.</p>
+            <h2>Histórico e ajuda</h2>
+            <p>Problemas para abrir uma instalação antiga? Consulte a <a href="canal-feedback.html#instalacoes-antigas">ajuda de instalação</a>.</p>
             <details class="mt-3 text-sm text-slate-600">
                 <summary class="cursor-pointer">Histórico das versões Free anteriores</summary>
                 <p class="mt-2"><a href="wiki-release-v3-2-8-free.html">3.2.8-free</a> · <a href="wiki-release-v3-2-7-free.html">3.2.7-free</a> · <a href="wiki-release-v3-2-6-free.html">3.2.6-free</a> · <a href="wiki-release-v3-2-5-free.html">3.2.5-free</a> · <a href="wiki-release-v3-2-4-free.html">3.2.4-free</a> · <a href="wiki-release-v3-2-3-free.html">3.2.3-free</a> · <a href="wiki-release-v3-2-2-free.html">3.2.2-free</a>.</p>

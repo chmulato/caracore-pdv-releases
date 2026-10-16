@@ -54,9 +54,9 @@
     <section class="portal-hero green-bg text-white py-12 md:py-16">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="max-w-3xl mx-auto text-center">
-                <p class="text-sm uppercase tracking-wide text-green-100 mb-3">Ciclo de RCs · GA após aprovação formal</p>
+                <p class="text-sm uppercase tracking-wide text-green-100 mb-3">Prévias para avaliação · versão final após aprovação</p>
                 <h1 class="text-3xl md:text-5xl font-bold mb-4">O que vem no CaraCore PDV</h1>
-                <p class="text-lg text-green-50">A 4.0.0-rc6 é a pré-release pública da edição Free, com limite de 100 vendas finalizadas por mês civil. A 3.2.12-free é a versão estável multiplataforma e atualização corretiva da linha 3.2.x.</p>
+                <p class="text-lg text-green-50">A 4.0.0-rc6 é uma prévia Free para avaliação no Windows, com até 100 vendas por mês. A versão atual é a 3.2.12-free para Windows, Linux e macOS, publicada como estável com homologação em andamento.</p>
                 <p class="mt-6">
                     <a href="wiki-release-v4-0-0-rc6.html" class="inline-flex items-center bg-white text-green-700 px-6 py-3 rounded-lg font-semibold hover:bg-green-50">Pré-release Free e SHA-256</a>
                     <a href="download.html" class="inline-flex items-center ml-3 text-white underline hover:text-green-100">Baixar Free (3.2.12)</a>
@@ -75,12 +75,12 @@
         <header>
             <p class="eyebrow">Desenvolvimento em andamento</p>
             <p class="eyebrow">Mesmo produto</p>
-            <h1>Local, simples e pronto para a rotina</h1>
-            <p>A próxima versão do <strong>CaraCore PDV</strong> mantém o caixa no computador da loja: banco <strong>SQLite local</strong>, interface em modo aplicativo e <strong>launcher</strong> para abrir a operação sem nuvem obrigatória.</p>
+            <h2>Local e simples, em desenvolvimento</h2>
+            <p>A próxima versão do <strong>CaraCore PDV</strong> mantém os dados no computador da loja e abre o caixa em modo aplicativo, sem nuvem obrigatória. PIX integrado e emissão fiscal estão no roadmap, não disponíveis hoje no Free nem no Premium.</p>
         </header>
 
         <section class="card wiki-card">
-            <p class="download-notice">A pré-release Free <a href="wiki-release-v4-0-0-rc6.html">4.0.0-rc6</a> é o arquivo oferecido para avaliação. SHA-256: <code>0c00b24b33b3c365fd1f24ec173bfa4e35bedf1946b2df4151035250780d5325</code>. O <a href="homologacao-v4.html#rc6">roteiro</a> está publicado; o ciclo manual completo no Edge ainda não foi preenchido. A versão estável e multiplataforma continua a <a href="download.html">3.2.12-free</a>.</p>
+            <p class="download-notice">A prévia Free <a href="wiki-release-v4-0-0-rc6.html">4.0.0-rc6</a> é oferecida para avaliação. SHA256: <code class="break-all">0c00b24b33b3c365fd1f24ec173bfa4e35bedf1946b2df4151035250780d5325</code>. O <a href="homologacao-v4.html#rc6">roteiro de avaliação</a> está publicado; a homologação completa ainda está pendente. Para a versão atual, veja a <a href="download.html">3.2.12-free e suas ressalvas</a>.</p>
         </section>
 
         <section class="card wiki-card">
@@ -89,9 +89,9 @@
                 <li>Login, primeiro acesso, dashboard e sessão local.</li>
                 <li>Venda de balcão, carrinho, pagamentos simples e mistos, troco e recibo.</li>
                 <li>Clientes, produtos, estoque, abertura de turno, sangria, suprimento e relatórios operacionais.</li>
-                <li>Launcher local para iniciar o backend Quarkus e abrir a experiência no modo aplicativo.</li>
+                <li>Inicialização local para abrir o caixa em modo aplicativo.</li>
             </ul>
-            <p>A v4 segue pelo ciclo de RCs; só será promovida a GA após aprovação formal dos gates e aceites. 08/11/2026 encerra a manutenção restrita da v3.2.12-free, atualização corretiva da linha 3.2.x, e não é uma data automática de GA. A rota pública da RC6 é ZIP portátil Windows x64 sem assinatura, com SHA-256 publicado separadamente; MSI não será distribuído. Para uso estável multiplataforma, baixe a <a href="download.html">3.2.12-free</a>.</p>
+            <p>A v4 passa por avaliações antes da aprovação formal da versão final, ainda sem data definida. Consulte o <a href="versoes.html">histórico e a manutenção da 3.2.x</a>. A prévia RC6 é um ZIP portátil Windows x64 sem assinatura digital, com SHA256 publicado; sem instalador MSI.</p>
         </section>
 
         <section class="card wiki-card">
@@ -123,7 +123,7 @@
                         </tr>
                         <tr>
                             <td>Continuidade e desempenho</td>
-                            <td>SQLite local, recuperação após reinício, menor latência percebida e operação com internet instável.</td>
+                            <td>Dados no computador da loja, recuperação após reinício e operação sem internet.</td>
                             <td>Testes de offline feitos; benchmark de corte pendente</td>
                         </tr>
                     </tbody>
@@ -155,7 +155,7 @@
                         </tr>
                         <tr>
                             <td>Offline e recuperação</td>
-                            <td>Confirmar continuidade local, SQLite, recuperação e reinício sem perda de estado.</td>
+                            <td>Confirmar continuidade local, recuperação e reinício sem perda de dados.</td>
                             <td>Concluída na oficina</td>
                         </tr>
                         <tr>
@@ -171,7 +171,7 @@
         <section class="card wiki-card">
             <h2>O que muda para a loja</h2>
             <ul>
-                <li><strong>Operação local:</strong> os dados do PDV permanecem no computador da loja, em SQLite.</li>
+                <li><strong>Operação local:</strong> os dados do PDV permanecem no computador da loja.</li>
                 <li><strong>Experiência PWA:</strong> acesso responsivo e adequado ao uso em tela cheia, com foco no caixa.</li>
                 <li><strong>Menos dependência da internet:</strong> a venda local continua sendo o centro do produto.</li>
                 <li><strong>Transição responsável:</strong> a linha atual permanece disponível enquanto a nova versão conclui sua homologação.</li>
@@ -195,7 +195,7 @@
                         </tr>
                         <tr>
                             <td>Dados</td>
-                            <td>SQLite local no computador da loja, com recuperação e backup validados.</td>
+                            <td>Dados no computador da loja, com recuperação e backup a validar.</td>
                         </tr>
                         <tr>
                             <td>Experiência</td>

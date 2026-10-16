@@ -1,6 +1,6 @@
 # CaraCore-PDV - Loja e Releases
 
-**Download principal da loja = tag `v3.2.12-free` (Latest).** A pré-release de avaliação é `v4.0.0-rc6`; ela não é o download estável. A `v4.0.0-rc5` fica no histórico.
+**Download principal da loja = tag `v3.2.12-free` (Latest), com homologação em andamento.** A pré-release de avaliação é `v4.0.0-rc6`; ela não é o download estável. A `v4.0.0-rc5` fica no histórico.
 
 **Publicação de 15/10/2026:** corretiva de HTTP 405 e estorno/cancelamento, fonte `hotfix/3.2.12-free` commit `72ace488aed4ee91001c60cf40a3934ddfe8faf1`. 19/19 testes focados Java 25/H2 e CRC/estrutura dos ZIPs aprovados; hashes dos cinco assets remotos conferidos. Suíte completa, smoke portátil SQLite/health/navegador, execução Linux/macOS e homologação operacional completa seguem pendentes. Publicação estável/Latest autorizada explicitamente com essas ressalvas; não significa homologação completa. A 3.2.8 permanece no histórico. [Notas da corretiva](docs/wiki-release-v3-2-12-free.html).
 
@@ -19,14 +19,14 @@ O CaraCore-PDV foi desenhado para lojistas que precisam de:
 - recibo digital e economia com bobinas/impressoras;
 - controle básico de produtos, operadores, estoque e vendas;
 - leitura simples do caixa e do fechamento do dia;
-- configuração fiscal no escopo atual com NFC-e, alíquotas e NCM;
+- recibo sem valor fiscal; emissão fiscal permanece em desenvolvimento;
 - trilha de evolução para Premium depois que o básico estiver validado.
 
 Este repositório não deve ser lido como catálogo de promessa ampla. A leitura correta da oferta pública atual é:
 
 - desktop local (Windows, Linux e macOS) com SQLite;
 - Free: venda no navegador, sem PIX integrado e sem NF-e/NFC-e;
-- PIX integrado e NFC-e no Premium, após demonstração;
+- Premium com suporte prioritário; PIX integrado e emissão fiscal em desenvolvimento (roadmap), não disponíveis hoje;
 - validação de aderência para pequena loja antes de expansão.
 
 Não tratar como promessa pública vigente neste README:
@@ -55,15 +55,12 @@ A matriz de desenvolvimento fica no repositório **caracore-pdv**. Este reposit�
 | Release | <https://github.com/chmulato/caracore-pdv-releases/releases/tag/v3.2.12-free> |
 | Loja | <https://pdv.caracore.com.br/download.html> |
 
-O trecho `free-free` no nome do ZIP é o nome publicado, não um segundo plano.
-
 ### Artefatos v3.2.12-free
 
 | Artefato | Plataforma | SHA256 |
 | -------- | ---------- | ------ |
 | `caracore-pdv-v3.2.12-free-windows-x64.zip` | Windows 10/11 x64 | `6d7a50b0acf2a05620a090eebdd48f049a1dd5599ccb6c40c419c38145f7c0e2` |
-| `caracore-pdv-v3.2.12-free-linux-x64.zip` | Linux x64 (Ubuntu 20.04+) | `795a396318da61d1bd45dcfe816879d2184706f1c7849f1cd2ad98baa99fd9c1` |
-| `caracore-pdv-v3.2.12-free-macos-x64.zip` | macOS 12+ x64 (Intel) | `795a396318da61d1bd45dcfe816879d2184706f1c7849f1cd2ad98baa99fd9c1` |
+| `caracore-pdv-v3.2.12-free-linux-x64.zip` / `caracore-pdv-v3.2.12-free-macos-x64.zip` | Linux x64 / macOS Intel x64: mesmo pacote Java portátil (123.561.524 bytes), requer JDK 25 instalado | `795a396318da61d1bd45dcfe816879d2184706f1c7849f1cd2ad98baa99fd9c1` |
 
 ### Pré-release atual v4.0.0-rc6 — not store download
 
@@ -72,7 +69,7 @@ O trecho `free-free` no nome do ZIP é o nome publicado, não um segundo plano.
 | `CaraCore-PDV-4.0.0-rc6-qute-portable-windows-x64.zip` | Windows x64 | `0c00b24b33b3c365fd1f24ec173bfa4e35bedf1946b2df4151035250780d5325` |
 | Launcher | `iniciar_pdv.bat` (underscore) | Edge em modo aplicativo |
 | Banco | só `./data/caracore-pdv.db` | Não abre `%APPDATA%\caracore\` |
-| Requisitos | Windows 10/11 x64 e Microsoft Edge; Java 25 incluído em `runtime\`, sem JDK/Python do sistema | Ciclo manual completo do roteiro ainda pendente |
+| Requisitos | Windows 10/11 x64 e Microsoft Edge; Java 25 incluído no ZIP | Ciclo manual completo do roteiro ainda pendente |
 
 Notas e download: <https://pdv.caracore.com.br/wiki-release-v4-0-0-rc6.html>. Roteiro: <https://pdv.caracore.com.br/homologacao-v4.html#rc6>.
 
@@ -91,7 +88,7 @@ RC3 permanece arquivada e foi substituída pela RC4. O hash de seu artefato hist
 | `caracore-pdv-4.0.0-rc2-qute-portable.zip` | Windows · Linux · macOS | `5e5d55b6d376c7f1d6ce91a9fb9a73f6d606289af27b508adf2d9eb2cdcd955d` |
 | Launcher | `iniciar_pdv.bat` (underscore) | Edge em modo aplicativo |
 | Banco | só `./data/caracore-pdv.db` | Não abre `%APPDATA%\caracore\` |
-| Reqs | Java 25+ e Python 3 | |
+| Reqs históricos | Consulte a documentação incluída no pacote arquivado | |
 
 ### Outra linha — Rust v0.1.4
 

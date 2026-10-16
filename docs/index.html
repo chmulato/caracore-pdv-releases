@@ -7,7 +7,7 @@
     <meta name="keywords" content="PDV web local, ponto de venda, recibo digital, caixa offline, varejo">
     <meta name="author" content="Cara Core Informática">
     <meta property="og:title" content="CaraCore-PDV | Operação de venda sem ruído">
-    <meta property="og:description" content="Baixe o Free estável 3.2.12: aplicação web local, recibo digital com link e PDF sem valor fiscal, até 100 vendas por mês.">
+    <meta property="og:description" content="Baixe o Free 3.2.12, com homologação em andamento: vendas no computador da loja e recibo digital sem valor fiscal, até 100 vendas por mês.">
     <meta property="og:type" content="website">
     <title>CaraCore-PDV | Operação de venda sem ruído</title>
     <script src="https://cdn.tailwindcss.com"></script>
@@ -41,7 +41,7 @@
                         <p class="text-xs text-gray-600">Operação de venda sem ruído</p>
                     </div>
                 </a>
-                <div class="hidden lg:flex items-center space-x-6">
+                <div id="mobile-menu" class="hidden lg:flex absolute lg:static top-full left-0 w-full lg:w-auto bg-white p-4 lg:p-0 flex-col lg:flex-row gap-3 lg:gap-6 lg:items-center">
                     <a href="#dores" class="text-gray-700 hover:text-green-600 font-medium transition">O que resolvemos</a>
                     <a href="#jornada" class="text-gray-700 hover:text-green-600 font-medium transition">Como funciona</a>
                     <a href="#economia" class="text-gray-700 hover:text-green-600 font-medium transition">Economia</a>
@@ -52,16 +52,6 @@
                     </a>
                 </div>
                 <button id="mobile-menu-button" class="lg:hidden text-gray-700" aria-label="Abrir menu"><i class="fas fa-bars text-2xl"></i></button>
-            </div>
-            <div id="mobile-menu" class="hidden lg:hidden pb-4">
-                <div class="flex flex-col space-y-3">
-                    <a href="#dores" class="text-gray-700 font-medium py-2">O que resolvemos</a>
-                    <a href="#jornada" class="text-gray-700 font-medium py-2">Como funciona</a>
-                    <a href="#economia" class="text-gray-700 font-medium py-2">Economia</a>
-                    <a href="#planos" class="text-gray-700 font-medium py-2">Planos</a>
-                    <a href="versoes.html" class="text-gray-700 font-medium py-2">Versões</a>
-                    <a href="#demo" class="green-bg text-white px-6 py-3 rounded-lg font-semibold text-center">Agendar demonstração</a>
-                </div>
             </div>
         </nav>
     </header>
@@ -74,13 +64,13 @@
                     Venda no balcão com os dados no computador da loja.
                 </h1>
                 <p class="text-xl md:text-2xl text-green-50 mb-10">
-                    Free estável 3.2.12: aplicação web local, até 100 vendas por mês e recibo digital com link e PDF, sem valor fiscal. Sem PIX integrado nem NF-e/NFC-e.
+                    Free 3.2.12: até 100 vendas por mês e recibo digital com link e PDF, sem valor fiscal. Sem PIX integrado nem NF-e/NFC-e.
                 </p>
-                <a href="consultoria.html" class="inline-flex items-center justify-center bg-white text-green-700 px-10 py-4 rounded-lg font-bold text-lg hover:bg-green-50 transition shadow-lg">
-                    Agende uma Demonstração Presencial
+                <a href="download.html" class="inline-flex items-center justify-center bg-white text-green-700 px-10 py-4 rounded-lg font-bold text-lg hover:bg-green-50 transition shadow-lg">
+                    Baixar Free (3.2.12)
                 </a>
                 <p class="mt-6 text-sm text-green-100">
-                    Prefere testar sozinho? <a href="download.html" class="inline-flex items-center bg-white/15 border border-white/30 text-white px-5 py-2 rounded-lg font-semibold hover:bg-white/25">Baixar Free (3.2.12)</a>
+                    Versão estável publicada; homologação em andamento. <a href="wiki-release-v3-2-12-free.html#validacao" class="underline">Ver ressalvas</a>.
                 </p>
             </div>
         </div>
@@ -145,16 +135,11 @@
                             <td class="px-5 py-4 font-semibold text-gray-900">Recibo digital</td>
                             <td class="px-5 py-4 text-green-700 font-semibold">R$ 0 de bobina</td>
                             <td class="px-5 py-4 text-gray-600">Sem impressora térmica</td>
-                            <td class="px-5 py-4 text-green-800 font-semibold">R$ 130–350/mês por caixa</td>
+                            <td class="px-5 py-4 text-green-800 font-semibold">Economia estimada: R$ 130–350/mês por caixa</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
-            <p class="text-center mt-8">
-                <a href="consultoria.html" class="inline-flex items-center justify-center green-bg text-white px-8 py-3 rounded-lg font-semibold hover:shadow-lg transition">
-                    Ver a conta na demonstração
-                </a>
-            </p>
         </div>
     </section>
 
@@ -168,7 +153,7 @@
                 <article class="rounded-2xl border border-gray-100 p-6 bg-gray-50">
                     <i class="fas fa-wifi text-green-600 text-2xl mb-4" aria-hidden="true"></i>
                     <h3 class="font-bold text-gray-900 mb-2">Venda sem parar</h3>
-                    <p class="text-sm text-gray-600 mb-3">O caixa continua mesmo com a internet oscilando.</p>
+                    <p class="text-sm text-gray-600 mb-3">Funciona sem internet: os dados ficam no computador da loja.</p>
                     <a href="tecnologia.html" class="text-sm font-semibold text-green-700 hover:text-green-800">Qualidades do PDV</a>
                 </article>
                 <article class="rounded-2xl border border-gray-100 p-6 bg-gray-50">
@@ -186,8 +171,8 @@
                 <article class="rounded-2xl border border-gray-100 p-6 bg-gray-50">
                     <i class="fas fa-shield-halved text-green-600 text-2xl mb-4" aria-hidden="true"></i>
                     <h3 class="font-bold text-gray-900 mb-2">Dados locais e recibo digital</h3>
-                    <p class="text-sm text-gray-600 mb-3">O Free guarda a operação no SQLite local e oferece recibo por link e PDF, sem valor fiscal. Não emite NF-e/NFC-e.</p>
-                    <a href="download.html" class="text-sm font-semibold text-green-700 hover:text-green-800">Conhecer o Free estável</a>
+                    <p class="text-sm text-gray-600 mb-3">O Free guarda a operação no computador da loja e oferece recibo por link e PDF, sem valor fiscal. Não emite NF-e/NFC-e.</p>
+                    <a href="download.html" class="text-sm font-semibold text-green-700 hover:text-green-800">Conhecer o Free</a>
                 </article>
             </div>
         </div>
@@ -198,10 +183,10 @@
             <div class="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
                 <article class="rounded-2xl border-2 border-green-200 bg-white p-6">
                     <h2 class="text-2xl font-bold text-gray-900 mb-3">Free (hoje)</h2>
-                    <p class="text-gray-600 mb-4">A versão estável <strong>3.2.12-free</strong> é uma atualização corretiva da linha 3.2.x. É uma aplicação web local no navegador, com SQLite, até 100 vendas finalizadas por mês e recibo digital por link e PDF, sem valor fiscal.</p>
-                    <p class="text-sm text-gray-500 mb-4">A linha 3.2.x recebe apenas manutenção restrita até 08/11/2026. Depois, a evolução segue pela PDV v4, através do ciclo de RCs.</p>
+                    <p class="text-gray-600 mb-4">A versão <strong>3.2.12</strong> abre no navegador, guarda os dados no computador da loja e permite até 100 vendas por mês, com recibo digital por link e PDF, sem valor fiscal.</p>
+                    <p class="text-sm text-gray-500 mb-4">Homologação em andamento. Consulte as <a href="wiki-release-v3-2-12-free.html#validacao" class="underline">ressalvas nas notas</a>.</p>
                     <p class="text-sm text-gray-500 mb-4">Sem PIX integrado e sem emissão de NF-e/NFC-e.</p>
-                    <a href="download.html" class="text-green-700 font-semibold hover:text-green-800">Baixar Free estável (3.2.12)</a>
+                    <a href="download.html" class="text-green-700 font-semibold hover:text-green-800">Baixar Free (3.2.12)</a>
                 </article>
                 <article class="rounded-2xl border border-slate-200 bg-white p-6">
                     <h2 class="text-2xl font-bold text-gray-900 mb-3">Fiscal / Reforma (roadmap)</h2>
@@ -217,7 +202,7 @@
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-3">Planos</h2>
-                <p class="text-lg text-gray-600">Degustação no balcão ou operação completa.</p>
+                <p class="text-lg text-gray-600">Teste no balcão e conheça as opções de suporte.</p>
             </div>
             <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
                 <div class="bg-white rounded-2xl p-8 border-2 border-gray-200">
@@ -225,10 +210,10 @@
                         <h3 class="text-2xl font-bold text-gray-900">Free</h3>
                         <span class="text-2xl font-bold text-gray-900">R$ 0</span>
                     </div>
-                    <p class="text-gray-600 mb-6">Teste real no computador da loja. Canal público atual: <strong>v3.2.12-free</strong>.</p>
+                    <p class="text-gray-600 mb-6">Teste real no computador da loja. <strong>Versão 3.2.12</strong>.</p>
                     <ul class="space-y-3 text-gray-700 mb-8">
-                        <li class="flex items-start"><i class="fas fa-check text-green-600 mr-3 mt-1"></i>Até 100 vendas/mês · 100 produtos · 1 operador · 4 vendedores · 1 loja</li>
-                        <li class="flex items-start"><i class="fas fa-check text-green-600 mr-3 mt-1"></i>SQLite local · balcão no navegador</li>
+                        <li class="flex items-start"><i class="fas fa-check text-green-600 mr-3 mt-1"></i>Até 100 vendas/mês · 100 produtos · 1 operador · 1 loja</li>
+                        <li class="flex items-start"><i class="fas fa-check text-green-600 mr-3 mt-1"></i>Dados no computador da loja · caixa no navegador</li>
                         <li class="flex items-start"><i class="fas fa-check text-green-600 mr-3 mt-1"></i>Pagamentos: dinheiro, débito, crédito e outros</li>
                     </ul>
                     <p class="text-sm text-gray-500 mb-4">Sem PIX integrado (sem QR/gateway) e sem emissão fiscal (NF-e/NFC-e). “Outros” não é o PIX integrado da loja.</p>
@@ -240,14 +225,12 @@
                         <h3 class="text-2xl font-bold text-gray-900">Premium</h3>
                         <div><span class="text-2xl font-bold text-gray-900">R$ 79,90</span><span class="text-gray-500 text-sm">/mês</span></div>
                     </div>
-                    <p class="text-gray-600 mb-6">Operação sem o teto da degustação, com PIX integrado e suporte.</p>
+                    <p class="text-gray-600 mb-6">Operação sem o teto da degustação, com suporte prioritário.</p>
                     <ul class="space-y-3 text-gray-700 mb-8">
                         <li class="flex items-start"><i class="fas fa-check text-green-600 mr-3 mt-1"></i>Vendas ilimitadas no mês</li>
-                        <li class="flex items-start"><i class="fas fa-check text-green-600 mr-3 mt-1"></i>PIX integrado (QR/gateway) no fluxo do caixa</li>
-                        <li class="flex items-start"><i class="fas fa-check text-green-600 mr-3 mt-1"></i>Emissão fiscal (NF-e/NFC-e) quando aplicável e suporte prioritário</li>
+                        <li class="flex items-start"><i class="fas fa-check text-green-600 mr-3 mt-1"></i>Suporte prioritário</li>
                     </ul>
-                    <a href="consultoria.html" class="block w-full text-center green-bg text-white py-3 rounded-lg font-semibold hover:shadow-lg transition">Agendar demonstração</a>
-                    <p class="text-sm text-gray-500 mt-4 text-center">A economia com papel costuma cobrir a mensalidade.</p>
+                    <p class="text-sm text-gray-600">Em desenvolvimento (<a href="roadmap-2026.html" class="underline">roadmap</a>): PIX integrado e emissão fiscal — confirme a disponibilidade na demonstração.</p>
                 </div>
             </div>
         </div>
@@ -291,6 +274,7 @@
                     <h3 class="text-white font-bold mb-3">Contato</h3>
                     <ul class="space-y-2 text-sm">
                         <li><a href="canal-feedback.html" class="hover:text-white">Canal da loja</a></li>
+                        <li><a href="https://wiki.caracore.com.br/pdv/representantes.html" class="hover:text-white">Seja representante</a></li>
                         <li><a href="mailto:suporte@caracore.com.br" class="hover:text-white">suporte@caracore.com.br</a></li>
                         <li><a href="https://www.caracore.com.br/portfolio.html#caracore-pdv" class="hover:text-white" rel="noopener">Portfólio</a></li>
                     </ul>
@@ -302,21 +286,9 @@
         </div>
     </footer>
 
-    <a href="https://wiki.caracore.com.br/pdv/representantes.html"
-       class="group fixed bottom-5 right-5 z-50 flex items-center gap-3 rounded-full border border-slate-700 bg-slate-900/90 px-4 py-3 shadow-lg backdrop-blur-sm transition hover:bg-slate-900 focus:outline-none focus:ring-2 focus:ring-emerald-400"
-       aria-label="Represente a Tecnologia Cara Core">
-        <svg class="h-5 w-5 text-emerald-300" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M16 17l-1.2 1.2a2.2 2.2 0 0 1-3.1 0L10 16.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M8 15l1.2-1.2a2.2 2.2 0 0 1 3.1 0L14 15.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M2 12l5-5 4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M22 12l-5-5-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-        <span class="hidden sm:inline text-sm font-semibold text-slate-100">Represente a Tecnologia Cara Core</span>
-    </a>
-
     <script>
         var m=document.getElementById('mobile-menu-button'),n=document.getElementById('mobile-menu');
-        if(m&&n){m.addEventListener('click',function(){n.classList.toggle('hidden');});}
+        if(m&&n){m.addEventListener('click',function(){n.classList.toggle('hidden');n.classList.toggle('flex');m.setAttribute('aria-expanded',String(!n.classList.contains('hidden')));});}
         document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();var t=document.querySelector(this.getAttribute('href'));if(t)t.scrollIntoView({behavior:'smooth',block:'start'});});});
     </script>
     <script src="assets/js/pwa.js"></script>

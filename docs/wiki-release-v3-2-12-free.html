@@ -19,7 +19,7 @@
       <p class="eyebrow">Notas da versão · 15/10/2026</p>
       <h1 class="text-3xl font-bold">CaraCore PDV Free 3.2.12</h1>
       <p class="mt-3 text-lg">Atualização corretiva: estorno de venda finalizada não é cancelamento de venda em andamento.</p>
-      <p class="mt-3 text-sm text-slate-600">Canal estável/Latest para Windows x64, Linux x64 e macOS Intel x64. Requer Java 25+ instalado separadamente. Manutenção restrita da linha 3.2.x até 08/11/2026; essa data não define GA da v4.</p>
+      <p class="mt-3 text-sm text-slate-600">Publicada como estável/Latest para Windows x64, Linux x64 e macOS Intel x64, com homologação em andamento. Requer JDK 25 instalado separadamente. Manutenção restrita da linha 3.2.x até 08/11/2026; essa data não define GA da v4.</p>
     </header>
     <section class="card wiki-card mb-6">
       <h2>O que mudou</h2>
@@ -45,6 +45,8 @@
       <h2>Atualização e rastreabilidade</h2>
       <p>Encerre o PDV e faça backup antes de atualizar. Extraia em pasta nova e preserve os dados existentes; não substitua o banco da loja por um banco vazio. Consulte <code>INSTALACAO.txt</code> no ZIP. Senhas existentes são preservadas; <code>admin/admin</code> é somente o primeiro acesso de uma instalação nova.</p>
       <p class="mt-3">Fonte: branch <code>hotfix/3.2.12-free</code>, commit <code>72ace488aed4ee91001c60cf40a3934ddfe8faf1</code>. A tag pública identifica a distribuição; o manifesto registra o commit de origem. A 3.2.8 permanece no histórico; a v4 RC6 continua pré-release separada.</p>
+      <p class="mt-3">A linha 3.2.x recebe apenas manutenção restrita até 08/11/2026, sem novos recursos. A v4 segue pelo ciclo de RCs; RC7 permanece em QA local, sem download público. A promoção a GA depende dos gates e aceites formais, não do encerramento da manutenção da 3.2.x.</p>
+      <p class="mt-3">Linux e macOS usam o mesmo pacote (Java portátil), com 123.561.524 bytes e nomes de arquivo distintos. Ambos requerem JDK 25 instalado; o Java não vem embutido no Free 3.2.12.</p>
     </section>
     <p class="flex flex-wrap gap-3">
       <a href="download.html" class="btn-release">Baixar 3.2.12-free</a>

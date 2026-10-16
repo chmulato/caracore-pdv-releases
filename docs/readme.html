@@ -152,8 +152,8 @@
                             <td>Base de configuração e cálculo fiscal no escopo atual, com foco em clareza e evolução regulatória</td>
                         </tr>
                         <tr>
-                            <td><strong>PIX Split Configurável</strong></td>
-                            <td>Preparação técnica para cenários futuros, sem tratar como benefício central da pequena operação hoje</td>
+                            <td><strong>PIX Split (roadmap)</strong></td>
+                            <td>Em desenvolvimento, não disponível hoje no Free nem no Premium</td>
                         </tr>
                         <tr>
                             <td><strong>Histórico de Alíquotas</strong></td>
@@ -201,7 +201,7 @@
                         </tr>
                         <tr>
                             <td><strong>Infraestruturas externas (PIX e SEFAZ)</strong></td>
-                            <td>Integração com gateways de pagamento (PIX) e Web Services da SEFAZ (emissão NFC-e e contingência). O PDV não controla a disponibilidade desses serviços; a documentação técnica (o que plugar, timeout, fila de contingência e testes) está no repositório (PLUGINS_PIX_SEFAZ.md).</td>
+                            <td>Em desenvolvimento (roadmap), não disponíveis hoje no Free nem no Premium. Confirme a disponibilidade na demonstração; não há promessa de emissão fiscal ou PIX integrado.</td>
                         </tr>
                         <tr style="background-color: #f3f4f6;">
                             <td><strong>Opção simplificada (um único PDV)</strong></td>
@@ -271,22 +271,20 @@
                 <p class="text-sm text-gray-500 mt-2 italic">Figura 3: Configuração Fiscal com gestão de alíquotas da Reforma Tributária 2026</p>
             </div>
             
-            <h3 class="text-2xl font-semibold text-gray-800 mb-4">PIX Split Configurável</h3>
+            <h3 class="text-2xl font-semibold text-gray-800 mb-4">PIX Split (roadmap)</h3>
             <p class="text-gray-700 leading-relaxed mb-4">
-                O sistema oferece preparação para <strong>PIX Split Automático</strong>, mas isso não deve ser tratado como foco principal da validação inicial da pequena loja:
+                PIX integrado e split de pagamento estão em desenvolvimento. Não estão disponíveis hoje no Free nem no Premium.
             </p>
             <ul class="list-disc list-inside text-gray-700 space-y-2 mb-4">
-                <li><strong>Toggle de Ativação:</strong> Interface administrativa para habilitar ou desabilitar o PIX Split</li>
-                <li><strong>Configuração de Chaves PIX:</strong> Cadastro de chaves PIX para recebimento principal, tributário e taxa de serviço</li>
-                <li><strong>Cálculo Inteligente:</strong> Quando habilitado, calcula automaticamente a divisão do pagamento entre as partes</li>
-                <li><strong>Modo Informativo:</strong> Quando desabilitado, os tributos são calculados apenas para fins informativos, sem divisão real do pagamento</li>
+                <li>O Free registra dinheiro, débito, crédito e outros; “outros” não é PIX integrado.</li>
+                <li>Recibo digital por link e PDF sem valor fiscal.</li>
             </ul>
             <div class="my-6 text-center">
                 <img src="assets/img/caracore_pdv_tela_restrita_03_caixa.png" alt="Resumo Fiscal com PIX Split Desabilitado" class="mx-auto max-w-full h-auto rounded-lg shadow-lg" style="max-width: 100%;">
                 <p class="text-sm text-gray-500 mt-2 italic">Figura 4: Resumo fiscal com PIX Split desabilitado - tributos apenas informativos</p>
             </div>
             <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-6">
-                <p class="text-yellow-800"><strong>Importante:</strong> O PIX Split está preparado tecnicamente, mas permanece desabilitado por padrão até a oficialização pelo governo. A Reforma Tributária (cálculo de CBS e IBS) está ativa e funcionando normalmente.</p>
+                <p class="text-yellow-800"><strong>Importante:</strong> roadmap não significa funcionalidade disponível. Consulte o <a href="roadmap-2026.html" class="underline">planejamento</a> e confirme a disponibilidade na demonstração.</p>
             </div>
             
             <h3 class="text-2xl font-semibold text-gray-800 mb-4 mt-8">Centro de Segurança e Backup</h3>
@@ -315,7 +313,7 @@
             
             <h3 class="text-2xl font-semibold text-gray-800 mb-4 mt-8">Infraestruturas externas (PIX e SEFAZ)</h3>
             <p class="text-gray-700 leading-relaxed mb-4">
-                O CaraCore-PDV integra-se a serviços externos: <strong>gateways de pagamento (PIX)</strong> e <strong>Web Services da SEFAZ</strong> (emissão NFC-e e contingência). A disponibilidade dessas infraestruturas não é controlada pelo PDV; o sistema detecta timeout e indisponibilidade, aciona contingência quando necessário e mantém fila local para retry. A documentação técnica sobre o que plugar, como configurar e como testar (incluindo testes automatizados da fila de contingência) está no repositório do projeto (PLUGINS_PIX_SEFAZ.md).
+                Integração com PIX e emissão de NF-e/NFC-e estão em desenvolvimento, não disponíveis hoje no Free nem no Premium. O Free oferece recibo digital sem valor fiscal. Consulte o <a href="roadmap-2026.html" class="underline">roadmap</a> e confirme a disponibilidade na demonstração.
             </p>
         </div>
         
@@ -458,4 +456,3 @@
     </script>
 </body>
 </html>
-
