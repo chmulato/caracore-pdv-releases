@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Guia comercial e operacional alinhado à oficina de validação: como o CaraCore-PDV gera valor no caixa e na gestão antes da expansão.">
-    <title>Guia Comercial e Operacional (Alinhado à Oficina) - CaraCore-PDV</title>
+    <meta name="description" content="Guia comercial e operacional alinhado à oficina de validação: como o CaraCore PDV gera valor no caixa e na gestão antes da expansão.">
+    <title>Guia Comercial e Operacional (Alinhado à Oficina) - CaraCore PDV</title>
     
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -17,6 +17,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/portal-style.css">
+    <link rel="stylesheet" href="assets/css/pdv-theme.css">
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" type="image/svg+xml" href="assets/brand/favicon.svg">
 </head>
 <body class="smooth-scroll bg-gray-50">
     
@@ -26,9 +29,7 @@
             <div class="flex justify-between items-center h-20">
                 <div class="flex items-center space-x-3">
                     <a href="index.html" class="flex items-center space-x-3">
-                        <div class="w-12 h-12 green-bg rounded-lg flex items-center justify-center">
-                            <i class="fas fa-cash-register text-white text-xl"></i>
-                        </div>
+                        <img src="assets/brand/caracore-logo.svg" alt="" width="48" height="48" class="w-12 h-12 rounded-lg" aria-hidden="true">
                         <div>
                             <p class="text-xl font-bold text-gray-900">CaraCore PDV</p>
                             <p class="text-xs text-gray-600">Operação de venda sem ruído</p>
@@ -41,7 +42,10 @@
                     <a href="index.html#economia" class="text-gray-700 hover:text-green-600 font-medium transition">Economia</a>
                     <a href="index.html#planos" class="text-gray-700 hover:text-green-600 font-medium transition">Planos</a>
                     <a href="versoes.html" class="text-gray-700 hover:text-green-600 font-medium transition">Versões</a>
-                    <a href="consultoria.html" class="green-bg text-white px-6 py-2 rounded-lg font-semibold hover:shadow-lg transition">Agendar demonstração</a>
+                    <a href="index.html#demo" class="cta-link text-sm font-medium transition">Demonstração</a>
+                    <a href="download.html" class="cta-btn text-white px-6 py-2 rounded-lg font-semibold hover:shadow-lg transition text-center">
+                        Baixar
+                    </a>
                 </div>
                 <button id="mobile-menu-button" class="lg:hidden text-gray-700" aria-label="Menu"><i class="fas fa-bars text-2xl"></i></button>
             </div>
@@ -63,10 +67,10 @@
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="max-w-4xl mx-auto text-center">
                 <div class="mb-6">
-                    <img src="assets/img/caracore_pdv.png" alt="CaraCore-PDV Logo" class="mx-auto max-w-full h-auto" style="max-width: 600px;">
+                    <img src="assets/img/caracore_pdv.png" alt="CaraCore PDV Logo" class="mx-auto max-w-full h-auto" style="max-width: 600px;">
                 </div>
                 <h1 class="text-4xl md:text-5xl font-bold mb-4">Guia Comercial e Operacional para a Pequena Loja</h1>
-                <p class="text-xl text-green-50">Entenda a oferta pública atual do CaraCore-PDV pelo que importa no dia a dia: caixa, operação local, menor dependência de internet e evolução segura quando o básico estiver validado.</p>
+                <p class="text-xl text-green-50">Entenda a oferta pública atual do CaraCore PDV pelo que importa no dia a dia: caixa, operação local, menor dependência de internet e evolução segura quando o básico estiver validado.</p>
             </div>
         </div>
     </section>
@@ -78,7 +82,7 @@
         <div class="section-card">
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Visão Geral</h2>
             <p class="text-gray-700 leading-relaxed mb-4">
-                O <strong>CaraCore-PDV</strong> foi desenhado para pequenas operações que precisam vender com rapidez, fechar o dia com mais confiança e trabalhar com menos susto quando a internet oscila. A oferta pública atual é uma aplicação web local, aberta no navegador e com SQLite no computador da loja.
+                O <strong>CaraCore PDV</strong> foi desenhado para pequenas operações que precisam vender com rapidez, fechar o dia com mais confiança e trabalhar com menos susto quando a internet oscila. A oferta pública atual é uma aplicação web local, aberta no navegador e com SQLite no computador da loja.
             </p>
             <p class="text-gray-700 leading-relaxed">
                 Esta página não deve ser lida como promessa de suíte completa. Ela mostra como o produto responde às dores mais comuns do pequeno varejo: fila no balcão, fechamento confuso, custo com papel, treinamento pesado e medo de parar a venda quando a conexão falha.
@@ -234,7 +238,7 @@
             <p class="text-gray-600 text-sm mb-6">A configuração e o dispositivo dedicado são feitos pela equipe Cara Core ou por parceiros. Consulte <a href="consultoria.html" class="green-accent hover:underline">Consultoria</a>.</p>
             
             <div class="my-6 text-center">
-                <img src="assets/img/caracore_pdv_tela_restrita_02_operacao.png" alt="Interface de Frente de Caixa - CaraCore-PDV" class="mx-auto max-w-full h-auto rounded-lg shadow-lg" style="max-width: 100%;">
+                <img src="assets/img/caracore_pdv_tela_restrita_02_operacao.png" alt="Interface de Frente de Caixa - CaraCore PDV" class="mx-auto max-w-full h-auto rounded-lg shadow-lg" style="max-width: 100%;">
                 <p class="text-sm text-gray-500 mt-2 italic">Figura 2: Interface de Frente de Caixa otimizada para agilidade</p>
             </div>
             
@@ -250,7 +254,7 @@
                 <li><strong>Atualização Dinâmica:</strong> Dados carregados via API REST para visualização em tempo real</li>
             </ul>
             <div class="my-6 text-center">
-                <img src="assets/img/caracore_pdv_tela_restrita_01_resumo.png" alt="Dashboard Administrativo - CaraCore-PDV" class="mx-auto max-w-full h-auto rounded-lg shadow-lg" style="max-width: 100%;">
+                <img src="assets/img/caracore_pdv_tela_restrita_01_resumo.png" alt="Dashboard Administrativo - CaraCore PDV" class="mx-auto max-w-full h-auto rounded-lg shadow-lg" style="max-width: 100%;">
                 <p class="text-sm text-gray-500 mt-2 italic">Figura 1: Dashboard administrativo com métricas em tempo real</p>
             </div>
             <p class="text-gray-700 leading-relaxed mb-6">
@@ -292,7 +296,7 @@
                 O painel administrativo inclui um <strong>Centro de Segurança e Backup</strong> para configuração de políticas de segurança, criptografia de dados sensíveis e gestão de rotinas de backup e restore.
             </p>
             <div class="my-6 text-center">
-                <img src="assets/img/caracore_pdv_tela_restrita_03_config_backup.png" alt="Centro de Segurança e Backup - CaraCore-PDV" class="mx-auto max-w-full h-auto rounded-lg shadow-lg" style="max-width: 100%;">
+                <img src="assets/img/caracore_pdv_tela_restrita_03_config_backup.png" alt="Centro de Segurança e Backup - CaraCore PDV" class="mx-auto max-w-full h-auto rounded-lg shadow-lg" style="max-width: 100%;">
                 <p class="text-sm text-gray-500 mt-2 italic">Centro de Segurança e Backup no painel administrativo</p>
             </div>
             
@@ -321,7 +325,7 @@
         <div class="section-card">
             <h2 class="text-3xl font-bold text-gray-900 mb-6">Implantação e Suporte</h2>
             <p class="text-gray-700 leading-relaxed mb-4">
-                O CaraCore-PDV é uma <strong>aplicação web local</strong>, acessada pelo navegador no computador da loja, com armazenamento SQLite. A implantação correta precisa preservar simplicidade, treinamento curto e leitura honesta do que a loja realmente precisa agora.
+                O CaraCore PDV é uma <strong>aplicação web local</strong>, acessada pelo navegador no computador da loja, com armazenamento SQLite. A implantação correta precisa preservar simplicidade, treinamento curto e leitura honesta do que a loja realmente precisa agora.
             </p>
             <div class="bg-green-50 border-l-4 border-green-500 p-4">
                 <p class="text-gray-800">
@@ -341,7 +345,7 @@
         <div class="section-card">
             <h2 class="text-3xl font-bold text-gray-900 mb-6">Modelo de Distribuição e Suporte</h2>
                 <p class="text-gray-700 leading-relaxed mb-6">
-                O <strong>CaraCore-PDV</strong> é mantido pela <strong>Cara Core Informática</strong> com foco em operação prática de pequena loja. O suporte profissional existe para implantar com menos risco, orientar o uso real e ajudar o cliente a crescer sem inflar a operação antes da hora.
+                O <strong>CaraCore PDV</strong> é mantido pela <strong>Cara Core Informática</strong> com foco em operação prática de pequena loja. O suporte profissional existe para implantar com menos risco, orientar o uso real e ajudar o cliente a crescer sem inflar a operação antes da hora.
             </p>
             <div class="bg-green-50 border-l-4 border-green-500 p-4 mb-6">
                 <p class="text-gray-800">
@@ -366,7 +370,7 @@
         <div class="section-card">
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Contato e Suporte</h2>
             <p class="text-gray-700 leading-relaxed mb-4">
-                Para informações sobre <strong>Suporte Profissional</strong>, consultoria técnica, treinamento de equipes ou customizações, entre em contato com a <strong>Cara Core Informática</strong>. Nossa equipe está preparada para ajudar sua empresa a implementar e manter o CaraCore-PDV em ambiente de produção com máxima confiabilidade e eficiência.
+                Para informações sobre <strong>Suporte Profissional</strong>, consultoria técnica, treinamento de equipes ou customizações, entre em contato com a <strong>Cara Core Informática</strong>. Nossa equipe está preparada para ajudar sua empresa a implementar e manter o CaraCore PDV em ambiente de produção com máxima confiabilidade e eficiência.
             </p>
             <p class="text-gray-700 leading-relaxed font-semibold">
                 <strong>Cara Core Informática</strong> - Transformando tecnologia em resultados para seu negócio.

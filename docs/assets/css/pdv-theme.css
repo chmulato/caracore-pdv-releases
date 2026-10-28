@@ -1,0 +1,21 @@
+/* CaraCore PDV — tema da loja sobre portal-style.css.
+   portal-style.css foi escrito para o portal do PDV, mas hoje é compartilhado byte
+   a byte com as lojas do Hub e do CSO. Por isso, os ajustes desta loja vivem aqui,
+   e não no arquivo comum.
+   As cores abaixo são as mesmas que portal-style.css já aplicava: esta loja não
+   muda de visual, só passa a declarar o próprio tema como as outras duas. */
+
+:root {
+  --brand-a: #0b1f3a;
+  --brand-b: #111827;
+  --brand-c: #0f766e;
+
+  --green: #059669;
+  --green2: #10b981;
+}
+
+/* CTA do cabeçalho — estrutura e classes iguais nas três lojas (PDV, Hub, CSO).
+   Só a cor muda, e ela vem das variáveis do tema da loja. */
+.cta-link { color: #374151; }
+.cta-link:hover { color: var(--green); }
+.cta-btn { background: linear-gradient(135deg, var(--green) 0%, var(--green2) 100%); }

@@ -6,19 +6,22 @@
     <meta name="description" content="CaraCore PDV Free 3.2.12: aplicação web local para vendas no balcão, com recibo digital por link e PDF sem valor fiscal.">
     <meta name="keywords" content="PDV web local, ponto de venda, recibo digital, caixa offline, varejo">
     <meta name="author" content="Cara Core Informática">
-    <meta property="og:title" content="CaraCore-PDV | Operação de venda sem ruído">
+    <meta property="og:title" content="CaraCore PDV | Operação de venda sem ruído">
     <meta property="og:description" content="Baixe o Free 3.2.12, com homologação em andamento: vendas no computador da loja e recibo digital sem valor fiscal, até 100 vendas finalizadas por mês civil.">
     <meta property="og:type" content="website">
-    <title>CaraCore-PDV | Operação de venda sem ruído</title>
+    <title>CaraCore PDV | Operação de venda sem ruído</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/portal-style.css">
+    <link rel="stylesheet" href="assets/css/pdv-theme.css">
     <link rel="manifest" href="manifest.webmanifest">
     <meta name="theme-color" content="#166534">
     <link rel="apple-touch-icon" href="assets/pwa/icon.svg">
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" type="image/svg+xml" href="assets/brand/favicon.svg">
 </head>
 <body class="smooth-scroll bg-gray-50">
     <nav class="breadcrumb container mx-auto px-4 sm:px-6 lg:px-8 pt-3 text-sm text-gray-600" aria-label="Navegação institucional">
@@ -33,9 +36,7 @@
         <nav class="container mx-auto px-4 sm:px-6 lg:px-8" aria-label="Menu da loja">
             <div class="flex justify-between items-center h-20">
                 <a href="index.html" class="flex items-center space-x-3">
-                    <div class="w-12 h-12 green-bg rounded-lg flex items-center justify-center">
-                        <i class="fas fa-cash-register text-white text-xl" aria-hidden="true"></i>
-                    </div>
+                    <img src="assets/brand/caracore-logo.svg" alt="" width="48" height="48" class="w-12 h-12 rounded-lg" aria-hidden="true">
                     <div>
                         <p class="text-xl font-bold text-gray-900">CaraCore PDV</p>
                         <p class="text-xs text-gray-600">Operação de venda sem ruído</p>
@@ -47,8 +48,9 @@
                     <a href="#economia" class="text-gray-700 hover:text-green-600 font-medium transition">Economia</a>
                     <a href="#planos" class="text-gray-700 hover:text-green-600 font-medium transition">Planos</a>
                     <a href="versoes.html" class="text-gray-700 hover:text-green-600 font-medium transition">Versões</a>
-                    <a href="#demo" class="green-bg text-white px-6 py-2 rounded-lg font-semibold hover:shadow-lg transition">
-                        Agendar demonstração
+                    <a href="#demo" class="cta-link text-sm font-medium transition">Demonstração</a>
+                    <a href="download.html" class="cta-btn text-white px-6 py-2 rounded-lg font-semibold hover:shadow-lg transition text-center">
+                        Baixar
                     </a>
                 </div>
                 <button id="mobile-menu-button" class="lg:hidden text-gray-700" aria-label="Abrir menu"><i class="fas fa-bars text-2xl"></i></button>
@@ -84,21 +86,21 @@
             </div>
             <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
                 <figure class="bg-gray-50 rounded-2xl overflow-hidden border border-gray-100">
-                    <img src="assets/img/caracore_pdv_tela_restrita_01_resumo.png" alt="Resumo diário da loja no CaraCore-PDV" class="w-full h-52 object-cover object-top" width="640" height="360" loading="eager">
+                    <img src="assets/img/caracore_pdv_tela_restrita_01_resumo.png" alt="Resumo diário da loja no CaraCore PDV" class="w-full h-52 object-cover object-top" width="640" height="360" loading="eager">
                     <figcaption class="p-5">
                         <h3 class="font-bold text-gray-900 mb-1">Entra e vê o dia</h3>
                         <p class="text-sm text-gray-600">Login rápido e resumo da operação antes de abrir o caixa.</p>
                     </figcaption>
                 </figure>
                 <figure class="bg-gray-50 rounded-2xl overflow-hidden border border-gray-100">
-                    <img src="assets/img/caracore_pdv_tela_restrita_02_operacao_nova_venda.png" alt="Nova venda no CaraCore-PDV" class="w-full h-52 object-cover object-top" width="640" height="360" loading="lazy">
+                    <img src="assets/img/caracore_pdv_tela_restrita_02_operacao_nova_venda.png" alt="Nova venda no CaraCore PDV" class="w-full h-52 object-cover object-top" width="640" height="360" loading="lazy">
                     <figcaption class="p-5">
                         <h3 class="font-bold text-gray-900 mb-1">Vende sem ruído</h3>
                         <p class="text-sm text-gray-600">Carrinho claro, atalhos e total visível. Menos clique, menos fila.</p>
                     </figcaption>
                 </figure>
                 <figure class="bg-gray-50 rounded-2xl overflow-hidden border border-gray-100">
-                    <img src="assets/img/caracore_pdv_tela_restrita_03_caixa.png" alt="Fechamento de caixa no CaraCore-PDV" class="w-full h-52 object-cover object-top" width="640" height="360" loading="lazy">
+                    <img src="assets/img/caracore_pdv_tela_restrita_03_caixa.png" alt="Fechamento de caixa no CaraCore PDV" class="w-full h-52 object-cover object-top" width="640" height="360" loading="lazy">
                     <figcaption class="p-5">
                         <h3 class="font-bold text-gray-900 mb-1">Fecha o caixa em paz</h3>
                         <p class="text-sm text-gray-600">Conferência do turno e relatório do dia no mesmo caminho.</p>
