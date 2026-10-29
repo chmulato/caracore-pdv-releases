@@ -36,7 +36,7 @@
                     <a href="index.html#planos" class="text-gray-700 hover:text-green-600 font-medium transition">Planos</a>
                     <a href="versoes.html" class="text-green-700 font-semibold">Versões</a>
                     <a href="index.html#demo" class="cta-link text-sm font-medium transition">Demonstração</a>
-                    <a href="download.html" class="cta-btn text-white px-6 py-2 rounded-lg font-semibold hover:shadow-lg transition text-center">
+                    <a href="download.html#instalacao" class="cta-btn text-white px-6 py-2 rounded-lg font-semibold hover:shadow-lg transition text-center">
                         Baixar
                     </a>
                 </div>
@@ -61,52 +61,78 @@
                 <p class="text-sm uppercase tracking-wide text-green-100 mb-3">CaraCore PDV · um produto</p>
                 <h1 class="text-3xl md:text-5xl font-bold mb-4">Versões do CaraCore PDV</h1>
                 <p class="text-lg text-green-50">A mesma operação de caixa. Números de versão, não lojas diferentes.</p>
+                <p class="mt-4 flex flex-wrap justify-center gap-2">
+                    <span class="selo selo-estavel">Estável · 3.2.12-free · 15/10/2026</span>
+                    <span class="selo selo-previa">Prévia rc6 · 10/10/2026</span>
+                </p>
             </div>
         </div>
     </section>
 
     <div class="wrapper">
-        <p class="download-notice">Versão 3.2.12-free publicada. Validações de homologação em andamento, <a href="wiki-release-v3-2-12-free.html#validacao">ver notas da versão</a>. A prévia <strong>4.0.0-rc6</strong> está disponível para avaliação no Windows. Instale cada versão em uma pasta separada.</p>
+        <p class="download-notice">Versão 3.2.12-free publicada. Validações de homologação em andamento, <a href="wiki-release-v3-2-12-free.html#validacao">ver notas da versão</a>. A prévia <strong>4.0.0-rc6</strong> está publicada para avaliação no Windows. Instale cada versão em uma pasta separada.</p>
 
         <section class="card wiki-card" id="canais">
-            <h2>Tabela de decisão</h2>
+            <h2>Comparativo das versões</h2>
             <div class="wiki-table-wrap">
                 <table class="wiki-table">
                     <thead>
                         <tr>
-                            <th>Versão</th>
-                            <th>Identificação</th>
-                            <th>Como abrir</th>
-                            <th>Endereço local</th>
-                            <th>Dados</th>
-                            <th>Requisitos</th>
+                            <th>Item</th>
+                            <th>3.2.12-free</th>
+                            <th>4.0.0-rc6</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Free balcão</td>
-                            <td><code>v3.2.12-free</code></td>
-                            <td><code>iniciar-pdv.bat</code> (hífen)</td>
-                            <td><code>localhost:8080/login</code></td>
-                            <td><code>%APPDATA%\caracore\</code></td>
-                            <td>JDK 25 instalado</td>
+                            <td>Plataformas</td>
+                            <td>Windows, Linux, macOS</td>
+                            <td>Windows 10/11 x64</td>
                         </tr>
                         <tr>
-                            <td>Prévia</td>
-                            <td><code>v4.0.0-rc6</code></td>
-                            <td><code>iniciar_pdv.bat</code> (sublinhado)</td>
-                            <td><code>127.0.0.1:8080</code></td>
-                            <td><code>./data/caracore-pdv.db</code></td>
-                            <td>Windows 10/11 x64 e Microsoft Edge; Java 25 incluído</td>
+                            <td>Java</td>
+                            <td>JDK 25 instalado</td>
+                            <td>Java 25 embutido</td>
+                        </tr>
+                        <tr>
+                            <td>Navegador</td>
+                            <td>Qualquer navegador</td>
+                            <td>Microsoft Edge</td>
+                        </tr>
+                        <tr>
+                            <td>Estorno de venda paga</td>
+                            <td>Sim (status ESTORNADA)</td>
+                            <td>Não</td>
+                        </tr>
+                        <tr>
+                            <td>Instalador</td>
+                            <td>ZIP</td>
+                            <td>ZIP portátil</td>
+                        </tr>
+                        <tr>
+                            <td>Status</td>
+                            <td><span class="selo selo-estavel">Estável</span></td>
+                            <td><span class="selo selo-previa">Prévia rc6</span></td>
+                        </tr>
+                        <tr>
+                            <td>Data</td>
+                            <td>15/10/2026</td>
+                            <td>10/10/2026</td>
+                        </tr>
+                        <tr>
+                            <td>SHA-256</td>
+                            <td><a href="wiki-release-v3-2-12-free.html">Notas e hashes</a></td>
+                            <td><a href="wiki-release-v4-0-0-rc6.html">Notas e hash</a></td>
                         </tr>
                     </tbody>
                 </table>
             </div>
-            <p>As duas versões seguem o plano Free, com limite de 100 vendas finalizadas por mês civil. A 3.2.12-free abre no navegador no Windows, Linux e macOS; sua homologação está em andamento. A 4.0.0-rc6 é uma prévia para avaliação no Windows e abre no Edge. A versão final da v4 depende de aprovação formal, sem data automática de lançamento.</p>
+            <p>As duas versões seguem o plano Free, com limite de 100 vendas finalizadas por mês civil. A 3.2.12-free abre no navegador no Windows, Linux e macOS; sua homologação está em andamento. A 4.0.0-rc6 é uma prévia para avaliação no Windows e abre no Edge. A versão final da v4 depende de aprovação formal, sem data de GA definida.</p>
         </section>
 
         <section class="card wiki-card" id="atual">
             <h2>Edição Free atual — 3.2.12-free</h2>
+            <p><span class="selo selo-estavel">Estável · 3.2.12-free · 15/10/2026</span> <span class="text-sm text-slate-600 ml-2">Windows · Linux · macOS</span></p>
             <p>Corretiva de 15/10/2026: HTTP 405 preservado, status ESTORNADA distinto de CANCELADA em recibos e relatórios, migração V047 e fila em transação independente.</p>
             <p>Novo caixa com leitura e consolidação de itens, quantidade, desconto auditado, CPF opcional mascarado, pagamento em modal e recibos com subtotal/desconto. Estoque baixa e estorna linhas repetidas pelo produto. O limite de 100 vendas finalizadas por mês civil permanece; no teto, novas vendas ficam bloqueadas até o mês seguinte. Sem NF-e/NFC-e. O PIX é feito pela maquininha do banco.</p>
             <p class="text-sm text-slate-600">Esta é uma atualização corretiva da linha 3.2.x. Até 08/11/2026, a linha recebe apenas manutenção restrita, sem novos recursos. A sucessão é a PDV v4 pelo ciclo de RCs; o encerramento da manutenção não promove automaticamente a v4 a GA.</p>
@@ -120,17 +146,29 @@
         <section class="card wiki-card" id="proxima">
             <span id="previa" hidden></span>
             <h2>Pré-release Free 4.0.0-rc6 — somente para avaliação</h2>
+            <p><span class="selo selo-previa">Prévia rc6</span></p>
             <p>A <strong>4.0.0-rc6</strong> usa o plano Free, com até 100 vendas finalizadas por mês civil. É uma prévia para avaliação, não a versão final. Extraia em pasta nova e execute <code>iniciar_pdv.bat</code> (sublinhado). Os dados e registros de execução ficam em <code>.\data</code>. Requer Windows 10/11 x64 e Microsoft Edge. Não precisa instalar Java: ele vem dentro do ZIP.</p>
             <p>Distribuição somente em ZIP portátil Windows x64 sem assinatura digital; sem instalador MSI. SHA256: <code class="break-all">0c00b24b33b3c365fd1f24ec173bfa4e35bedf1946b2df4151035250780d5325</code>.</p>
             <p class="wiki-links">
-                <a class="btn-release" href="wiki-release-v4-0-0-rc6.html">Notas da RC6</a>
+                <a class="btn-release" href="download.html#instalacao-rc6">Avaliar prévia v4</a>
+                <a class="btn-release btn-release-outline" href="canal-feedback.html">Enviar feedback</a>
+                <a class="btn-release btn-release-outline" href="wiki-release-v4-0-0-rc6.html">Notas da RC6</a>
                 <a class="btn-release btn-release-outline" href="homologacao-v4.html#rc6">Homologação</a>
-                <a class="btn-release btn-release-outline" href="roadmap-2026.html">O que vem a seguir</a>
             </p>
             <details class="mt-3 text-xs text-slate-500">
                 <summary class="cursor-pointer">Pré-releases anteriores</summary>
                 <p class="mt-2"><a href="wiki-release-v4-0-0-rc5.html" class="underline">RC5</a> · <a href="wiki-release-v4-0-0-rc4.html" class="underline">RC4</a> · <a href="wiki-release-v4-0-0-rc3.html" class="underline">RC3</a> · <a href="wiki-release-v4-0-0-rc2.html" class="underline">RC2</a> · <a href="wiki-release-v4-0-0-rc1.html" class="underline">RC1</a>.</p>
             </details>
+        </section>
+
+        <section class="card wiki-card" id="migracao-v4">
+            <h2>Migração: da 3.2 para a prévia v4</h2>
+            <ul>
+                <li>Não copie o banco da 3.2 para a v4.</li>
+                <li>Na v4 não há estorno de venda finalizada.</li>
+                <li>Instale a v4 em pasta separada, só para teste. Sua operação continua na 3.2.12.</li>
+                <li>Faça backup antes de qualquer teste.</li>
+            </ul>
         </section>
 
         <section class="card wiki-card" id="historico">
@@ -141,6 +179,7 @@
                 <p class="mt-2"><a href="wiki-release-v3-2-8-free.html">3.2.8-free</a> · <a href="wiki-release-v3-2-7-free.html">3.2.7-free</a> · <a href="wiki-release-v3-2-6-free.html">3.2.6-free</a> · <a href="wiki-release-v3-2-5-free.html">3.2.5-free</a> · <a href="wiki-release-v3-2-4-free.html">3.2.4-free</a> · <a href="wiki-release-v3-2-3-free.html">3.2.3-free</a> · <a href="wiki-release-v3-2-2-free.html">3.2.2-free</a>.</p>
             </details>
             <p>Manual: <a href="https://wiki.caracore.com.br/projeto-pdv.html">wiki central do PDV</a>.</p>
+            <p class="text-sm text-slate-600">O piloto Rust é outra linha: <a href="https://pdv-rust.caracore.com.br/" target="_blank" rel="noopener">CaraCore PDV Rust</a> é um piloto separado; não é esta prévia v4.</p>
         </section>
 
     </div>

@@ -239,6 +239,13 @@ body.page-tecnologia .wrapper { max-width: 760px; }
     background: #fff;
 }
 
+@media (max-width: 640px) {
+    #canais .wiki-table { min-width: 0; }
+    #canais .wiki-table th,
+    #canais .wiki-table td { padding: 8px 8px; font-size: 0.82rem; }
+    #canais .selo { padding: 0.25rem 0.55rem; font-size: 0.72rem; }
+}
+
 .back {
     margin-top: 2rem;
     padding-top: 1.25rem;
