@@ -134,7 +134,7 @@
             <h2>Edição Free atual — 3.2.12-free</h2>
             <p><span class="selo selo-estavel">Estável · 3.2.12-free · 15/10/2026</span> <span class="text-sm text-slate-600 ml-2">Windows · Linux · macOS</span></p>
             <p>Corretiva de 15/10/2026: HTTP 405 preservado, status ESTORNADA distinto de CANCELADA em recibos e relatórios, migração V047 e fila em transação independente.</p>
-            <p>Novo caixa com leitura e consolidação de itens, quantidade, desconto auditado, CPF opcional mascarado, pagamento em modal e recibos com subtotal/desconto. Estoque baixa e estorna linhas repetidas pelo produto. O limite de 100 vendas finalizadas por mês civil permanece; no teto, novas vendas ficam bloqueadas até o mês seguinte. Sem NF-e/NFC-e. O PIX é feito pela maquininha do banco.</p>
+            <p>Novo caixa com leitura e consolidação de itens, quantidade, desconto auditado, CPF opcional mascarado na tela, pagamento em modal e recibos com subtotal/desconto. Estoque baixa e estorna linhas repetidas pelo produto. O limite de 100 vendas finalizadas por mês civil permanece; no teto, novas vendas ficam bloqueadas até o mês seguinte. Sem NF-e/NFC-e. O PIX é feito pela maquininha do banco.</p>
             <p class="text-sm text-slate-600">Esta é uma atualização corretiva da linha 3.2.x. Até 08/11/2026, a linha recebe apenas manutenção restrita, sem novos recursos. A sucessão é a PDV v4 pelo ciclo de RCs; o encerramento da manutenção não promove automaticamente a v4 a GA.</p>
             <p class="text-sm text-slate-600"><strong>Validações em andamento:</strong> consulte os testes concluídos e as validações pendentes nas <a href="wiki-release-v3-2-12-free.html#validacao">notas técnicas</a>. A publicação não representa homologação completa.</p>
             <p class="wiki-links">
@@ -165,7 +165,7 @@
             <h2>Migração: da 3.2 para a prévia v4</h2>
             <ul>
                 <li>Não copie o banco da 3.2 para a v4.</li>
-                <li>Na v4 não há estorno de venda finalizada.</li>
+                <li>Na v4, cancelar uma venda já paga não devolve o estoque nem registra ESTORNADA; a 3.2.12 fazia.</li>
                 <li>Instale a v4 em pasta separada, só para teste. Sua operação continua na 3.2.12.</li>
                 <li>Faça backup antes de qualquer teste.</li>
             </ul>
