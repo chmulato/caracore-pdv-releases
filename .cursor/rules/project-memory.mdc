@@ -1,9 +1,18 @@
 ---
-description: Memória da loja PDV Desktop Java — caracore-pdv-releases; vitrine pdv.caracore.com.br; coexistência com PDV Desktop Rust
+description: Memória da loja PDV Desktop Java — caracore-pdv-releases; vitrine pdv.caracore.com.br; copy em "estado B" (3.2.12 = versão anterior, v4 = pré-lançamento); coexistência com PDV Desktop Rust
 alwaysApply: true
 ---
 
 # Memória da Loja — caracore-pdv-releases
+
+## ESTADO DA COPY PÚBLICA — 30/10/2026 (ler antes de editar qualquer página)
+
+- **"Estado B", publicado em 30/10/2026** (commit `b29f6a4` em `index.html`, `download.html`, `versoes.html`, `roadmap-2026.html`, `pwa.html`, `tecnologia.html`, `homologacao-v4.html`, `README.md`): a vitrine apresenta a **v4 como pré-lançamento** e a **3.2.12-free como "versão anterior · indicada para operar"**. O GitHub ainda marca a 3.2.12 como *Latest* — **a copy não usa "Latest", "estável", "GA" nem "pré-release pública"** para a v4, e não chama a 3.2.12 de corretiva.
+- **Selo é status, data é build.** Não colar data dentro de selo de status (era o que fazia a linha antiga parecer mais nova). Seção abaixo ("PDV Free — publicação de 15/10/2026") é **histórico** do pacote, não instrução de copy.
+- **Arquivos que o JS hidrata também são copy:** editar só o HTML não muda a tela (ver `assets/js/*-data.js` e `assets/data/produtos.json` na Central `caracore-loja`).
+- **O que a v4 NÃO entrega** (não prometer): cifra de arquivo, PIX integrado, emissão fiscal, recuperação de senha self-service, estorno de venda já finalizada. O **Gate E recusou o GA em 29/10/2026** (`caracore-pdv/docs/arquitetura/GATE_E_MATRIZ_20261029.md:143`) e a rota escrita é `rc7` curta; **08/11/2026 é o fim da manutenção da 3.2.12, não GA da v4**.
+- O ZIP público continua a **RC6 de 11/10** e **não contém** as correções de 29–30/10: pacote novo = medição nova (aceite não atravessa hash). **Nada publicado nem tagueado depois da RC6.**
+- Feature nova vai só na v4 da oficina (`caracore-pdv/AGENTS.md` § "Como desenvolver uma feature nova na v4"), nunca na linha 3.2.x.
 
 ## PDV Free — publicação de 15/10/2026
 
@@ -16,7 +25,7 @@ alwaysApply: true
 - **caracore-pdv-releases:** loja (vitrine, download e feedback) do **CaraCore PDV Desktop (Java)**.
 - **URL:** https://pdv.caracore.com.br/
 - **Publicação:** GitHub Pages a partir da pasta **docs/**.
-- **Oficina:** caracore-pdv (Java 25 · Quarkus). Canal Free estável publicado: `v3.2.12-free` (UI no navegador `http://localhost:8080/login`; ramo `hotfix/3.2.12-free`). Pré-release pública atual da edição Free para avaliação = Qute `v4.0.0-rc6`, até 100 vendas finalizadas/mês (fonte `master` `681ea32`; a tag Git permanece em `b3358fe`; T032 mantém o roteiro operacional formal como gate; não é GA nem substitui o download estável).
+- **Oficina:** caracore-pdv (Java 25 · Quarkus). Canal Free publicado: `v3.2.12-free` (**na copy: versão anterior, ainda a indicada para operar**; UI no navegador `http://localhost:8080/login`; ramo `hotfix/3.2.12-free`). Prévia pública da linha nova = Qute `v4.0.0-rc6`, até 100 vendas finalizadas/mês (fonte `master` `681ea32`; a tag Git permanece em `b3358fe`). **O Gate E recusou o GA da v4 em 29/10/2026** e a rota escrita é `rc7` curta; a v4 não substitui o download indicado para operar.
 - **Matriz:** caracore-site — `#caracore-pdv` · `#pdv-coexistencia`.
 - **Wiki:** wiki.caracore.com.br — `projeto-pdv.html`, `pdv/`.
 
@@ -24,7 +33,7 @@ alwaysApply: true
 - CTA Free: **Baixar Free (3.2.12)** → `download.html`. Premium: demonstração → `consultoria.html`. Sem misturar NF-e/Reforma no funil Free.
 - Qualidades: SQLite offline, venda no navegador, fechamento organizado. Copy Free pode informar recibo digital por link e PDF, sempre sem valor fiscal. Sem NF-e, NFC-e nem PIX integrado.
 - Menu do produto: O que resolvemos · Como funciona · Economia · Planos · **Versões** · Agendar demonstração.
-- **Versões** (`versoes.html`): mapa de canais + detalhe RC6 + histórico. Atual/estável = 3.2.12-free. Prévia = 4.0.0-rc6. Sem misturar pasta nem data.
+- **Versões** (`versoes.html`): mapa de canais + detalhe RC6 + histórico. **Versão anterior / indicada para operar = 3.2.12-free. Prévia = 4.0.0-rc6 (pré-lançamento).** Sem misturar pasta nem data, e sem colar data em selo de status.
 - Download: página do Free (ZIPs + SHA + instalação). ZIPs 3.2.12: Windows `6d7a50b0acf2a05620a090eebdd48f049a1dd5599ccb6c40c419c38145f7c0e2` · Linux `795a396318da61d1bd45dcfe816879d2184706f1c7849f1cd2ad98baa99fd9c1` · macOS `795a396318da61d1bd45dcfe816879d2184706f1c7849f1cd2ad98baa99fd9c1`. ZIP RC6: SHA-256 `0c00b24b33b3c365fd1f24ec173bfa4e35bedf1946b2df4151035250780d5325`, 178.166.244 bytes. A RC5 fica no histórico. A homologação manual completa da 3.2.12 no Edge/leitor segue pendente.
 - Sem depoimento inventado. Sem % de economia inventada.
 - PWA da loja (`pwa.html`) = vitrine/atalho, **não** é o caixa.
@@ -46,11 +55,11 @@ alwaysApply: true
 - Teto Rust piloto = **100 vendas na vida**, não por mês. Não misturar com o Free Java.
 
 ## Mensagem de produto
-- Versão atual do download: **3.2.12-free** (ZIP Windows/Linux/macOS). Requisito: Java 25+.
+- Versão do download indicada para operar: **3.2.12-free** (ZIP Windows/Linux/macOS) — na copy pública é a **versão anterior**. Requisito: Java 25+.
 - Nomes reais dos ZIP: `caracore-pdv-v3.2.12-free-{windows,linux,macos}-x64.zip`.
 - SHA256 Windows `6d7a50b0acf2a05620a090eebdd48f049a1dd5599ccb6c40c419c38145f7c0e2` · Linux `795a396318da61d1bd45dcfe816879d2184706f1c7849f1cd2ad98baa99fd9c1` · macOS `795a396318da61d1bd45dcfe816879d2184706f1c7849f1cd2ad98baa99fd9c1`.
 - Launcher Free: `iniciar-pdv.bat` (hífen). Banco: `%APPDATA%\caracore\` (Win) / `~/.caracore/`.
-- **4.0.0-rc4** é pré-release pública para avaliação (`iniciar_pdv.bat` underscore; Windows x64 + Java 25+ + Python 3 + Edge app mode; banco `./data/caracore-pdv.db`; ZIP unsigned sem MSI). SHA-256 `31a0cdeda68dce058079c5d0d3d5652084ba8a8cc073dfce60e021c4b3c1fdf2`; notas e avisos: `wiki-release-v4-0-0-rc4.html`. Não é GA nem download estável da loja. T032 mantém o roteiro operacional formal como gate; troca de senha e homologação Edge/Windows 1280×800 estão resolvidas. Retomada: oficina `CONTINUIDADE_DESENVOLVIMENTO.md`.
+- **4.0.0-rc6** é a prévia pública atual (`iniciar_pdv.bat` underscore; Windows x64 + Java 25 embutido em `runtime\`; banco `./data/caracore-pdv.db`; ZIP unsigned). SHA-256 `0c00b24b33b3c365fd1f24ec173bfa4e35bedf1946b2df4151035250780d5325`, 178.166.244 bytes. **Não é GA nem o download indicado para operar**, e o **Gate E recusou o GA em 29/10/2026**. A RC4 e a RC5 ficam no histórico — não citar o hash da RC4 como atual. T032 16/16 e matriz M01–M11 + M10b foram medidos no pacote `ff400efd8737…` (HEAD `0522bbf`), com **M11 bloqueado** por PERF-001–007; **SCA nunca medido** (não existe "0 CVE"); o **cenário "banco 3.2.12 migrado" está bloqueado**. Aceite não atravessa hash: pacote novo = medição nova. Retomada: `caracore-pdv/AGENTS.md` (checkpoint de 30/10) e `docs/prompt-proxima-tarefa-ga-v4-entrega-20261029.txt`.
 - ZIP 3.2.12 inclui `INSTALACAO.txt`; notas atuais em `wiki-release-v3-2-12-free.html`; 3.2.8, 3.2.7 e anteriores permanecem no histórico.
 - **V3 (negócio):** PME, PIX Split 2027 — posicionamento comercial; **não** confundir com a linha Rust (v0.1.x).
 - **Evitar:** Java descontinuado; “PDV v3” para a linha Rust; “nova geração”; “substitui”; PIX no Free; recibo no Free.
