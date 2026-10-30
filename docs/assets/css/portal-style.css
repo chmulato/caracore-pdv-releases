@@ -197,6 +197,7 @@ a[aria-label="Represente a Tecnologia Cara Core"] {
 .selo-estavel { background: #ecfdf5; color: #065f46; border-color: #a7f3d0; }
 .selo-previa { background: #fffbeb; color: #92400e; border-color: #fcd34d; }
 .selo-piloto { background: #fff7ed; color: #9a3412; border-color: #fdba74; }
+.selo-anterior { background: #f1f5f9; color: #475569; border-color: #cbd5e1; }
 
 /* Wiki-fiscal / consultoria helper boxes */
 .info-box {

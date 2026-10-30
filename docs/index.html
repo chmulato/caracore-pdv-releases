@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="CaraCore PDV Free 3.2.12: aplicação web local para vendas no balcão, com recibo digital por link e PDF sem valor fiscal.">
+    <meta name="description" content="CaraCore PDV: v4 em pré-lançamento, com a prévia 4.0.0-rc6 para avaliação, e a versão anterior 3.2.12-free para operar no balcão com recibo digital por link e PDF sem valor fiscal.">
     <meta name="keywords" content="PDV web local, ponto de venda, recibo digital, caixa offline, varejo">
     <meta name="author" content="Cara Core Informática">
     <meta property="og:title" content="CaraCore PDV | Operação de venda sem ruído">
-    <meta property="og:description" content="Baixe o Free 3.2.12, com homologação em andamento: vendas no computador da loja e recibo digital sem valor fiscal, até 100 vendas finalizadas por mês civil.">
+    <meta property="og:description" content="Avalie a prévia 4.0.0-rc6 do PDV v4 no Windows. Para operar hoje, a versão anterior 3.2.12-free roda em Windows, Linux e macOS, com até 100 vendas finalizadas por mês civil.">
     <meta property="og:type" content="website">
     <title>CaraCore PDV | Operação de venda sem ruído</title>
     <script src="https://cdn.tailwindcss.com"></script>
@@ -62,21 +62,29 @@
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="max-w-3xl mx-auto text-center">
                 <p class="text-sm uppercase tracking-wide text-green-100 mb-4">PDV no computador da loja · Windows, Linux e macOS</p>
-                <p class="mb-4"><span class="selo selo-estavel">Estável · 3.2.12-free · 15/10/2026</span></p>
+                <p class="mb-4 flex flex-wrap justify-center gap-2">
+                    <span class="selo selo-previa">Em pré-lançamento · v4 prévia rc6</span>
+                    <span class="selo selo-anterior">Versão anterior · 3.2.12-free</span>
+                </p>
                 <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
                     Venda no balcão com os dados no computador da loja.
                 </h1>
                 <p class="text-xl md:text-2xl text-green-50 mb-10">
-                    Free 3.2.12: R$ 0 até 100 vendas finalizadas por mês civil — no teto, novas vendas ficam bloqueadas até o mês seguinte. Recibo digital com link e PDF, sem valor fiscal. Sem NF-e/NFC-e. O PIX é feito pela maquininha do banco.
+                    A v4 está em pré-lançamento: avalie a prévia 4.0.0-rc6 no Windows e ajude a fechar a versão final. Para operar hoje, a versão anterior é a Free 3.2.12 — R$ 0 até 100 vendas finalizadas por mês civil, com recibo digital por link e PDF, sem valor fiscal. Sem NF-e/NFC-e. O PIX é feito pela maquininha do banco.
                 </p>
-                <a href="download.html#instalacao" class="inline-flex items-center justify-center bg-white text-green-700 px-10 py-4 rounded-lg font-bold text-lg hover:bg-green-50 transition shadow-lg">
-                    Baixar Free 3.2.12
-                </a>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+                    <a href="download.html#pre-release-v4" class="inline-flex items-center justify-center bg-white text-green-700 px-8 py-4 rounded-lg font-bold text-lg hover:bg-green-50 transition shadow-lg">
+                        Avaliar a prévia v4
+                    </a>
+                    <a href="download.html#instalacao" class="inline-flex items-center justify-center border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-green-700 transition">
+                        Baixar Free 3.2.12
+                    </a>
+                </div>
                 <p class="mt-4 text-sm text-green-50">
-                    Windows · Linux · macOS · requer JDK 25 instalado.
+                    Free 3.2.12: Windows · Linux · macOS · requer JDK 25 instalado. Prévia v4: só Windows 10/11 x64, Java embutido.
                 </p>
                 <p class="mt-2 text-sm text-green-100">
-                    Versão 3.2.12-free publicada. Validações de homologação em andamento, <a href="wiki-release-v3-2-12-free.html#validacao" class="underline">ver notas da versão</a>.
+                    Versão anterior 3.2.12-free (15/10/2026) em manutenção de transição até 08/11/2026, ainda indicada para operar. Validações de homologação em andamento, <a href="wiki-release-v3-2-12-free.html#validacao" class="underline">ver notas da versão</a>.
                 </p>
             </div>
         </div>
@@ -99,7 +107,7 @@
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-8">
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-3">Duas versões, papéis diferentes</h2>
-                <p class="text-lg text-gray-600 max-w-2xl mx-auto">A 3.2.12 é a versão estável. A 4.0.0-rc6 é prévia, só para avaliação no Windows.</p>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">A v4 está em pré-lançamento: a 4.0.0-rc6 é a prévia pública, só para avaliação no Windows. A 3.2.12-free é a versão anterior e segue sendo a indicada para operar.</p>
             </div>
             <div class="max-w-5xl mx-auto overflow-x-auto bg-white rounded-2xl border border-gray-200 shadow-sm">
                 <table class="w-full text-left text-sm">
@@ -138,13 +146,13 @@
                         </tr>
                         <tr>
                             <th class="px-4 py-3 font-semibold text-gray-900">Status</th>
-                            <td class="px-4 py-3"><span class="selo selo-estavel">Estável</span></td>
-                            <td class="px-4 py-3"><span class="selo selo-previa">Prévia rc6</span></td>
+                            <td class="px-4 py-3"><span class="selo selo-anterior">Versão anterior</span></td>
+                            <td class="px-4 py-3"><span class="selo selo-previa">Em pré-lançamento</span></td>
                         </tr>
                         <tr>
-                            <th class="px-4 py-3 font-semibold text-gray-900">Data</th>
-                            <td class="px-4 py-3 text-gray-600">15/10/2026</td>
-                            <td class="px-4 py-3 text-gray-600">10/10/2026</td>
+                            <th class="px-4 py-3 font-semibold text-gray-900">Último build</th>
+                            <td class="px-4 py-3 text-gray-600">15/10/2026 · manutenção</td>
+                            <td class="px-4 py-3 text-gray-600">10/10/2026 · prévia</td>
                         </tr>
                         <tr>
                             <th class="px-4 py-3 font-semibold text-gray-900">SHA-256</th>
@@ -154,6 +162,7 @@
                     </tbody>
                 </table>
             </div>
+            <p class="mt-3 text-sm text-gray-600 max-w-5xl mx-auto">As datas são as do último build de cada linha. A 3.2.12-free tem data mais recente (15/10/2026) porque continua recebendo manutenção; a prévia da v4 é de 10/10/2026. Data de build não indica qual linha é a recomendada para operar.</p>
         </div>
     </section>
 
@@ -271,7 +280,7 @@
                 </article>
                 <article class="rounded-2xl border border-slate-200 bg-white p-6">
                     <h2 class="text-2xl font-bold text-gray-900 mb-3">Fiscal / Reforma (roadmap)</h2>
-                    <p class="text-gray-600 mb-4">A evolução fiscal e gerencial está identificada no roadmap; não faz parte do Free estável de hoje.</p>
+                    <p class="text-gray-600 mb-4">A evolução fiscal e gerencial está identificada no roadmap; não faz parte do Free da versão anterior.</p>
                     <p class="text-sm text-gray-500 mb-4">Roadmap não significa emissão de NF-e/NFC-e ou integração SEFAZ disponíveis.</p>
                     <a href="roadmap-2026.html" class="text-green-700 font-semibold hover:text-green-800">Consultar roadmap</a>
                 </article>

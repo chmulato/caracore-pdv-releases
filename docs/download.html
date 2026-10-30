@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Baixe grátis a edição Free do CaraCore PDV para Windows, Linux e macOS e valide o produto com até 100 vendas finalizadas por mês civil no balcão.">
+  <meta name="description" content="CaraCore PDV v4 em pré-lançamento: avalie a prévia 4.0.0-rc6 no Windows ou baixe a versão anterior 3.2.12-free para Windows, Linux e macOS, com até 100 vendas finalizadas por mês civil.">
   <meta name="author" content="Cara Core Informática">
-  <meta property="og:title" content="CaraCore PDV | Baixar Free 3.2.12">
-  <meta property="og:description" content="Teste a edição Free 3.2.12 no Windows, Linux ou macOS, com dados no computador da loja e limites claros. Homologação em andamento.">
+  <meta property="og:title" content="CaraCore PDV | v4 em pré-lançamento e Free 3.2.12">
+  <meta property="og:description" content="Avalie a prévia 4.0.0-rc6 no Windows. Para operar hoje, a versão anterior 3.2.12-free segue disponível para Windows, Linux e macOS.">
   <meta property="og:type" content="website">
   <title>CaraCore PDV | Baixar e Testar Grátis (Free)</title>
   <link rel="manifest" href="manifest.webmanifest">
@@ -71,21 +71,50 @@
   <main class="page-shell max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
     <section class="portal-panel card overflow-hidden">
       <div class="brand-bg text-white px-6 sm:px-10 py-8">
-        <p class="text-sm uppercase tracking-wide text-emerald-200">Versão atual: <strong>3.2.12-free</strong> · Windows · Linux · macOS</p>
-        <p class="mt-3"><span class="selo selo-estavel">Estável · 3.2.12-free · 15/10/2026</span></p>
+        <p class="text-sm uppercase tracking-wide text-emerald-200">Em pré-lançamento: <strong>CaraCore PDV v4</strong> · Windows</p>
+        <p class="mt-3 flex flex-wrap gap-2">
+          <span class="selo selo-previa">Em pré-lançamento · prévia rc6</span>
+          <span class="selo selo-anterior">Versão anterior · 3.2.12-free</span>
+        </p>
         <h1 class="text-3xl sm:text-4xl font-extrabold mt-3 leading-tight">
-          Teste o PDV no seu balcão. R$ 0 até 100 vendas finalizadas por mês civil.
+          O PDV v4 está em pré-lançamento. Avalie no seu balcão e ajude a fechar a versão final.
         </h1>
       </div>
 
       <div class="px-6 sm:px-10 py-8 space-y-8">
-        <p class="text-base text-slate-700">Versão estável 3.2.12-free (15/10/2026) — homologação em andamento (<a href="wiki-release-v3-2-12-free.html#validacao" class="font-semibold underline">ressalvas</a>). Já usa a 3.2.x? Feche o PDV, faça backup de <code>%APPDATA%\caracore</code> e extraia o ZIP novo em outra pasta. Seus dados e sua senha são mantidos. Ao atingir 100 vendas finalizadas no mês, o Free bloqueia novas vendas até o mês seguinte; o Premium remove o teto.</p>
+        <p class="text-base text-slate-700">A <strong>prévia 4.0.0-rc6</strong> é a versão pública de avaliação do PDV v4: só Windows 10/11 x64, com o plano Free (até 100 vendas finalizadas por mês civil) e <strong>sem migração de dados da 3.2</strong>. A versão final depende de aprovação formal, sem data definida.</p>
+
+        <p class="text-base text-slate-700"><strong>Para operar hoje:</strong> a <strong>3.2.12-free</strong> é a versão anterior — publicada em 15/10/2026, em manutenção de transição até <strong>08/11/2026</strong> e ainda a indicada para o caixa rodando em Windows, Linux ou macOS. Os pacotes e hashes continuam disponíveis abaixo.</p>
 
         <p class="text-base text-slate-700"><strong>Free:</strong> até 100 vendas finalizadas por mês civil, 100 produtos, 1 operador, 1 loja. <strong>Premium:</strong> R$ 79,90/mês. Vale para a 3.2.12 e para a prévia v4.</p>
 
+        <section id="pre-release-v4" class="rounded-2xl border border-amber-300 bg-amber-50 p-5">
+          <div id="instalacao-rc6">
+            <p class="mb-3"><span class="selo selo-previa">Em pré-lançamento · prévia rc6</span></p>
+            <h2 class="text-lg font-extrabold text-slate-900">Avaliar a prévia 4.0.0-rc6 (Windows)</h2>
+            <p class="mt-2 text-sm font-semibold text-slate-900">A prévia 4.0.0 rc6 usa o plano Free (até 100 vendas finalizadas por mês civil; no teto, novas vendas ficam bloqueadas até o mês seguinte) e não é o Premium.</p>
+            <p class="mt-2 text-sm text-slate-700">Windows 10/11 x64 e Microsoft Edge. Somente para avaliação. Sem NF-e nem NFC-e. O PIX é feito pela maquininha do banco. Não precisa instalar Java: ele vem dentro do ZIP.</p>
+            <ol class="mt-3 text-sm text-slate-800 space-y-2 list-decimal list-inside">
+              <li>Extraia o ZIP em uma pasta nova, separada da 3.2.12-free.</li>
+              <li>Execute <code>iniciar_pdv.bat</code> (sublinhado). O PDV abre no Edge.</li>
+              <li>Primeiro acesso: <code>admin</code> / <code>admin</code>, com troca de senha obrigatória. Depois da troca, essas credenciais deixam de valer.</li>
+            </ol>
+            <p class="mt-3 text-sm text-slate-700">Os dados ficam em <code>.\data</code> e os registros de execução em <code>.\data\logs</code>, dentro da pasta extraída. Essa instalação não usa <code>%APPDATA%\caracore</code>.</p>
+            <p class="mt-3 text-xs text-slate-600 font-mono">SHA256 0c00b24b…780d5325
+              <button type="button" class="ml-2 rounded border border-amber-400 px-2 py-1 hover:bg-amber-100" onclick="copyHash('0c00b24b33b3c365fd1f24ec173bfa4e35bedf1946b2df4151035250780d5325', this)" aria-label="Copiar SHA256 completo da prévia 4.0.0-rc6">Copiar</button>
+            </p>
+            <div class="mt-3 flex flex-wrap gap-3">
+              <a class="inline-flex rounded-xl border border-amber-500 bg-white px-4 py-2 text-sm font-semibold text-slate-900 hover:bg-amber-100" href="https://github.com/chmulato/caracore-pdv-releases/releases/download/v4.0.0-rc6/CaraCore-PDV-4.0.0-rc6-qute-portable-windows-x64.zip">Baixar a prévia 4.0.0-rc6</a>
+              <a class="inline-flex rounded-xl border border-amber-500 px-4 py-2 text-sm font-semibold text-slate-900 hover:bg-amber-100" href="canal-feedback.html">Enviar feedback</a>
+              <a class="text-sm font-semibold text-emerald-800 underline self-center" href="wiki-release-v4-0-0-rc6.html">Notas</a>
+              <a class="text-sm font-semibold text-emerald-800 underline self-center" href="homologacao-v4.html#rc6">Homologação</a>
+            </div>
+          </div>
+        </section>
+
         <div id="pacotes">
-          <h2 class="text-xl font-extrabold text-slate-900">Pacotes do Free (v3.2.12-free)</h2>
-          <p class="text-sm text-slate-600 mt-1">Confira o nome e o SHA256 do arquivo antes de abrir o pacote. Requer JDK 25 instalado.</p>
+          <h2 class="text-xl font-extrabold text-slate-900">Versão anterior — pacotes Free (3.2.12-free)</h2>
+          <p class="text-sm text-slate-600 mt-1">Manutenção de transição até 08/11/2026. Confira o nome e o SHA256 do arquivo antes de abrir o pacote. Requer JDK 25 instalado.</p>
           <div class="mt-4 grid grid-cols-1 gap-3">
             <div class="rounded-xl border border-slate-200 bg-slate-50 px-4 py-3">
               <a id="assetWindows" href="https://github.com/chmulato/caracore-pdv-releases/releases/download/v3.2.12-free/caracore-pdv-v3.2.12-free-windows-x64.zip" class="flex items-center gap-2 text-slate-900 font-semibold hover:text-emerald-800 text-sm">
@@ -120,7 +149,7 @@
         </div>
 
         <div id="instalacao" class="rounded-2xl border border-emerald-200 bg-emerald-50 p-5">
-          <h2 class="text-lg font-extrabold text-slate-900">Instalação 3.2.12-free</h2>
+          <h2 class="text-lg font-extrabold text-slate-900">Instalação 3.2.12-free (versão anterior)</h2>
           <ol class="mt-3 text-sm text-slate-800 space-y-2 list-decimal list-inside">
             <li>Tenha o <a class="font-semibold text-emerald-800 underline" href="https://adoptium.net/temurin/releases/?version=25">JDK 25</a> (<code>java -version</code> mostra 25).</li>
             <li>Extraia o ZIP em uma <strong>pasta nova</strong> (exemplo: <code>C:\CaraCore\pdv-free</code>).</li>
@@ -144,38 +173,13 @@
           </ul>
           <p class="mt-4 text-sm text-slate-700">
             <a href="wiki-release-v3-2-12-free.html" class="font-semibold text-emerald-700 hover:underline">Notas 3.2.12</a>
-            · <a href="versoes.html#proxima" class="font-semibold text-emerald-700 hover:underline">Orientações técnicas da versão 4.0</a>
+            · <a href="versoes.html#proxima" class="font-semibold text-emerald-700 hover:underline">O que muda na v4</a>
           </p>
         </div>
 
-        <details id="pre-release-v4" class="rounded-2xl border border-amber-300 bg-amber-50 p-5">
-          <summary class="cursor-pointer text-lg font-extrabold text-slate-900">Prévia da v4 (só Windows, para avaliação)</summary>
-          <div id="instalacao-rc6" class="mt-4">
-            <p class="mb-3"><span class="selo selo-previa">Prévia rc6 · 10/10/2026</span></p>
-            <p class="text-sm font-semibold text-slate-900">A prévia 4.0.0 rc6 usa o plano Free (até 100 vendas finalizadas por mês civil; no teto, novas vendas ficam bloqueadas até o mês seguinte) e não é o Premium.</p>
-            <h2 class="mt-2 text-lg font-extrabold text-slate-900">Instalação 4.0.0-rc6</h2>
-            <p class="mt-2 text-sm text-slate-700">Windows 10/11 x64 e Microsoft Edge. Somente para avaliação. Sem NF-e nem NFC-e. O PIX é feito pela maquininha do banco. Não precisa instalar Java: ele vem dentro do ZIP.</p>
-            <ol class="mt-3 text-sm text-slate-800 space-y-2 list-decimal list-inside">
-              <li>Extraia o ZIP em uma pasta nova, separada da 3.2.12-free.</li>
-              <li>Execute <code>iniciar_pdv.bat</code> (sublinhado). O PDV abre no Edge.</li>
-              <li>Primeiro acesso: <code>admin</code> / <code>admin</code>, com troca de senha obrigatória. Depois da troca, essas credenciais deixam de valer.</li>
-            </ol>
-            <p class="mt-3 text-sm text-slate-700">Os dados ficam em <code>.\data</code> e os registros de execução em <code>.\data\logs</code>, dentro da pasta extraída. Essa instalação não usa <code>%APPDATA%\caracore</code>.</p>
-            <p class="mt-3 text-xs text-slate-600 font-mono">SHA256 0c00b24b…780d5325
-              <button type="button" class="ml-2 rounded border border-amber-400 px-2 py-1 hover:bg-amber-100" onclick="copyHash('0c00b24b33b3c365fd1f24ec173bfa4e35bedf1946b2df4151035250780d5325', this)" aria-label="Copiar SHA256 completo da prévia 4.0.0-rc6">Copiar</button>
-            </p>
-            <div class="mt-3 flex flex-wrap gap-3">
-              <a class="inline-flex rounded-xl border border-amber-500 px-4 py-2 text-sm font-semibold text-slate-900 hover:bg-amber-100" href="https://github.com/chmulato/caracore-pdv-releases/releases/download/v4.0.0-rc6/CaraCore-PDV-4.0.0-rc6-qute-portable-windows-x64.zip">Avaliar prévia v4</a>
-              <a class="inline-flex rounded-xl border border-amber-500 px-4 py-2 text-sm font-semibold text-slate-900 hover:bg-amber-100" href="canal-feedback.html">Enviar feedback</a>
-              <a class="text-sm font-semibold text-emerald-800 underline self-center" href="wiki-release-v4-0-0-rc6.html">Notas</a>
-              <a class="text-sm font-semibold text-emerald-800 underline self-center" href="homologacao-v4.html#rc6">Homologação</a>
-            </div>
-          </div>
-        </details>
-
         <section id="migracao-v4" class="rounded-2xl border border-amber-300 bg-amber-50 p-5">
-          <h2 class="text-lg font-extrabold text-slate-900">Migração: da 3.2 para a prévia v4</h2>
-          <p class="mt-2 text-sm font-semibold text-amber-900">Hoje NÃO é suportado. A transferência de dados da linha 3.2 para a prévia 4 não é suportada; sua operação continua na 3.2.12.</p>
+          <h2 class="text-lg font-extrabold text-slate-900">Migração: da 3.2 para a v4</h2>
+          <p class="mt-2 text-sm font-semibold text-amber-900">Hoje NÃO é suportado. A transferência de dados da linha 3.2 para a v4 ainda não é suportada; sua operação continua na versão anterior, a 3.2.12-free.</p>
           <ul class="mt-3 text-sm text-slate-800 space-y-2 list-disc list-inside">
             <li>Não copie o banco da 3.2 para a v4.</li>
             <li>Na v4, cancelar uma venda já paga não devolve o estoque nem registra ESTORNADA; a 3.2.12 fazia.</li>
