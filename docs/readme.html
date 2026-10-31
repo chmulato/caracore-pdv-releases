@@ -61,7 +61,7 @@
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="max-w-4xl mx-auto text-center">
                 <div class="mb-6">
-                    <img src="assets/img/caracore_pdv.png" alt="CaraCore PDV Logo" class="mx-auto max-w-full h-auto" style="max-width: 600px;">
+                    <img src="assets/img/caracore_pdv.png" alt="CaraCore PDV Logo" class="mx-auto max-w-full h-auto" style="width: 100%; max-width: 600px;">
                 </div>
                 <h1 class="text-4xl md:text-5xl font-bold mb-4">Guia Comercial e Operacional para a Pequena Loja</h1>
                 <p class="text-xl text-green-50">Entenda a oferta pública atual do CaraCore PDV pelo que importa no dia a dia: caixa, operação local, menor dependência de internet e evolução segura quando o básico estiver validado.</p>
@@ -175,27 +175,27 @@
                         </tr>
                         <tr style="background-color: #f3f4f6;">
                             <td><strong>Operação Ininterrupta (Tecnologia de Fluxo Contínuo)</strong></td>
-                            <td><strong>Blindagem de Dados Local:</strong> o caixa nunca para, mesmo sem internet. Vendas registradas e protegidas localmente; backup automático ao encerrar e rotinas de cópia de segurança. Zero perda de vendas por falhas de rede.</td>
+                            <td><strong>Blindagem de Dados Local:</strong> o caixa continua vendendo mesmo sem internet. Vendas registradas e protegidas localmente; backup automático ao encerrar e rotinas de cópia de segurança.</td>
                         </tr>
                         <tr>
                             <td><strong>Enlace de Contingência</strong></td>
-                            <td>Quando a internet cai por completo, o sistema continua vendendo e comunica dados vitais por canal alternativo. Inclui validação de licença e recuperação de senha para o operador. O PDV nunca para de operar.</td>
+                            <td>Com dispositivo Android dedicado, configurado pela Cara Core ou por parceiros, o PDV envia resumo por SMS quando a internet cai. Recurso desligado por padrão; não substitui a internet nem faz recuperação de senha.</td>
                         </tr>
                         <tr>
-                            <td><strong>Planos Free e Premium</strong></td>
-                                                        <td>Free: validação real com limites claros. Premium: assinatura mensal de R$ 79,90 com suporte, vendas e cadastros sem os tetos do Free (que vai até 100 vendas finalizadas por mês civil), cálculo estimado de CBS/IBS (não é apuração fiscal). NF-e/NFC-e está no roadmap, sem data. O PIX é feito pela maquininha do banco, fora do PDV. <a href="https://pdv.caracore.com.br/roadmap-2026.html#premium" class="underline">Saiba mais</a></td>
+                            <td><strong>Planos Free e Pro (o Premium da loja 3.2.12)</strong></td>
+                                                        <td>Free: validação real com limites claros. Pro: assinatura mensal de R$ 79,90 com suporte, vendas e cadastros sem os tetos do Free (que vai até 100 vendas finalizadas por mês civil), cálculo estimado de CBS/IBS (não é apuração fiscal). NF-e/NFC-e está no roadmap, sem data. O PIX é feito pela maquininha do banco, fora do PDV. <a href="https://pdv.caracore.com.br/roadmap-2026.html#premium" class="underline">Saiba mais</a></td>
                         </tr>
                         <tr>
                             <td><strong>Configuração de E-mail e Contador</strong></td>
-                            <td>Painel para servidor de e-mail (recuperação de senha, notificações). Seção <strong>Contador responsável</strong> (nome e e-mail) para trilha de envio ao contador conforme disponibilidade por release.</td>
+                            <td>Servidor SMTP para envio de relatórios ao contador e notificações. A recuperação de senha não usa e-mail. Seção <strong>Contador responsável</strong> (nome e e-mail) para a trilha de envio ao contador.</td>
                         </tr>
                         <tr>
                             <td><strong>Relatório ao contador</strong></td>
-                                                        <td>Disponível nas duas edições, Free e Premium.</td>
+                                                        <td>Disponível nas duas edições, Free e Pro.</td>
                         </tr>
                         <tr>
                             <td><strong>Recuperação de senha</strong></td>
-                            <td>E-mail, WhatsApp e Telegram.</td>
+                            <td>WhatsApp ou Telegram, com código de uso único. Recurso opcional, desligado por padrão e habilitado na configuração de mensageria.</td>
                         </tr>
                         <tr>
                             <td><strong>Infraestruturas externas (PIX e SEFAZ)</strong></td>
@@ -216,18 +216,18 @@
             
             <h3 class="text-2xl font-semibold text-gray-800 mb-4">Operação Ininterrupta e Blindagem de Dados Local</h3>
             <p class="text-gray-700 leading-relaxed mb-4">
-                Com a <strong>Tecnologia de Fluxo Contínuo</strong>, o caixa nunca para: vendas são salvas e protegidas localmente, com backup automático ao encerrar e rotinas de cópia de segurança. O sistema prospera mesmo quando a internet oscila ou cai — <strong>nenhuma venda se perde</strong>.
+                Com a <strong>Tecnologia de Fluxo Contínuo</strong>, o caixa continua vendendo: vendas são salvas e protegidas localmente, com backup automático ao encerrar e rotinas de cópia de segurança. O sistema segue operando mesmo quando a internet oscila ou cai, e as vendas ficam registradas no computador da loja.
             </p>
             <ul class="list-disc list-inside text-gray-700 space-y-2 mb-6">
                 <li>Operação contínua mesmo sem internet</li>
-                <li>Zero perda de vendas por falhas de rede</li>
+                <li>Vendas registradas localmente quando a rede falha</li>
                 <li>Centro de Segurança e Backup no painel para políticas de retenção</li>
                 <li>Múltiplos terminais operando de forma independente quando aplicável</li>
             </ul>
             
             <h3 class="text-2xl font-semibold text-gray-800 mb-4">Enlace de Contingência</h3>
             <p class="text-gray-700 leading-relaxed mb-4">
-                Quando a internet cai por completo, o PDV <strong>nunca para de vender</strong>. O enlace de contingência mantém a comunicação de dados vitais e a validação de licença por canal alternativo; a recuperação de senha do operador também pode usar esse canal. Banner e indicador na tela informam quando o modo está ativo.
+                Com dispositivo Android dedicado, configurado pela Cara Core ou por parceiros, o PDV envia resumo por SMS quando a internet cai. O recurso é desligado por padrão; não substitui a internet nem faz recuperação de senha. Banner e indicador na tela informam quando o modo está ativo.
             </p>
             <p class="text-gray-600 text-sm mb-6">A configuração e o dispositivo dedicado são feitos pela equipe Cara Core ou por parceiros. Consulte <a href="consultoria.html" class="green-accent hover:underline">Consultoria</a>.</p>
             
@@ -296,17 +296,17 @@
             
             <h3 class="text-2xl font-semibold text-gray-800 mb-4 mt-8">Configuração de E-mail e Contador</h3>
             <p class="text-gray-700 leading-relaxed mb-4">
-                O painel de <strong>Configuração de E-mail</strong> define servidor, porta e credenciais para envio de e-mails (recuperação de senha, notificações). A seção <strong>Contador responsável</strong> (nome e e-mail) prepara o destinatário para a trilha de envio ao contador conforme disponibilidade por release.
+                O painel de <strong>Configuração de E-mail</strong> define servidor, porta e credenciais para envio de relatórios ao contador e notificações. A recuperação de senha não usa e-mail. A seção <strong>Contador responsável</strong> (nome e e-mail) define o destinatário da trilha de envio ao contador.
             </p>
             
             <h3 class="text-2xl font-semibold text-gray-800 mb-4">Relatório ao contador</h3>
             <p class="text-gray-700 leading-relaxed mb-4">
-                Disponível nas duas edições, Free e Premium.
+                Disponível nas duas edições, Free e Pro.
             </p>
             
             <h3 class="text-2xl font-semibold text-gray-800 mb-4">Recuperação de senha</h3>
             <p class="text-gray-700 leading-relaxed mb-4">
-                Canais disponíveis: e-mail, WhatsApp e Telegram.
+                WhatsApp ou Telegram, com código de uso único. Recurso opcional, desligado por padrão e habilitado na configuração de mensageria.
             </p>
             
             <h3 class="text-2xl font-semibold text-gray-800 mb-4 mt-8">Infraestruturas externas (PIX e SEFAZ)</h3>
