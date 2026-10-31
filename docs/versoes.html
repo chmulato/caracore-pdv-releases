@@ -149,6 +149,35 @@
             </details>
         </section>
 
+        <section class="card wiki-card" id="candidato">
+            <h2>Candidato de bancada — build c343890</h2>
+            <p><span class="selo selo-previa">Não publicado</span></p>
+            <p>Pacote montado na bancada em 31/10/2026 para medir o código da <code>master</code>. <strong>Não é release, não é GA e não tem download</strong>: nenhuma tag, release ou asset foi criado. A distribuição continua sendo a <a href="download.html">3.2.12-free</a>, e a prévia pública segue a <a href="wiki-release-v4-0-0-rc6.html">4.0.0-rc6</a>.</p>
+            <div class="wiki-table-wrap">
+                <table class="wiki-table">
+                    <tbody>
+                        <tr><td>Arquivo</td><td><code class="break-all">CaraCore-PDV-4.0.0-qute-portable-windows-x64.zip</code></td></tr>
+                        <tr><td>Bytes</td><td>178317680</td></tr>
+                        <tr><td>SHA-256</td><td><code class="break-all">0c2003b0f99a75328f7ebe632fc20b07cb5834a3f75b6f0e97ccfb7aef83434d</code></td></tr>
+                        <tr><td>Runtime</td><td>Java 25.0.3 embutido</td></tr>
+                        <tr><td>Launcher</td><td>auto-update ativo para <code class="break-all">https://api.caracore.com.br/releases/latest.json</code></td></tr>
+                        <tr><td>Manifesto</td><td>6 entradas autoverificáveis, sem autorreferência; sidecar SHA-256 confere</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="text-sm text-slate-600">A leitura do sidecar e do manifesto foi feita no próprio ZIP: 289 entradas, <code>testzip</code> sem erro, canal <code>qute-portable-candidate</code>. T032 e a matriz M01–M11 <strong>não</strong> foram medidos neste hash — o aceite de outro pacote não se transporta. SCA segue não medido.</p>
+            <h3>O que a versão 4.0.0 traz</h3>
+            <ul>
+                <li><strong>Licença Pro por chave assinada (Ed25519):</strong> o token é verificado offline contra a chave pública embutida e amarrado ao hardware da máquina. A ativação é feita na tela, sem troca manual de arquivo de licença; a consulta online de licença é opcional e vem desligada.</li>
+                <li><strong>Atualização pelo gateway único <code>api.caracore.com.br</code>:</strong> o cliente lê <code>releases/latest.json</code>, exige <code>sha256</code> e entende o campo <code>mandatory</code>; a atualização pede confirmação e é adiada enquanto há venda aberta. Hoje o gateway anuncia a 3.2.12-free — uma instalação 4.0.0 só recebe oferta quando o canal apontar para a v4.</li>
+                <li><strong>Sincronização de vendas na rede local para o CaraCore HUB:</strong> venda finalizada vai ao HUB com token de pareamento. Vem desligada por padrão. É sincronização de vendas, não de estoque nem de pedido; PUDO é recurso do HUB, não do PDV.</li>
+                <li><strong>Suíte automatizada:</strong> 1.039 testes executados no CI do commit <code>c343890</code>, 0 falhas, 3 ignorados; cobertura de linha 52,82% contra piso de 50%.</li>
+            </ul>
+            <p class="wiki-links">
+                <a class="btn-release btn-release-outline" href="release-notes/v4.0.0-candidato-c343890.md">Registro completo do candidato (markdown)</a>
+            </p>
+        </section>
+
         <section class="card wiki-card" id="atual">
             <h2>Versão anterior — 3.2.12-free</h2>
             <p><span class="selo selo-anterior">Versão anterior · 3.2.12-free · 15/10/2026</span> <span class="text-sm text-slate-600 ml-2">Windows · Linux · macOS</span></p>
