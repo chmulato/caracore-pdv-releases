@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Versões — CaraCore PDV</title>
-    <meta name="description" content="Versões do CaraCore PDV: Free 3.2.12-free publicada. Validações de homologação em andamento, ver notas da versão. Prévia 4.0.0-rc6 para avaliação.">
+    <meta name="description" content="Versões do CaraCore PDV: Free 3.2.12-free publicada. Validações de homologação em andamento, ver notas da versão. Prévia de 31/10/2026 para avaliação.">
     <link rel="manifest" href="manifest.webmanifest">
     <meta name="theme-color" content="#166534">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -56,7 +56,7 @@
                 <h1 class="text-3xl md:text-5xl font-bold mb-4">Versões do CaraCore PDV</h1>
                 <p class="text-lg text-green-50">A mesma operação de caixa. Números de versão, não lojas diferentes.</p>
                 <p class="mt-4 flex flex-wrap justify-center gap-2">
-                    <span class="selo selo-previa">Em pré-lançamento · prévia rc6</span>
+                    <span class="selo selo-previa">Em pré-lançamento · prévia candidata</span>
                     <span class="selo selo-anterior">Versão anterior · 3.2.12-free</span>
                 </p>
             </div>
@@ -64,7 +64,7 @@
     </section>
 
     <div class="wrapper">
-        <p class="download-notice">O PDV v4 está em pré-lançamento: a prévia <strong>4.0.0-rc6</strong> é pública para avaliação no Windows. A <strong>3.2.12-free</strong> é a versão anterior, em manutenção de transição até 08/11/2026 e ainda a indicada para operar em Windows, Linux e macOS. Instale cada versão em uma pasta separada.</p>
+        <p class="download-notice">O PDV v4 está em pré-lançamento: a prévia de <strong>31/10/2026</strong> é pública para avaliação no Windows. A <strong>3.2.12-free</strong> é a versão anterior, em manutenção de transição até 08/11/2026 e ainda a indicada para operar em Windows, Linux e macOS. Instale cada versão em uma pasta separada.</p>
 
         <section class="card wiki-card" id="canais">
             <h2>Comparativo das versões</h2>
@@ -74,7 +74,7 @@
                         <tr>
                             <th>Item</th>
                             <th>3.2.12-free</th>
-                            <th>PDV v4 (prévia rc6)</th>
+                            <th>PDV v4 (prévia 31/10/2026)</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -116,41 +116,25 @@
                         <tr>
                             <td>SHA-256</td>
                             <td><a href="wiki-release-v3-2-12-free.html">Notas e hashes</a></td>
-                            <td><a href="wiki-release-v4-0-0-rc6.html">Notas e hash</a></td>
+                            <td><a href="release-notes/v4.0.0-candidato-c343890.md">Registro da prévia</a></td>
                         </tr>
                         <tr>
-                            <td>Pré-release de bancada</td>
-                            <td colspan="2">build c343890 · SHA-256 <code class="break-all">0c2003b0…83434d</code> · limite Free de 100 vendas finalizadas por mês civil · <strong>não é GA</strong></td>
+                            <td>Prévia pública</td>
+                            <td colspan="2">build de 31/10/2026 · SHA-256 <code class="break-all">0c2003b0…83434d</code> · limite Free de 100 vendas finalizadas por mês civil · <strong>não é GA</strong></td>
                         </tr>
                     </tbody>
                 </table>
             </div>
-            <p class="text-sm text-slate-600">As datas são as do último build de cada linha. O build mais recente da v4 é de 31/10/2026 (pré-release de medição); a prévia pública continua a 4.0.0-rc6, de 10/10/2026. Data de build não indica qual linha é a recomendada para operar.</p>
-            <p>As duas versões seguem o plano Free, com limite de 100 vendas finalizadas por mês civil. A 3.2.12-free é a versão anterior: abre no navegador no Windows, Linux e macOS, com homologação em andamento, e segue disponível enquanto a v4 não é aprovada. A 4.0.0-rc6 é a prévia pública do PDV v4 para avaliação no Windows e abre no Edge. A versão final da v4 depende de aprovação formal, sem data de GA definida.</p>
+            <p class="text-sm text-slate-600">As datas são as do último build de cada linha. O build mais recente da v4 é de 31/10/2026, a prévia pública atual; a RC6, de 10/10/2026, fica no histórico. Data de build não indica qual linha é a recomendada para operar.</p>
+            <p>As duas versões seguem o plano Free, com limite de 100 vendas finalizadas por mês civil. A 3.2.12-free é a versão anterior: abre no navegador no Windows, Linux e macOS, com homologação em andamento, e segue disponível enquanto a v4 não é aprovada. A prévia de 31/10/2026 é a versão pública de avaliação do PDV v4 no Windows e abre no Edge. A versão final da v4 depende de aprovação formal, sem data de GA definida.</p>
         </section>
 
         <section class="card wiki-card" id="proxima">
             <span id="previa" hidden></span>
-            <h2>PDV v4 em pré-lançamento — prévia 4.0.0-rc6</h2>
-            <p><span class="selo selo-previa">Em pré-lançamento · prévia rc6</span></p>
-            <p>A <strong>4.0.0-rc6</strong> é a prévia pública do PDV v4 para avaliação no Windows, com o plano Free e até 100 vendas finalizadas por mês civil. Não é a versão final e não substitui a 3.2.12-free na operação. Extraia em pasta nova e execute <code>iniciar_pdv.bat</code> (sublinhado). Os dados e registros de execução ficam em <code>.\data</code>. Requer Windows 10/11 x64 e Microsoft Edge. Não precisa instalar Java: ele vem dentro do ZIP.</p>
-            <p>Distribuição somente em ZIP portátil Windows x64 sem assinatura digital; sem instalador MSI. SHA256: <code class="break-all">0c00b24b33b3c365fd1f24ec173bfa4e35bedf1946b2df4151035250780d5325</code>.</p>
-            <p class="wiki-links">
-                <a class="btn-release" href="download.html#pre-release-v4">Avaliar a prévia v4</a>
-                <a class="btn-release btn-release-outline" href="canal-feedback.html">Enviar feedback</a>
-                <a class="btn-release btn-release-outline" href="wiki-release-v4-0-0-rc6.html">Notas da RC6</a>
-                <a class="btn-release btn-release-outline" href="homologacao-v4.html#rc6">Homologação</a>
-            </p>
-            <details class="mt-3 text-xs text-slate-500">
-                <summary class="cursor-pointer">Pré-releases anteriores</summary>
-                <p class="mt-2"><a href="wiki-release-v4-0-0-rc5.html" class="underline">RC5</a> · <a href="wiki-release-v4-0-0-rc4.html" class="underline">RC4</a> · <a href="wiki-release-v4-0-0-rc3.html" class="underline">RC3</a> · <a href="wiki-release-v4-0-0-rc2.html" class="underline">RC2</a> · <a href="wiki-release-v4-0-0-rc1.html" class="underline">RC1</a>.</p>
-            </details>
-        </section>
-
-        <section class="card wiki-card" id="candidato">
-            <h2>Pré-release de bancada 4.0.0 — build c343890</h2>
-            <p><span class="selo selo-previa">Pré-release · não é GA</span> <span class="text-sm text-slate-600 ml-2">build de 31/10/2026</span></p>
-            <p>Pacote montado na bancada para medir o código da <code>master</code> e publicado como <strong>pré-release de bancada</strong> com autorização escrita do dono (F7). Não é GA, não é "stable" e não substitui a versão indicada para operar. O ZIP e o sidecar <code>SHA256SUMS</code> estão como assets na <a href="https://github.com/chmulato/caracore-pdv-releases/releases/tag/v4.0.0-candidato-20261031">release no GitHub</a>; a distribuição indicada continua sendo a <a href="download.html">3.2.12-free</a>, e a prévia pública segue a <a href="wiki-release-v4-0-0-rc6.html">4.0.0-rc6</a>.</p>
+            <h2>PDV v4 em pré-lançamento — prévia de 31/10/2026</h2>
+            <p><span class="selo selo-previa">Em pré-lançamento · prévia candidata</span></p>
+            <p>A <strong>prévia de 31/10/2026</strong> (build <code>c343890</code>) é a versão pública de avaliação do PDV v4 para Windows, com o plano Free e até 100 vendas finalizadas por mês civil. Não é a versão final e não substitui a 3.2.12-free na operação. Extraia em pasta nova e execute <code>iniciar_pdv.bat</code> (sublinhado). Os dados e registros de execução ficam em <code>.\data</code>. Requer Windows 10/11 x64 e Microsoft Edge. Não precisa instalar Java: ele vem dentro do ZIP.</p>
+            <p>Distribuição somente em ZIP portátil Windows x64 sem assinatura digital; sem instalador MSI. O ZIP e o sidecar <code>SHA256SUMS</code> estão na <a href="https://github.com/chmulato/caracore-pdv-releases/releases/tag/v4.0.0-candidato-20261031">release no GitHub</a>. Não é GA: a distribuição indicada para operar continua sendo a <a href="download.html">3.2.12-free</a>, e a <a href="wiki-release-v4-0-0-rc6.html">4.0.0-rc6</a> fica no histórico.</p>
             <div class="wiki-table-wrap">
                 <table class="wiki-table">
                     <tbody>
@@ -175,8 +159,13 @@
                 <a class="btn-release" href="https://github.com/chmulato/caracore-pdv-releases/releases/download/v4.0.0-candidato-20261031/CaraCore-PDV-4.0.0-qute-portable-windows-x64.zip">Baixar o ZIP (Windows x64)</a>
                 <a class="btn-release btn-release-outline" href="https://github.com/chmulato/caracore-pdv-releases/releases/download/v4.0.0-candidato-20261031/CaraCore-PDV-4.0.0-qute-portable-SHA256SUMS.txt">SHA256SUMS</a>
                 <a class="btn-release btn-release-outline" href="https://github.com/chmulato/caracore-pdv-releases/releases/tag/v4.0.0-candidato-20261031">Release no GitHub</a>
-                <a class="btn-release btn-release-outline" href="release-notes/v4.0.0-candidato-c343890.md">Registro completo do candidato (markdown)</a>
+                <a class="btn-release btn-release-outline" href="release-notes/v4.0.0-candidato-c343890.md">Registro completo da prévia (markdown)</a>
+                <a class="btn-release btn-release-outline" href="homologacao-v4.html">Homologação</a>
             </p>
+            <details class="mt-3 text-xs text-slate-500">
+                <summary class="cursor-pointer">Pré-releases anteriores</summary>
+                <p class="mt-2"><a href="wiki-release-v4-0-0-rc6.html" class="underline">RC6 (10/10/2026)</a> · <a href="wiki-release-v4-0-0-rc5.html" class="underline">RC5</a> · <a href="wiki-release-v4-0-0-rc4.html" class="underline">RC4</a> · <a href="wiki-release-v4-0-0-rc3.html" class="underline">RC3</a> · <a href="wiki-release-v4-0-0-rc2.html" class="underline">RC2</a> · <a href="wiki-release-v4-0-0-rc1.html" class="underline">RC1</a>.</p>
+            </details>
         </section>
 
         <section class="card wiki-card" id="atual">

@@ -1,6 +1,6 @@
 # CaraCore-PDV - Loja e Releases
 
-**Versão anterior = tag `v3.2.12-free` (Latest), em manutenção de transição até 08/11/2026 e ainda a indicada para operar.** O PDV v4 está em pré-lançamento; a prévia pública de avaliação é `v4.0.0-rc6`, que não é o download da loja. A `v4.0.0-rc5` fica no histórico.
+**Versão anterior = tag `v3.2.12-free` (Latest), em manutenção de transição até 08/11/2026 e ainda a indicada para operar.** O PDV v4 está em pré-lançamento; a prévia pública de avaliação é `v4.0.0-candidato-20261031`, build de 31/10/2026 (commit `c343890`), que não é o download da loja. A `v4.0.0-rc6` e a `v4.0.0-rc5` ficam no histórico.
 
 **Publicação de 15/10/2026:** corretiva de HTTP 405 e estorno/cancelamento, fonte `hotfix/3.2.12-free` commit `72ace488aed4ee91001c60cf40a3934ddfe8faf1`. 19/19 testes focados Java 25/H2 e CRC/estrutura dos ZIPs aprovados; hashes dos cinco assets remotos conferidos. Suíte completa, smoke portátil SQLite/health/navegador, execução Linux/macOS e homologação operacional completa seguem pendentes. Publicação estável/Latest autorizada explicitamente com essas ressalvas; não significa homologação completa. A 3.2.8 permanece no histórico. [Notas da corretiva](docs/wiki-release-v3-2-12-free.html).
 
@@ -46,8 +46,8 @@ A matriz de desenvolvimento fica no repositório **caracore-pdv**. Este reposit�
 | Campo | Valor |
 | ----- | ----- |
 | Versão anterior (download da loja) | `v3.2.12-free` (Free / balcão) · manutenção de transição até 08/11/2026 |
-| PDV v4 em pré-lançamento | prévia pública `v4.0.0-rc6` — Windows x64 · ZIP sem Authenticode · **não é o download da loja** |
-| Histórico imediato | `v4.0.0-rc5` — permanece publicada, não é a prévia atual |
+| PDV v4 em pré-lançamento | prévia pública `v4.0.0-candidato-20261031` (build de 31/10/2026) — Windows x64 · ZIP sem Authenticode · **não é o download da loja** |
+| Histórico imediato | `v4.0.0-rc6` e `v4.0.0-rc5` — permanecem publicadas, não são a prévia atual |
 | Publicação da versão anterior | 15/10/2026 |
 | Launcher Free | `iniciar-pdv.bat` (hífen) · navegador em `http://localhost:8080/login` |
 | Banco Free | `%APPDATA%\caracore\` (Windows) · `~/.caracore/` (Linux/macOS) |
@@ -62,20 +62,21 @@ A matriz de desenvolvimento fica no repositório **caracore-pdv**. Este reposit�
 | `caracore-pdv-v3.2.12-free-windows-x64.zip` | Windows 10/11 x64 | `6d7a50b0acf2a05620a090eebdd48f049a1dd5599ccb6c40c419c38145f7c0e2` |
 | `caracore-pdv-v3.2.12-free-linux-x64.zip` / `caracore-pdv-v3.2.12-free-macos-x64.zip` | Linux x64 / macOS Intel x64: mesmo pacote Java portátil (123.561.524 bytes), requer JDK 25 instalado | `795a396318da61d1bd45dcfe816879d2184706f1c7849f1cd2ad98baa99fd9c1` |
 
-### Pré-release atual v4.0.0-rc6 — not store download
+### Prévia pública v4.0.0-candidato-20261031 — build de 31/10/2026, not store download
 
 | Artefato | Plataforma | SHA256 |
 | -------- | ---------- | ------ |
-| `CaraCore-PDV-4.0.0-rc6-qute-portable-windows-x64.zip` | Windows x64 | `0c00b24b33b3c365fd1f24ec173bfa4e35bedf1946b2df4151035250780d5325` |
+| `CaraCore-PDV-4.0.0-qute-portable-windows-x64.zip` (178.317.680 bytes) | Windows x64 | `0c2003b0f99a75328f7ebe632fc20b07cb5834a3f75b6f0e97ccfb7aef83434d` |
+| `CaraCore-PDV-4.0.0-qute-portable-SHA256SUMS.txt` | sidecar do ZIP | conferido no pacote (289 entradas; manifesto com 6 entradas) |
 | Launcher | `iniciar_pdv.bat` (underscore) | Edge em modo aplicativo |
 | Banco | só `./data/caracore-pdv.db` | Não abre `%APPDATA%\caracore\` |
 | Requisitos | Windows 10/11 x64 e Microsoft Edge; Java 25 incluído no ZIP | Ciclo manual completo do roteiro ainda pendente |
 
-Notas e download: <https://pdv.caracore.com.br/wiki-release-v4-0-0-rc6.html>. Roteiro: <https://pdv.caracore.com.br/homologacao-v4.html#rc6>.
+Notas e download: <https://pdv.caracore.com.br/download.html#pre-release-v4> · registro: <https://pdv.caracore.com.br/release-notes/v4.0.0-candidato-c343890.md> · roteiro: <https://pdv.caracore.com.br/homologacao-v4.html>.
 
-O ZIP é unsigned; o hash detecta alterações, mas não autentica a identidade do publicador. Não desative SmartScreen, Defender nem antivírus. A homologação manual completa no Edge e com leitor físico ainda não foi concluída; a publicação foi autorizada com essa ressalva. O Free 3.2.12 é o download principal da loja.
+O ZIP é unsigned; o hash detecta alterações, mas não autentica a identidade do publicador. Não desative SmartScreen, Defender nem antivírus. A homologação manual completa no Edge e com leitor físico ainda não foi concluída; a publicação foi autorizada com essa ressalva. T032 e a matriz M01–M11 foram medidos em `ff400efd`, não neste pacote; o SCA segue não medido e o cenário "banco 3.2.12 migrado" continua bloqueado. O Free 3.2.12 é o download principal da loja.
 
-A `v4.0.0-rc5` fica no histórico, com SHA-256 `d45d12d9fbf6e3923f69ddbbf6173ef2128be0341e30e75f038b7dc1f3ab6f81`.
+A `v4.0.0-rc6` (`0c00b24b33b3c365fd1f24ec173bfa4e35bedf1946b2df4151035250780d5325`) e a `v4.0.0-rc5` (`d45d12d9fbf6e3923f69ddbbf6173ef2128be0341e30e75f038b7dc1f3ab6f81`) ficam no histórico.
 
 ### Histórico técnico — v4.0.0-rc3
 
@@ -112,7 +113,7 @@ A tag `v0.1.4` (MSI/EXE/ZIP) é o piloto Rust em <https://pdv-rust.caracore.com.
 
 ### Linha atual: `java_25`
 
-A vitrine em `docs/` segue a trilha Java 25 da matriz, com SQLite local e soberania localhost. O PDV v4 está em pré-lançamento e a prévia pública é a `v4.0.0-rc6` (Quarkus + Qute), build de 11/10/2026 com o SHA-256 registrado acima; ela não substitui a versão anterior. A versão anterior é a tag `v3.2.12-free`, em manutenção de transição até 08/11/2026. A RC7 está somente em homologação local na oficina, sem publicação ou aceite global. O corte de GA foi recusado; a data 08/11/2026 está em reavaliação, sem data nova.
+A vitrine em `docs/` segue a trilha Java 25 da matriz, com SQLite local e soberania localhost. O PDV v4 está em pré-lançamento e a prévia pública é a de 31/10/2026 (`v4.0.0-candidato-20261031`, Quarkus + Qute, commit `c343890`, 178.317.680 bytes, SHA-256 registrado acima); ela não substitui a versão anterior. A versão anterior é a tag `v3.2.12-free`, em manutenção de transição até 08/11/2026. O Gate E recusou o corte do GA em 29/10/2026 e a rota aprovada é uma `rc7` curta seguida de GA em data escrita; nenhuma tag `rc7` foi publicada. 08/11/2026 encerra a manutenção da 3.2.12 e não é a data de GA da v4.
 
 Notas da versão anterior: <https://pdv.caracore.com.br/wiki-release-v3-2-12-free.html>
 
@@ -150,11 +151,11 @@ Download e onboarding:
 | `docs/download.html` | Página de download da Degustação Free (Windows, Linux e macOS) |
 | `docs/pwa.html` | PWA da vitrine (não é o caixa) |
 | `docs/tecnologia.html` | Soluções e pilares técnicos |
-| `docs/versoes.html` | Versão anterior (3.2.12-free), PDV v4 em pré-lançamento (4.0.0-rc6) e histórico |
+| `docs/versoes.html` | Versão anterior (3.2.12-free), PDV v4 em pré-lançamento (prévia de 31/10/2026) e histórico |
 | `docs/wiki-release-v3-2-12-free.html` | Notas da versão anterior Free |
 | `docs/wiki-release-v3-2-7-free.html` | Notas históricas da 3.2.7-free |
 | `docs/wiki-release-v3-2-6-free.html` | Notas históricas da 3.2.6-free |
-| `docs/wiki-release-v4-0-0-rc6.html` | Notas e SHA-256 da prévia pública atual (não é o download da loja) |
+| `docs/wiki-release-v4-0-0-rc6.html` | Notas e SHA-256 históricos da RC6 (não é a prévia atual) |
 | `docs/wiki-release-v3-2-5-free.html` | Notas históricas da 3.2.5-free |
 | `docs/wiki-release-v4-0-0-rc5.html` | Notas e SHA-256 históricos da RC5 |
 | `docs/wiki-release-v4-0-0-rc3.html` | Notas e hash histórico da RC3 |

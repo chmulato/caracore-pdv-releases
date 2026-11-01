@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homologação CaraCore PDV v4</title>
-    <meta name="description" content="Roteiro de homologação da pré-release CaraCore PDV 4.0.0-rc6. O registro da 4.0.0-rc5 permanece pendente.">
+    <meta name="description" content="Roteiro de homologação da prévia CaraCore PDV de 31/10/2026. O registro da 4.0.0-rc6 fica no histórico e o da 4.0.0-rc5 permanece pendente.">
     <meta name="theme-color" content="#166534">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="assets/css/portal-style.css">
@@ -19,21 +19,21 @@
         <span> · </span>
         <a href="index.html" class="hover:text-green-600">CaraCore PDV</a>
         <span> · </span>
-        <a href="wiki-release-v4-0-0-rc6.html" class="hover:text-green-600">v4.0.0-rc6</a>
+        <a href="download.html#pre-release-v4" class="hover:text-green-600">prévia de 31/10/2026</a>
         <span> · homologação</span>
     </nav>
     <header class="portal-hero green-bg text-white py-12">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
             <h1 class="text-3xl md:text-4xl font-bold mb-4">Roteiro de homologação v4</h1>
-            <p class="text-lg text-green-50">A pré-release publicada é a 4.0.0-rc6. O ciclo manual completo do roteiro no Edge ainda não foi preenchido. O registro da 4.0.0-rc5 continua pendente.</p>
+            <p class="text-lg text-green-50">A prévia pública é a de 31/10/2026. O ciclo manual completo do roteiro no Edge ainda não foi preenchido. O registro da 4.0.0-rc5 continua pendente.</p>
         </div>
     </header>
     <main class="wrapper space-y-6">
         <section class="card wiki-card">
             <p>Gate T032 da pré-release Qute portátil, edição Free. Não é a versão anterior 3.2.12-free. O plano Free não emite NF-e/NFC-e. O PIX é feito pela maquininha do banco.</p>
-            <p class="mt-3"><a href="#rc6">Registro da 4.0.0-rc6</a> · <a href="#rc5">Registro da 4.0.0-rc5</a></p>
+            <p class="mt-3"><a href="#candidato">Registro da prévia de 31/10/2026</a> · <a href="#rc6">Registro da 4.0.0-rc6</a> · <a href="#rc5">Registro da 4.0.0-rc5</a></p>
             <p class="mt-4 flex flex-wrap gap-3">
-                <a class="btn-release" href="download.html#instalacao-rc6">Avaliar prévia v4</a>
+                <a class="btn-release" href="download.html#pre-release-v4">Avaliar prévia v4</a>
                 <a class="btn-release btn-release-outline" href="canal-feedback.html">Enviar feedback</a>
             </p>
         </section>
@@ -82,8 +82,16 @@
             </table>
         </section>
 
+        <section id="candidato" class="card wiki-card">
+            <h2 class="text-xl font-bold mb-3">Prévia de 31/10/2026 — build c343890</h2>
+            <p>ZIP portátil Windows x64, 178.317.680 bytes, SHA-256 <code class="break-all">0c2003b0f99a75328f7ebe632fc20b07cb5834a3f75b6f0e97ccfb7aef83434d</code>, gerado do commit <code>c343890</code> e publicado como pré-release para avaliação. O código desse commit passou por 1.039 testes no CI, 0 falhas, 3 ignorados, com cobertura de linha 52,82% contra piso de 50%.</p>
+            <p class="mt-3">O pacote foi conferido por dentro: 289 entradas, <code>testzip</code> sem erro, sidecar SHA-256 e manifesto com 6 entradas. T032 e a matriz M01–M11 foram medidos em <code>ff400efd</code>, <strong>não neste pacote</strong> — o aceite de outro pacote não se transporta. O SCA segue não medido e o cenário "banco 3.2.12 migrado" continua bloqueado.</p>
+            <p class="mt-3">O ciclo manual do roteiro (os mesmos 16 passos aplicados às RCs) ainda não foi executado neste pacote. Preencher o resultado obtido passo a passo é o que falta para o aceite.</p>
+            <p class="mt-3"><a class="underline" href="release-notes/v4.0.0-candidato-c343890.md">Registro completo da prévia</a></p>
+        </section>
+
         <section id="rc6" class="card wiki-card">
-            <h2 class="text-xl font-bold mb-3">4.0.0-rc6 — pré-release publicada</h2>
+            <h2 class="text-xl font-bold mb-3">4.0.0-rc6 — prévia anterior, no histórico</h2>
             <p>ZIP no GitHub substituído de novo em 11/10/2026. SHA-256: <code>0c00b24b33b3c365fd1f24ec173bfa4e35bedf1946b2df4151035250780d5325</code>. 178.166.244 bytes. O arquivo anterior desta tag (SHA-256 <code>847f0cfec022b33e0d4c1c7d608cc0772ab1c46064004a093037dd7a29dc840f</code>) saiu. Neste pacote foram vistos o menu, uma venda, o recibo e a saída da sessão. O roteiro completo no Edge continua pendente.</p>
             <p class="mt-3"><a class="underline" href="wiki-release-v4-0-0-rc6.html">Notas e download</a></p>
             <h3 class="text-lg font-bold mt-4 mb-2">Conferido na oficina antes do ZIP</h3>
@@ -100,7 +108,7 @@
                 <li>Câmera do leitor com a rede desligada, débito, crédito, 101ª venda e desligamento com token.</li>
             </ul>
         </section>
-        <p class="text-sm text-gray-600">Notas: <a class="underline" href="wiki-release-v4-0-0-rc6.html">4.0.0-rc6</a>.</p>
+        <p class="text-sm text-gray-600">Notas: <a class="underline" href="release-notes/v4.0.0-candidato-c343890.md">prévia de 31/10/2026</a> · <a class="underline" href="wiki-release-v4-0-0-rc6.html">4.0.0-rc6</a>.</p>
     </main>
     <script src="assets/js/loja.js"></script>
 </body>
