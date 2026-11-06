@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Versões — CaraCore PDV</title>
-    <meta name="description" content="Versões do CaraCore PDV: Free 3.2.12-free publicada. Validações de homologação em andamento, ver notas da versão. Prévia de 31/10/2026 para avaliação.">
+    <meta name="description" content="Versões do CaraCore PDV: v4.0.0 lançada em 08/11/2026 para Windows, com migração do banco da 3.2.x; 3.2.12-free como versão anterior para Windows, Linux e macOS. Notas, hashes e comparativo.">
     <link rel="manifest" href="manifest.webmanifest">
     <meta name="theme-color" content="#166534">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -33,7 +33,7 @@
                     <a href="index.html#planos" class="text-gray-700 hover:text-green-600 font-medium transition">Planos</a>
                     <a href="versoes.html" class="text-green-700 font-semibold">Versões</a>
                     <a href="index.html#demo" class="cta-link text-sm font-medium transition">Demonstração</a>
-                    <a href="download.html#instalacao" class="cta-btn text-white px-6 py-2 rounded-lg font-semibold hover:shadow-lg transition text-center">
+                    <a href="download.html#v4-0-0" class="cta-btn text-white px-6 py-2 rounded-lg font-semibold hover:shadow-lg transition text-center">
                         Baixar
                     </a>
                 </div>
@@ -56,7 +56,7 @@
                 <h1 class="text-3xl md:text-5xl font-bold mb-4">Versões do CaraCore PDV</h1>
                 <p class="text-lg text-green-50">A mesma operação de caixa. Números de versão, não lojas diferentes.</p>
                 <p class="mt-4 flex flex-wrap justify-center gap-2">
-                    <span class="selo selo-previa">Prévia pública até 08/11/2026</span>
+                    <span class="selo selo-estavel">Lançamento oficial · CaraCore PDV v4.0.0</span>
                     <span class="selo selo-anterior">Versão anterior · 3.2.12-free</span>
                 </p>
             </div>
@@ -64,16 +64,13 @@
     </section>
 
     <div class="wrapper">
-        <!-- v4.0.0 GA (build de 06/11/2026, lançamento em 08/11/2026): release publicada e medida
+        <!-- v4.0.0 GA (build de 06/11/2026, lançado em 08/11/2026): release publicada e medida
              (T032 17/17, matriz 11/11 itens aprovados com M11 não medida, migrado 9/9, sonda 20/0/1/0,
-             C2 aprovado, VERIFICADO com duas
-             chaves), canal pdv-v4 servindo este hash. Na virada (A6), atualizar o aviso do topo, o
-             cabeçalho da coluna v4, o status, o último build, a linha SHA-256, a seção #proxima e o
-             parágrafo de #atual ("enquanto a v4 não é aprovada").
+             C2 aprovado, VERIFICADO com duas chaves), canal pdv-v4 servindo este hash.
              ZIP: https://github.com/chmulato/caracore-pdv4-releases/releases/download/v4.0.0/CaraCore-PDV-4.0.0-qute-portable-windows-x64.zip
              SHA-256: 9557e0b16d77a85e0bb68971eb0e8710356977261337a8c1c05593e893d81eac · bytes: 176.613.179
              SHA256SUMS: https://github.com/chmulato/caracore-pdv4-releases/releases/download/v4.0.0/SHA256SUMS.txt -->
-        <p class="download-notice">O PDV v4.0.0 tem lançamento marcado para <strong>08/11/2026</strong>: até lá, a prévia de <strong>31/10/2026</strong> é pública para avaliação no Windows. A <strong>3.2.12-free</strong> é a versão anterior, em manutenção de transição até 08/11/2026 e ainda a indicada para operar em Windows, Linux e macOS. O pacote final da v4.0.0 foi publicado em 06/11/2026, com T032 17/17 no próprio ZIP e duas assinaturas Ed25519; o lançamento está marcado para 08/11/2026. Instale cada versão em uma pasta separada.</p>
+        <p class="download-notice">O <strong>CaraCore PDV v4.0.0</strong> foi lançado em <strong>08/11/2026</strong>: pacote de 06/11/2026, T032 17/17 no próprio ZIP e duas assinaturas Ed25519. É a versão indicada para operar no Windows 10/11 x64, com migração do banco da 3.2.x no primeiro acesso. A <strong>3.2.12-free</strong> passa a versão anterior, com manutenção de transição encerrada em 08/11/2026 e pacotes ainda disponíveis para Windows, Linux e macOS. A prévia de 31/10/2026 fica no histórico. Instale cada versão em uma pasta separada.</p>
 
         <section class="card wiki-card" id="canais">
             <h2>Comparativo das versões</h2>
@@ -83,7 +80,7 @@
                         <tr>
                             <th>Item</th>
                             <th>3.2.12-free</th>
-                            <th>PDV v4 (prévia 31/10/2026)</th>
+                            <th>PDV v4.0.0</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -115,75 +112,68 @@
                         <tr>
                             <td>Status</td>
                             <td><span class="selo selo-anterior">Versão anterior</span></td>
-                            <td><span class="selo selo-previa">Prévia até 08/11/2026</span></td>
+                            <td><span class="selo selo-estavel">Lançamento oficial</span></td>
                         </tr>
                         <tr>
                             <td>Último build</td>
-                            <td>15/10/2026 · manutenção</td>
-                            <td>31/10/2026 · pré-release</td>
+                            <td>15/10/2026 · manutenção encerrada</td>
+                            <td>06/11/2026 · lançado em 08/11/2026</td>
                         </tr>
                         <tr>
                             <td>SHA-256</td>
                             <td><a href="wiki-release-v3-2-12-free.html">Notas e hashes</a></td>
-                            <td><a href="release-notes/v4.0.0-candidato-c343890.md">Registro da prévia</a></td>
+                            <td><a href="release-notes/v4.0.0.md">Notas e hash</a></td>
                         </tr>
                         <tr>
-                            <td>Prévia pública</td>
-                            <td colspan="2">build de 31/10/2026 · SHA-256 <code class="break-all">0c2003b0…83434d</code> · limite Free de 100 vendas finalizadas por mês civil · <strong>não é o GA de 08/11/2026</strong></td>
+                            <td>Lançamento oficial</td>
+                            <td colspan="2">v4.0.0 · build de 06/11/2026 · SHA-256 <code class="break-all">9557e0b1…d81eac</code> · migração do banco da 3.2.x no primeiro acesso · limite Free de 100 vendas finalizadas por mês civil · prévia de 31/10/2026 no histórico</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
-            <p class="text-sm text-slate-600">As datas são as do último build de cada linha. A prévia pública é de 31/10/2026 e o pacote final da v4.0.0 é de 06/11/2026, já publicado e medido; a RC6, de 10/10/2026, fica no histórico. Data de build não indica qual linha é a recomendada para operar.</p>
-            <p>As duas versões seguem o plano Free, com limite de 100 vendas finalizadas por mês civil. A 3.2.12-free é a versão anterior: abre no navegador no Windows, Linux e macOS, com homologação em andamento, e segue disponível até o lançamento da v4.0.0, em 08/11/2026. A prévia de 31/10/2026 é a versão pública de avaliação do PDV v4 no Windows e abre no Edge. O pacote final da v4.0.0 foi publicado em 06/11/2026, com T032 17/17 no próprio ZIP e duas assinaturas Ed25519; o lançamento está marcado para 08/11/2026.</p>
+            <p class="text-sm text-slate-600">As datas são as do último build de cada linha. O pacote da v4.0.0 é de 06/11/2026, foi medido e lançado em 08/11/2026; a prévia de 31/10/2026 e a RC6, de 10/10/2026, ficam no histórico. Data de build não indica qual linha é a recomendada para operar.</p>
+            <p>As duas versões seguem o plano Free, com limite de 100 vendas finalizadas por mês civil. A <strong>v4.0.0</strong> é a versão indicada para operar: Windows 10/11 x64, abre no Edge e migra o banco da 3.2.x no primeiro acesso. A 3.2.12-free é a versão anterior: abre no navegador no Windows, Linux e macOS, com manutenção de transição encerrada em 08/11/2026. A prévia de 31/10/2026 fica no histórico, sem migração de dados e sem substituir a v4.0.0.</p>
         </section>
 
         <section class="card wiki-card" id="proxima">
             <span id="previa" hidden></span>
-            <h2>PDV v4 — prévia de 31/10/2026, até o GA de 08/11/2026</h2>
-            <p><span class="selo selo-previa">Prévia pública até 08/11/2026</span></p>
-            <p>A <strong>prévia de 31/10/2026</strong> (build <code>c343890</code>) é a versão pública de avaliação do PDV v4 para Windows, com o plano Free e até 100 vendas finalizadas por mês civil. Não é a versão final e não substitui a 3.2.12-free na operação. Extraia em pasta nova e execute <code>iniciar_pdv.bat</code> (sublinhado). Os dados e registros de execução ficam em <code>.\data</code>. Requer Windows 10/11 x64 e Microsoft Edge. Não precisa instalar Java: ele vem dentro do ZIP.</p>
-            <p>Distribuição somente em ZIP portátil Windows x64 sem assinatura digital; sem instalador MSI. O ZIP e o sidecar <code>SHA256SUMS</code> estão na <a href="https://github.com/chmulato/caracore-pdv-releases/releases/tag/v4.0.0-candidato-20261031">release no GitHub</a>. Não é o GA de 08/11/2026: a distribuição indicada para operar continua sendo a <a href="download.html">3.2.12-free</a>, e a <a href="wiki-release-v4-0-0-rc6.html">4.0.0-rc6</a> fica no histórico.</p>
+            <h2>PDV v4.0.0 — lançado em 08/11/2026</h2>
+            <p><span class="selo selo-estavel">Lançamento oficial · v4.0.0</span></p>
+            <p>O <strong>PDV v4.0.0</strong> (build <code>be0f74b</code>, de 06/11/2026) foi lançado em <strong>08/11/2026</strong> e é a versão indicada para operar no Windows 10/11 x64, com o plano Free e até 100 vendas finalizadas por mês civil. Extraia o ZIP em pasta nova e execute <code>iniciar_pdv.bat</code> (sublinhado). Os dados e registros de execução ficam em <code>.\data</code>. Requer Microsoft Edge. Não precisa instalar Java: ele vem dentro do ZIP. O banco da 3.2.x é migrado no primeiro acesso — faça backup antes.</p>
+            <p>Distribuição somente em ZIP portátil Windows x64 sem assinatura digital; sem instalador MSI. O ZIP e o sidecar <code>SHA256SUMS</code>, assinado com duas chaves Ed25519, estão na <a href="https://github.com/chmulato/caracore-pdv4-releases/releases/tag/v4.0.0">release no GitHub</a>. A <a href="download.html#pre-release-v4">prévia de 31/10/2026</a> e a <a href="wiki-release-v4-0-0-rc6.html">4.0.0-rc6</a> ficam no histórico.</p>
             <div class="wiki-table-wrap">
                 <table class="wiki-table">
                     <tbody>
                         <tr><td>Arquivo</td><td><code class="break-all">CaraCore-PDV-4.0.0-qute-portable-windows-x64.zip</code></td></tr>
-                        <tr><td>Bytes</td><td>178317680</td></tr>
-                        <tr><td>SHA-256</td><td><code class="break-all">0c2003b0f99a75328f7ebe632fc20b07cb5834a3f75b6f0e97ccfb7aef83434d</code></td></tr>
-                        <tr><td>Runtime</td><td>Java 25.0.3 embutido</td></tr>
-                        <tr><td>Launcher</td><td>auto-update ativo para <code class="break-all">https://api.caracore.com.br/releases/latest.json</code></td></tr>
-                        <tr><td>Manifesto</td><td>6 entradas autoverificáveis, sem autorreferência; sidecar SHA-256 confere</td></tr>
+                        <tr><td>Bytes</td><td>176613179</td></tr>
+                        <tr><td>SHA-256</td><td><code class="break-all">9557e0b16d77a85e0bb68971eb0e8710356977261337a8c1c05593e893d81eac</code></td></tr>
+                        <tr><td>Runtime</td><td>Java 25 embutido</td></tr>
+                        <tr><td>Launcher</td><td>auto-update ativo para <code class="break-all">https://api.caracore.com.br/releases/pdv-v4/latest.json</code></td></tr>
+                        <tr><td>Assinaturas</td><td>SHA256SUMS assinado com as chaves <code>pdv-release-2026-a</code> e <code>pdv-release-2026-b</code> (Ed25519); <code>verificar_release.py --require-signatures 2</code> = VERIFICADO</td></tr>
                     </tbody>
                 </table>
             </div>
-            <p class="text-sm text-slate-600">A leitura do sidecar e do manifesto foi feita no próprio ZIP: 289 entradas, <code>testzip</code> sem erro, canal <code>qute-portable-candidate</code>. T032 e a matriz M01–M11 <strong>não</strong> foram medidos neste hash — o aceite de outro pacote não se transporta. SCA segue não medido.</p>
+            <p class="text-sm text-slate-600">No próprio hash: T032 17/17, matriz M01–M11 11/11 (M11 não medida, bloqueada por PERF-001–007), migração do banco da 3.2.x 9/9 e sonda de promessas 20 aprovadas, 0 reprovadas, 1 não coberta; C2 aprovado, sem conexões externas nas amostras. O aceite não se transporta para outro pacote. SCA: varredura OSV de 06/11/2026; NVD não medido.</p>
             <h3>O que a versão 4.0.0 traz</h3>
             <ul>
                 <li><strong>Licença Pro por chave assinada (Ed25519):</strong> o token é verificado offline contra a chave pública embutida e amarrado ao hardware da máquina. A ativação é feita na tela, sem troca manual de arquivo de licença; a consulta online de licença é opcional e vem desligada.</li>
-                <li><strong>Atualização pelo gateway único <code>api.caracore.com.br</code>:</strong> o cliente lê <code>releases/latest.json</code>, exige <code>sha256</code> e entende o campo <code>mandatory</code>; a atualização pede confirmação e é adiada enquanto há venda aberta. Hoje o gateway anuncia a 3.2.12-free — uma instalação 4.0.0 só recebe oferta quando o canal apontar para a v4.</li>
+                <li><strong>Atualização pelo gateway único <code>api.caracore.com.br</code>:</strong> o cliente lê <code>releases/pdv-v4/latest.json</code>, exige <code>sha256</code> e confere a assinatura Ed25519 do canal; a atualização pede confirmação e é adiada enquanto há venda aberta. O download é feito pelo próprio app e a aplicação do pacote é manual.</li>
                 <li><strong>Sincronização de vendas na rede local:</strong> a venda finalizada pode ser enviada pela rede com token de pareamento. Vem desligada por padrão. É sincronização de vendas, não de estoque nem de pedido.</li>
-                <li><strong>Suíte automatizada:</strong> 1.039 testes executados no CI do commit <code>c343890</code>, 0 falhas, 3 ignorados; cobertura de linha 52,82% contra piso de 50%.</li>
+                <li><strong>Migração do banco da 3.2.x:</strong> o esquema é atualizado no primeiro acesso, mantendo vendas e histórico. Loja migrada não tem a ação de estornar venda já paga — a 3.2.12 tinha.</li>
+                <li><strong>Suíte automatizada:</strong> 1.126 testes executados no CI do commit <code>be0f74b</code>, 0 falhas, 3 ignorados; cobertura de linha 55,69% contra piso de 50%.</li>
             </ul>
-            <!-- v4.0.0 GA (08/11, A6): trocar os links da prévia pelos de baixo e, na mesma passada,
-                 o <h2> e o selo da seção, os dois parágrafos de texto (a prévia deixa de ser "até o GA"),
-                 o <h3> e as quatro linhas acima (1.126 testes no CI de be0f74b, 55,69% de LINE, canal
-                 pdv-v4 com signature de 2 kids e migração 3.2.x suportada) e a linha "Estorno de venda
-                 paga" da tabela:
             <p class="wiki-links">
                 <a class="btn-release" href="https://github.com/chmulato/caracore-pdv4-releases/releases/download/v4.0.0/CaraCore-PDV-4.0.0-qute-portable-windows-x64.zip">Baixar a v4.0.0 (Windows x64)</a>
                 <a class="btn-release btn-release-outline" href="https://github.com/chmulato/caracore-pdv4-releases/releases/download/v4.0.0/SHA256SUMS.txt">SHA256SUMS</a>
                 <a class="btn-release btn-release-outline" href="https://github.com/chmulato/caracore-pdv4-releases/releases/tag/v4.0.0">Release no GitHub</a>
                 <a class="btn-release btn-release-outline" href="release-notes/v4.0.0.md">Notas da versão</a>
-            </p>
-            <p class="text-sm text-slate-600">SHA-256: <code class="break-all">9557e0b16d77a85e0bb68971eb0e8710356977261337a8c1c05593e893d81eac</code> · 176.613.179 bytes · build de 06/11/2026</p>
-            -->
-            <p class="wiki-links">
-                <a class="btn-release" href="https://github.com/chmulato/caracore-pdv-releases/releases/download/v4.0.0-candidato-20261031/CaraCore-PDV-4.0.0-qute-portable-windows-x64.zip">Baixar o ZIP (Windows x64)</a>
-                <a class="btn-release btn-release-outline" href="https://github.com/chmulato/caracore-pdv-releases/releases/download/v4.0.0-candidato-20261031/CaraCore-PDV-4.0.0-qute-portable-SHA256SUMS.txt">SHA256SUMS</a>
-                <a class="btn-release btn-release-outline" href="https://github.com/chmulato/caracore-pdv-releases/releases/tag/v4.0.0-candidato-20261031">Release no GitHub</a>
-                <a class="btn-release btn-release-outline" href="release-notes/v4.0.0-candidato-c343890.md">Registro completo da prévia (markdown)</a>
                 <a class="btn-release btn-release-outline" href="homologacao-v4.html">Homologação</a>
             </p>
+            <p class="text-sm text-slate-600">SHA-256: <code class="break-all">9557e0b16d77a85e0bb68971eb0e8710356977261337a8c1c05593e893d81eac</code> · 176.613.179 bytes · build de 06/11/2026</p>
+            <details class="mt-3 text-sm text-slate-600">
+                <summary class="cursor-pointer">Prévia anterior (31/10/2026)</summary>
+                <p class="mt-2">A prévia <code>c343890</code>, de 31/10/2026, fica no histórico e não tem migração de dados da 3.2: <a href="https://github.com/chmulato/caracore-pdv-releases/releases/download/v4.0.0-candidato-20261031/CaraCore-PDV-4.0.0-qute-portable-windows-x64.zip" class="underline">ZIP</a> · <a href="https://github.com/chmulato/caracore-pdv-releases/releases/download/v4.0.0-candidato-20261031/CaraCore-PDV-4.0.0-qute-portable-SHA256SUMS.txt" class="underline">SHA256SUMS</a> · <a href="release-notes/v4.0.0-candidato-c343890.md" class="underline">registro</a>. SHA-256 <code class="break-all">0c2003b0…83434d</code> · 178.317.680 bytes.</p>
+            </details>
             <details class="mt-3 text-xs text-slate-500">
                 <summary class="cursor-pointer">Pré-releases anteriores</summary>
                 <p class="mt-2"><a href="wiki-release-v4-0-0-rc6.html" class="underline">RC6 (10/10/2026)</a> · <a href="wiki-release-v4-0-0-rc5.html" class="underline">RC5</a> · <a href="wiki-release-v4-0-0-rc4.html" class="underline">RC4</a> · <a href="wiki-release-v4-0-0-rc3.html" class="underline">RC3</a> · <a href="wiki-release-v4-0-0-rc2.html" class="underline">RC2</a> · <a href="wiki-release-v4-0-0-rc1.html" class="underline">RC1</a>.</p>
@@ -195,7 +185,7 @@
             <p><span class="selo selo-anterior">Versão anterior · 3.2.12-free · 15/10/2026</span> <span class="text-sm text-slate-600 ml-2">Windows · Linux · macOS</span></p>
             <p>Corretiva de 15/10/2026: HTTP 405 preservado, status ESTORNADA distinto de CANCELADA em recibos e relatórios, migração V047 e fila em transação independente.</p>
             <p>Novo caixa com leitura e consolidação de itens, quantidade, desconto auditado, CPF opcional mascarado na tela, pagamento em modal e recibos com subtotal/desconto. Estoque baixa e estorna linhas repetidas pelo produto. O limite de 100 vendas finalizadas por mês civil permanece; no teto, novas vendas ficam bloqueadas até o mês seguinte. Sem NF-e/NFC-e. O PIX é feito pela maquininha do banco.</p>
-            <p class="text-sm text-slate-600">A 3.2.12-free é a última versão da linha 3.2.x. Até 08/11/2026 ela recebe apenas manutenção de transição, sem novos recursos, e continua sendo a versão indicada para operar até a publicação da v4. A sucessão é a PDV v4.0.0, com pacote publicado em 06/11/2026 e lançamento marcado para 08/11/2026.</p>
+            <p class="text-sm text-slate-600">A 3.2.12-free é a última versão da linha 3.2.x. A manutenção de transição foi encerrada em 08/11/2026, sem novos recursos; os pacotes seguem disponíveis para quem ainda opera nela. A sucessão é a PDV v4.0.0, lançada em 08/11/2026, que migra o banco da 3.2.x no primeiro acesso.</p>
             <p class="text-sm text-slate-600"><strong>Validações em andamento:</strong> consulte os testes concluídos e as validações pendentes nas <a href="wiki-release-v3-2-12-free.html#validacao">notas técnicas</a>. A publicação não representa homologação completa.</p>
             <p class="wiki-links">
                 <a class="btn-release" href="download.html">Baixar Free 3.2.12 (até 100 vendas finalizadas/mês)</a>
@@ -207,7 +197,7 @@
             <h2>Migração: da 3.2 para a v4</h2>
             <ul>
                 <li><strong>Prévia de 31/10/2026:</strong> não copie o banco da 3.2 para ela — a migração não é suportada nesse build.</li>
-                <li><strong>v4.0.0 (lançamento de 08/11/2026):</strong> copie o banco da 3.2 (<code>%APPDATA%\caracore\caracore-pdv.db</code>) para <code>data\caracore-pdv.db</code> na pasta da v4 <strong>antes da primeira abertura</strong>; o esquema é atualizado sozinho e as vendas e o histórico são mantidos.</li>
+                <li><strong>v4.0.0, lançada em 08/11/2026:</strong> copie o banco da 3.2 (<code>%APPDATA%\caracore\caracore-pdv.db</code>) para <code>data\caracore-pdv.db</code> na pasta da v4 <strong>antes da primeira abertura</strong>; o esquema é atualizado sozinho e as vendas e o histórico são mantidos.</li>
                 <li>Na v4, cancelar uma venda já paga não devolve o estoque nem registra ESTORNADA; a 3.2.12 fazia.</li>
                 <li>Instale a v4 em pasta separada e mantenha a 3.2.12 operando até conferir a migração. Faça backup antes de qualquer teste.</li>
             </ul>
@@ -221,7 +211,7 @@
                 <p class="mt-2"><a href="wiki-release-v3-2-8-free.html">3.2.8-free</a> · <a href="wiki-release-v3-2-7-free.html">3.2.7-free</a> · <a href="wiki-release-v3-2-6-free.html">3.2.6-free</a> · <a href="wiki-release-v3-2-5-free.html">3.2.5-free</a> · <a href="wiki-release-v3-2-4-free.html">3.2.4-free</a> · <a href="wiki-release-v3-2-3-free.html">3.2.3-free</a> · <a href="wiki-release-v3-2-2-free.html">3.2.2-free</a>.</p>
             </details>
             <p>Manual: <a href="https://wiki.caracore.com.br/projeto-pdv.html">wiki central do PDV</a>.</p>
-            <p class="text-sm text-slate-600">O piloto Rust é outra linha: <a href="https://pdv-rust.caracore.com.br/" target="_blank" rel="noopener">CaraCore PDV Rust</a> é um piloto separado; não é esta prévia v4.</p>
+            <p class="text-sm text-slate-600">O piloto Rust é outra linha: <a href="https://pdv-rust.caracore.com.br/" target="_blank" rel="noopener">CaraCore PDV Rust</a> é um piloto separado; não é o PDV v4.0.0.</p>
         </section>
 
     </div>
