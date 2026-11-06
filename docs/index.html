@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="CaraCore PDV v4.0.0, lançado em 08/11/2026: caixa rápido com os dados na loja, projeção de IBS/CBS e pacote mensal para o contador em CSV e PDF. Windows 10/11 x64.">
+    <meta name="description" content="CaraCore PDV v4.0.0, lançado em 08/11/2026: caixa rápido com os dados na loja, projeção de IBS/CBS e pacote mensal para o contador em CSV e PDF. Para Windows 10 e 11.">
     <meta name="keywords" content="PDV web local, ponto de venda, recibo digital, caixa offline, varejo">
     <meta name="author" content="Cara Core Informática">
     <meta property="og:title" content="CaraCore PDV | Caixa rápido, dados na sua loja">
-    <meta property="og:description" content="CaraCore PDV v4.0.0, lançado em 08/11/2026, para Windows 10/11 x64: caixa rápido com dados na loja, projeção de IBS/CBS e pacote mensal para o contador em CSV e PDF. Valores estimados, sem documento fiscal.">
+    <meta property="og:description" content="CaraCore PDV v4.0.0, lançado em 08/11/2026, para Windows 10 e 11: caixa rápido com dados na loja, projeção de IBS/CBS e pacote mensal para o contador em CSV e PDF. Valores estimados, sem documento fiscal.">
     <meta property="og:type" content="website">
     <title>CaraCore PDV | Caixa rápido, dados na sua loja</title>
     <script src="https://cdn.tailwindcss.com"></script>
@@ -45,6 +45,7 @@
                     <a href="#planos" class="text-gray-700 hover:text-green-600 font-medium transition">Planos</a>
                     <a href="#migracao" class="text-gray-700 hover:text-green-600 font-medium transition">Migração</a>
                     <a href="versoes.html" class="text-gray-700 hover:text-green-600 font-medium transition">Versões</a>
+                    <a href="https://wiki.caracore.com.br/pdv/index.html" class="text-gray-700 hover:text-green-600 font-medium transition">Suporte</a>
                     <a href="download.html#v4-0-0" class="cta-btn text-white px-6 py-2 rounded-lg font-semibold hover:shadow-lg transition text-center">Baixar</a>
                 </div>
                 <button id="mobile-menu-button" class="lg:hidden text-gray-700" aria-label="Abrir menu"><i class="fas fa-bars text-2xl"></i></button>
@@ -56,7 +57,7 @@
     <section class="portal-hero green-bg text-white py-20 md:py-24">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="max-w-3xl mx-auto text-center">
-                <p class="text-sm uppercase tracking-wide text-green-100 mb-4">PDV no computador da loja · Windows 10/11 x64</p>
+                <p class="text-sm uppercase tracking-wide text-green-100 mb-4">PDV no computador da loja · operação no balcão</p>
                 <p class="mb-4 flex flex-wrap justify-center gap-2">
                     <span class="selo selo-estavel">Lançamento oficial · CaraCore PDV v4.0.0</span>
                 </p>
@@ -78,7 +79,8 @@
                     </a>
                 </div>
                 <p class="mt-4 text-sm text-green-50">
-                    Windows 10/11 x64 · Java embutido · instalação em pasta separada.
+                    Baixe, extraia e abra o caixa — o Free não tem mensalidade.
+                    <a href="download.html#v4-0-0" class="underline hover:text-white">Ver como instalar</a>.
                 </p>
             </div>
         </div>
@@ -89,9 +91,9 @@
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="max-w-4xl mx-auto flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
                 <p class="text-sm text-emerald-900">
-                    <strong>CaraCore PDV v4.0.0 · lançamento oficial em 08/11/2026.</strong> Build de 06/11/2026,
-                    SHA-256 <code class="break-all">9557e0b1…d81eac</code>. Versão indicada para operar o caixa; a
-                    3.2.12-free passa a versão anterior e segue disponível para Windows, Linux e macOS.
+                    <strong>CaraCore PDV v4.0.0 · lançamento oficial em 08/11/2026.</strong> É a versão indicada para
+                    operar o caixa; a 3.2.12-free passa a versão anterior e segue disponível para Windows, Linux e
+                    macOS. Detalhes de instalação e de versão ficam no download.
                 </p>
                 <a href="download.html#v4-0-0" class="text-sm font-semibold text-emerald-800 hover:text-emerald-900 underline whitespace-nowrap">Baixar a v4.0.0</a>
             </div>
@@ -121,10 +123,10 @@
 
                 <article class="rounded-2xl border border-gray-100 p-6 bg-gray-50">
                     <i class="fas fa-key text-green-600 text-2xl mb-4" aria-hidden="true"></i>
-                    <h3 class="font-bold text-gray-900 mb-2">2. Licença Pro por chave assinada</h3>
+                    <h3 class="font-bold text-gray-900 mb-2">2. Licença Pro ativada pela chave</h3>
                     <p class="text-sm text-gray-600 mb-3">
-                        Você cola a chave na tela <strong>Licença</strong> e o próprio PDV confere a assinatura
-                        <strong>Ed25519</strong>, a validade e a máquina. Sem arquivo de licença para instalar à mão.
+                        Você cola a chave na tela <strong>Licença</strong> e o próprio PDV confere a validade e a
+                        máquina. Sem arquivo de licença para instalar à mão.
                     </p>
                     <p class="text-xs text-gray-500">
                         A licença é por máquina: cada caixa tem a sua. O Pro remove os tetos do Free.
@@ -133,11 +135,10 @@
 
                 <article class="rounded-2xl border border-gray-100 p-6 bg-gray-50">
                     <i class="fas fa-arrows-rotate text-green-600 text-2xl mb-4" aria-hidden="true"></i>
-                    <h3 class="font-bold text-gray-900 mb-2">3. Atualização pelo gateway oficial</h3>
+                    <h3 class="font-bold text-gray-900 mb-2">3. Atualização pelo próprio PDV</h3>
                     <p class="text-sm text-gray-600 mb-3">
-                        O PDV consulta <strong>api.caracore.com.br</strong>, baixa o pacote novo e confere o
-                        <strong>SHA-256</strong> publicado antes de aplicar. Com venda aberta, a atualização espera o
-                        caixa liberar.
+                        O PDV avisa no <strong>dashboard</strong> quando há versão nova, baixa o pacote com a sua
+                        confirmação e só aplica quando o caixa estiver livre.
                     </p>
                     <p class="text-xs text-gray-500">
                         A aplicação pede sua confirmação na tela — não fecha o PDV no meio do atendimento.
@@ -146,15 +147,13 @@
 
                 <article class="rounded-2xl border border-gray-100 p-6 bg-gray-50">
                     <i class="fas fa-clipboard-check text-green-600 text-2xl mb-4" aria-hidden="true"></i>
-                    <h3 class="font-bold text-gray-900 mb-2">4. Base de testes e guarda de relógio</h3>
+                    <h3 class="font-bold text-gray-900 mb-2">4. Teto do Free protegido</h3>
                     <p class="text-sm text-gray-600 mb-3">
-                        Mais de <strong>1.000 testes automatizados</strong> no aplicativo, executados a cada alteração,
-                        com piso de cobertura cobrado no build. O limite do Free não pode ser driblado voltando a data
-                        do computador.
+                        O teto do Free é conferido pelo próprio PDV: voltar a data do computador não libera vendas.
+                        O limite vale por mês civil e volta ao normal no mês seguinte.
                     </p>
                     <p class="text-xs text-gray-500">
-                        Sem promessa de desempenho medida: benchmarks seguem congelados e serão publicados só com
-                        medição.
+                        Nada de número inventado: só entra no site o que foi conferido.
                     </p>
                 </article>
 
@@ -181,14 +180,14 @@
                         <li class="flex items-start"><i class="fas fa-check text-green-600 mr-3 mt-1"></i>Até 100 vendas finalizadas por mês civil</li>
                         <li class="flex items-start"><i class="fas fa-check text-green-600 mr-3 mt-1"></i>Até 100 produtos · 1 operador de caixa · 4 vendedores · 1 loja</li>
                         <li class="flex items-start"><i class="fas fa-check text-green-600 mr-3 mt-1"></i>Recibo digital por link e PDF, sem valor fiscal</li>
-                        <li class="flex items-start"><i class="fas fa-check text-green-600 mr-3 mt-1"></i>Atualizações pelo gateway oficial a partir da v4 (a 3.2.12 instalada hoje não se atualiza sozinha)</li>
+                        <li class="flex items-start"><i class="fas fa-check text-green-600 mr-3 mt-1"></i>Atualizações automáticas a partir da v4 (a 3.2.12 instalada hoje não se atualiza sozinha)</li>
                         <li class="flex items-start"><i class="fas fa-info-circle text-amber-600 mr-3 mt-1"></i>No teto de 100 vendas finalizadas, novas vendas ficam bloqueadas até o mês seguinte.</li>
                     </ul>
                     <a href="download.html#v4-0-0"
                        class="inline-flex items-center justify-center w-full green-bg text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition">
                         Baixar o CaraCore PDV v4
                     </a>
-                    <p class="text-xs text-gray-500 mt-3">Windows 10/11 x64 · Java embutido · a 3.2.12 segue disponível para Windows, Linux e macOS.</p>
+                    <p class="text-xs text-gray-500 mt-3">Para Windows 10 e 11 · a 3.2.12 segue disponível para Windows, Linux e macOS.</p>
                 </div>
 
                 <div class="bg-white rounded-2xl p-8 border-2 border-green-400 relative shadow-lg">
@@ -197,10 +196,10 @@
                         <h3 class="text-2xl font-bold text-gray-900">Pro</h3>
                         <span class="text-2xl font-bold text-gray-900">R$ 79,90<small class="text-base font-medium text-gray-500">/mês</small></span>
                     </div>
-                    <p class="text-gray-600 mb-6">Sem os tetos do Free, com suporte e licença por chave assinada.</p>
+                    <p class="text-gray-600 mb-6">Sem os tetos do Free, com suporte e licença por chave.</p>
                     <ul class="space-y-3 text-gray-700 mb-8">
                         <li class="flex items-start"><i class="fas fa-check text-green-600 mr-3 mt-1"></i>Vendas, produtos e cadastros sem os tetos do Free</li>
-                        <li class="flex items-start"><i class="fas fa-check text-green-600 mr-3 mt-1"></i>Licença por chave Ed25519, presa à máquina</li>
+                        <li class="flex items-start"><i class="fas fa-check text-green-600 mr-3 mt-1"></i>Licença por chave, presa à máquina</li>
                         <li class="flex items-start"><i class="fas fa-check text-green-600 mr-3 mt-1"></i>Sincronização de vendas na rede da loja</li>
                         <li class="flex items-start"><i class="fas fa-check text-green-600 mr-3 mt-1"></i>Suporte prioritário</li>
                     </ul>
@@ -224,28 +223,28 @@
             <div class="max-w-3xl mx-auto">
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-3 text-center">Já usa a 3.2.x? Sua operação continua.</h2>
                 <p class="text-lg text-gray-600 text-center mb-8">
-                    A v4.0.0 abre um banco da 3.2.x colocado na pasta <code>data</code> e atualiza o esquema no
-                    primeiro acesso, mantendo as vendas e o histórico. A instalação é separada: a 3.2.12-free pode
-                    continuar instalada, disponível para Windows, Linux e macOS.
+                    A v4.0.0 aproveita os dados da 3.2.x: as vendas e o histórico continuam. A instalação é separada,
+                    então a 3.2.12-free pode seguir instalada enquanto você confere a operação no balcão.
                 </p>
                 <div class="rounded-2xl border-2 border-green-200 bg-green-50 p-6 mb-6">
                     <h3 class="font-bold text-gray-900 mb-2"><i class="fas fa-shield-halved text-green-700 mr-2" aria-hidden="true"></i>Como conviver com as duas versões</h3>
                     <ul class="space-y-2 text-gray-700 text-sm">
-                        <li>1. O pacote da v4 é baixado desta loja, com SHA-256 publicado para conferência.</li>
-                        <li>2. Para migrar, copie o banco da 3.2 para <code>data\caracore-pdv.db</code> na pasta da v4 antes da primeira abertura, faça backup da pasta <code>data</code> e mantenha a 3.2.12 instalada até conferir a operação.</li>
-                        <li>3. A partir da v4, as atualizações chegam pelo gateway oficial, com sua confirmação; o canal <code>pdv-v4</code> está no ar desde 06/11/2026 e a aplicação do pacote baixado é manual.</li>
+                        <li>1. Baixe a v4.0.0 nesta loja. O passo a passo da migração está no download e no manual.</li>
+                        <li>2. Guarde uma cópia dos dados da 3.2.x antes de abrir a v4 pela primeira vez.</li>
+                        <li>3. Na primeira abertura, a v4.0.0 atualiza os dados e mantém o histórico; a 3.2.12 pode continuar instalada até você conferir.</li>
                     </ul>
                 </div>
                 <div class="rounded-2xl border border-amber-300 bg-amber-50 p-6">
                     <h3 class="font-bold text-amber-900 mb-2"><i class="fas fa-circle-exclamation text-amber-700 mr-2" aria-hidden="true"></i>O que muda se você instalar a v4</h3>
                     <ul class="space-y-2 text-amber-900 text-sm">
                         <li>A v4 não tem a ação de estornar uma venda já finalizada: cancelar uma venda em aberto descarta a venda e não mexe no estoque, porque a baixa só acontece na finalização. Na 3.2.12 o estorno de venda paga devolvia o estoque.</li>
-                        <li>A v4 roda só em <strong>Windows 10/11 x64</strong>, com Java embutido; a 3.2.12 atende Windows, Linux e macOS.</li>
+                        <li>A v4 roda em <strong>Windows 10 e 11</strong>; a 3.2.12 atende Windows, Linux e macOS.</li>
                         <li>A v4 não emite NF-e/NFC-e e não traz PIX integrado; o recibo é digital, sem valor fiscal.</li>
                     </ul>
                 </div>
                 <p class="text-sm text-gray-500 mt-6 text-center">
                     Dúvida sobre a sua loja? <a href="canal-feedback.html" class="underline hover:text-green-700">Fale pelo canal da loja</a>.
+                    O manual, os primeiros passos e os guias ficam na <a href="https://wiki.caracore.com.br/pdv/index.html" class="underline hover:text-green-700">Wiki do PDV</a>.
                 </p>
             </div>
         </div>
@@ -257,9 +256,9 @@
             <div class="max-w-2xl mx-auto text-center text-white">
                 <h2 class="text-3xl md:text-4xl font-bold mb-4">Comece pelo balcão, sem custo.</h2>
                 <p class="text-xl text-green-50 mb-8">Instale o Free, venda, feche o caixa. Se o teto apertar, o Pro tira o teto.</p>
-                <a href="download.html#pacotes"
+                <a href="download.html#v4-0-0"
                    class="inline-flex items-center justify-center bg-white text-green-700 px-10 py-4 rounded-lg font-bold text-lg hover:bg-green-50 transition shadow-lg">
-                    Baixar a 3.2.12-free
+                    Baixar o Free (v4.0.0)
                 </a>
                 <p class="text-sm text-green-100 mt-6">
                     Não atendemos ligações. <a href="canal-feedback.html" class="underline hover:text-white">Escreva pelo canal da loja</a>.
@@ -280,7 +279,7 @@
                     <ul class="space-y-2 text-sm">
                         <li><a href="download.html" class="hover:text-white">Download</a></li>
                         <li><a href="consultoria.html" class="hover:text-white">Demonstração e implantação</a></li>
-                        <li><a href="https://wiki.caracore.com.br/projeto-pdv.html" class="hover:text-white">Wiki do PDV</a></li>
+                        <li><a href="https://wiki.caracore.com.br/pdv/index.html" class="hover:text-white">Suporte e manual (Wiki)</a></li>
                         <li><a href="versoes.html" class="hover:text-white">Versões</a></li>
                     </ul>
                 </div>
