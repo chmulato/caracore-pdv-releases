@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="CaraCore PDV v4.0.0: caixa rápido com os dados na loja, projeção de IBS/CBS e pacote mensal para o contador em CSV e PDF. Windows 10/11 x64.">
+    <meta name="description" content="CaraCore PDV v4.0.0, com lançamento em 08/11/2026: caixa rápido com os dados na loja, projeção de IBS/CBS e pacote mensal para o contador em CSV e PDF. Windows 10/11 x64.">
     <meta name="keywords" content="PDV web local, ponto de venda, recibo digital, caixa offline, varejo">
     <meta name="author" content="Cara Core Informática">
     <meta property="og:title" content="CaraCore PDV | Caixa rápido, dados na sua loja">
-    <meta property="og:description" content="CaraCore PDV v4.0.0 para Windows 10/11 x64: caixa rápido com dados na loja, projeção de IBS/CBS e pacote mensal para o contador em CSV e PDF. Valores estimados, sem documento fiscal.">
+    <meta property="og:description" content="CaraCore PDV v4.0.0, com lançamento em 08/11/2026, para Windows 10/11 x64: caixa rápido com dados na loja, projeção de IBS/CBS e pacote mensal para o contador em CSV e PDF. Valores estimados, sem documento fiscal.">
     <meta property="og:type" content="website">
     <title>CaraCore PDV | Caixa rápido, dados na sua loja</title>
     <script src="https://cdn.tailwindcss.com"></script>
@@ -58,7 +58,8 @@
             <div class="max-w-3xl mx-auto text-center">
                 <p class="text-sm uppercase tracking-wide text-green-100 mb-4">PDV no computador da loja · Windows 10/11 x64</p>
                 <p class="mb-4 flex flex-wrap justify-center gap-2">
-                    <span class="selo selo-estavel">Lançamento oficial · CaraCore PDV v4.0.0</span>
+                    <!-- VIRADA 08/11 (A6): trocar por <span class="selo selo-estavel">Lançamento oficial · CaraCore PDV v4.0.0</span>. Release v4.0.0 já publicada e medida (9557e0b1…d81eac, 176.613.179 B, build de 06/11/2026). -->
+                    <span class="selo selo-previa">Lançamento em 08/11 · CaraCore PDV v4.0.0</span>
                 </p>
                 <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
                     Caixa rápido, dados na sua loja e seu negócio preparado para a Reforma Tributária.
@@ -69,10 +70,10 @@
                     São valores estimados: não substituem a apuração oficial e não emitem documento fiscal.
                 </p>
                 <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
-                    <!-- No build de 08/11/2026, o asset v4.0.0 entra em download.html -->
-                    <a href="download.html"
+                    <!-- VIRADA 08/11 (A6): trocar o destino por download.html#v4-0-0 e o rótulo por "Baixar a v4.0.0" -->
+                    <a href="download.html#pre-release-v4"
                        class="inline-flex items-center justify-center bg-white text-green-700 px-8 py-4 rounded-lg font-bold text-lg hover:bg-green-50 transition shadow-lg">
-                        <i class="fas fa-download mr-3" aria-hidden="true"></i> Baixar CaraCore PDV v4
+                        <i class="fas fa-download mr-3" aria-hidden="true"></i> Avaliar a prévia da v4
                     </a>
                     <a href="#planos" class="inline-flex items-center justify-center border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-green-700 transition">
                         Conhecer o plano Pro
@@ -90,10 +91,12 @@
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="max-w-4xl mx-auto flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
                 <p class="text-sm text-emerald-900">
-                    <strong>CaraCore PDV v4.0.0 · build de 08/11/2026.</strong> Pacote Windows 10/11 x64 com Java
-                    embutido e SHA-256 publicado. A Free 3.2.12 continua disponível para Windows, Linux e macOS.
+                    <strong>CaraCore PDV v4.0.0 · lançamento marcado para 08/11/2026.</strong> Até lá, avalie a prévia
+                    pública de 31/10/2026; a 3.2.12-free continua indicada para operar o caixa e segue disponível para
+                    Windows, Linux e macOS.
                 </p>
-                <a href="download.html" class="text-sm font-semibold text-emerald-800 hover:text-emerald-900 underline whitespace-nowrap">Baixar a v4.0.0</a>
+                <!-- VIRADA 08/11 (A6): trocar o texto por "build de 06/11/2026 · SHA-256 9557e0b1…d81eac" e o rótulo por "Baixar a v4.0.0" (destino download.html#v4-0-0) -->
+                <a href="download.html#pre-release-v4" class="text-sm font-semibold text-emerald-800 hover:text-emerald-900 underline whitespace-nowrap">Ver a prévia da v4</a>
             </div>
         </div>
     </section>
@@ -179,20 +182,21 @@
                     <p class="text-gray-600 mb-6">Gratuito para sempre, no computador da loja.</p>
                     <ul class="space-y-3 text-gray-700 mb-8">
                         <li class="flex items-start"><i class="fas fa-check text-green-600 mr-3 mt-1"></i>Até 100 vendas finalizadas por mês civil</li>
-                        <li class="flex items-start"><i class="fas fa-check text-green-600 mr-3 mt-1"></i>Até 100 produtos · 1 operador de caixa · 1 loja</li>
+                        <li class="flex items-start"><i class="fas fa-check text-green-600 mr-3 mt-1"></i>Até 100 produtos · 1 operador de caixa · 4 vendedores · 1 loja</li>
                         <li class="flex items-start"><i class="fas fa-check text-green-600 mr-3 mt-1"></i>Recibo digital por link e PDF, sem valor fiscal</li>
                         <li class="flex items-start"><i class="fas fa-check text-green-600 mr-3 mt-1"></i>Atualizações pelo gateway oficial a partir da v4 (a 3.2.12 instalada hoje não se atualiza sozinha)</li>
                         <li class="flex items-start"><i class="fas fa-info-circle text-amber-600 mr-3 mt-1"></i>No teto de 100 vendas finalizadas, novas vendas ficam bloqueadas até o mês seguinte.</li>
                     </ul>
-                    <a href="download.html"
+                    <!-- VIRADA 08/11 (A6): release #66 já publicada (v4.0.0, 9557e0b1…d81eac); trocar o destino por download.html#v4-0-0 e o rótulo por "Baixar o CaraCore PDV v4" -->
+                    <a href="download.html#pre-release-v4"
                        class="inline-flex items-center justify-center w-full green-bg text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition">
-                        Baixar o CaraCore PDV v4
+                        Avaliar a prévia da v4
                     </a>
                     <p class="text-xs text-gray-500 mt-3">Windows 10/11 x64 · Java embutido · a 3.2.12 segue disponível para Windows, Linux e macOS.</p>
                 </div>
 
                 <div class="bg-white rounded-2xl p-8 border-2 border-green-400 relative shadow-lg">
-                    <span class="selo selo-estavel absolute -top-3 right-6">Lançamento v4</span>
+                    <span class="selo selo-estavel absolute -top-3 right-6">Plano Pro</span>
                     <div class="flex items-center justify-between mb-4">
                         <h3 class="text-2xl font-bold text-gray-900">Pro</h3>
                         <span class="text-2xl font-bold text-gray-900">R$ 79,90<small class="text-base font-medium text-gray-500">/mês</small></span>
@@ -224,21 +228,22 @@
             <div class="max-w-3xl mx-auto">
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-3 text-center">Já usa a 3.2.x? Sua operação continua.</h2>
                 <p class="text-lg text-gray-600 text-center mb-8">
-                    Você pode continuar na 3.2.12-free, disponível para Windows, Linux e macOS. A v4.0.0 é uma
-                    instalação separada: a transferência do banco da 3.2 ainda não é suportada.
+                    A v4.0.0 abre um banco da 3.2.x colocado na pasta <code>data</code> e atualiza o esquema no
+                    primeiro acesso, mantendo as vendas e o histórico. A instalação é separada: a 3.2.12-free pode
+                    continuar instalada, disponível para Windows, Linux e macOS.
                 </p>
                 <div class="rounded-2xl border-2 border-green-200 bg-green-50 p-6 mb-6">
                     <h3 class="font-bold text-gray-900 mb-2"><i class="fas fa-shield-halved text-green-700 mr-2" aria-hidden="true"></i>Como conviver com as duas versões</h3>
                     <ul class="space-y-2 text-gray-700 text-sm">
                         <li>1. O pacote da v4 é baixado desta loja, com SHA-256 publicado para conferência.</li>
-                        <li>2. A v4 não importa o banco da 3.2.x — faça backup da pasta <code>data</code> e mantenha a 3.2.12 instalada.</li>
-                        <li>3. As atualizações da v4 chegam pelo gateway oficial, com sua confirmação.</li>
+                        <li>2. Para migrar, copie o banco da 3.2 para <code>data\caracore-pdv.db</code> na pasta da v4 antes da primeira abertura, faça backup da pasta <code>data</code> e mantenha a 3.2.12 instalada até conferir a operação.</li>
+                        <li>3. A partir da v4, as atualizações chegam pelo gateway oficial, com sua confirmação; o canal <code>pdv-v4</code> está no ar desde 06/11/2026 e a aplicação do pacote baixado é manual.</li>
                     </ul>
                 </div>
                 <div class="rounded-2xl border border-amber-300 bg-amber-50 p-6">
                     <h3 class="font-bold text-amber-900 mb-2"><i class="fas fa-circle-exclamation text-amber-700 mr-2" aria-hidden="true"></i>O que muda se você instalar a v4</h3>
                     <ul class="space-y-2 text-amber-900 text-sm">
-                        <li>Cancelar uma venda <strong>já paga</strong> não devolve o estoque automaticamente na v4 — na 3.2.12 devolvia.</li>
+                        <li>A v4 não tem a ação de estornar uma venda já finalizada: cancelar uma venda em aberto descarta a venda e não mexe no estoque, porque a baixa só acontece na finalização. Na 3.2.12 o estorno de venda paga devolvia o estoque.</li>
                         <li>A v4 roda só em <strong>Windows 10/11 x64</strong>, com Java embutido; a 3.2.12 atende Windows, Linux e macOS.</li>
                         <li>A v4 não emite NF-e/NFC-e e não traz PIX integrado; o recibo é digital, sem valor fiscal.</li>
                     </ul>
@@ -256,9 +261,9 @@
             <div class="max-w-2xl mx-auto text-center text-white">
                 <h2 class="text-3xl md:text-4xl font-bold mb-4">Comece pelo balcão, sem custo.</h2>
                 <p class="text-xl text-green-50 mb-8">Instale o Free, venda, feche o caixa. Se o teto apertar, o Pro tira o teto.</p>
-                <a href="download.html"
+                <a href="download.html#pacotes"
                    class="inline-flex items-center justify-center bg-white text-green-700 px-10 py-4 rounded-lg font-bold text-lg hover:bg-green-50 transition shadow-lg">
-                    Baixar o CaraCore PDV v4
+                    Baixar a 3.2.12-free
                 </a>
                 <p class="text-sm text-green-100 mt-6">
                     Não atendemos ligações. <a href="canal-feedback.html" class="underline hover:text-white">Escreva pelo canal da loja</a>.
@@ -294,7 +299,7 @@
             </div>
             <div class="border-t border-gray-800 pt-6 text-sm text-gray-400">
                 <p>&copy; 2024–2026 Cara Core Informática · CNPJ 23.969.028/0001-37 · <a href="https://www.caracore.com.br/" class="hover:text-white">www.caracore.com.br</a></p>
-                <p class="mt-1">Free 3.2.12 publicada em 15/10/2026 · CaraCore PDV v4.0.0 · build de 08/11/2026</p>
+                <p class="mt-1">Free 3.2.12 publicada em 15/10/2026 · CaraCore PDV v4.0.0 · lançamento marcado para 08/11/2026</p>
             </div>
         </div>
     </footer>

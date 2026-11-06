@@ -64,16 +64,19 @@
 
   <main class="page-shell max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
     <!-- =====================================================================
-         v4.0.0 GA — pacote para o lançamento de 08/11/2026. Publicar somente com
-         o pacote assinado com as duas chaves, T032 17/17 no hash que vai ser
-         publicado, Gate E escrito e canal pdv-v4 (fila #64–#69).
-         ZIP:        https://github.com/chmulato/caracore-pdv-releases/releases/download/v4.0.0/[arquivo].zip
-         SHA-256:    [hash completo]
-         Bytes:      [tamanho]
-         SHA256SUMS: https://github.com/chmulato/caracore-pdv-releases/releases/download/v4.0.0/[sidecar].txt
-         Tag:        https://github.com/chmulato/caracore-pdv-releases/releases/tag/v4.0.0
-         Ao publicar, trocar também o bloco do topo, a seção #candidato e o trecho
-         "Vale para a 3.2.12 e para a v4" em #premium-resumo.
+         v4.0.0 GA — lançamento de 08/11/2026. Estado em 06/11/2026: release
+         publicada e medida (T032 17/17, matriz 11/11 itens com M11 não medida, migrado 9/9, sonda
+         20/0/1/0, C2 aprovado, VERIFICADO com duas chaves) e canal pdv-v4
+         servindo este hash. A seção #v4-0-0 fica pronta e comentada até a
+         virada de 08/11 (A6): descomentar, mover o bloco para antes de
+         #pre-release-v4 e trocar o selo/CTA do topo e de index.html.
+         ZIP:        https://github.com/chmulato/caracore-pdv4-releases/releases/download/v4.0.0/CaraCore-PDV-4.0.0-qute-portable-windows-x64.zip
+         SHA-256:    9557e0b16d77a85e0bb68971eb0e8710356977261337a8c1c05593e893d81eac
+         Bytes:      176.613.179
+         Build:      06/11/2026 (origem master be0f74b)
+         SHA256SUMS: https://github.com/chmulato/caracore-pdv4-releases/releases/download/v4.0.0/SHA256SUMS.txt
+         Assinaturas do sidecar: SHA256SUMS.txt.sig e SHA256SUMS.txt.sig.pdv-release-2026-b (Ed25519)
+         Tag:        https://github.com/chmulato/caracore-pdv4-releases/releases/tag/v4.0.0
          ===================================================================== -->
     <section class="portal-panel card overflow-hidden">
       <div class="brand-bg text-white px-6 sm:px-10 py-8">
@@ -88,27 +91,30 @@
       </div>
 
       <div class="px-6 sm:px-10 py-8 space-y-8">
-        <p class="text-base text-slate-700">A <strong>prévia 4.0.0-candidata de 31/10/2026</strong> (commit <code>c343890</code>) é a versão pública de avaliação do PDV v4: só Windows 10/11 x64, com o plano Free (até 100 vendas finalizadas por mês civil) e <strong>sem migração de dados da 3.2</strong>. A RC6 fica no histórico. O lançamento da v4.0.0 está marcado para <strong>08/11/2026</strong> e depende de pacote assinado, T032 no hash que vai ser publicado e Gate E escrito; se um gate não fechar, a data desliza e nada é anunciado como publicado.</p>
+        <p class="text-base text-slate-700">A <strong>prévia 4.0.0-candidata de 31/10/2026</strong> (commit <code>c343890</code>) é a versão pública de avaliação do PDV v4: só Windows 10/11 x64, com o plano Free (até 100 vendas finalizadas por mês civil) e <strong>sem migração de dados da 3.2</strong>. A RC6 fica no histórico. O pacote final da <strong>v4.0.0</strong> já está publicado e medido no repositório de distribuição, com Java 25 embutido e migração do banco da 3.2.x; o lançamento está marcado para <strong>08/11/2026</strong>.</p>
 
         <p class="text-base text-slate-700"><strong>Para operar hoje:</strong> a <strong>3.2.12-free</strong> é a versão anterior — publicada em 15/10/2026, em manutenção de transição até <strong>08/11/2026</strong> e ainda a indicada para o caixa rodando em Windows, Linux ou macOS. Os pacotes e hashes continuam disponíveis abaixo.</p>
 
-        <p class="text-base text-slate-700"><strong>Free:</strong> até 100 vendas finalizadas por mês civil, 100 produtos, 1 operador de caixa, 1 loja. <strong>Pro (o Premium da loja 3.2.12):</strong> R$ 79,90/mês. Vale para a 3.2.12 e para a v4 — prévia hoje, GA em 08/11/2026.</p>
+        <p class="text-base text-slate-700"><strong>Free:</strong> até 100 vendas finalizadas por mês civil, 100 produtos, 1 operador de caixa, 4 vendedores, 1 loja. <strong>Pro (o Premium da loja 3.2.12):</strong> R$ 79,90/mês. Vale para a 3.2.12 e para a v4 — prévia hoje, GA em 08/11/2026.</p>
 
-        <!-- v4.0.0 GA (08/11/2026): descomentar, preencher e colocar antes de #pre-release-v4, somente depois dos gates.
+        <!-- v4.0.0 GA (08/11/2026): pronto; na virada (A6) basta descomentar — a seção já está antes de
+             #pre-release-v4. Trocar também o selo/título do topo, o parágrafo "Para operar hoje" e a
+             seção #pre-release-v4 passa a "prévia anterior".
         <section id="v4-0-0" class="rounded-2xl border border-emerald-300 bg-emerald-50 p-5">
-          <p class="mb-2"><span class="selo selo-estavel">Lançamento oficial · v4.0.0</span> <span class="text-xs text-slate-600 ml-2">build de 08/11/2026</span></p>
+          <p class="mb-2"><span class="selo selo-estavel">Lançamento oficial · v4.0.0</span> <span class="text-xs text-slate-600 ml-2">build de 06/11/2026</span></p>
           <h2 class="text-lg font-extrabold text-slate-900">CaraCore PDV v4.0.0 — Windows 10/11 x64</h2>
-          <p class="mt-2 text-sm text-slate-700">Java embutido. Extraia em pasta separada. SHA-256 publicado para conferência.</p>
-          <p class="mt-3 text-xs text-slate-600 font-mono">SHA256 [PREENCHER HASH COMPLETO]
-            <button type="button" class="ml-2 rounded border border-emerald-400 px-2 py-1 hover:bg-emerald-100" onclick="copyHash('[PREENCHER HASH COMPLETO]', this)" aria-label="Copiar SHA256 completo da v4.0.0">Copiar</button>
+          <p class="mt-2 text-sm text-slate-700">Java embutido. Extraia em pasta separada. SHA-256 publicado para conferência. O banco da 3.2.x é migrado no primeiro acesso; faça backup antes.</p>
+          <p class="mt-3 text-xs text-slate-600 font-mono">SHA256 9557e0b16d77a85e0bb68971eb0e8710356977261337a8c1c05593e893d81eac
+            <button type="button" class="ml-2 rounded border border-emerald-400 px-2 py-1 hover:bg-emerald-100" onclick="copyHash('9557e0b16d77a85e0bb68971eb0e8710356977261337a8c1c05593e893d81eac', this)" aria-label="Copiar SHA256 completo da v4.0.0">Copiar</button>
           </p>
           <div class="mt-3 flex flex-wrap gap-3">
-            <a class="inline-flex rounded-xl bg-emerald-700 px-4 py-2 text-sm font-semibold text-white hover:bg-emerald-800" href="[PREENCHER URL DO ZIP]">Baixar a v4.0.0</a>
-            <a class="inline-flex rounded-xl border border-emerald-500 px-4 py-2 text-sm font-semibold text-slate-900 hover:bg-emerald-100" href="[PREENCHER URL DO SHA256SUMS]">SHA256SUMS</a>
-            <a class="inline-flex rounded-xl border border-emerald-500 px-4 py-2 text-sm font-semibold text-slate-900 hover:bg-emerald-100" href="[PREENCHER URL DA TAG]">Release no GitHub</a>
-            <a class="inline-flex rounded-xl border border-emerald-500 px-4 py-2 text-sm font-semibold text-slate-900 hover:bg-emerald-100" href="[PREENCHER URL DAS NOTAS]">Notas da versão</a>
+            <a class="inline-flex rounded-xl bg-emerald-700 px-4 py-2 text-sm font-semibold text-white hover:bg-emerald-800" href="https://github.com/chmulato/caracore-pdv4-releases/releases/download/v4.0.0/CaraCore-PDV-4.0.0-qute-portable-windows-x64.zip">Baixar a v4.0.0</a>
+            <a class="inline-flex rounded-xl border border-emerald-500 px-4 py-2 text-sm font-semibold text-slate-900 hover:bg-emerald-100" href="https://github.com/chmulato/caracore-pdv4-releases/releases/download/v4.0.0/SHA256SUMS.txt">SHA256SUMS</a>
+            <a class="inline-flex rounded-xl border border-emerald-500 px-4 py-2 text-sm font-semibold text-slate-900 hover:bg-emerald-100" href="https://github.com/chmulato/caracore-pdv4-releases/releases/tag/v4.0.0">Release no GitHub</a>
+            <a class="inline-flex rounded-xl border border-emerald-500 px-4 py-2 text-sm font-semibold text-slate-900 hover:bg-emerald-100" href="release-notes/v4.0.0.md">Notas da versão</a>
           </div>
-          <p class="mt-3 text-xs text-slate-600">[PREENCHER bytes] · ZIP portátil Windows x64 · sem assinatura digital.</p>
+          <p class="mt-3 text-xs text-slate-600">176.613.179 bytes · ZIP portátil Windows x64 · sem assinatura Authenticode · SHA256SUMS assinado com duas chaves Ed25519.</p>
+          <p class="mt-2 text-xs text-slate-600">A partir desta versão, o PDV avisa no dashboard quando há versão nova; o download é feito pelo próprio app e conferido por SHA-256. A aplicação do pacote é manual: feche o PDV, extraia o ZIP e copie o conteúdo sobre a instalação, mantendo a pasta <code>data</code>.</p>
         </section>
         -->
 
@@ -207,7 +213,7 @@
         <div>
           <h2 class="text-lg font-extrabold text-slate-900">Limites do Free</h2>
           <ul class="mt-3 text-sm text-slate-700 space-y-2">
-            <li class="flex items-start gap-2"><i class="fas fa-check text-emerald-600 mt-0.5"></i><span><strong>100 vendas finalizadas por mês civil</strong> · 100 produtos · 1 operador de caixa · 1 loja. No teto, novas vendas ficam bloqueadas até o mês seguinte.</span></li>
+            <li class="flex items-start gap-2"><i class="fas fa-check text-emerald-600 mt-0.5"></i><span><strong>100 vendas finalizadas por mês civil</strong> · 100 produtos · 1 operador de caixa · 4 vendedores · 1 loja. No teto, novas vendas ficam bloqueadas até o mês seguinte.</span></li>
             <li class="flex items-start gap-2"><i class="fas fa-check text-emerald-600 mt-0.5"></i><span>Funciona sem internet: os dados ficam no computador da loja. Pagamentos: dinheiro, débito, crédito e outros — <strong>“outros” não gera PIX no PDV</strong>.</span></li>
             <li class="flex items-start gap-2"><i class="fas fa-check text-emerald-600 mt-0.5"></i><span>Recibo digital por link e PDF, sem valor fiscal.</span></li>
             <li class="flex items-start gap-2"><i class="fas fa-triangle-exclamation text-amber-600 mt-0.5"></i><span>Sem NF-e/NFC-e. O PIX é feito pela maquininha do banco.</span></li>
@@ -220,12 +226,12 @@
 
         <section id="migracao-v4" class="rounded-2xl border border-amber-300 bg-amber-50 p-5">
           <h2 class="text-lg font-extrabold text-slate-900">Migração: da 3.2 para a v4</h2>
-          <p class="mt-2 text-sm font-semibold text-amber-900">Hoje NÃO é suportado. A transferência de dados da linha 3.2 para a v4 ainda não é suportada; sua operação continua na versão anterior, a 3.2.12-free.</p>
+          <p class="mt-2 text-sm font-semibold text-amber-900">Na prévia de 31/10/2026 a migração não é suportada: não copie o banco da 3.2 para a prévia. A v4.0.0 (lançamento de 08/11/2026) atualiza o banco da 3.2.x no primeiro acesso; antes, faça backup e mantenha a 3.2.12 instalada até conferir a operação.</p>
           <ul class="mt-3 text-sm text-slate-800 space-y-2 list-disc list-inside">
-            <li>Não copie o banco da 3.2 para a v4.</li>
-            <li>Na v4, cancelar uma venda já paga não devolve o estoque nem registra ESTORNADA; a 3.2.12 fazia.</li>
-            <li>Instale a v4 em pasta separada, só para teste. Sua operação continua na 3.2.12.</li>
-            <li>Faça backup antes de qualquer teste.</li>
+            <li>Faça backup da pasta <code>data</code> antes de qualquer teste ou migração.</li>
+            <li>Para migrar, copie o banco da 3.2 (<code>%APPDATA%\caracore\caracore-pdv.db</code>) para <code>data\caracore-pdv.db</code> na pasta da v4 <strong>antes da primeira abertura</strong>; a v4 atualiza o esquema sozinha e mantém as vendas e o histórico.</li>
+            <li>A v4 não tem a ação de estornar uma venda já finalizada: cancelar uma venda em aberto descarta a venda e não mexe no estoque, porque a baixa só acontece na finalização. Na 3.2.12 o estorno de venda paga devolvia o estoque.</li>
+            <li>Mantenha a 3.2.12 instalada e o backup à mão até conferir a operação na v4.</li>
           </ul>
         </section>
 
