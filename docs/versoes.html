@@ -204,12 +204,12 @@
         </section>
 
         <section class="card wiki-card" id="migracao-v4">
-            <h2>Migração: da 3.2 para a prévia v4</h2>
+            <h2>Migração: da 3.2 para a v4</h2>
             <ul>
-                <li>Não copie o banco da 3.2 para a v4.</li>
+                <li><strong>Prévia de 31/10/2026:</strong> não copie o banco da 3.2 para ela — a migração não é suportada nesse build.</li>
+                <li><strong>v4.0.0 (lançamento de 08/11/2026):</strong> copie o banco da 3.2 (<code>%APPDATA%\caracore\caracore-pdv.db</code>) para <code>data\caracore-pdv.db</code> na pasta da v4 <strong>antes da primeira abertura</strong>; o esquema é atualizado sozinho e as vendas e o histórico são mantidos.</li>
                 <li>Na v4, cancelar uma venda já paga não devolve o estoque nem registra ESTORNADA; a 3.2.12 fazia.</li>
-                <li>Instale a v4 em pasta separada, só para teste. Sua operação continua na 3.2.12.</li>
-                <li>Faça backup antes de qualquer teste.</li>
+                <li>Instale a v4 em pasta separada e mantenha a 3.2.12 operando até conferir a migração. Faça backup antes de qualquer teste.</li>
             </ul>
         </section>
 
