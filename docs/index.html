@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="CaraCore PDV v4.0.0, lançado em 08/11/2026: caixa rápido com os dados na loja, projeção de IBS/CBS e pacote mensal para o contador em CSV e PDF. Windows 10 e 11.">
-    <meta name="keywords" content="PDV web local, ponto de venda, recibo digital, caixa offline, varejo">
+    <meta name="description" content="CaraCore PDV v4.0.0: frente de caixa Local-First no computador da loja, com banco SQLite local e venda funcionando mesmo sem internet. Windows 10 e 11.">
+    <meta name="keywords" content="PDV local-first, PDV web local, ponto de venda, recibo digital, caixa offline, varejo">
     <meta name="author" content="Cara Core Informática">
     <meta property="og:url" content="https://pdv.caracore.com.br/">
-    <meta property="og:title" content="CaraCore PDV | Caixa rápido, dados na sua loja">
-    <meta property="og:description" content="CaraCore PDV v4.0.0 para Windows 10 e 11: caixa rápido com dados na loja, projeção de IBS/CBS e pacote mensal para o contador em CSV e PDF.">
+    <meta property="og:title" content="CaraCore PDV | Caixa Local-First que funciona sem internet">
+    <meta property="og:description" content="CaraCore PDV v4.0.0: frente de caixa Local-First no computador da loja, com banco SQLite local e venda funcionando mesmo sem internet.">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://pdv.caracore.com.br/assets/img/og-pdv-1200x630.png">
     <meta property="og:image:width" content="1200">
@@ -16,7 +16,7 @@
     <link rel="canonical" href="https://pdv.caracore.com.br/">
     <meta property="og:site_name" content="CaraCore PDV">
     <meta name="twitter:card" content="summary_large_image">
-    <title>CaraCore PDV | Caixa rápido, dados na sua loja</title>
+    <title>CaraCore PDV | Caixa Local-First que funciona sem internet</title>
     <link rel="stylesheet" href="assets/vendor/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="assets/css/fonts.css">
     <link rel="stylesheet" href="assets/css/portal-style.css">
@@ -32,7 +32,7 @@
       "@type": "SoftwareApplication",
       "name": "CaraCore PDV",
       "url": "https://pdv.caracore.com.br/",
-      "description": "Caixa para loja que roda no proprio computador, com os dados em SQLite local: venda no navegador, baixa de estoque na venda, fechamento de turno e recibo digital sem valor fiscal.",
+      "description": "Frente de caixa Local-First que roda no proprio computador da loja, com os dados em SQLite local: a venda funciona mesmo sem internet, com baixa de estoque na venda, fechamento de turno e recibo digital sem valor fiscal.",
       "applicationCategory": "BusinessApplication",
       "operatingSystem": "Windows 10, Windows 11",
       "softwareVersion": "4.0.0",
@@ -109,25 +109,57 @@
                     <span class="selo selo-estavel">Lançamento oficial · CaraCore PDV v4.0.0</span>
                 </p>
                 <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-                    Caixa rápido, dados na sua loja e seu negócio preparado para a Reforma Tributária.
+                    Seu balcão nunca para: PDV Local-First rápido, que funciona mesmo sem internet.
                 </h1>
-                <p class="text-xl md:text-2xl text-green-50 mb-10">
-                    A v4.0.0 chega com calculadora de preço com IBS/CBS projetados, prévia da retenção do
+                <p class="text-xl md:text-2xl text-green-50 mb-6">
+                    Vendas, estoque e caixa rodando direto na máquina da loja, com banco de dados local.
+                    O recado do caixa não depende de nuvem, e os dados ficam com você.
+                </p>
+                <p class="text-base text-white mb-10">
+                    Na <strong>v4.0.0</strong> que você baixa hoje: projeção de IBS/CBS no preço, prévia da retenção do
                     Split Payment no fechamento da venda (plano Pro) e pacote mensal para o contador em CSV e PDF.
                     São valores estimados: não substituem a apuração oficial e não emitem documento fiscal.
+                    PIX no caixa (Mercado Pago) e NFC-e sob demanda (PlugNotas) são módulos em desenvolvimento para a
+                    <strong>v4.1.0</strong>, com meta em 24/03/2027 — ainda não estão na v4.0.0.
                 </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-10">
+                <div class="bg-emerald-700 rounded-2xl p-6">
+                    <h2 class="text-lg font-bold mb-2">Operação Offline-First real</h2>
+                    <p class="text-sm text-green-50">
+                        A venda acontece no caixa, na sua máquina. Caiu a internet, o balcão continua vendendo e
+                        fechando o turno.
+                    </p>
+                </div>
+                <div class="bg-emerald-700 rounded-2xl p-6">
+                    <h2 class="text-lg font-bold mb-2">Soberania dos dados</h2>
+                    <p class="text-sm text-green-50">
+                        Banco SQLite local, no computador da loja: a venda não passa por servidor de terceiros.
+                        É o seu ambiente, e isso facilita a sua conformidade com a LGPD.
+                    </p>
+                </div>
+                <div class="bg-emerald-700 rounded-2xl p-6">
+                    <h2 class="text-lg font-bold mb-2">Ecossistema completo, sem pedágio</h2>
+                    <p class="text-sm text-green-50">
+                        Caixa, estoque, turno, recibo e relatórios no mesmo programa. Free sem mensalidade; o Pro
+                        tira os tetos. Não cobramos por cupom emitido.
+                    </p>
+                </div>
+            </div>
+            <div class="max-w-3xl mx-auto text-center">
                 <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
                     <a href="download.html#v4-0-0"
                        class="inline-flex items-center justify-center bg-white text-green-700 px-8 py-4 rounded-lg font-bold text-lg hover:bg-green-50 transition shadow-lg">
-                        <i class="fas fa-download mr-3" aria-hidden="true"></i> Baixar a v4.0.0
+                        <i class="fas fa-download mr-3" aria-hidden="true"></i> Baixar CaraCore PDV v4.0.0
                     </a>
-                    <a href="#planos" class="inline-flex items-center justify-center border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-green-700 transition">
-                        Conhecer o plano Pro
+                    <a href="tecnologia.html" class="inline-flex items-center justify-center border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-green-700 transition">
+                        Ver Arquitetura Local-First
                     </a>
                 </div>
                 <p class="mt-4 text-sm text-green-50">
                     Baixe, extraia e abra o caixa — o Free não tem mensalidade.
-                    <a href="download.html#v4-0-0" class="underline hover:text-white">Ver como instalar</a>.
+                    <a href="download.html#v4-0-0" class="underline hover:text-white">Ver como instalar</a> ou
+                    <a href="#planos" class="underline hover:text-white">comparar Free e Pro</a>.
                 </p>
             </div>
         </div>
@@ -258,8 +290,9 @@
 
             </div>
             <p class="text-center text-sm text-gray-600 mt-6 max-w-3xl mx-auto">
-                Este plano é o mesmo comercializado como <strong>Premium</strong> na loja da 3.2.12. Free e Pro não emitem
-                NF-e/NFC-e; o PIX é feito pela maquininha do banco, fora do PDV.
+                Este plano é o mesmo comercializado como <strong>Premium</strong> na loja da 3.2.12. Na v4.0.0, Free e Pro
+                não emitem NF-e/NFC-e e o PIX é feito pela maquininha do banco, fora do PDV. O PIX no caixa (Mercado Pago)
+                e a NFC-e sob demanda (PlugNotas) são módulos em desenvolvimento para a v4.1.0.
             </p>
         </div>
     </section>
