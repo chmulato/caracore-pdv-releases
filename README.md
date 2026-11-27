@@ -26,7 +26,7 @@ Este repositório não deve ser lido como catálogo de promessa ampla. A leitura
 
 - desktop local (Windows, Linux e macOS) com SQLite;
 - Free: venda no navegador, sem PIX integrado e sem NF-e/NFC-e;
-- Premium com suporte prioritário; PIX integrado e emissão fiscal em desenvolvimento (roadmap), não disponíveis hoje;
+- Premium com suporte prioritário; PIX integrado e emissão fiscal são módulos do Plano Pro na v4.1.0 (roadmap), não disponíveis hoje, cada um ativado pela credencial do próprio provedor, com meta em 24/03/2027;
 - validação de aderência para pequena loja antes de expansão.
 
 Não tratar como promessa pública vigente neste README:
